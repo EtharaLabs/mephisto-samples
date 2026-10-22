@@ -2,9 +2,9 @@
 
 # Mephisto: samples
 
-<p align="center"><b>The samples lane: 30 of 30 Harbor task bundles.</b></p>
+<p align="center"><b>The samples lane: 26 of 30 Harbor task bundles.</b></p>
 
-<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-30_of_30-845EF7" alt="bundles: 30 of 30"></a> <a href="#evidence-status"><img src="https://img.shields.io/badge/sealed-0-845EF7" alt="sealed: 0"></a> <a href="#difficulty-tiers"><img src="https://img.shields.io/badge/difficulty-measured-845EF7" alt="difficulty: measured"></a></p>
+<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-26_of_30-845EF7" alt="bundles: 26 of 30"></a> <a href="#evidence-status"><img src="https://img.shields.io/badge/sealed-0-845EF7" alt="sealed: 0"></a> <a href="#difficulty-tiers"><img src="https://img.shields.io/badge/difficulty-measured-845EF7" alt="difficulty: measured"></a></p>
 
 <p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#difficulty-tiers">Difficulty tiers</a> | <a href="#evidence-status">Evidence status</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#reproduction">Reproduction</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
 
@@ -18,11 +18,11 @@ Each bundle is one Harbor task in a directory named by its content-derived uuid5
 
 | Property | Value |
 | --- | --- |
-| Bundles | 30 of 30 |
-| Sealed | 0 of 30 |
-| Registrations | unregistered (30) |
-| Audit verdicts | none (30) |
-| Harbor schema | 1.4 (21), absent (9) |
+| Bundles | 26 of 30 |
+| Sealed | 0 of 26 |
+| Registrations | unregistered (26) |
+| Audit verdicts | none (26) |
+| Harbor schema | 1.4 (21), absent (5) |
 
 ## Difficulty tiers
 
@@ -35,10 +35,8 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 | uuid | Verdict | Sealed digest | Stream |
 | --- | --- | --- | --- |
 | 00ed522b-32e1-51f6-a187-dfbd2fe900a8 | none | absent | none |
-| 08fa665a-16ac-51c3-a628-450f7ce300c2 | none | absent | none |
 | 120ddda7-c14b-5ba0-9dba-d6e9441cc885 | none | absent | none |
 | 13c33dbf-b865-500d-83db-69b8f823e20d | none | absent | none |
-| 304e275d-73d8-59d2-8c7e-94c7fe1e3beb | none | absent | none |
 | 33d28748-b172-584d-b378-f46d85de56fe | none | absent | none |
 | 39b48a38-7a2a-5865-bdc9-ba74b50711aa | none | absent | none |
 | 433b88b8-dff9-5688-ad67-33625fbb599c | none | absent | none |
@@ -57,9 +55,7 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 | ac583bff-6ce6-5d54-94f5-5f9083830070 | none | absent | none |
 | b59face6-b2ba-510f-8351-9d0f846689c0 | none | absent | none |
 | bbcc0dfa-dc77-5e6d-9f25-27484d6fae09 | none | absent | none |
-| d23e7283-bf61-5028-b093-5761c1f48e7b | none | absent | none |
 | d3cd6658-d997-5f26-89e3-97e5443046b4 | none | absent | none |
-| d6cb9bed-077f-5ff0-949d-f9dd0c16a872 | none | absent | none |
 | e5d63160-7e3a-5d55-bab1-a887c9e97be3 | none | absent | none |
 | efbd2e9b-fcb5-56b9-a946-c4275207032c | none | absent | none |
 | f5e2f024-213f-58cf-aa21-594a53624a8b | none | absent | none |
@@ -151,10 +147,8 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 | Bundle | Task | Keywords | Registration | Sealed at | Tier |
 | --- | --- | --- | --- | --- | --- |
 | [`00ed522b-32e1-51f6-a187-dfbd2fe900a8`](00ed522b-32e1-51f6-a187-dfbd2fe900a8/) | `edgebench/jagua_nesting_optimization` | absent | unregistered | unsealed | - |
-| [`08fa665a-16ac-51c3-a628-450f7ce300c2`](08fa665a-16ac-51c3-a628-450f7ce300c2/) | `edgebench/cap_set_extremal_construction` | absent | unregistered | unsealed | - |
 | [`120ddda7-c14b-5ba0-9dba-d6e9441cc885`](120ddda7-c14b-5ba0-9dba-d6e9441cc885/) | `edgebench/120ddda7-c14b-5ba0-9dba-d6e9441cc885` | bounded-continuous, libpcap-1.10.6+mut1, optimization, packet-filter-compiler-codegen, reimplementation-fidelity, systems-and-se | unregistered | unsealed | - |
 | [`13c33dbf-b865-500d-83db-69b8f823e20d`](13c33dbf-b865-500d-83db-69b8f823e20d/) | `edgebench/arc_compiler_runtime` | absent | unregistered | unsealed | - |
-| [`304e275d-73d8-59d2-8c7e-94c7fe1e3beb`](304e275d-73d8-59d2-8c7e-94c7fe1e3beb/) | `edgebench/arc_compiler_runtime` | absent | unregistered | unsealed | - |
 | [`33d28748-b172-584d-b378-f46d85de56fe`](33d28748-b172-584d-b378-f46d85de56fe/) | `edgebench/cftc_futures_positioning_book` | cftc-cot-positioning, commercial-hedger-flow, cross-market-futures, finance, professional-knowledge-work | unregistered | unsealed | - |
 | [`39b48a38-7a2a-5865-bdc9-ba74b50711aa`](39b48a38-7a2a-5865-bdc9-ba74b50711aa/) | `mephisto/chronopack_undocumented_encoder` | binary-format, bit-exact, compression, policy-inference, systems-software-engineering, undocumented-behaviour-recovery | unregistered | unsealed | - |
 | [`433b88b8-dff9-5688-ad67-33625fbb599c`](433b88b8-dff9-5688-ad67-33625fbb599c/) | `edgebench/p6zeta_zero_one_ip_solver_from_scratch_v2` | combinatorial-optimization, edgebench, mephisto | unregistered | unsealed | - |
@@ -173,9 +167,7 @@ The verdict is the audit outcome recorded at the sealed digest, and `none` means
 | [`ac583bff-6ce6-5d54-94f5-5f9083830070`](ac583bff-6ce6-5d54-94f5-5f9083830070/) | `edgebench/cryoem_single_particle_reconstruction` | 3d-reconstruction, bayesian-inverse-problem, cryo-em, scientific-problems-ml, structural-biology | unregistered | unsealed | - |
 | [`b59face6-b2ba-510f-8351-9d0f846689c0`](b59face6-b2ba-510f-8351-9d0f846689c0/) | `edgebench/treasury_curve_positioning_book` | duration-convexity, finance, macro-regime-adaptive, professional-knowledge-work, treasury-curve-positioning | unregistered | unsealed | - |
 | [`bbcc0dfa-dc77-5e6d-9f25-27484d6fae09`](bbcc0dfa-dc77-5e6d-9f25-27484d6fae09/) | `mephisto/p9iota_latticestore_workspace_reconstruction` | bit-exact-reconstruction, content-addressed-storage, crash-recovery, multi-crate-workspace, performance, rust | unregistered | unsealed | - |
-| [`d23e7283-bf61-5028-b093-5761c1f48e7b`](d23e7283-bf61-5028-b093-5761c1f48e7b/) | `edgebench/vliw_kernel_optimization` | absent | unregistered | unsealed | - |
 | [`d3cd6658-d997-5f26-89e3-97e5443046b4`](d3cd6658-d997-5f26-89e3-97e5443046b4/) | `edgebench/sec_leverage_trajectory_projection_book` | capital-structure-trajectory, finance, leverage-projection-book, professional-knowledge-work, rate-cycle-adaptive, sec-xbrl-fundamental-panel | unregistered | unsealed | - |
-| [`d6cb9bed-077f-5ff0-949d-f9dd0c16a872`](d6cb9bed-077f-5ff0-949d-f9dd0c16a872/) | `edgebench/jagua_nesting_optimization` | absent | unregistered | unsealed | - |
 | [`e5d63160-7e3a-5d55-bab1-a887c9e97be3`](e5d63160-7e3a-5d55-bab1-a887c9e97be3/) | `edgebench/fdic_bank_capital_projection_book` | bank-regulatory-capital, cross-sectional-panel-forecasting, finance, macro-regime-adaptive, professional-knowledge-work | unregistered | unsealed | - |
 | [`efbd2e9b-fcb5-56b9-a946-c4275207032c`](efbd2e9b-fcb5-56b9-a946-c4275207032c/) | `edgebench/fdic_community_credit_triage` | bank-credit-surveillance, copy-frontier-anchored, cross-sectional-allocation, finance, professional-knowledge-work | unregistered | unsealed | - |
 | [`f5e2f024-213f-58cf-aa21-594a53624a8b`](f5e2f024-213f-58cf-aa21-594a53624a8b/) | `edgebench/p6zeta_zero_one_ip_solver_from_scratch` | combinatorial-optimization, edgebench, mephisto | unregistered | unsealed | - |
@@ -203,7 +195,7 @@ flowchart LR
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#131a33","primaryTextColor":"#e8ecff","primaryBorderColor":"#845EF7","lineColor":"#22d3ee","fontFamily":"monospace"}}}%%
 flowchart LR
     staging["staging/"]
-    staging --> samples["samples/<br/>30 of 30"]
+    staging --> samples["samples/<br/>26 of 30"]
     samples --> delivery["delivery/<br/>0 of 10000"]
     delivery --> stock["stock/<br/>0 of 10000"]
 ```
