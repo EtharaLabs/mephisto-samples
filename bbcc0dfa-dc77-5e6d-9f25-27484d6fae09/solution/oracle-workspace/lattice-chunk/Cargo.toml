@@ -1,7 +1,0 @@
-[package]
-name = "lattice-chunk"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-lattice-types = { path = "../lattice-types" }
