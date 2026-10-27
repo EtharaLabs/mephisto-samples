@@ -114,12 +114,8 @@ Each bundle directory is a complete Harbor task: `task.toml` is the runner manif
 
 Released under the [MIT License](LICENSE). © 2026 Ethara.AI.
 
+Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
+
 ## Contact
 
 [Ethara AI on GitHub](https://github.com/Ethara-Ai), [SECURITY.md](SECURITY.md) for a private report, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
-
----
-
-## Copyright
-
-Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
