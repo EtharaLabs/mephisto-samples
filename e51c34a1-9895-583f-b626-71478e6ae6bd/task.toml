@@ -1,0 +1,66 @@
+schema_version = "1.4"
+
+artifacts = [
+  { source = "/home/workspace/output" },
+]
+
+[task]
+name = "ethara/abs-auto-forward-flow-purchase"
+version = "1.0.0"
+description = "Structured-credit forward-flow purchase on real SEC Regulation AB II auto-loan tapes: from 18 months of six seasoned trusts and the June 2026 tapes of six offer pools, buy fractional loan participations within a budget, a deployment floor, pool caps and a delinquency cap, forecast every offered loan's charge-off probability, and write a consistent memo; graded on the trusts' hidden July to September 2026 tapes."
+authors = [{ name = "shreyansh.parashar", email = "shreyansh.parashar@ethara.ai" }]
+keywords = [
+  "professional-knowledge-work",
+  "finance",
+  "structured-credit",
+  "auto-loan-abs",
+  "portfolio-decision",
+  "credit-risk",
+]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 1.0
+platforms = ["linux/amd64", "linux/arm64"]
+reward_type = "continuous"
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "no-network"
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+workdir = "/home/workspace"
+
+[agent]
+timeout_sec = 43200.0
+network_mode = "no-network"
+user = "1000:1000"
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+workdir = "/home/workspace"
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-10-28"
+source_kind = "synthetic"
+
+[upstream_provenance.source]
+generator = "abs-auto-forward-flow generate.py version 1"
+generation_inputs = [
+  "SEC EDGAR Form ABS-EE Exhibit 102 tapes of twelve auto-loan trusts, admitted in .seed run forge-0shreyansh-20261028t131720z-b40481 (admitted.jsonl sha256 8e5f2ee36b9c5fdadd2bf96a435967dde997e72d71d1f38c08ac8b495c6b684e)",
+  "reference window 2025-01 to 2026-06, offer window 2026-01 to 2026-06, hidden window 2026-07 to 2026-09, boundary 2026-06",
+  "budget 15 percent of the offer, pool cap 25 percent and delinquent cap 20 percent of the budget, deployment floor 95 percent",
+  "lanes per the run contract generation_inputs block",
+]

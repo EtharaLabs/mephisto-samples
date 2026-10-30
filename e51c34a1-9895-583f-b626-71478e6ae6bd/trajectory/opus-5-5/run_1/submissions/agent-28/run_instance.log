@@ -1,0 +1,9 @@
+2026-10-30 07:15:09,000 - INFO - Judge container started: d2f1164363b3a5683bb8b698087e0b355cc9066341108a428dcb4caae19cfad6
+2026-10-30 07:15:09,003 - INFO - Archive saved (705092 bytes)
+2026-10-30 07:15:09,447 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-10-30 07:15:09,537 - INFO - Running eval script...
+2026-10-30 07:15:15,063 - INFO - Test runtime: 5.52s, timed_out: False
+2026-10-30 07:15:15,064 - INFO - Result: 0/0 passed (pass_rate=0.00%)
+2026-10-30 07:15:15,065 - INFO - Stopping container edgebench.judge.abs_auto_forward_flow_purchase.8c415bc46aee...
+2026-10-30 07:15:15,315 - INFO - Removing container edgebench.judge.abs_auto_forward_flow_purchase.8c415bc46aee...
+2026-10-30 07:15:15,403 - INFO - Container edgebench.judge.abs_auto_forward_flow_purchase.8c415bc46aee removed.

@@ -1,0 +1,19 @@
+{
+  "task_id": "abs_auto_forward_flow_purchase",
+  "submission_id": "5227421563fd",
+  "total_tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.422,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 7.869112968444824,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [],
+  "metrics": {},
+  "submitted_at": 1793321173.733692
+}

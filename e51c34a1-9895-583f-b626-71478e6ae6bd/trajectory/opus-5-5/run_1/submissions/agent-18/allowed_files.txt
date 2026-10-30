@@ -1,0 +1,3 @@
+output/chargeoff_probabilities.csv
+output/memo.json
+output/purchases.csv

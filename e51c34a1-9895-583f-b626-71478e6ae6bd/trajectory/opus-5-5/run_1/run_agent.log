@@ -1,0 +1,49 @@
+2026-10-30 01:06:48,965 - INFO - Images ready
+2026-10-30 01:06:48,983 - INFO - Registered session with judge server
+2026-10-30 01:06:49,003 - INFO - Network isolation: iptables unavailable, using Docker relay (macOS/Docker Desktop)
+2026-10-30 01:06:49,539 - INFO - Isolated-mode relay started: sforge-relay-abs-rig-opus55-12h-20261029t193640z (relay ip 172.28.0.2)
+2026-10-30 01:06:49,631 - INFO - Isolated-mode (Docker Desktop) enabled: install with internet, then cut over to internal net; endpoints via relay 172.28.0.2
+2026-10-30 01:06:49,948 - INFO - Container started: sforge.run.abs_auto_forward_flow_purchase.abs-rig-opus55-12h-20261029t193640z (judge_url=http://172.28.0.2:8080)
+2026-10-30 01:06:49,948 - INFO - Install step 1/2: sudo -E bash -c 'NODE_MIRROR=${SFORGE_NODEJS_MIRROR_URL:-https://nodejs.org/dist} && case "$(uname -m)" in aarch64|arm64) NODE_ARCH=arm64;; *) NODE_ARCH=x64;; esac && curl -fsSL $NODE_MIRROR/v20.18.0/node-v20.18.0-linux-$NODE_ARCH.tar.xz | tar -xJ -C /usr/local --strip-components=1'
+2026-10-30 01:06:53,151 - INFO - Install step 1 done (3.2s)
+2026-10-30 01:06:53,152 - INFO - Install step 2/2: sudo -E npm install -g @anthropic-ai/claude-code@2.1.308
+2026-10-30 01:07:05,089 - INFO - Install step 2 done (11.9s)
+2026-10-30 01:07:05,090 - INFO - Agent installation complete
+2026-10-30 01:07:05,330 - INFO - Installed sforge-submit script
+2026-10-30 01:07:05,452 - INFO - Installed Claude Code stop hook
+2026-10-30 01:07:05,517 - INFO - Configured Claude Code settings with hooks
+2026-10-30 01:07:05,518 - INFO - Host-side auto-eval started (interval=1800s)
+2026-10-30 01:07:05,651 - INFO - Isolated-mode cutover complete: sforge.run.abs_auto_forward_flow_purchase.abs-rig-opus55-12h-20261029t193640z now on internal net only (172.28.0.3)
+2026-10-30 01:07:05,769 - INFO - Prompt written (3320 bytes)
+2026-10-30 01:07:05,769 - INFO - Running agent: claude -p "$(cat /tmp/agent_prompt.md)" --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-promp... (timeout=43200s)
+2026-10-30 08:09:39,577 - INFO - Agent exited after 25353.8s, will resume
+2026-10-30 08:09:39,582 - INFO - Resuming agent (attempt 1/100, 17846s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 08:26:35,955 - INFO - Agent exited after 1016.4s, will resume
+2026-10-30 08:26:35,957 - INFO - Resuming agent (attempt 2/100, 16830s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 09:11:48,747 - INFO - Agent exited after 2712.8s, will resume
+2026-10-30 09:11:48,751 - INFO - Resuming agent (attempt 3/100, 14117s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 09:46:38,927 - INFO - Agent exited after 2090.2s, will resume
+2026-10-30 09:46:38,930 - INFO - Resuming agent (attempt 4/100, 12027s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 09:57:33,166 - INFO - Agent exited after 654.2s, will resume
+2026-10-30 09:57:33,168 - INFO - Resuming agent (attempt 5/100, 11373s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 10:09:23,585 - INFO - Agent exited after 710.4s, will resume
+2026-10-30 10:09:23,588 - INFO - Resuming agent (attempt 6/100, 10662s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 10:46:36,284 - INFO - Agent exited after 2232.7s, will resume
+2026-10-30 10:46:36,288 - INFO - Resuming agent (attempt 7/100, 8430s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 11:08:48,961 - INFO - Agent exited after 1332.7s, will resume
+2026-10-30 11:08:48,964 - INFO - Resuming agent (attempt 8/100, 7097s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 11:32:40,591 - INFO - Agent exited after 1431.6s, will resume
+2026-10-30 11:32:40,593 - INFO - Resuming agent (attempt 9/100, 5665s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 11:55:01,546 - INFO - Agent exited after 1340.9s, will resume
+2026-10-30 11:55:01,549 - INFO - Resuming agent (attempt 10/100, 4324s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 12:13:05,061 - INFO - Agent exited after 1083.5s, will resume
+2026-10-30 12:13:05,072 - INFO - Resuming agent (attempt 11/100, 3241s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch --exclude-dynamic-system-prom...
+2026-10-30 13:07:05,341 - INFO - Agent finished: runtime=43199.4s, timed_out=True, resumes=11, pool_paused=0s
+2026-10-30 13:07:05,348 - INFO - Auto-eval thread stopped
+2026-10-30 13:07:05,572 - INFO - Final archive: 704255 bytes
+2026-10-30 13:07:05,695 - INFO - Work container processes stopped
+2026-10-30 13:07:05,724 - INFO - Done: best=0.00% (round 'agent-48'), agent_subs=50, auto_subs=23, resumes=11, runtime=43199.4s
+2026-10-30 13:07:06,028 - INFO - Isolated-mode relay removed: sforge-relay-abs-rig-opus55-12h-20261029t193640z
+2026-10-30 13:07:06,029 - INFO - Stopping container sforge.run.abs_auto_forward_flow_purchase.abs-rig-opus55-12h-20261029t193640z...
+2026-10-30 13:07:06,379 - INFO - Removing container sforge.run.abs_auto_forward_flow_purchase.abs-rig-opus55-12h-20261029t193640z...
+2026-10-30 13:07:07,054 - INFO - Container sforge.run.abs_auto_forward_flow_purchase.abs-rig-opus55-12h-20261029t193640z removed.

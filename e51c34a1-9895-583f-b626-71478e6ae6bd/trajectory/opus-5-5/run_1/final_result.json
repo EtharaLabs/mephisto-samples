@@ -1,0 +1,16 @@
+{
+  "agent": "claude-code",
+  "task": "abs_auto_forward_flow_purchase",
+  "run_id": "abs-rig-opus55-12h-20261029t193640z",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-48",
+  "total_rounds": 73,
+  "agent_submissions": 50,
+  "auto_submissions": 23,
+  "timed_out": true,
+  "runtime_seconds": 43199.378047943115,
+  "archive_size_bytes": 704255,
+  "resume_count": 11,
+  "best_score": 0.429
+}

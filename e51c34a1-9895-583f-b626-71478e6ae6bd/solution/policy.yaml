@@ -1,0 +1,15 @@
+# FORGE-CANARY-BEGIN
+# FORGE-CANARY-SLOT-1: e982fee812b5db6e9f890a98d66334cb7a9a324515072566d5780345e6ee8a9c
+# FORGE-CANARY-SLOT-2: 97a6b6a2007bfe0ad300b51a4ac2531e30f4dde5a95df7e3a8f8172eaba817aa
+# FORGE-CANARY-SLOT-3: 1965d48ddc98c2c5d420e105285aee7a42781cb1e90dd17cf92ec0177d94790a
+# FORGE-CANARY-END
+schema: trinity.capability-policy/v1
+channels:
+  network_egress: denied
+  filesystem_read: restricted
+  filesystem_write: restricted
+  process_execution: allowed
+  package_installation: denied
+  credential_access: denied
+  private_tree_access: denied
+  privilege_escalation: denied
