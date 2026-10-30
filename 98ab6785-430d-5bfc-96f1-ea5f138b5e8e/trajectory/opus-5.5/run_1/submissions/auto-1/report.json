@@ -1,0 +1,19 @@
+{
+  "task_id": "synthetic_claims_reserving",
+  "submission_id": "895f893c7627",
+  "total_tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 34.002014943672876,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 0.16703104972839355,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [],
+  "metrics": {},
+  "submitted_at": 1793310023.6198275
+}

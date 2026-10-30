@@ -1,0 +1,12 @@
+binding_status: unminted-unsigned
+claim: No screening, image-build, pilot or publication attestation is asserted.
+external_evidence: []
+generator: Deterministic synthetic claims reserving portfolio, version 1
+license: MIT
+origin: original
+provenance_date: '2026-10-28'
+schema: synthetic-claims-reserving.provenance-draft/v1
+screening_status: not-run
+source_kind: synthetic
+binding:
+  canonical_bundle_hash: a07621cda2989841d08184aa664ed5dc406be06b1a1ee03d755100b38f03fd9a

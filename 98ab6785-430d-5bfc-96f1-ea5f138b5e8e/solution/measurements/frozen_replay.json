@@ -1,0 +1,197 @@
+{
+  "after": {
+    "expected_records": 5000,
+    "lanes": {
+      "cash_timing": {
+        "coverage": 1.0,
+        "fraction": 0.8484442915212574,
+        "max": 20,
+        "metric": 0.8484442915212574,
+        "points": 16.968885830425148
+      },
+      "large_loss": {
+        "coverage": 1.0,
+        "fraction": 0.8903454720155204,
+        "max": 20,
+        "metric": 0.8903454720155204,
+        "points": 17.806909440310406
+      },
+      "reopening": {
+        "coverage": 1.0,
+        "fraction": 0.18550000000000003,
+        "max": 20,
+        "metric": 0.457,
+        "points": 3.7100000000000004
+      },
+      "report_timing": {
+        "coverage": 1.0,
+        "fraction": 0.9428613650771728,
+        "max": 20,
+        "metric": 0.9428613650771728,
+        "points": 18.857227301543457
+      },
+      "severity": {
+        "coverage": 1.0,
+        "fraction": 0.8691859497486853,
+        "max": 20,
+        "metric": 0.8691859497486853,
+        "points": 17.383718994973705
+      }
+    },
+    "nonreopening_points": 71.01674156725272,
+    "score": 74.72674156725272,
+    "valid_records": 5000
+  },
+  "archived_before": {
+    "expected_records": 5000,
+    "lanes": {
+      "cash_timing": {
+        "coverage": 1.0,
+        "fraction": 0.9527458749487574,
+        "max": 20,
+        "metric": 0.9527458749487574,
+        "points": 19.054917498975147
+      },
+      "large_loss": {
+        "coverage": 1.0,
+        "fraction": 0.8903454720155204,
+        "max": 20,
+        "metric": 0.8903454720155204,
+        "points": 17.806909440310406
+      },
+      "reopening": {
+        "coverage": 1.0,
+        "fraction": 0.18550000000000003,
+        "max": 20,
+        "metric": 0.457,
+        "points": 3.7100000000000004
+      },
+      "report_timing": {
+        "coverage": 1.0,
+        "fraction": 0.9428613650771728,
+        "max": 20,
+        "metric": 0.9428613650771728,
+        "points": 18.857227301543457
+      },
+      "severity": {
+        "coverage": 1.0,
+        "fraction": 0.8691859497486853,
+        "max": 20,
+        "metric": 0.8691859497486853,
+        "points": 17.383718994973705
+      }
+    },
+    "score": 76.81277323580271,
+    "valid_records": 5000
+  },
+  "before": {
+    "expected_records": 5000,
+    "lanes": {
+      "cash_timing": {
+        "coverage": 1.0,
+        "fraction": 0.9527458749487576,
+        "max": 20,
+        "metric": 0.9527458749487576,
+        "points": 19.05491749897515
+      },
+      "large_loss": {
+        "coverage": 1.0,
+        "fraction": 0.8903454720155204,
+        "max": 20,
+        "metric": 0.8903454720155204,
+        "points": 17.806909440310406
+      },
+      "reopening": {
+        "coverage": 1.0,
+        "fraction": 0.18550000000000003,
+        "max": 20,
+        "metric": 0.457,
+        "points": 3.7100000000000004
+      },
+      "report_timing": {
+        "coverage": 1.0,
+        "fraction": 0.9428613650771728,
+        "max": 20,
+        "metric": 0.9428613650771728,
+        "points": 18.857227301543457
+      },
+      "severity": {
+        "coverage": 1.0,
+        "fraction": 0.8691859497486853,
+        "max": 20,
+        "metric": 0.8691859497486853,
+        "points": 17.383718994973705
+      }
+    },
+    "nonreopening_points": 73.10277323580272,
+    "score": 76.81277323580272,
+    "valid_records": 5000
+  },
+  "first_difference": {
+    "archived": {
+      "cash_pattern": [
+        0.0,
+        0.0,
+        0.3021986768423216,
+        0.22326506426568055,
+        0.1897647623642639,
+        0.15926765498118958,
+        0.06438035056973254,
+        0.0474289729185885,
+        0.007237987737629421,
+        0.0064565303205940325
+      ],
+      "large_loss_score": 0.875,
+      "record_id": "L0C00-A035",
+      "reopening_flag": false,
+      "reporting_pattern": [
+        0.26133789853999734,
+        0.255155252914481,
+        0.18648471248632856,
+        0.13870676325953443,
+        0.09299940283992107,
+        0.06531596995973761,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ultimate_severity": 1965.4921569657877
+    },
+    "replay": {
+      "cash_pattern": [
+        0.0,
+        0.0,
+        0.30219867684232166,
+        0.22326506426568052,
+        0.1897647623642638,
+        0.15926765498118955,
+        0.06438035056973254,
+        0.047428972918588504,
+        0.00723798773762942,
+        0.006456530320594032
+      ],
+      "large_loss_score": 0.875,
+      "record_id": "L0C00-A035",
+      "reopening_flag": false,
+      "reporting_pattern": [
+        0.26133789853999734,
+        0.255155252914481,
+        0.18648471248632856,
+        0.1387067632595344,
+        0.09299940283992107,
+        0.06531596995973762,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ultimate_severity": 1965.4921569657877
+    }
+  },
+  "interpretation": "Frozen recipe-informed first checkpoint, not a new uninformed attempt or a duration experiment.",
+  "original_replay_equals_archived_output": false,
+  "original_replay_max_scaled_numeric_difference": 4.459398216183154e-16,
+  "source": "/Users/apple/mephisto/refine-runs/opus-5/submitted/agent-14/reserving.py",
+  "source_sha256": "9462fddbaa27633a3aa98d400c8e9c21a3833617e0188ec2f643b45628eae7a1"
+}

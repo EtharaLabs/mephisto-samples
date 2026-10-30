@@ -1,0 +1,22 @@
++ echo '>>>>> Start Test Output'
++ cd /workspace
+>>>>> Start Test Output
++ mkdir -p /logs/verifier
++ echo IyEvYmluL3NoCnNldCAtZXUKZXhwb3J0IFBZVEhPTkRPTlRXUklURUJZVEVDT0RFPTEKZXhlYyBweXRob24zIC1JIC1CIC90ZXN0cy9zY29yaW5nL2VudHJ5cG9pbnQucHkK
++ base64 -d
++ chmod +x /tmp/harbor_test.sh
++ bash /tmp/harbor_test.sh
+>>>>> Start Structured Result
+{"expected_records": 5000, "lanes": {"cash_timing": {"coverage": 1.0, "fraction": 0.3220127136301094, "max": 20, "metric": 0.8567672992268166, "points": 6.440254272602188}, "large_loss": {"coverage": 1.0, "fraction": 0.21863220494083727, "max": 20, "metric": 0.6289921493151434, "points": 4.372644098816745}, "reopening": {"coverage": 1.0, "fraction": 0.7045, "max": 20, "metric": 0.803, "points": 14.09}, "report_timing": {"coverage": 1.0, "fraction": 0.6556603093198073, "max": 20, "metric": 0.9258657880476628, "points": 13.113206186396146}, "severity": {"coverage": 1.0, "fraction": 0.387514291326816, "max": 20, "metric": 0.9164216803519021, "points": 7.750285826536319}}, "score": 45.766390384351396, "valid_records": 5000}
+>>>>> End Structured Result
+++ cat /logs/verifier/reward.txt
+++ tr -dc 0-9.-
+{"score": 45.7663903844}
+>>>>> End Test Output
+Exit code: 0
++ SCORE=45.7663903844
++ echo '{"score": 45.7663903844}'
++ EXIT_CODE=0
++ echo '>>>>> End Test Output'
++ echo 'Exit code: 0'
++ exit 0

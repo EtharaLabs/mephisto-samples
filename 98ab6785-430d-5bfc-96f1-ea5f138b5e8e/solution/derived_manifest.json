@@ -1,0 +1,12 @@
+{
+  "environment/attachments/queries.jsonl": "5eb4849bee5692a1d1ac8bef4e3f49f31e3a3a08bc3dc551593db4827c62ce76",
+  "environment/attachments/train.jsonl": "64769b7b09dd06368e658bb142aa8efd7701b531b357675ea609705062ec4f23",
+  "solution/measurements/chain_ladder.json": "b6f11bf135f3e3e04826426345e1d3a496405a9c028270077e5cdd16be44d559",
+  "solution/measurements/copy_forward.json": "16ae56d0a7f634e68c5191a5334fbc7fe71afb85916945530bf017ab7db8c59d",
+  "solution/measurements/empty.json": "af370f5a574bc83a715d29623cfd6ed3925e40033a66e092abbb88e7071818d2",
+  "solution/measurements/oracle.json": "39415f8741506c8c4e033c4c809dae257919d6d103524d14fd859b9ddeb99d6d",
+  "solution/measurements/public_reference.json": "9cc72c40aa89b90c3d61050c394c1d96760316586f55ec4926de0a9a50b45d82",
+  "solution/measurements/rung_study.json": "4e2b97530716f752d4a6e3b8be6e637a9aa456ea1fc9658859ac26f42484e3b5",
+  "solution/measurements/summary.json": "a938f47401c311f5d3d4e172c65fbd142dcc99c6923c750b220e2d0770acab8e",
+  "tests/hidden_test_data/outcomes.jsonl": "45adc7dc242888a56c08b2ae68065670f5ac41af7ca163475a52cbb74230246b"
+}

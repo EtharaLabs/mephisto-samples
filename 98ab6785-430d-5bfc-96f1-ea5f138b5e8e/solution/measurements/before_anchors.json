@@ -1,0 +1,258 @@
+{
+  "protected_sha256": {
+    "environment/queries.jsonl": "5eb4849bee5692a1d1ac8bef4e3f49f31e3a3a08bc3dc551593db4827c62ce76",
+    "environment/train.jsonl": "64769b7b09dd06368e658bb142aa8efd7701b531b357675ea609705062ec4f23",
+    "solution/baselines/adapt.py": "debdc8935c4c8562d32bde024531aa469836932e0d7391e1f7c7e4e75a2f178e",
+    "solution/baselines/chain_ladder.py": "8d71d30b6973159818a36e941f6f9cba50a6a6b47816ef244fbeb88f105cbecd",
+    "solution/baselines/common.py": "0ad5627f47b49ea8d4d017751d482102d1002dc68606dc10de473f1bc251eaa7",
+    "solution/baselines/copy_forward.py": "1d713c87a10a57bc3207889a73377f0219ca4dc67b9d13f55eb7d3deffc85e5c",
+    "solution/baselines/empty.py": "16b6c67964136792e4c67e97245c261b83360e3f62497122d32fd0dd7401f621",
+    "solution/baselines/public_data.py": "093d9ddfbe2fe0f9d68d2d9fedd90f1511ca09e306166037a918426dbe03a646",
+    "solution/grounding.yaml": "0bd4f42edc28dbb3f6487ade0e134e576d34db6ce0e98f41075ea452e55bc101",
+    "solution/process.py": "4e1d15e1bc87b814e5f60cd32a4b5d94c1373d0c438ca1fd94d010cbffc9362e",
+    "solution/public_reference.py": "60b4e3583d45445d91e1dad90eed1c3a8d7878b9de0315f86f5210263ea3615c",
+    "solution/reserving_reference.py": "f73a8b52515831ba92cc778b55e6c1b8d1a31b157d11da5974cf5f555c0dbf30",
+    "tests/hidden_test_data/outcomes.jsonl": "45adc7dc242888a56c08b2ae68065670f5ac41af7ca163475a52cbb74230246b",
+    "tests/scoring/entrypoint.py": "2e3bd14529be66d249dec7adfbcb6a4a3ae1a0b62d9c11ab9d354c0ac613d1fe",
+    "tests/scoring/eval_script.py": "96e6a3b4f420c9d0b044e5bb9f78bfa4435bd1d88a438baa79361689a51555a6",
+    "tests/test.sh": "151f4bd821cad245e9429d020c31d823ff10ed4eb983e02b6d4ee35bbb6ef4da"
+  },
+  "sources": {
+    "instruction.md": "# Claims methods laboratory: five independently scored problems\n\nRecover five fixed deterministic insurance methods from observable claims data\nand aggregate scoring feedback. This is **method imitation**, not prediction of\nunknowable future realizations. Every target is a deterministic function of the\npublic panel; the private reference achieves 100/100. Exact estimation choices\nare withheld. Observations alone do not uniquely identify those choices; judge\nfeedback is part of the task. There are no identifier hashes or random target salts.\n\nYou have 12 hours in a single turn. Write your artifacts, run your script locally,\nthen invoke `sforge-submit`; obey cooldowns. Best score is kept. Feedback gives\neach lane's metric, coverage and points, not individual answers. You can improve\none problem without solving any other. There is no cross-lane consistency veto.\n\n## Observable panel\n\nRead `/workspace/data/train.jsonl` and `/workspace/data/queries.jsonl`.\nTraining has 25,000 rows: 100 cohorts in five lines, 25 completed accident periods\nper cohort and ten development quarters per record. Group by `record_id`.\nQueries have 5,000 objects `{\"record_id\":\"...\",\"history\":[...]}`, with two to six\nordered observed quarters (20,000 history rows). The full horizon ends at lag ten.\nTraining realizations precede all query accident periods. Queries are independent\nrolling valuations, not a common diagonal. Pooling observable query information\nis allowed; calendar extrapolations use only indices at or before each cutoff.\n\n| Fields | Meaning |\n|---|---|\n| `record_id`, `lob`, `cohort` | Record, line, cohort identifiers; not encoded answers |\n| `accident_period`, `development_lag`, `calendar_period` | Integer quarters; calendar = accident + lag |\n| `exposure`, `risk_index` | Exposure and underwriting proxy |\n| `inflation_index` | Observed claims cost index |\n| `primary_paid`, `settlement_paid`, `reopening_paid` | Incremental payments by type |\n| `paid` | Cumulative total payments |\n| `case_reserve`, `incurred` | Booked outstanding reserve; incurred = paid + case |\n| `reported_count`, `new_reported_count`, `reopened_count` | Cumulative reports, incremental reports, cumulative reopenings |\n\nNo inputs are null. Amounts are synthetic currency. Booked reserves are estimates,\nnot answers. Individual claim sizes and large-loss labels are NOT observed.\n\n## Five output fields, five different estimators\n\n1. **Primary ultimate severity \u2014 `ultimate_severity`.** A credibility estimate of\n   average primary claim size after full development, in deflated currency per\n   reported claim. This is NOT total ultimate loss or remaining reserve dollars.\n   The model family is credibility-based severity estimation. Predict the\n   method's estimate, not a realized individual claim size.\n2. **Reporting timing \u2014 `reporting_pattern`.** Ten probabilities for the entire\n   reporting-lag distribution, lags 1\u201310, INCLUDING observed lags. It describes\n   when claims report, not how much they cost. The model family is a conditional\n   reporting-lag distribution. The target covers the entire development horizon,\n   rather than only reports already observed.\n3. **Elevated reopening incidence \u2014 `reopening_flag`.** Boolean: is the estimated\n   per-report reopening event propensity in the top quintile of accident-period\n   \u00d7 line peers? Fit a delayed binomial event model to report counts and increments\n   of cumulative reopenings, then update with observed eligible reports. It is a\n   classification of elevated occurrence propensity, NOT whether at least one\n   random future event actually occurs, and NOT a share of reopening dollars.\n4. **Future payment timing \u2014 `cash_pattern`.** Ten probabilities allocating the\n   remaining cash across development lags 1\u201310. Entries at/before cutoff must be\n   zero. The target is a conditional future-payment distribution in nominal\n   currency, including primary, settlement and reopening payments. This is a\n   schedule, not the reporting curve or a reserve amount.\n5. **Large-loss signal \u2014 `large_loss_score`.** Rank of aggregate excess-loss-cell\n   incidence within accident-period \u00d7 line peers. A cell is a cohort-period-lag\n   observation with at least one new report. The model family is standardized\n   aggregate primary-loss upper-tail incidence estimation. This is a\n   tail-contamination PROXY, not a reconstructed individual large-loss label.\n   Predict peer-relative incidence of unusually large aggregate primary losses,\n   not average claim size or post-lag-six payments.\n\nPeer percentiles are `(number below + 0.5 \u00d7 number tied)/peer count`. Top quintile\nmeans percentile >=0.8. Large-loss scores should express this peer-relative\nordering; any globally order-preserving transformation is accepted. Method\nconstruction, fitting choices and hyperparameters remain private. The quantities,\noutput requirements and scoring rules are public. All methods use only public inputs.\n\n## Submission\n\nWrite `/workspace/reserving.py`, `/workspace/requirements.txt` (empty for stdlib),\nand `/workspace/reserving_results.json`. Put a runnable CLI in a source comment.\nRun your script yourself. The judge reads static JSON and **never executes the\nsubmitted script**. No packages are installed on submission; both images have no\nnetwork. Example shape, for a query observed through lag two:\n\n```json\n{\n  \"predictions\": [{\n    \"record_id\": \"<query record_id>\",\n    \"ultimate_severity\": 1800.0,\n    \"reporting_pattern\": [0.25,0.25,0.2,0.15,0.1,0.05,0,0,0,0],\n    \"reopening_flag\": false,\n    \"cash_pattern\": [0,0,0.2,0.2,0.2,0.15,0.1,0.05,0.05,0.05],\n    \"large_loss_score\": 0.65\n  }],\n  \"self_reported_metrics\": {\"record_count\": 1}\n}\n```\n\n`self_reported_metrics` is informational and ignored by grading. The former\naccounting award has been removed rather than allocating points for easy invariant\nsums. It cannot veto, add or subtract any points. There is no stability aggregate.\n\n## Scoring: exactly 100 points, five lanes capped at 20\n\n| Lane | Field | Weight | Metric | Floor | Full |\n|---|---|---:|---|---:|---:|\n| severity | ultimate_severity | 20 | Relative-error agreement | 0 | 1 |\n| report_timing | reporting_pattern | 20 | Distribution overlap | 0 | 1 |\n| reopening | reopening_flag | 20 | F1 | 1/3 | 1 |\n| cash_timing | cash_pattern | 20 | Distribution overlap | 0 | 1 |\n| large_loss | large_loss_score | 20 | Spearman correlation | 0 | 1 |\n\nEach lane reads ONLY its own field and its own private target. No scored field is\ncomputed from another submitted field. Missing one field does not invalidate the\nother four. Shared record IDs and file/JSON transport validity are the only common\nrequirements. Weights and metrics are fixed, not adjusted to a desired baseline.\n\n* Severity: per-row `e=min(1,abs(pred-target)/max(target,1))`. Missing/invalid values\n  have e=1. Metric `(1-mean(e))/(1+sqrt(mean(e\u00b2)))`. Points = 20 \u00d7 metric.\n* Distributions: ten finite nonnegative entries, each <=1, total mass <=1+1e-6.\n  Full predictions should sum to one. Partial mass is allowed and penalized.\n  Row quality is `clip(1-0.5*(sum(abs(p[j]-t[j]))+abs(sum(p)-sum(t))),0,1)`.\n  This is overlap with an additional unallocated-mass category. Zero vectors,\n  invalid vectors and missing rows earn zero. Cash mass at/before the private\n  observed cutoff makes that cash vector invalid, not other fields. Lane quality\n  is mean row quality over ALL queries. Points = 20 \u00d7 quality.\n* Reopening: F1 = `2TP/(2TP+FP+FN)`, zero if denominator is zero. Missing positives\n  count as false negatives. Points = `20*clip((F1-1/3)/(1-1/3),0,1)*valid coverage`.\n  The target has 20% positives; all-positive and all-negative controls earn zero.\n* Large loss: Spearman uses average ranks for ties. Constant vectors earn zero.\n  Points = `20*clip(correlation,0,1)*valid coverage`.\n\nNumeric magnitudes must be <=1e100; booleans are not numbers. Severity must be\nnonnegative; ranking scores may be signed. Flags must be JSON booleans. Unknown\nIDs and extra fields are ignored. Duplicate IDs invalidate that record. Malformed\nJSON, missing any of the three files or symlinked submissions yield zero. JSON\nlimit: 20,000,000 bytes. The judge returns a bare 0\u2013100 total and lane diagnostics.\n\n## Iteration\n\nHistorical pseudo-valuations test model plausibility but are not labeled examples\nof the private methods. Isolate each estimator while using judge feedback to\ndistinguish specifications. Independent scoring removes repair-order penalties;\nit does not guarantee unique inverse identification or a particular learning time.\n",
+    "tests/scoring/score.py": "\"\"\"Five additive lanes. Each reads one submitted field and its own private target.\"\"\"\nimport json\nimport math\nimport statistics\nfrom pathlib import Path\n\nMANIFEST = json.loads(Path(__file__).with_name(\"scorer_manifest.json\").read_text())\nLANES = {r[\"id\"]: r for r in MANIFEST[\"lanes\"]}\nFIELDS = {k: v[\"field\"] for k, v in LANES.items()}\n\n\ndef finite(x):\n    return type(x) in (int, float) and abs(x) <= 1e100 and math.isfinite(x)\n\n\ndef ranks(xs):\n    ordered = sorted(range(len(xs)), key=xs.__getitem__)\n    result = [0.0] * len(xs)\n    i = 0\n    while i < len(xs):\n        j = i + 1\n        while j < len(xs) and xs[ordered[j]] == xs[ordered[i]]:\n            j += 1\n        for k in ordered[i:j]:\n            result[k] = (i + j - 1) / 2\n        i = j\n    return result\n\n\ndef spearman(a, b):\n    if len(a) < 2:\n        return 0.0\n    a, b = ranks(a), ranks(b)\n    ma, mb = statistics.fmean(a), statistics.fmean(b)\n    va, vb = sum((x - ma) ** 2 for x in a), sum((y - mb) ** 2 for y in b)\n    if not va or not vb:\n        return 0.0\n    if a == b:\n        return 1.0\n    return sum((x - ma) * (y - mb) for x, y in zip(a, b)) / math.sqrt(va * vb)\n\n\ndef valid(value, kind, truth):\n    if kind == \"f1_detection\":\n        return type(value) is bool\n    if kind == \"distribution_overlap\":\n        return (isinstance(value, list) and len(value) == 10\n                and all(finite(v) and 0 <= v <= 1 for v in value)\n                and sum(value) <= 1 + 1e-6)\n    return finite(value) and (kind != \"relative_agreement\" or value >= 0)\n\n\ndef lane_score(sub, truth, spec):\n    field, kind = spec[\"field\"], spec[\"metric\"]\n    pairs = []\n    for t in truth:\n        v = sub.get(t[\"record_id\"], {}).get(field)\n        if valid(v, kind, t):\n            # Only cash timing requires zero mass in already-observed periods.\n            if field == \"cash_pattern\" and any(v[:t[\"observed_lag\"]]):\n                continue\n            pairs.append((v, t[field]))\n    coverage = len(pairs) / len(truth)\n    if not pairs:\n        metric, fraction = 0.0, 0.0\n    elif kind == \"spearman_ic\":\n        metric = spearman([a for a, _ in pairs], [b for _, b in pairs])\n        fraction = max(0.0, min(1.0, metric)) * coverage\n    elif kind == \"f1_detection\":\n        tp = sum(a and b for a, b in pairs)\n        fp = sum(a and not b for a, b in pairs)\n        fn = sum(t[field] for t in truth) - tp\n        metric = 2 * tp / max(2 * tp + fp + fn, 1)\n        fraction = max(0.0, min(1.0, (metric - spec[\"anchor_floor\"]) / (1 - spec[\"anchor_floor\"]))) * coverage\n    elif kind == \"relative_agreement\":\n        errors = [min(1.0, abs(a - b) / max(b, 1)) for a, b in pairs] + [1.0] * (len(truth) - len(pairs))\n        metric = (1 - statistics.fmean(errors)) / (1 + math.sqrt(statistics.fmean(e * e for e in errors)))\n        fraction = metric\n    else:\n        # TV on ten periods plus an explicit unallocated-mass category.\n        # Zero vectors earn zero, not half credit. Invalid/missing rows earn zero.\n        qualities = [max(0.0, min(1.0, 1 - 0.5 * (sum(abs(x - y) for x, y in zip(a, b)) + abs(sum(a) - sum(b))))) if any(a) else 0.0 for a, b in pairs]\n        metric = sum(qualities) / len(truth)\n        fraction = metric\n    return {\"metric\": metric, \"coverage\": coverage, \"fraction\": fraction,\n            \"max\": spec[\"weight\"], \"points\": spec[\"weight\"] * fraction}\n\n\ndef evaluate(document, truth):\n    if not truth:\n        raise ValueError(\"empty private target corpus: infrastructure failure\")\n    if not isinstance(document, dict) or not isinstance(document.get(\"predictions\"), list):\n        document = {\"predictions\": []}\n    keys = {t[\"record_id\"] for t in truth}\n    sub, duplicates = {}, set()\n    for r in document[\"predictions\"]:\n        if not isinstance(r, dict) or not isinstance(r.get(\"record_id\"), str):\n            continue\n        key = r[\"record_id\"]\n        if key not in keys:\n            continue\n        if key in sub:\n            duplicates.add(key)\n        sub[key] = r\n    for key in duplicates:\n        sub.pop(key, None)\n    result = {lane: lane_score(sub, truth, spec) for lane, spec in LANES.items()}\n    # Deliberately no consistency veto, global stability or scored accounting.\n    return {\"score\": sum(row[\"points\"] for row in result.values()), \"lanes\": result,\n            \"valid_records\": len(sub), \"expected_records\": len(truth)}\n",
+    "tests/scoring/scorer_manifest.json": "{\n  \"task_id\": \"synthetic_claims_reserving\",\n  \"framework\": \"B\",\n  \"score_scale\": \"0-100\",\n  \"scoring_direction\": \"higher-better\",\n  \"entrypoint\": \"eval_script.py\",\n  \"kind\": \"shell\",\n  \"command\": [\"/bin/sh\", \"/tests/test.sh\"],\n  \"working_dir\": \"/workspace\",\n  \"required_submission_files\": [\"reserving.py\", \"requirements.txt\", \"reserving_results.json\"],\n  \"required_scoring_files\": [\"entrypoint.py\", \"eval_script.py\", \"score.py\", \"scorer_manifest.json\", \"../hidden_test_data/outcomes.jsonl\"],\n  \"score_output\": {\"source\": \"stdout\", \"format\": \"structured_json\", \"field\": \"score\", \"scale_max\": 100},\n  \"score_normalization\": {\"raw_min\": 0, \"raw_max\": 100, \"target_min\": 0, \"target_max\": 100},\n  \"failure_policy\": {\"missing_submission\": \"zero_score\", \"missing_dependency\": \"infra_error\", \"missing_scoring_file\": \"infra_error\", \"parse_failure\": \"zero_score\", \"nonzero_exit_without_score\": \"infra_error\"},\n  \"lanes\": [\n    {\"id\": \"severity\", \"weight\": 20, \"metric\": \"relative_agreement\", \"field\": \"ultimate_severity\", \"anchor_floor\": 0, \"anchor_full\": 1, \"component\": \"Robust primary claim-size credibility regression\", \"trivial_strategy\": \"Zero severity earns zero\", \"anchor_source\": \"Exact size reference\"},\n    {\"id\": \"report_timing\", \"weight\": 20, \"metric\": \"distribution_overlap\", \"field\": \"reporting_pattern\", \"anchor_floor\": 0, \"anchor_full\": 1, \"component\": \"Count-only multinomial reporting distribution\", \"trivial_strategy\": \"Zero mass earns zero; uniform has partial credit\", \"anchor_source\": \"Exact reporting distribution\"},\n    {\"id\": \"reopening\", \"weight\": 20, \"metric\": \"f1_detection\", \"field\": \"reopening_flag\", \"anchor_floor\": 0.3333333333333333, \"anchor_full\": 1, \"component\": \"Delayed binomial reopening hazard classification\", \"trivial_strategy\": \"All positive or all negative earns zero at 20 percent prevalence\", \"anchor_source\": \"All-positive F1 and identity\"},\n    {\"id\": \"cash_timing\", \"weight\": 20, \"metric\": \"distribution_overlap\", \"field\": \"cash_pattern\", \"anchor_floor\": 0, \"anchor_full\": 1, \"component\": \"Matched-prefix empirical future payment schedule\", \"trivial_strategy\": \"Zero mass earns zero; uniform future schedule has partial credit\", \"anchor_source\": \"Exact cash distribution\"},\n    {\"id\": \"large_loss\", \"weight\": 20, \"metric\": \"spearman_ic\", \"field\": \"large_loss_score\", \"anchor_floor\": 0, \"anchor_full\": 1, \"component\": \"Aggregate standardized excess-loss incidence ranking\", \"trivial_strategy\": \"Constant score earns zero\", \"anchor_source\": \"Exact tail-incidence ranking\"}\n  ],\n  \"lane_total\": 100,\n  \"grand_max\": 100,\n  \"parameters\": {\"distribution_mass_tolerance\": 0.000001},\n  \"calibration\": \"Five equal substantive weights fixed before measuring the restructured ladder. No score-target fitting.\",\n  \"boundary\": \"Observable inputs and scoring rules public; exact method specification, source and realized reference outputs private. Invariant 6 deliberately diverged.\",\n  \"diagnostics\": \"All 32 naive/reference combinations and 80 directed repairs are measured. Self-report and global stability awards removed; no shared scored output.\"\n}\n"
+  },
+  "summary": {
+    "anchor_sha256": "57a115b56e70757929267d97b39d7360841bf0059dfa290dea6060b06961670c",
+    "hidden_rows": 5000,
+    "interpretation": "Deterministic-method imitation; no outcome-noise ceiling. Author controls are not agent trajectories.",
+    "ordering": [
+      "empty",
+      "copy_forward",
+      "chain_ladder",
+      "public_reference",
+      "oracle"
+    ],
+    "query_history_rows": 20000,
+    "query_rows": 5000,
+    "scores": {
+      "chain_ladder": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 0.7887383677353506,
+            "max": 20,
+            "metric": 0.7887383677353506,
+            "points": 15.774767354707011
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.1526860600005044,
+            "max": 20,
+            "metric": 0.1526860600005044,
+            "points": 3.053721200010088
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.784706166733507,
+            "max": 20,
+            "metric": 0.784706166733507,
+            "points": 15.69412333467014
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.8635424166399702,
+            "max": 20,
+            "metric": 0.8635424166399702,
+            "points": 17.270848332799403
+          }
+        },
+        "score": 51.79346022218664,
+        "valid_records": 5000
+      },
+      "copy_forward": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.5251815431467007,
+            "max": 20,
+            "metric": 0.5251815431467007,
+            "points": 10.503630862934015
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.017241379310344886,
+            "max": 20,
+            "metric": 0.3448275862068966,
+            "points": 0.34482758620689774
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.6778184595585957,
+            "max": 20,
+            "metric": 0.6778184595585957,
+            "points": 13.556369191171914
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.801862917455208,
+            "max": 20,
+            "metric": 0.801862917455208,
+            "points": 16.03725834910416
+          }
+        },
+        "score": 40.44208598941699,
+        "valid_records": 5000
+      },
+      "empty": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "large_loss": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "reopening": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "report_timing": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "severity": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          }
+        },
+        "score": 0.0,
+        "valid_records": 0
+      },
+      "oracle": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          }
+        },
+        "score": 100.0,
+        "valid_records": 5000
+      },
+      "public_reference": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 0.739451038478272,
+            "max": 20,
+            "metric": 0.739451038478272,
+            "points": 14.78902076956544
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.5587302679526188,
+            "max": 20,
+            "metric": 0.5587302679526188,
+            "points": 11.174605359052377
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.961,
+            "max": 20,
+            "metric": 0.974,
+            "points": 19.22
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.9577288878707623,
+            "max": 20,
+            "metric": 0.9577288878707623,
+            "points": 19.154577757415247
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.9212005820767424,
+            "max": 20,
+            "metric": 0.9212005820767424,
+            "points": 18.424011641534847
+          }
+        },
+        "score": 82.7622155275679,
+        "valid_records": 5000
+      }
+    },
+    "separations": {
+      "chain_ladder->public_reference": 30.968755305381265,
+      "copy_forward->chain_ladder": 11.35137423276965,
+      "empty->copy_forward": 40.44208598941699,
+      "public_reference->oracle": 17.237784472432097
+    },
+    "train_rows": 25000
+  }
+}

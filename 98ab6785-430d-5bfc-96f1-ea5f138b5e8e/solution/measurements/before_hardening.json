@@ -1,0 +1,326 @@
+{
+  "grounding": {
+    "booking_factor_range": [
+      0.55,
+      1.05
+    ],
+    "calendar_break": 18,
+    "calendar_growth_after": 0.027,
+    "calendar_growth_before": 0.009,
+    "calendar_season_amplitude": 0.025,
+    "calendar_season_period": 4,
+    "cohort_log_sd": 0.38,
+    "cohorts_per_line": 20,
+    "delay_tilt_range": [
+      -0.6,
+      0.9
+    ],
+    "development_horizon": 10,
+    "exposure_range": [
+      0.7,
+      1.5
+    ],
+    "frequency_base": 65.0,
+    "frequency_line_step": 9.0,
+    "large_loss_multiplier": 7.0,
+    "large_loss_probability": 0.035,
+    "lines": 5,
+    "observed_lags": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "public_fit": {
+      "credibility_periods": 8.0,
+      "inflation_lookback": 4
+    },
+    "query_periods": [
+      35,
+      84
+    ],
+    "reopening_delay": 4,
+    "reopening_fraction_range": [
+      0.5,
+      1.2
+    ],
+    "reopening_probability_range": [
+      0.08,
+      0.25
+    ],
+    "report_weights": [
+      0.28,
+      0.24,
+      0.19,
+      0.14,
+      0.09,
+      0.06
+    ],
+    "reporting": {
+      "wide_headroom_points": 15.0
+    },
+    "risk_index_noise_sd": 0.12,
+    "round_digits": 6,
+    "seed": 718392641,
+    "settlement_delay": 2,
+    "settlement_fraction_range": [
+      0.35,
+      0.8
+    ],
+    "severity_base": 1100.0,
+    "severity_line_step": 350.0,
+    "severity_log_sd": 0.55,
+    "train_periods": [
+      0,
+      24
+    ],
+    "version": 1
+  },
+  "instruction": "# Claims methods laboratory: five independently scored problems\n\nRecover five fixed deterministic insurance methods from observable claims data\nand aggregate scoring feedback. This is **method imitation**, not prediction of\nunknowable future realizations. Every target is a deterministic function of the\npublic panel; the private reference achieves 100/100. Exact estimation choices\nare withheld. Observations alone do not uniquely identify those choices; judge\nfeedback is part of the task. There are no identifier hashes or random target salts.\n\nYou have 12 hours in a single turn. Write your artifacts, run your script locally,\nthen invoke `sforge-submit`; obey cooldowns. Best score is kept. Feedback gives\neach lane's metric, coverage and points, not individual answers. You can improve\none problem without solving any other. There is no cross-lane consistency veto.\n\n## Observable panel\n\nRead `/workspace/data/train.jsonl` and `/workspace/data/queries.jsonl`.\nTraining has 25,000 rows: 100 cohorts in five lines, 25 completed accident periods\nper cohort and ten development quarters per record. Group by `record_id`.\nQueries have 5,000 objects `{\"record_id\":\"...\",\"history\":[...]}`, with two to six\nordered observed quarters (20,000 history rows). The full horizon ends at lag ten.\nTraining realizations precede all query accident periods. Queries are independent\nrolling valuations, not a common diagonal. Pooling observable query information\nis allowed; calendar extrapolations use only indices at or before each cutoff.\n\n| Fields | Meaning |\n|---|---|\n| `record_id`, `lob`, `cohort` | Record, line, cohort identifiers; not encoded answers |\n| `accident_period`, `development_lag`, `calendar_period` | Integer quarters; calendar = accident + lag |\n| `exposure`, `risk_index` | Exposure and underwriting proxy |\n| `inflation_index` | Observed claims cost index |\n| `primary_paid`, `settlement_paid`, `reopening_paid` | Incremental payments by type |\n| `paid` | Cumulative total payments |\n| `case_reserve`, `incurred` | Booked outstanding reserve; incurred = paid + case |\n| `reported_count`, `new_reported_count`, `reopened_count` | Cumulative reports, incremental reports, cumulative reopenings |\n\nNo inputs are null. Amounts are synthetic currency. Booked reserves are estimates,\nnot answers. Individual claim sizes and large-loss labels are NOT observed.\n\n## Five output fields, five different estimators\n\n1. **Primary ultimate severity \u2014 `ultimate_severity`.** A credibility estimate of\n   average primary claim size after full development, in deflated currency per\n   reported claim. This is NOT total ultimate loss or remaining reserve dollars.\n   The method fits robust cohort/line claim-size priors and updates with observed\n   primary payments and report counts. It does not multiply by a predicted count\n   curve. Fit a robust severity regression, not a payment timing model.\n2. **Reporting timing \u2014 `reporting_pattern`.** Ten probabilities for the entire\n   reporting-lag distribution, lags 1\u201310, INCLUDING observed lags. It describes\n   when claims report, not how much they cost. A cohort/line count distribution\n   is updated by fitting a regularized tilt to the observed prefix's count shares.\n   Unobserved reports are not zeros; condition the likelihood on the observed\n   prefix. Structural zero reporting lags can be learned from training.\n3. **Elevated reopening incidence \u2014 `reopening_flag`.** Boolean: is the estimated\n   per-report reopening event propensity in the top quintile of accident-period\n   \u00d7 line peers? Fit a delayed binomial event model to report counts and increments\n   of cumulative reopenings, then update with observed eligible reports. It is a\n   classification of elevated occurrence propensity, NOT whether at least one\n   random future event actually occurs, and NOT a share of reopening dollars.\n4. **Future payment timing \u2014 `cash_pattern`.** Ten probabilities allocating the\n   remaining cash across development lags 1\u201310. Entries at/before cutoff must be\n   zero. The method matches observed deflated payment-prefix shapes to completed\n   histories in the same cohort, averages their conditional future cash patterns\n   using nearby-history weights, then applies extrapolated calendar indices and\n   normalizes. This is a schedule, not the reporting curve or a reserve amount.\n5. **Large-loss signal \u2014 `large_loss_score`.** Rank of aggregate excess-loss-cell\n   incidence within accident-period \u00d7 line peers. A cell is a cohort-period-lag\n   observation with at least one new report. The method centers deflated primary\n   losses using typical line severity and scales residuals by square-root report\n   count; learns an upper-decile residual threshold; and estimates exceedance\n   propensity with historical/query credibility. This is a tail-contamination\n   PROXY, not a reconstructed individual large-loss label. Predict incidence of\n   extreme residual cells, not average claim size or post-lag-six payments.\n\nPeer percentiles are `(number below + 0.5 \u00d7 number tied)/peer count`. Top quintile\nmeans percentile >=0.8. Large-loss scores should express this peer-relative\nordering; any globally order-preserving transformation is accepted. Exact robust\nlocation, credibility strengths, regularization, neighbor count/distance weighting,\nand event-delay selection rules remain private. All methods use only public inputs.\n\n## Submission\n\nWrite `/workspace/reserving.py`, `/workspace/requirements.txt` (empty for stdlib),\nand `/workspace/reserving_results.json`. Put a runnable CLI in a source comment.\nRun your script yourself. The judge reads static JSON and **never executes the\nsubmitted script**. No packages are installed on submission; both images have no\nnetwork. Example shape, for a query observed through lag two:\n\n```json\n{\n  \"predictions\": [{\n    \"record_id\": \"<query record_id>\",\n    \"ultimate_severity\": 1800.0,\n    \"reporting_pattern\": [0.25,0.25,0.2,0.15,0.1,0.05,0,0,0,0],\n    \"reopening_flag\": false,\n    \"cash_pattern\": [0,0,0.2,0.2,0.2,0.15,0.1,0.05,0.05,0.05],\n    \"large_loss_score\": 0.65\n  }],\n  \"self_reported_metrics\": {\"record_count\": 1}\n}\n```\n\n`self_reported_metrics` is informational and ignored by grading. The former\naccounting award has been removed rather than allocating points for easy invariant\nsums. It cannot veto, add or subtract any points. There is no stability aggregate.\n\n## Scoring: exactly 100 points, five lanes capped at 20\n\n| Lane | Field | Weight | Metric | Floor | Full |\n|---|---|---:|---|---:|---:|\n| severity | ultimate_severity | 20 | Relative-error agreement | 0 | 1 |\n| report_timing | reporting_pattern | 20 | Distribution overlap | 0 | 1 |\n| reopening | reopening_flag | 20 | F1 | 1/3 | 1 |\n| cash_timing | cash_pattern | 20 | Distribution overlap | 0 | 1 |\n| large_loss | large_loss_score | 20 | Spearman correlation | 0 | 1 |\n\nEach lane reads ONLY its own field and its own private target. No scored field is\ncomputed from another submitted field. Missing one field does not invalidate the\nother four. Shared record IDs and file/JSON transport validity are the only common\nrequirements. Weights and metrics are fixed, not adjusted to a desired baseline.\n\n* Severity: per-row `e=min(1,abs(pred-target)/max(target,1))`. Missing/invalid values\n  have e=1. Metric `(1-mean(e))/(1+sqrt(mean(e\u00b2)))`. Points = 20 \u00d7 metric.\n* Distributions: ten finite nonnegative entries, each <=1, total mass <=1+1e-6.\n  Full predictions should sum to one. Partial mass is allowed and penalized.\n  Row quality is `clip(1-0.5*(sum(abs(p[j]-t[j]))+abs(sum(p)-sum(t))),0,1)`.\n  This is overlap with an additional unallocated-mass category. Zero vectors,\n  invalid vectors and missing rows earn zero. Cash mass at/before the private\n  observed cutoff makes that cash vector invalid, not other fields. Lane quality\n  is mean row quality over ALL queries. Points = 20 \u00d7 quality.\n* Reopening: F1 = `2TP/(2TP+FP+FN)`, zero if denominator is zero. Missing positives\n  count as false negatives. Points = `20*clip((F1-1/3)/(1-1/3),0,1)*valid coverage`.\n  The target has 20% positives; all-positive and all-negative controls earn zero.\n* Large loss: Spearman uses average ranks for ties. Constant vectors earn zero.\n  Points = `20*clip(correlation,0,1)*valid coverage`.\n\nNumeric magnitudes must be <=1e100; booleans are not numbers. Severity must be\nnonnegative; ranking scores may be signed. Flags must be JSON booleans. Unknown\nIDs and extra fields are ignored. Duplicate IDs invalidate that record. Malformed\nJSON, missing any of the three files or symlinked submissions yield zero. JSON\nlimit: 20,000,000 bytes. The judge returns a bare 0\u2013100 total and lane diagnostics.\n\n## Iteration\n\nStart with observed severity, empirical count proportions, historical reopening\nrates, volume-weighted chain-ladder cash increments and empirical upper-tail\ncounts. Cohort estimates and calendar normalization are useful next steps.\nHistorical pseudo-valuations test model plausibility but are not labeled examples\nof the private methods. Isolate each estimator while using judge feedback to\ndistinguish specifications. Independent scoring removes repair-order penalties;\nit does not guarantee unique inverse identification or a particular learning time.\n",
+  "large_loss_observable_exact_ceiling": 1.0,
+  "noncash_targets_sha256": "1bb1832e036e87bd3098672a22b78213feb3364da918c2ac3263aff82d51509b",
+  "process": "\"\"\"Private marked-Poisson claims process; no score-dependent parameters.\"\"\"\nimport math\nimport random\n\n\ndef inflation(calendar, g):\n    b = g[\"calendar_break\"]\n    trend = min(calendar, b) * g[\"calendar_growth_before\"]\n    trend += max(0, calendar - b) * g[\"calendar_growth_after\"]\n    return math.exp(trend + g[\"calendar_season_amplitude\"] * math.sin(\n        2 * math.pi * calendar / g[\"calendar_season_period\"]))\n\n\ndef poisson(rng, mean):\n    # Exact Poisson via exponential interarrival times, not a Gaussian shortcut.\n    elapsed, count = 0.0, 0\n    while True:\n        elapsed += rng.expovariate(mean)\n        if elapsed > 1:\n            return count\n        count += 1\n\n\ndef cohort_parameters(g):\n    rng = random.Random(g[\"seed\"])\n    out = []\n    for line in range(g[\"lines\"]):\n        for cohort in range(g[\"cohorts_per_line\"]):\n            latent = rng.gauss(0, g[\"cohort_log_sd\"])\n            tilt = rng.uniform(*g[\"delay_tilt_range\"])\n            weights = [w * math.exp(tilt * j) for j, w in enumerate(g[\"report_weights\"])]\n            out.append({\n                \"lob\": f\"L{line}\", \"cohort\": f\"L{line}C{cohort:02d}\",\n                \"frequency\": (g[\"frequency_base\"] + line * g[\"frequency_line_step\"]) * math.exp(latent),\n                \"severity\": g[\"severity_base\"] + line * g[\"severity_line_step\"],\n                \"report_mass\": [w / sum(weights) for w in weights],\n                \"settle_fraction\": rng.uniform(*g[\"settlement_fraction_range\"]),\n                \"reopen_probability\": rng.uniform(*g[\"reopening_probability_range\"]),\n                \"reopen_fraction\": rng.uniform(*g[\"reopening_fraction_range\"]),\n                \"booking_factor\": rng.uniform(*g[\"booking_factor_range\"]),\n                \"risk_index\": math.exp(latent + rng.gauss(0, g[\"risk_index_noise_sd\"])),\n            })\n    return out\n\n\ndef simulate(g):\n    rng = random.Random(g[\"seed\"] + 1)\n    train, queries, outcomes = [], [], []\n    params = cohort_parameters(g)\n    periods = list(range(g[\"train_periods\"][0], g[\"train_periods\"][1] + 1))\n    periods += list(range(g[\"query_periods\"][0], g[\"query_periods\"][1] + 1))\n    for ap in periods:\n        for ci, p in enumerate(params):\n            exposure = rng.uniform(*g[\"exposure_range\"])\n            horizon = g[\"development_horizon\"]\n            primary, settled, reopened = ([0.0] * (horizon + 1) for _ in range(3))\n            reports, reopens = ([0] * (horizon + 1) for _ in range(2))\n            base = [0.0] * (horizon + 1)\n            for lag, mass in enumerate(p[\"report_mass\"], 1):\n                n = poisson(rng, exposure * p[\"frequency\"] * mass)\n                reports[lag] = n\n                for _ in range(n):\n                    sigma = g[\"severity_log_sd\"]\n                    severity = p[\"severity\"] * math.exp(rng.gauss(-sigma * sigma / 2, sigma))\n                    if rng.random() < g[\"large_loss_probability\"]:\n                        severity *= g[\"large_loss_multiplier\"]\n                    base[lag] += severity\n                    primary[lag] += severity * inflation(ap + lag, g)\n                    s = lag + g[\"settlement_delay\"]\n                    settled[s] += severity * p[\"settle_fraction\"] * inflation(ap + s, g)\n                    r = lag + g[\"reopening_delay\"]\n                    if rng.random() < p[\"reopen_probability\"]:\n                        reopened[r] += severity * p[\"reopen_fraction\"] * inflation(ap + r, g)\n                        reopens[r] += 1\n            history, cumulative, count, rc = [], 0.0, 0, 0\n            record_id = f\"{p['cohort']}-A{ap:03d}\"\n            for lag in range(1, horizon + 1):\n                cumulative += primary[lag] + settled[lag] + reopened[lag]\n                count += reports[lag]\n                rc += reopens[lag]\n                # Booked case only for known reports still awaiting settlement.\n                outstanding = sum(base[r] for r in range(1, lag + 1)\n                                  if r + g[\"settlement_delay\"] > lag)\n                case = outstanding * p[\"settle_fraction\"] * p[\"booking_factor\"] * inflation(ap + lag, g)\n                row = {\"record_id\": record_id, \"lob\": p[\"lob\"], \"cohort\": p[\"cohort\"],\n                       \"accident_period\": ap, \"development_lag\": lag, \"calendar_period\": ap + lag,\n                       \"exposure\": exposure, \"risk_index\": p[\"risk_index\"],\n                       \"inflation_index\": inflation(ap + lag, g),\n                       \"primary_paid\": primary[lag], \"settlement_paid\": settled[lag],\n                       \"reopening_paid\": reopened[lag], \"paid\": cumulative,\n                       \"case_reserve\": case, \"incurred\": cumulative + case,\n                       \"reported_count\": count, \"new_reported_count\": reports[lag],\n                       \"reopened_count\": rc}\n                row = {k: round(v, g[\"round_digits\"]) if isinstance(v, float) else v for k, v in row.items()}\n                history.append(row)\n            if ap <= g[\"train_periods\"][1]:\n                train.extend(history)\n            else:\n                age = g[\"observed_lags\"][(ap + ci) % len(g[\"observed_lags\"])]\n                queries.append({\"record_id\": record_id, \"history\": history[:age]})\n                outcomes.append({\"record_id\": record_id, \"accident_period\": ap, \"lob\": p[\"lob\"],\n                                 \"observed_lag\": age, \"paid_at_cutoff\": history[age - 1][\"paid\"],\n                                 \"incurred_at_cutoff\": history[age - 1][\"incurred\"],\n                                 \"future_primary\": primary[age + 1:],\n                                 \"future_settlement\": settled[age + 1:],\n                                 \"future_reopening\": reopened[age + 1:]})\n    return train, queries, outcomes, params\n",
+  "protected_source_sha256": {
+    "solution/baselines/adapt.py": "debdc8935c4c8562d32bde024531aa469836932e0d7391e1f7c7e4e75a2f178e",
+    "solution/baselines/common.py": "0ad5627f47b49ea8d4d017751d482102d1002dc68606dc10de473f1bc251eaa7",
+    "solution/public_reference.py": "60b4e3583d45445d91e1dad90eed1c3a8d7878b9de0315f86f5210263ea3615c",
+    "solution/reserving_reference.py": "f73a8b52515831ba92cc778b55e6c1b8d1a31b157d11da5974cf5f555c0dbf30",
+    "tests/scoring/score.py": "1618694380ab6e756a5fa2cb425febba37c6909cf31ce73e06201dac9b824efb",
+    "tests/scoring/scorer_manifest.json": "57a115b56e70757929267d97b39d7360841bf0059dfa290dea6060b06961670c"
+  },
+  "summary": {
+    "anchor_sha256": "57a115b56e70757929267d97b39d7360841bf0059dfa290dea6060b06961670c",
+    "hidden_rows": 5000,
+    "interpretation": "Deterministic-method imitation; no outcome-noise ceiling. Author controls are not agent trajectories.",
+    "ordering": [
+      "empty",
+      "copy_forward",
+      "chain_ladder",
+      "public_reference",
+      "oracle"
+    ],
+    "query_history_rows": 20000,
+    "query_rows": 5000,
+    "scores": {
+      "chain_ladder": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 0.87669404648869,
+            "max": 20,
+            "metric": 0.87669404648869,
+            "points": 17.5338809297738
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.1526860600005044,
+            "max": 20,
+            "metric": 0.1526860600005044,
+            "points": 3.053721200010088
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.784706166733507,
+            "max": 20,
+            "metric": 0.784706166733507,
+            "points": 15.69412333467014
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.8635424166399702,
+            "max": 20,
+            "metric": 0.8635424166399702,
+            "points": 17.270848332799403
+          }
+        },
+        "score": 53.55257379725343,
+        "valid_records": 5000
+      },
+      "copy_forward": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 1.745270594710746e-17,
+            "max": 20,
+            "metric": 1.745270594710746e-17,
+            "points": 3.4905411894214923e-16
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.5251815431467007,
+            "max": 20,
+            "metric": 0.5251815431467007,
+            "points": 10.503630862934015
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.017241379310344886,
+            "max": 20,
+            "metric": 0.3448275862068966,
+            "points": 0.34482758620689774
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.6778184595585957,
+            "max": 20,
+            "metric": 0.6778184595585957,
+            "points": 13.556369191171914
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.801862917455208,
+            "max": 20,
+            "metric": 0.801862917455208,
+            "points": 16.03725834910416
+          }
+        },
+        "score": 40.44208598941699,
+        "valid_records": 5000
+      },
+      "empty": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "large_loss": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "reopening": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "report_timing": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          },
+          "severity": {
+            "coverage": 0.0,
+            "fraction": 0.0,
+            "max": 20,
+            "metric": 0.0,
+            "points": 0.0
+          }
+        },
+        "score": 0.0,
+        "valid_records": 0
+      },
+      "oracle": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 1.0,
+            "max": 20,
+            "metric": 1.0,
+            "points": 20.0
+          }
+        },
+        "score": 100.0,
+        "valid_records": 5000
+      },
+      "public_reference": {
+        "expected_records": 5000,
+        "lanes": {
+          "cash_timing": {
+            "coverage": 1.0,
+            "fraction": 0.9292771381727373,
+            "max": 20,
+            "metric": 0.9292771381727373,
+            "points": 18.585542763454747
+          },
+          "large_loss": {
+            "coverage": 1.0,
+            "fraction": 0.5587302679526188,
+            "max": 20,
+            "metric": 0.5587302679526188,
+            "points": 11.174605359052377
+          },
+          "reopening": {
+            "coverage": 1.0,
+            "fraction": 0.961,
+            "max": 20,
+            "metric": 0.974,
+            "points": 19.22
+          },
+          "report_timing": {
+            "coverage": 1.0,
+            "fraction": 0.9577288878707623,
+            "max": 20,
+            "metric": 0.9577288878707623,
+            "points": 19.154577757415247
+          },
+          "severity": {
+            "coverage": 1.0,
+            "fraction": 0.9212005820767424,
+            "max": 20,
+            "metric": 0.9212005820767424,
+            "points": 18.424011641534847
+          }
+        },
+        "score": 86.55873752145722,
+        "valid_records": 5000
+      }
+    },
+    "separations": {
+      "chain_ladder->public_reference": 33.00616372420379,
+      "copy_forward->chain_ladder": 13.110487807836442,
+      "empty->copy_forward": 40.44208598941699,
+      "public_reference->oracle": 13.441262478542782
+    },
+    "train_rows": 25000
+  },
+  "unmodified_panel_fields_sha256": "ef7c191e6e80d4dbe20450ccbda00329872343acdcc5a0d1afbff3ad1c714da8"
+}

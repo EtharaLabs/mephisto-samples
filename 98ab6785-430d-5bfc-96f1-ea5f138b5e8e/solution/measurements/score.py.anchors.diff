@@ -1,0 +1,27 @@
+--- before/tests/scoring/score.py
++++ after/tests/scoring/score.py
+@@ -65,7 +65,7 @@
+         metric, fraction = 0.0, 0.0
+     elif kind == "spearman_ic":
+         metric = spearman([a for a, _ in pairs], [b for _, b in pairs])
+-        fraction = max(0.0, min(1.0, metric)) * coverage
++        fraction = max(0.0, min(1.0, (metric - spec["anchor_floor"]) / (1 - spec["anchor_floor"]))) * coverage
+     elif kind == "f1_detection":
+         tp = sum(a and b for a, b in pairs)
+         fp = sum(a and not b for a, b in pairs)
+@@ -75,13 +75,13 @@
+     elif kind == "relative_agreement":
+         errors = [min(1.0, abs(a - b) / max(b, 1)) for a, b in pairs] + [1.0] * (len(truth) - len(pairs))
+         metric = (1 - statistics.fmean(errors)) / (1 + math.sqrt(statistics.fmean(e * e for e in errors)))
+-        fraction = metric
++        fraction = max(0.0, min(1.0, (metric - spec["anchor_floor"]) / (1 - spec["anchor_floor"])))
+     else:
+         # TV on ten periods plus an explicit unallocated-mass category.
+         # Zero vectors earn zero, not half credit. Invalid/missing rows earn zero.
+         qualities = [max(0.0, min(1.0, 1 - 0.5 * (sum(abs(x - y) for x, y in zip(a, b)) + abs(sum(a) - sum(b))))) if any(a) else 0.0 for a, b in pairs]
+         metric = sum(qualities) / len(truth)
+-        fraction = metric
++        fraction = max(0.0, min(1.0, (metric - spec["anchor_floor"]) / (1 - spec["anchor_floor"])))
+     return {"metric": metric, "coverage": coverage, "fraction": fraction,
+             "max": spec["weight"], "points": spec["weight"] * fraction}
+ 

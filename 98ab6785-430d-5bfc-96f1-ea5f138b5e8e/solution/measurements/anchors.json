@@ -1,0 +1,328 @@
+{
+  "archive_sha256": "d2e40552f3b69f24ee387c421c68547e9b5d6df082c3de21000bb66ba68304b0",
+  "archived_agent45": {
+    "expected_records": 5000,
+    "lanes": {
+      "cash_timing": {
+        "coverage": 0.92,
+        "fraction": 0.0,
+        "max": 20,
+        "metric": 0.7259982873483335,
+        "points": 0.0
+      },
+      "large_loss": {
+        "coverage": 1.0,
+        "fraction": 0.07917737970236673,
+        "max": 20,
+        "metric": 0.5627764243946662,
+        "points": 1.5835475940473345
+      },
+      "reopening": {
+        "coverage": 1.0,
+        "fraction": 0.682,
+        "max": 20,
+        "metric": 0.788,
+        "points": 13.64
+      },
+      "report_timing": {
+        "coverage": 0.97,
+        "fraction": 0.6703514870383958,
+        "max": 20,
+        "metric": 0.929028708013897,
+        "points": 13.407029740767914
+      },
+      "severity": {
+        "coverage": 1.0,
+        "fraction": 0.439530877071904,
+        "max": 20,
+        "metric": 0.9235197379373166,
+        "points": 8.790617541438081
+      }
+    },
+    "score": 37.42119487625333,
+    "valid_records": 5000
+  },
+  "interpretation": "New stricter competent-reference bar, selected after observing the old pilot. Retrospective only; no new pilot or duration evidence.",
+  "rounded_opus_after": 33.878439126442636,
+  "rounded_opus_before": 76.3476,
+  "rounded_opus_metrics": {
+    "cash_timing": {
+      "after": 0,
+      "before": 15.1638,
+      "metric": 0.75819
+    },
+    "large_loss": {
+      "after": 1.5836982034131708,
+      "before": 11.2556,
+      "metric": 0.56278
+    },
+    "reopening": {
+      "after": 13.64,
+      "before": 13.64,
+      "metric": 0.788
+    },
+    "report_timing": {
+      "after": 9.864084972193094,
+      "before": 17.8178,
+      "metric": 0.89089
+    },
+    "severity": {
+      "after": 8.790655950836369,
+      "before": 18.4704,
+      "metric": 0.92352
+    }
+  },
+  "scores": {
+    "chain_ladder": {
+      "expected_records": 5000,
+      "lanes": {
+        "cash_timing": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.7887383677353506,
+          "points": 0.0
+        },
+        "large_loss": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.1526860600005044,
+          "points": 0.0
+        },
+        "reopening": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "report_timing": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.784706166733507,
+          "points": 0.0
+        },
+        "severity": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.8635424166399702,
+          "points": 0.0
+        }
+      },
+      "score": 0.0,
+      "valid_records": 5000
+    },
+    "copy_forward": {
+      "expected_records": 5000,
+      "lanes": {
+        "cash_timing": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "large_loss": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.5251815431467007,
+          "points": 0.0
+        },
+        "reopening": {
+          "coverage": 1.0,
+          "fraction": 0.017241379310344886,
+          "max": 20,
+          "metric": 0.3448275862068966,
+          "points": 0.34482758620689774
+        },
+        "report_timing": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.6778184595585957,
+          "points": 0.0
+        },
+        "severity": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.801862917455208,
+          "points": 0.0
+        }
+      },
+      "score": 0.34482758620689774,
+      "valid_records": 5000
+    },
+    "empty": {
+      "expected_records": 5000,
+      "lanes": {
+        "cash_timing": {
+          "coverage": 0.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "large_loss": {
+          "coverage": 0.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "reopening": {
+          "coverage": 0.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "report_timing": {
+          "coverage": 0.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        },
+        "severity": {
+          "coverage": 0.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.0,
+          "points": 0.0
+        }
+      },
+      "score": 0.0,
+      "valid_records": 0
+    },
+    "oracle": {
+      "expected_records": 5000,
+      "lanes": {
+        "cash_timing": {
+          "coverage": 1.0,
+          "fraction": 1.0,
+          "max": 20,
+          "metric": 1.0,
+          "points": 20.0
+        },
+        "large_loss": {
+          "coverage": 1.0,
+          "fraction": 1.0,
+          "max": 20,
+          "metric": 1.0,
+          "points": 20.0
+        },
+        "reopening": {
+          "coverage": 1.0,
+          "fraction": 1.0,
+          "max": 20,
+          "metric": 1.0,
+          "points": 20.0
+        },
+        "report_timing": {
+          "coverage": 1.0,
+          "fraction": 1.0,
+          "max": 20,
+          "metric": 1.0,
+          "points": 20.0
+        },
+        "severity": {
+          "coverage": 1.0,
+          "fraction": 1.0,
+          "max": 20,
+          "metric": 1.0,
+          "points": 20.0
+        }
+      },
+      "score": 100.0,
+      "valid_records": 5000
+    },
+    "public_reference": {
+      "expected_records": 5000,
+      "lanes": {
+        "cash_timing": {
+          "coverage": 1.0,
+          "fraction": 0.0,
+          "max": 20,
+          "metric": 0.739451038478272,
+          "points": 0.0
+        },
+        "large_loss": {
+          "coverage": 1.0,
+          "fraction": 0.07065589873706901,
+          "max": 20,
+          "metric": 0.5587302679526188,
+          "points": 1.4131179747413802
+        },
+        "reopening": {
+          "coverage": 1.0,
+          "fraction": 0.961,
+          "max": 20,
+          "metric": 0.974,
+          "points": 19.22
+        },
+        "report_timing": {
+          "coverage": 1.0,
+          "fraction": 0.8036585094524556,
+          "max": 20,
+          "metric": 0.9577288878707623,
+          "points": 16.07317018904911
+        },
+        "severity": {
+          "coverage": 1.0,
+          "fraction": 0.4225354430075668,
+          "max": 20,
+          "metric": 0.9212005820767424,
+          "points": 8.450708860151336
+        }
+      },
+      "score": 45.15699702394183,
+      "valid_records": 5000
+    }
+  },
+  "source_checks": {
+    "cash_timing_measured_floor": true,
+    "cash_timing_named_source": true,
+    "cash_timing_otherwise_unchanged": true,
+    "environment/queries.jsonl": true,
+    "environment/train.jsonl": true,
+    "exact_three_branch_rescale_only": true,
+    "large_loss_measured_floor": true,
+    "large_loss_named_source": true,
+    "large_loss_otherwise_unchanged": true,
+    "manifest_other_fields_unchanged": true,
+    "reopening_otherwise_unchanged": true,
+    "report_timing_measured_floor": true,
+    "report_timing_named_source": true,
+    "report_timing_otherwise_unchanged": true,
+    "severity_measured_floor": true,
+    "severity_named_source": true,
+    "severity_otherwise_unchanged": true,
+    "solution/baselines/adapt.py": true,
+    "solution/baselines/chain_ladder.py": true,
+    "solution/baselines/common.py": true,
+    "solution/baselines/copy_forward.py": true,
+    "solution/baselines/empty.py": true,
+    "solution/baselines/public_data.py": true,
+    "solution/grounding.yaml": true,
+    "solution/process.py": true,
+    "solution/public_reference.py": true,
+    "solution/reserving_reference.py": true,
+    "tests/hidden_test_data/outcomes.jsonl": true,
+    "tests/scoring/entrypoint.py": true,
+    "tests/scoring/eval_script.py": true,
+    "tests/test.sh": true
+  },
+  "strict_five_point_ordering": false,
+  "textbook_baselines_approximately_zero": {
+    "definition": "Each textbook baseline earns less than 1 point of 100; not exactly zero.",
+    "scores": {
+      "chain_ladder": 0.0,
+      "copy_forward": 0.34482758620689774
+    }
+  }
+}

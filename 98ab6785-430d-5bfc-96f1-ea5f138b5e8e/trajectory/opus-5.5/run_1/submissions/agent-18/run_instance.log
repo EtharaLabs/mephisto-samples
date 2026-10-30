@@ -1,0 +1,9 @@
+2026-10-30 06:00:36,140 - INFO - Judge container started: e5432d7832fe88c7a28f0a7a03a63eba0abec4507e6e1a68c2b322406c2f26f0
+2026-10-30 06:00:36,140 - INFO - Archive saved (22102 bytes)
+2026-10-30 06:00:36,215 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-10-30 06:00:36,234 - INFO - Running eval script...
+2026-10-30 06:00:36,363 - INFO - Test runtime: 0.13s, timed_out: False
+2026-10-30 06:00:36,363 - INFO - Result: 0/0 passed (pass_rate=0.00%)
+2026-10-30 06:00:36,363 - INFO - Stopping container edgebench.judge.synthetic_claims_reserving.8f03f3af884e...
+2026-10-30 06:00:36,694 - INFO - Removing container edgebench.judge.synthetic_claims_reserving.8f03f3af884e...
+2026-10-30 06:00:36,697 - INFO - Container edgebench.judge.synthetic_claims_reserving.8f03f3af884e removed.

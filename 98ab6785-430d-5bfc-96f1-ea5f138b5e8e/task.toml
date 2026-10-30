@@ -1,0 +1,55 @@
+schema_version = "1.4"
+artifacts = [
+  { source = "/workspace/reserving.py" },
+  { source = "/workspace/requirements.txt" },
+  { source = "/workspace/reserving_results.json" },
+]
+
+[task]
+name = "edgebench/synthetic_claims_reserving"
+description = "Recover five independent claims methods: severity, reporting time, reopening incidence, payment schedule and aggregate tail detection; 0-100."
+keywords = ["professional-knowledge-work", "insurance", "claims-reserving", "synthetic"]
+authors = [{ name = "Mephisto", email = "benchmarks@ethara.ai" }]
+
+[agent]
+timeout_sec = 43200.0
+
+[environment]
+docker_image = "426628337772.dkr.ecr.ap-south-1.amazonaws.com/mephisto/edgebench.work.synthetic_claims_reserving:93ab2119fcf9@sha256:93ab2119fcf9eb290bc53fe63069441b2e9a342444dc9d95ad28f0b6acac1e74"
+network_mode = "no-network"
+workdir = "/workspace"
+
+[verifier]
+timeout_sec = 3600.0
+environment_mode = "separate"
+
+[verifier.environment]
+docker_image = "426628337772.dkr.ecr.ap-south-1.amazonaws.com/mephisto/edgebench.judge.synthetic_claims_reserving:24dcddec3ddf@sha256:24dcddec3ddf5c739458dc22be9c34c19b41a211dd0985a391e219bdd20de5a6"
+network_mode = "no-network"
+workdir = "/workspace"
+
+[extensions.sforge]
+task_id = "synthetic_claims_reserving"
+base_image = "python"
+parser = "structured_json"
+selection = "score_first"
+score_direction = "maximize"
+cwd = "/workspace"
+submit_paths = ["reserving.py", "requirements.txt", "reserving_results.json"]
+submit_exclude = ["tests/", "solution/", "__pycache__", "*.pyc"]
+work_image_tag = "93ab2119fcf9"
+judge_image_tag = "24dcddec3ddf"
+
+[metadata]
+provenance_schema_version = "1"
+data_license = "CC0-1.0"
+status = "draft-unpiloted"
+
+[upstream_provenance]
+origin = "original"
+source_kind = "synthetic"
+provenance_date = "2026-10-28"
+
+[upstream_provenance.source]
+generator = "solution/recompute.py"
+generation_inputs = ["solution/grounding.yaml", "solution/process.py", "solution/reserving_reference.py", "tests/scoring/scorer_manifest.json"]

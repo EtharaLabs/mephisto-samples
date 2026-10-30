@@ -1,0 +1,4122 @@
+{
+  "baseline_anchor_record": {
+    "definition": "Each textbook baseline is below 1 point of 100, not necessarily exactly zero.",
+    "name": "textbook_baselines_approximately_zero",
+    "scores": {
+      "chain_ladder": 0.0,
+      "copy_forward": 0.34482758620689774
+    },
+    "strict_five_point_ordering": false
+  },
+  "checks": {
+    "all_120_orders_monotone": true,
+    "all_32_combinations_additive": true,
+    "all_80_edges_per_control_local": true,
+    "controls_below_public_reference": true,
+    "cross_problem_gains_equal": true,
+    "empty_exactly_zero": true,
+    "every_problem_has_competent_headroom": true,
+    "every_problem_has_naive_headroom": true,
+    "five_distinct_output_fields": true,
+    "floors_strictly_below_one": true,
+    "oracle_exactly_100": true,
+    "public_reference_below_oracle": true,
+    "textbook_baselines_approximately_zero": true,
+    "weights_sum_100_and_max_20": true
+  },
+  "components": [
+    {
+      "discrepancy": 0.0,
+      "field": "ultimate_severity",
+      "gain_when_others_naive": 20.0,
+      "gain_when_others_reference": 20.0,
+      "max_gain_all_contexts": 20.000000000000007,
+      "max_off_target_change": 0.0,
+      "min_gain_all_contexts": 20.0,
+      "subproblem": "severity"
+    },
+    {
+      "discrepancy": 0.0,
+      "field": "reporting_pattern",
+      "gain_when_others_naive": 20.0,
+      "gain_when_others_reference": 20.0,
+      "max_gain_all_contexts": 20.000000000000007,
+      "max_off_target_change": 0.0,
+      "min_gain_all_contexts": 20.0,
+      "subproblem": "report_timing"
+    },
+    {
+      "discrepancy": 7.105427357601002e-15,
+      "field": "reopening_flag",
+      "gain_when_others_naive": 19.655172413793103,
+      "gain_when_others_reference": 19.655172413793096,
+      "max_gain_all_contexts": 19.655172413793103,
+      "max_off_target_change": 0.0,
+      "min_gain_all_contexts": 19.655172413793096,
+      "subproblem": "reopening"
+    },
+    {
+      "discrepancy": 0.0,
+      "field": "cash_pattern",
+      "gain_when_others_naive": 20.0,
+      "gain_when_others_reference": 20.0,
+      "max_gain_all_contexts": 20.000000000000007,
+      "max_off_target_change": 0.0,
+      "min_gain_all_contexts": 20.0,
+      "subproblem": "cash_timing"
+    },
+    {
+      "discrepancy": 0.0,
+      "field": "large_loss_score",
+      "gain_when_others_naive": 20.0,
+      "gain_when_others_reference": 20.0,
+      "max_gain_all_contexts": 20.000000000000007,
+      "max_off_target_change": 0.0,
+      "min_gain_all_contexts": 20.0,
+      "subproblem": "large_loss"
+    }
+  ],
+  "controls": {
+    "copy_forward": {
+      "all_120_repair_orders": [
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "reopening",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "reopening",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "large_loss",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "severity",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "severity",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "severity",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "report_timing",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "large_loss",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "severity",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "severity",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "reopening",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "reopening",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "severity",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "severity",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "report_timing",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "reopening",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "reopening",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "severity",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "severity",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "severity",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            20.000000000000007,
+            19.655172413793096
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            20.0,
+            19.655172413793103,
+            20.0,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "severity"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "discrepancy": 0.0,
+          "field": "ultimate_severity",
+          "gain_when_others_naive": 20.0,
+          "gain_when_others_reference": 20.0,
+          "max_gain_all_contexts": 20.000000000000007,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 20.0,
+          "subproblem": "severity"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "reporting_pattern",
+          "gain_when_others_naive": 20.0,
+          "gain_when_others_reference": 20.0,
+          "max_gain_all_contexts": 20.000000000000007,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 20.0,
+          "subproblem": "report_timing"
+        },
+        {
+          "discrepancy": 7.105427357601002e-15,
+          "field": "reopening_flag",
+          "gain_when_others_naive": 19.655172413793103,
+          "gain_when_others_reference": 19.655172413793096,
+          "max_gain_all_contexts": 19.655172413793103,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 19.655172413793096,
+          "subproblem": "reopening"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "cash_pattern",
+          "gain_when_others_naive": 20.0,
+          "gain_when_others_reference": 20.0,
+          "max_gain_all_contexts": 20.000000000000007,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 20.0,
+          "subproblem": "cash_timing"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "large_loss_score",
+          "gain_when_others_naive": 20.0,
+          "gain_when_others_reference": 20.0,
+          "max_gain_all_contexts": 20.000000000000007,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 20.0,
+          "subproblem": "large_loss"
+        }
+      ],
+      "factorial_scores": {
+        "0": 0.34482758620689774,
+        "1": 20.344827586206897,
+        "10": 40.3448275862069,
+        "11": 60.3448275862069,
+        "12": 40.0,
+        "13": 60.0,
+        "14": 60.0,
+        "15": 80.0,
+        "16": 20.344827586206897,
+        "17": 40.3448275862069,
+        "18": 40.3448275862069,
+        "19": 60.3448275862069,
+        "2": 20.344827586206897,
+        "20": 40.0,
+        "21": 60.0,
+        "22": 60.0,
+        "23": 80.0,
+        "24": 40.3448275862069,
+        "25": 60.3448275862069,
+        "26": 60.3448275862069,
+        "27": 80.3448275862069,
+        "28": 60.0,
+        "29": 80.0,
+        "3": 40.3448275862069,
+        "30": 80.0,
+        "31": 100.0,
+        "4": 20.0,
+        "5": 40.0,
+        "6": 40.0,
+        "7": 60.0,
+        "8": 20.344827586206897,
+        "9": 40.3448275862069
+      },
+      "max_additivity_error": 1.4210854715202004e-14,
+      "naive_score": 0.34482758620689774
+    },
+    "public_reference": {
+      "all_120_repair_orders": [
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            20.0,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            20.0,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            20.0,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            20.0,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            0.7800000000000011,
+            18.586882025258618,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            3.926829810950892,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            3.926829810950892,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            0.7800000000000011,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            20.0,
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            0.7800000000000011,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            20.0,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            11.549291139848663,
+            18.586882025258618,
+            20.0,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            0.7800000000000011,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "reopening",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            0.7800000000000011,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "reopening",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            20.0,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            20.0,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            18.586882025258618,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "large_loss",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            11.54929113984867,
+            18.586882025258618,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            11.54929113984867,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "severity",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            11.54929113984867,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "severity",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            20.000000000000007,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            20.000000000000007,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            18.586882025258625,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            0.7800000000000011,
+            18.586882025258625,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            11.549291139848663,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            11.549291139848663,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            0.7800000000000011,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            0.7800000000000011,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            18.586882025258618,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            20.000000000000007,
+            18.586882025258618,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            11.549291139848663,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "severity",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            11.549291139848663,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            0.7800000000000011,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            0.7800000000000011,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            20.0,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            3.926829810950885,
+            18.586882025258625,
+            20.0,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "report_timing",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            20.0,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            20.0,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "cash_timing",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "large_loss",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            11.549291139848663,
+            18.586882025258618,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "severity",
+            "large_loss",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            11.54929113984867,
+            20.0,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            11.54929113984867,
+            18.586882025258618,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "severity",
+            "large_loss",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            20.000000000000007,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            20.000000000000007,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            18.586882025258625,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            3.926829810950885,
+            18.586882025258625,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            3.926829810950892,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            3.926829810950892,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            20.0,
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "severity",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            11.549291139848663,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            20.0,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            0.7800000000000011,
+            18.586882025258618,
+            20.0,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "reopening",
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "reopening",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "reopening",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            11.549291139848663,
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "severity",
+            "large_loss",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            11.549291139848663,
+            0.7800000000000011,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "reopening",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            11.549291139848663,
+            18.586882025258618,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "large_loss",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            0.7800000000000011,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            0.7800000000000011,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            18.586882025258618,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            3.926829810950892,
+            18.586882025258618,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "report_timing",
+            "large_loss",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "severity",
+            "report_timing",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            11.549291139848663,
+            18.586882025258618,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "severity",
+            "large_loss",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            3.926829810950892,
+            11.549291139848663,
+            18.586882025258618
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "severity",
+            "large_loss"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            3.926829810950892,
+            18.586882025258618,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "large_loss",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            0.7800000000000011,
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "reopening",
+            "large_loss",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "severity",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            20.0,
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "cash_timing",
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "report_timing",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            3.926829810950892,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "report_timing",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "reopening",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            0.7800000000000011,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "reopening",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            20.0,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            11.549291139848663,
+            20.0,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "severity",
+            "cash_timing",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663,
+            0.7800000000000011,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "severity",
+            "reopening",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            11.549291139848663,
+            20.0,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "severity",
+            "cash_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            0.7800000000000011,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "reopening",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            20.0,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            3.926829810950892,
+            20.0,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "report_timing",
+            "cash_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "severity",
+            "report_timing",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            11.549291139848663,
+            20.0,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "severity",
+            "cash_timing",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892,
+            11.549291139848663,
+            20.0
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "severity",
+            "cash_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            3.926829810950892,
+            20.0,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "report_timing",
+            "cash_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            20.0,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            0.7800000000000011,
+            20.0,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "reopening",
+            "cash_timing",
+            "report_timing",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            11.549291139848663,
+            3.926829810950892,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "report_timing",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            11.549291139848663,
+            0.7800000000000011,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "severity",
+            "reopening",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            3.926829810950892,
+            11.549291139848663,
+            0.7800000000000011
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "severity",
+            "reopening"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            3.926829810950892,
+            0.7800000000000011,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "report_timing",
+            "reopening",
+            "severity"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            0.7800000000000011,
+            11.549291139848663,
+            3.926829810950892
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "severity",
+            "report_timing"
+          ]
+        },
+        {
+          "gains": [
+            18.586882025258618,
+            20.0,
+            0.7800000000000011,
+            3.926829810950892,
+            11.549291139848663
+          ],
+          "order": [
+            "large_loss",
+            "cash_timing",
+            "reopening",
+            "report_timing",
+            "severity"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "discrepancy": 0.0,
+          "field": "ultimate_severity",
+          "gain_when_others_naive": 11.549291139848663,
+          "gain_when_others_reference": 11.549291139848663,
+          "max_gain_all_contexts": 11.54929113984867,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 11.549291139848663,
+          "subproblem": "severity"
+        },
+        {
+          "discrepancy": 7.105427357601002e-15,
+          "field": "reporting_pattern",
+          "gain_when_others_naive": 3.926829810950885,
+          "gain_when_others_reference": 3.926829810950892,
+          "max_gain_all_contexts": 3.926829810950892,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 3.926829810950885,
+          "subproblem": "report_timing"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "reopening_flag",
+          "gain_when_others_naive": 0.7800000000000011,
+          "gain_when_others_reference": 0.7800000000000011,
+          "max_gain_all_contexts": 0.7800000000000011,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 0.7800000000000011,
+          "subproblem": "reopening"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "cash_pattern",
+          "gain_when_others_naive": 20.0,
+          "gain_when_others_reference": 20.0,
+          "max_gain_all_contexts": 20.000000000000007,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 20.0,
+          "subproblem": "cash_timing"
+        },
+        {
+          "discrepancy": 0.0,
+          "field": "large_loss_score",
+          "gain_when_others_naive": 18.586882025258618,
+          "gain_when_others_reference": 18.586882025258618,
+          "max_gain_all_contexts": 18.586882025258625,
+          "max_off_target_change": 0.0,
+          "min_gain_all_contexts": 18.586882025258618,
+          "subproblem": "large_loss"
+        }
+      ],
+      "factorial_scores": {
+        "0": 45.15699702394183,
+        "1": 56.70628816379049,
+        "10": 69.08382683489272,
+        "11": 80.63311797474138,
+        "12": 65.93699702394183,
+        "13": 77.48628816379049,
+        "14": 69.86382683489272,
+        "15": 81.41311797474138,
+        "16": 63.743879049200444,
+        "17": 75.2931701890491,
+        "18": 67.67070886015134,
+        "19": 79.22,
+        "2": 49.08382683489271,
+        "20": 64.52387904920045,
+        "21": 76.07317018904911,
+        "22": 68.45070886015134,
+        "23": 80.0,
+        "24": 83.74387904920044,
+        "25": 95.2931701890491,
+        "26": 87.67070886015134,
+        "27": 99.22,
+        "28": 84.52387904920045,
+        "29": 96.07317018904911,
+        "3": 60.63311797474138,
+        "30": 88.45070886015134,
+        "31": 100.0,
+        "4": 45.93699702394183,
+        "5": 57.48628816379049,
+        "6": 49.86382683489271,
+        "7": 61.41311797474138,
+        "8": 65.15699702394183,
+        "9": 76.70628816379049
+      },
+      "max_additivity_error": 7.105427357601002e-15,
+      "naive_score": 45.15699702394183
+    }
+  },
+  "protected_source_sha256": {
+    "solution/baselines/adapt.py": "debdc8935c4c8562d32bde024531aa469836932e0d7391e1f7c7e4e75a2f178e",
+    "solution/public_reference.py": "60b4e3583d45445d91e1dad90eed1c3a8d7878b9de0315f86f5210263ea3615c",
+    "solution/reserving_reference.py": "f73a8b52515831ba92cc778b55e6c1b8d1a31b157d11da5974cf5f555c0dbf30",
+    "solution/rung_study.py": "c62f4c21254a2cf223d6b95261b16b8eae8d5210a46af839225b7c3dbe550bc5",
+    "tests/scoring/score.py": "4fabe3ea15ade4589735f5ea0496937d16b3037205b3b1bb2eaab1d42aff4db3",
+    "tests/scoring/scorer_manifest.json": "d4200da32793f434a0277dc20188d20bd007ffa925bc673b3bfeb4ae193333d1"
+  },
+  "scope": "Independent available score gains, NOT learned repair paths or demonstrated hours of progress",
+  "scores": {
+    "chain_ladder": 0.0,
+    "copy_forward": 0.34482758620689774,
+    "empty": 0.0,
+    "oracle": 100.0,
+    "public_reference": 45.15699702394183
+  },
+  "status": "ACCEPT_STRUCTURE"
+}

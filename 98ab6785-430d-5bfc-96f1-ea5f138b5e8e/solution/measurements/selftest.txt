@@ -1,0 +1,102 @@
+PASS bytecode writes disabled
+PASS PyYAML 6.0.3
+PYTHON 3.14.3
+PASS YAML parsing, Python AST parsing, shell sh -n
+PASS historical hardening hashes and exact declared baseline-anchor scoring delta verified
+PASS generator, config, all targets, public data, solvers and transport byte-unchanged since anchor capture
+PASS passing anchor hash cannot overwrite a failed historical source guard
+PASS byte-idempotent consecutive regeneration of every derived artifact
+PASS regeneration preserves all pre-anchor protected bytes, including cash targets
+PASS scoring anchors unchanged by regeneration
+PASS five explicit lane weights sum to exactly 100; largest lane 20; no padding
+PASS every lane declares floor, full anchor, trivial strategy and component
+PASS reports, primary losses, exposure, indices and reopening events/payments unchanged in every public row
+PASS all four noncash targets unchanged, including every reopening label
+PASS 25000 training rows; 5000 queries; 20000 observed history rows; 5000 deterministic targets
+PASS train/query keys disjoint
+PASS all training realizations precede query accident periods
+PASS public corpus observable-field allowlist
+PASS no public symlinks into private trees
+PASS work environment contains only build recipe and attachments
+PASS work data payload contains only two observable datasets
+PASS no private intermediate or simulated future fields in public payload
+PASS no complete private target record in public payload
+PASS no serialized generator configuration keys in public payload
+PASS no private method/generator source fragments in public payload
+PASS oracle reads only observable train and queries, never targets or generator parameters
+PASS oracle independently reproduces every deterministic target
+PASS ORACLE SCORES EXACTLY 100
+PASS empty scores exactly zero
+PASS inert self-report award removed; summaries cannot veto predictions
+PASS each missing field loses exactly its own 20 points; other four lanes identical
+PASS duplicate-key invalidation prevents duplicate gaming
+PASS adversarial scalar/structure cases fail closed with finite reports
+PASS reopening prevalence exactly 20 percent in every period
+PASS five problems; full factorial measured from naive and competent controls
+PASS all 240 diagnostic repair paths telescope to oracle; not agent trajectories
+PASS design assertion rejects failed independence; nonzero selftest exit retained
+PASS study records exact baseline, adapter, scorer and anchor source digests
+PASS tests/test.sh invokes isolated evaluator with default /logs/verifier reward.txt and reward.json outputs
+PASS single-turn timeouts and separate verifier
+PASS both environments no-network
+PASS three submit paths, Python base and tag-only placeholders
+PASS author and metadata constraints
+PASS synthetic original provenance with date-only date
+PASS solution/solve.sh emits exact oracle and all three artifacts
+PASS all four non-oracle standalone controls reproduce measured submissions
+PASS isolated judge CLI scores solve.sh at 100, writes bare reward and structured markers; never executes submission
+PASS malformed JSON yields zero
+PASS NaN in scored field yields zero through malformed-JSON reporting
+PASS NaN in ignored field yields zero through malformed-JSON reporting
+PASS Infinity in scored field yields zero through malformed-JSON reporting
+PASS Infinity in ignored field yields zero through malformed-JSON reporting
+PASS -Infinity in scored field yields zero through malformed-JSON reporting
+PASS -Infinity in ignored field yields zero through malformed-JSON reporting
+PASS legitimate floats, integers, nulls, nested objects and arrays retain oracle score exactly 100
+PASS symlinked submission rejected
+SCORE empty: 0.000000/100
+SCORE copy_forward: 0.344828/100
+SCORE chain_ladder: 0.000000/100
+SCORE public_reference: 45.156997/100
+SCORE oracle: 100.000000/100
+PASS baseline-anchor endpoints remain exactly 100 and 0
+PASS every non-reference control below public_reference, which remains below oracle
+PASS every baseline floor strictly below 1.0
+PASS textbook_baselines_approximately_zero: both below 1 point of 100, not necessarily exactly zero
+BASELINE ANCHOR RECORD {"definition": "Each textbook baseline is below 1 point of 100, not necessarily exactly zero.", "name": "textbook_baselines_approximately_zero", "scores": {"chain_ladder": 0.0, "copy_forward": 0.34482758620689774}, "strict_five_point_ordering": false}
+PASS large-loss attainable public-input ceiling measured before/after: 1.000000 / 1.000000
+CASH PROBES {"after": {"cash_metric": 0.8408304749472872, "cohort_mean": 0.8580443842349239, "conditional_cohort_mean": 0.8852019030972497, "training_exposure_median": 1.094744}, "before": {"cash_metric": 0.9213079684347943, "cohort_mean": 0.9540432940362914, "conditional_cohort_mean": 0.9476411793137293, "training_exposure_median": 1.094744}}
+PASS public-only exposure conditioning improves the unchanged cash baseline
+PASS public-only exposure conditioning beats the cohort-mean cash control
+PASS no __pycache__, pyc or AppleDouble files
+FUNCTIONAL SELFTEST PASSED; design qualification follows and is not implied.
+INDEPENDENCE copy_forward: problem | others-naive gain | others-reference gain | discrepancy
+severity: 20.000000 | 20.000000 | 0.000000000000
+report_timing: 20.000000 | 20.000000 | 0.000000000000
+reopening: 19.655172 | 19.655172 | 0.000000000000
+cash_timing: 20.000000 | 20.000000 | 0.000000000000
+large_loss: 20.000000 | 20.000000 | 0.000000000000
+FACTORIAL copy_forward: 32 combinations, 80 edges, 120 orders; max additivity error 1.42e-14
+INDEPENDENCE public_reference: problem | others-naive gain | others-reference gain | discrepancy
+severity: 11.549291 | 11.549291 | 0.000000000000
+report_timing: 3.926830 | 3.926830 | 0.000000000000
+reopening: 0.780000 | 0.780000 | 0.000000000000
+cash_timing: 20.000000 | 20.000000 | 0.000000000000
+large_loss: 18.586882 | 18.586882 | 0.000000000000
+FACTORIAL public_reference: 32 combinations, 80 edges, 120 orders; max additivity error 7.11e-15
+DESIGN PASS all_120_orders_monotone
+DESIGN PASS all_32_combinations_additive
+DESIGN PASS all_80_edges_per_control_local
+DESIGN PASS controls_below_public_reference
+DESIGN PASS cross_problem_gains_equal
+DESIGN PASS empty_exactly_zero
+DESIGN PASS every_problem_has_competent_headroom
+DESIGN PASS every_problem_has_naive_headroom
+DESIGN PASS five_distinct_output_fields
+DESIGN PASS floors_strictly_below_one
+DESIGN PASS oracle_exactly_100
+DESIGN PASS public_reference_below_oracle
+DESIGN PASS textbook_baselines_approximately_zero
+DESIGN PASS weights_sum_100_and_max_20
+DESIGN VERDICT: ACCEPT_STRUCTURE; duration unverified
+SELFTEST PASSED INCLUDING CROSS-SUB-PROBLEM QUALIFICATION; NOT A DURATION CLAIM

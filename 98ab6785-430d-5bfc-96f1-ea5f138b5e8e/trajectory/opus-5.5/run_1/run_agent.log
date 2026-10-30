@@ -1,0 +1,32 @@
+2026-10-29 21:25:20,693 - INFO - Images ready
+2026-10-29 21:25:20,695 - INFO - Registered session with judge server
+2026-10-29 21:25:20,706 - INFO - Network isolation enabled: iptables preflight passed
+2026-10-29 21:25:21,089 - INFO - Container started: sforge.run.synthetic_claims_reserving.opus55-r2 (judge_url=http://host.docker.internal:8081)
+2026-10-29 21:25:21,089 - INFO - Install step 1/2: sudo -E bash -c 'NODE_MIRROR=${SFORGE_NODEJS_MIRROR_URL:-https://nodejs.org/dist} && case "$(uname -m)" in aarch64|arm64) NODE_ARCH=arm64;; *) NODE_ARCH=x64;; esac && curl -fsSL $NODE_MIRROR/v20.18.0/node-v20.18.0-linux-$NODE_ARCH.tar.xz | tar -xJ -C /usr/local --strip-components=1'
+2026-10-29 21:25:21,877 - INFO - Install step 1 done (0.8s)
+2026-10-29 21:25:21,877 - INFO - Install step 2/2: sudo -E npm install -g @anthropic-ai/claude-code@2.1.280
+2026-10-29 21:25:23,454 - INFO - Install step 2 done (1.6s)
+2026-10-29 21:25:23,454 - INFO - Agent installation complete
+2026-10-29 21:25:23,492 - INFO - Installed sforge-submit script
+2026-10-29 21:25:23,528 - INFO - Installed Claude Code stop hook
+2026-10-29 21:25:23,546 - INFO - Configured Claude Code settings with hooks
+2026-10-29 21:25:23,547 - INFO - Host-side auto-eval started (interval=900s)
+2026-10-29 21:25:23,629 - INFO - Network isolation applied: chain=SFORGE_da025fd197cb, ip=172.17.0.2, ip6=None, allowed=2 endpoints
+2026-10-29 21:25:23,667 - INFO - Prompt written (11449 bytes)
+2026-10-29 21:25:23,668 - INFO - Running agent: claude -p "$(cat /tmp/agent_prompt.md)" --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch... (timeout=43200s)
+2026-10-29 21:59:55,518 - INFO - Agent exited after 2071.8s, will resume
+2026-10-29 21:59:55,518 - INFO - Resuming agent (attempt 1/100, 41128s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch...
+2026-10-29 22:02:53,139 - INFO - Agent exited after 177.6s, will resume
+2026-10-29 22:02:53,139 - INFO - Resuming agent (attempt 2/100, 40951s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch...
+2026-10-29 22:06:00,822 - INFO - Agent exited after 187.7s, will resume
+2026-10-29 22:06:00,822 - INFO - Resuming agent (attempt 3/100, 40763s left): claude --continue -p "Continue working." --output-format stream-json --verbose --dangerously-skip-permissions --model claude-opus-5-5 --disallowedTools WebSearch,WebFetch...
+2026-10-30 09:25:22,848 - INFO - Agent finished: runtime=43199.2s, timed_out=True, resumes=3, pool_paused=0s
+2026-10-30 09:25:22,848 - INFO - Auto-eval thread stopped
+2026-10-30 09:25:22,912 - INFO - Final archive: 465125 bytes
+2026-10-30 09:25:22,951 - INFO - Work container processes stopped
+2026-10-30 09:25:22,954 - INFO - Done: best=0.00% (round 'auto-45'), agent_subs=24, auto_subs=47, resumes=3, runtime=43199.2s
+2026-10-30 09:25:23,386 - WARNING - Failed to remove v6 chain: ip6tables -F SFORGE_da025fd197cb failed: ip6tables: No chain/target/match by that name.
+2026-10-30 09:25:23,386 - INFO - Network isolation cleaned up: chain=SFORGE_da025fd197cb
+2026-10-30 09:25:23,386 - INFO - Stopping container sforge.run.synthetic_claims_reserving.opus55-r2...
+2026-10-30 09:25:23,853 - INFO - Removing container sforge.run.synthetic_claims_reserving.opus55-r2...
+2026-10-30 09:25:23,920 - INFO - Container sforge.run.synthetic_claims_reserving.opus55-r2 removed.

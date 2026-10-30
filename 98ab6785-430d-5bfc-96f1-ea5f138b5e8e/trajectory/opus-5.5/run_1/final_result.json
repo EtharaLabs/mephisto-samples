@@ -1,0 +1,16 @@
+{
+  "agent": "claude-code",
+  "task": "synthetic_claims_reserving",
+  "run_id": "opus55-r2",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "auto-45",
+  "total_rounds": 71,
+  "agent_submissions": 24,
+  "auto_submissions": 47,
+  "timed_out": true,
+  "runtime_seconds": 43199.175857543945,
+  "archive_size_bytes": 465125,
+  "resume_count": 3,
+  "best_score": 60.34664280395813
+}
