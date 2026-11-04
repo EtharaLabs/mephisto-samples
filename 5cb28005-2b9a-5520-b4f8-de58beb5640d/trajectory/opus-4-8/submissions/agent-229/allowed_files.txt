@@ -1,3 +1,0 @@
-fundamental_momentum.py
-requirements.txt
-momentum_results.json

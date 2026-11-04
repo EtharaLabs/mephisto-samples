@@ -1,6 +1,0 @@
-[[reward]]
-name = "reward"
-aggregation = "weighted-mean"
-
-[scoring.test_output]
-aggregation = "weighted-mean"

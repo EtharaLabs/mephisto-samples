@@ -1,3 +1,0 @@
-bank_capital_projection.py
-requirements.txt
-projection_results.json
