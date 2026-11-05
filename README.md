@@ -2,9 +2,9 @@
 
 # Mephisto: samples
 
-<p align="center"><b>The samples lane: 7 of 30 Harbor task bundles.</b></p>
+<p align="center"><b>The samples lane: 0 of 30 Harbor task bundles.</b></p>
 
-<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-7_of_30-845EF7" alt="bundles: 7 of 30"></a> <a href="#evidence-status"><img src="https://img.shields.io/badge/sealed-0-845EF7" alt="sealed: 0"></a> <a href="#difficulty-tiers"><img src="https://img.shields.io/badge/difficulty-measured-845EF7" alt="difficulty: measured"></a></p>
+<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-0_of_30-845EF7" alt="bundles: 0 of 30"></a> <a href="#evidence-status"><img src="https://img.shields.io/badge/sealed-0-845EF7" alt="sealed: 0"></a> <a href="#difficulty-tiers"><img src="https://img.shields.io/badge/difficulty-measured-845EF7" alt="difficulty: measured"></a></p>
 
 <p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#difficulty-tiers">Difficulty tiers</a> | <a href="#evidence-status">Evidence status</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#reproduction">Reproduction</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
 
@@ -18,11 +18,11 @@ Each bundle is one Harbor task in a directory named by its content-derived uuid5
 
 | Property | Value |
 | --- | --- |
-| Bundles | 7 of 30 |
-| Sealed | 0 of 7 |
-| Registrations | unregistered (7) |
-| Audit verdicts | none (7) |
-| Harbor schema | 1.4 (6), absent (1) |
+| Bundles | 0 of 30 |
+| Sealed | 0 of 0 |
+| Registrations | none |
+| Audit verdicts | none |
+| Harbor schema | none |
 
 ## Difficulty tiers
 
@@ -32,76 +32,19 @@ Difficulty is measured by the signed pilot alone and never declared in a bundle,
 
 The verdict is the audit outcome recorded at the sealed digest, and `none` means no verdict has landed for that digest yet. Only an authoring run removes a bundle from this lane, so removal waits for the next one.
 
-| uuid | Verdict | Sealed digest | Stream |
-| --- | --- | --- | --- |
-| 5cb28005-2b9a-5520-b4f8-de58beb5640d | none | absent | none |
-| 60cab9e2-ae65-5e56-b113-0b1d40e33558 | none | absent | none |
-| 98ab6785-430d-5bfc-96f1-ea5f138b5e8e | none | absent | none |
-| 9c463536-e514-5a50-9ff6-81ad513bae32 | none | absent | none |
-| d3cd6658-d997-5f26-89e3-97e5443046b4 | none | absent | none |
-| e51c34a1-9895-583f-b626-71478e6ae6bd | none | absent | none |
-| e5d63160-7e3a-5d55-bab1-a887c9e97be3 | none | absent | none |
-
 ## Coverage
 
-| Keyword | Bundles |
-| --- | --- |
-| professional-knowledge-work | 7 |
-| finance | 6 |
-| sec-xbrl-fundamental-panel | 2 |
-| auto-loan-abs | 1 |
-| bank-regulatory-capital | 1 |
-| capital-structure-trajectory | 1 |
-| claims-reserving | 1 |
-| credit-risk | 1 |
-| cross-sectional-momentum | 1 |
-| cross-sectional-panel-forecasting | 1 |
-| earnings-cycle-adaptive | 1 |
-| fed-policy-phase-labeling | 1 |
-| fomc-cadence-adaptive | 1 |
-| funding-condition-adaptive | 1 |
-| insurance | 1 |
-| leverage-projection-book | 1 |
-| macro-regime-adaptive | 1 |
-| portfolio-decision | 1 |
-| rate-cycle-adaptive | 1 |
-| rates-positioning-book | 1 |
-| short-end-cash-allocation | 1 |
-| structured-credit | 1 |
-| synthetic | 1 |
-| treasury-bill-liquidity | 1 |
+No resident bundle declares a keyword.
 
 ## Dataset structure
 
-| Bundle | Task | Keywords | Registration | Sealed at | Tier |
-| --- | --- | --- | --- | --- | --- |
-| [`5cb28005-2b9a-5520-b4f8-de58beb5640d`](5cb28005-2b9a-5520-b4f8-de58beb5640d/) | `edgebench/sec_fundamental_momentum_calibration` | cross-sectional-momentum, earnings-cycle-adaptive, finance, professional-knowledge-work, sec-xbrl-fundamental-panel | unregistered | unsealed | - |
-| [`60cab9e2-ae65-5e56-b113-0b1d40e33558`](60cab9e2-ae65-5e56-b113-0b1d40e33558/) | `edgebench/fed_funds_regime_positioning_book` | fed-policy-phase-labeling, finance, fomc-cadence-adaptive, professional-knowledge-work, rates-positioning-book | unregistered | unsealed | - |
-| [`98ab6785-430d-5bfc-96f1-ea5f138b5e8e`](98ab6785-430d-5bfc-96f1-ea5f138b5e8e/) | `edgebench/synthetic_claims_reserving` | claims-reserving, insurance, professional-knowledge-work, synthetic | unregistered | unsealed | - |
-| [`9c463536-e514-5a50-9ff6-81ad513bae32`](9c463536-e514-5a50-9ff6-81ad513bae32/) | `edgebench/treasury_liquidity_provisioning_book` | finance, funding-condition-adaptive, professional-knowledge-work, short-end-cash-allocation, treasury-bill-liquidity | unregistered | unsealed | - |
-| [`d3cd6658-d997-5f26-89e3-97e5443046b4`](d3cd6658-d997-5f26-89e3-97e5443046b4/) | `edgebench/sec_leverage_trajectory_projection_book` | capital-structure-trajectory, finance, leverage-projection-book, professional-knowledge-work, rate-cycle-adaptive, sec-xbrl-fundamental-panel | unregistered | unsealed | - |
-| [`e51c34a1-9895-583f-b626-71478e6ae6bd`](e51c34a1-9895-583f-b626-71478e6ae6bd/) | `ethara/abs-auto-forward-flow-purchase` | auto-loan-abs, credit-risk, finance, portfolio-decision, professional-knowledge-work, structured-credit | unregistered | unsealed | - |
-| [`e5d63160-7e3a-5d55-bab1-a887c9e97be3`](e5d63160-7e3a-5d55-bab1-a887c9e97be3/) | `edgebench/fdic_bank_capital_projection_book` | bank-regulatory-capital, cross-sectional-panel-forecasting, finance, macro-regime-adaptive, professional-knowledge-work | unregistered | unsealed | - |
-
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#131a33","primaryTextColor":"#e8ecff","primaryBorderColor":"#845EF7","lineColor":"#22d3ee","fontFamily":"monospace"}}}%%
-flowchart LR
-    bundle["&lt;uuid&gt;/"]
-    bundle --> n0["task.toml<br/>runner manifest"]
-    bundle --> n1["instruction.md<br/>objective the agent reads"]
-    bundle --> n2["environment/<br/>agent sandbox image"]
-    bundle --> n3["tests/<br/>verifier, hidden from the agent"]
-    bundle --> n4["solution/<br/>private oracle"]
-    bundle --> n5["README.md"]
-    bundle --> n6["plots/"]
-    bundle --> n7["trajectory/"]
-```
+No bundle is resident under `samples/`.
 
 ```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#131a33","primaryTextColor":"#e8ecff","primaryBorderColor":"#845EF7","lineColor":"#22d3ee","fontFamily":"monospace"}}}%%
 flowchart LR
     staging["staging/"]
-    staging --> samples["samples/<br/>7 of 30"]
+    staging --> samples["samples/<br/>0 of 30"]
     samples --> delivery["delivery/<br/>0 of 10000"]
     delivery --> stock["stock/<br/>0 of 10000"]
 ```
