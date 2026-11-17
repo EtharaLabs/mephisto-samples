@@ -142,6 +142,6 @@ Released under the MIT License. © 2026 Ethara.AI.
 
 ## Contact
 
-Mephisto is built by [Ethara.AI](https://github.com/Ethara-Ai).
+Mephisto EdgeBench-Enterprise is built by [Ethara.AI](https://github.com/Ethara-Ai). For questions about the benchmark or dataset, contact [research@ethara.ai](mailto:research@ethara.ai).
 
 Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
