@@ -4,9 +4,9 @@
 
 <p align="center"><b>Five sample task bundles from Mephisto, a Harbor benchmark that measures whether an autonomous agent can reproduce a professional review desk's method from the desk's own ledgers.</b></p>
 
-<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-5-845EF7" alt="bundles: 5"></a> <a href="#summary"><img src="https://img.shields.io/badge/harbor_schema-1.4-845EF7" alt="harbor schema: 1.4"></a> <a href="#rollouts"><img src="https://img.shields.io/badge/mean_reward-0.5310-845EF7" alt="mean reward: 0.5310"></a></p>
+<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-5-845EF7" alt="bundles: 5"></a> <a href="#summary"><img src="https://img.shields.io/badge/harbor_schema-1.4-845EF7" alt="harbor schema: 1.4"></a> <a href="#trials"><img src="https://img.shields.io/badge/mean_reward-0.5310-845EF7" alt="mean reward: 0.5310"></a></p>
 
-<p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#tasks">Tasks</a> | <a href="#rollouts">Rollouts</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
+<p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#tasks">Tasks</a> | <a href="#trials">Trials</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
 
 ## Abstract
 
@@ -42,20 +42,20 @@ This repository holds the five-bundle sample. All five are back-office and middl
 | [`2f2bb3bd`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/) | Trade finance | Reproduce a documentary credit desk's examination record across six competence-floored lanes: discrepancy count, discrepancy class profile, refusal flag, tenor tier, examiner priority rank and charge reserve. | Beneficiary |
 | [`fc330da8`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/) | Floorplan finance | Reproduce a dealer floorplan desk's monthly surveillance record across six competence-floored lanes: aging reserve, turn profile, sold-out-of-trust flag, variance tier, headroom rank and loss reserve. | Dealer |
 
-## Rollouts
+## Trials
 
-Each bundle was run once with Claude Code on `claude-opus-5-5` and scored by the bundle's own verifier. Every run reached the 12 hour agent timeout, and no run produced a passing round, so these rollouts record difficulty evidence rather than reference solutions. Rollouts are stored in each bundle's `rollouts/opus-5-5/`.
+Each bundle was run once with Claude Code on `claude-opus-5-5` and scored by the bundle's own verifier. Every run reached the 12 hour agent timeout, and no run produced a passing round, so these trials record difficulty evidence rather than reference solutions. Trials are stored in each bundle's `trials/opus-5-5/`.
 
 | Task | Best reward | Rounds | Best round | Agent submissions | Agent time |
 | --- | ---: | ---: | --- | ---: | ---: |
-| [`04fb6ba7-d838-59da-b07d-6b683edd47a1`](04fb6ba7-d838-59da-b07d-6b683edd47a1/rollouts/opus-5-5/) | 0.4578 | 782 | agent-634 | 639 | 12 h |
-| [`0e08e615-419f-5444-b3d7-5357f7c59733`](0e08e615-419f-5444-b3d7-5357f7c59733/rollouts/opus-5-5/) | 0.6588 | 420 | agent-273 | 277 | 12 h |
-| [`19dc92c2-7f44-5ee4-b4c6-5a09e38758e0`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/rollouts/opus-5-5/) | 0.5022 | 980 | agent-835 | 837 | 12 h |
-| [`2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/rollouts/opus-5-5/) | 0.5608 | 935 | agent-753 | 792 | 12 h |
-| [`fc330da8-c1f7-53fc-8c50-b5da77e9b985`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/rollouts/opus-5-5/) | 0.4753 | 785 | agent-757 | 762 | 12 h |
+| [`04fb6ba7-d838-59da-b07d-6b683edd47a1`](04fb6ba7-d838-59da-b07d-6b683edd47a1/trials/opus-5-5/) | 0.4578 | 782 | agent-634 | 639 | 12 h |
+| [`0e08e615-419f-5444-b3d7-5357f7c59733`](0e08e615-419f-5444-b3d7-5357f7c59733/trials/opus-5-5/) | 0.6588 | 420 | agent-273 | 277 | 12 h |
+| [`19dc92c2-7f44-5ee4-b4c6-5a09e38758e0`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/trials/opus-5-5/) | 0.5022 | 980 | agent-835 | 837 | 12 h |
+| [`2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/trials/opus-5-5/) | 0.5608 | 935 | agent-753 | 792 | 12 h |
+| [`fc330da8-c1f7-53fc-8c50-b5da77e9b985`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/trials/opus-5-5/) | 0.4753 | 785 | agent-757 | 762 | 12 h |
 | **mean** | **0.5310** | **780** | | **661** | **12 h** |
 
-Each rollout folder holds the run as the harness recorded it:
+Each trial folder holds the run as the harness recorded it:
 
 | Path | Contents |
 | --- | --- |
@@ -108,7 +108,7 @@ Each bundle is one Harbor task in a directory named by its content-derived uuid5
 ├── environment/      offline sandbox image, with the desk's ledgers in workspace/
 ├── tests/            verifier and held-out truth, hidden from the agent
 ├── solution/         private reference solution and measured lane floors
-└── rollouts/
+└── trials/
     └── opus-5-5/     agent model
         ├── final_result.json, agent_output.txt, run_history.json
         └── submissions/<round>/
