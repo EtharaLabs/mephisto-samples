@@ -1,0 +1,9 @@
+2026-11-15 13:34:21,586 - INFO - Judge container started: 440b317c1feefbf89140c368dfd2cefccd9854436f324402307f7400e8a37c17
+2026-11-15 13:34:21,587 - INFO - Archive saved (40185 bytes)
+2026-11-15 13:34:21,961 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-11-15 13:34:22,019 - INFO - Running eval script...
+2026-11-15 13:34:22,269 - INFO - Test runtime: 0.25s, timed_out: False
+2026-11-15 13:34:22,271 - INFO - Result: 0/6 passed (pass_rate=0.00%)
+2026-11-15 13:34:22,271 - INFO - Stopping container edgebench.judge.fund_administration_nav_oversight.4dea3dbe5207...
+2026-11-15 13:34:22,365 - INFO - Removing container edgebench.judge.fund_administration_nav_oversight.4dea3dbe5207...
+2026-11-15 13:34:22,430 - INFO - Container edgebench.judge.fund_administration_nav_oversight.4dea3dbe5207 removed.

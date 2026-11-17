@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "US",
+  "fund_id": "FD0311",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0311-A",
+      "currency": "EUR"
+    },
+    {
+      "class_id": "FD0311-I",
+      "currency": "GBP"
+    }
+  ],
+  "strategy": "multi-asset"
+}

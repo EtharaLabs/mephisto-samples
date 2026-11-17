@@ -1,0 +1,62 @@
+{
+  "task_id": "fund_administration_nav_oversight",
+  "submission_id": "bc58e1f6a6b0",
+  "total_tests": 6,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.4923,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 0.27593374252319336,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [
+    {
+      "name": "expense_reserve",
+      "status": "passed",
+      "message": null,
+      "score": 0.5448773501482224,
+      "weight": 1.0
+    },
+    {
+      "name": "fee_accrual_profile",
+      "status": "passed",
+      "message": null,
+      "score": 0.4025460785103236,
+      "weight": 1.0
+    },
+    {
+      "name": "nav_break_magnitude",
+      "status": "passed",
+      "message": null,
+      "score": 0.4180182906805471,
+      "weight": 1.0
+    },
+    {
+      "name": "oversight_rank",
+      "status": "passed",
+      "message": null,
+      "score": 0.7655367231638418,
+      "weight": 1.0
+    },
+    {
+      "name": "pricing_source_tier",
+      "status": "passed",
+      "message": null,
+      "score": 0.3379248526420544,
+      "weight": 1.0
+    },
+    {
+      "name": "restatement_flag",
+      "status": "passed",
+      "message": null,
+      "score": 0.48506787330316725,
+      "weight": 1.0
+    }
+  ],
+  "metrics": {},
+  "submitted_at": 1794749669.4718301
+}

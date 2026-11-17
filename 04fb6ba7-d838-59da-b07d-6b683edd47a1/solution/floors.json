@@ -1,0 +1,5075 @@
+{
+  "floors": {
+    "dilution_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.6965377538865981,
+      "floor_source": "oneshot_closed_dilution_reserve"
+    },
+    "collection_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.8772107847503572,
+      "floor_source": "oneshot_collection_profile"
+    },
+    "dispute_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8106666666666668,
+      "floor_source": "oneshot_closed_dispute_prevalence"
+    },
+    "recovery_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6901923505526647,
+      "floor_source": "oneshot_recovery_tier"
+    },
+    "availability_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.38571428571428573,
+      "floor_source": "oneshot_closed_availability_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.5771343770361312,
+      "floor_source": "oneshot_loss_reserve_normalised"
+    }
+  },
+  "old_floors": {
+    "dilution_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.6965377538865981,
+      "floor_source": "oneshot_closed_dilution_reserve"
+    },
+    "collection_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.8772107847503572,
+      "floor_source": "oneshot_collection_profile"
+    },
+    "dispute_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8106666666666668,
+      "floor_source": "oneshot_closed_dispute_prevalence"
+    },
+    "recovery_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6901923505526647,
+      "floor_source": "oneshot_recovery_tier"
+    },
+    "availability_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.38571428571428573,
+      "floor_source": "oneshot_closed_availability_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.5771343770361312,
+      "floor_source": "oneshot_loss_reserve_normalised"
+    }
+  },
+  "dead_lane_threshold": 0.1,
+  "methods": {
+    "balance_haircut": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.068261138697305,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.08734875883470099,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "sector_median": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2895088313328582,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8160399293303572,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.2131119769887673,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.06607142857142857,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.23642729101934334,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "prior_period_carry": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.29232199177369067,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8210673973035715,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.16863735176729044,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07678571428571429,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24468680772464851,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "advance_rate_table": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.1392857142857143,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "terms_schedule": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2895088313328582,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.36827135360714286,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.2131119769887673,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.06607142857142857,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.23642729101934334,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_dilution_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.5296531950895945,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_dilution_reserve_normalised": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.6046934433246781,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_collection_profile": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8772107847503572,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_dispute_flag": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.7515527950310559,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_recovery_tier": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.6901923505526647,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_availability_rank": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.15714285714285714,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_loss_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.41135543693474813,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_loss_reserve_normalised": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.5771343770361312,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_dilution_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.6965377538865981,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_collection_profile": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.7495896832955017,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_dispute_prevalence": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.8106666666666668,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_dispute_flag": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.7320261437908496,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_recovery_quartile": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.6723896082961812,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_recovery_tier": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.25293740391779607,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_availability_rank": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.38571428571428573,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_loss_direct": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.20541121513351285,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_loss_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2343383495612395,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    }
+  },
+  "controls": {
+    "empty": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.0,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 0.0,
+      "valid_records": 0,
+      "expected_records": 560,
+      "note": "empty submission",
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_zero": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.0,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.09884309055357143,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.10339943342776203,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.03571428571428571,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_one": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 1.073093138978919e-05,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.0,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.5026737967914439,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.09827833572453372,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.039285714285714285,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.00026190549967410287,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_sector_mean": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.25567971444210913,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8213464744948761,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.2131119769887673,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.06607142857142857,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2049482315340219,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_median": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "all_flag": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.5026737967914439,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.10339943342776203,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "no_flag": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.09827833572453372,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "uniform_distribution": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.6484631119107144,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "identity_ranking": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.09821428571428571,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "reverse_identity_ranking": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.0017857142857142857,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_0": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.10339943342776203,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_1": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.09827833572453372,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_2": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_3": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.8192737022767856,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.09827833572453372,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_0": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.316050626875,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_1": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.17248707941071428,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_2": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.10871065028571428,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_3": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.07151749701785715,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_4": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.08686320146428572,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_5": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.047267479392857144,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_6": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.05502680746428571,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_7": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.043233567535714286,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_8": {
+      "score": 0.0,
+      "lanes": {
+        "dilution_reserve": {
+          "metric": 0.2941267700040974,
+          "floor": 0.6965377538865981,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "collection_profile": {
+          "metric": 0.09884309055357143,
+          "floor": 0.8772107847503572,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "dispute_flag": {
+          "metric": 0.0,
+          "floor": 0.8106666666666668,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "recovery_tier": {
+          "metric": 0.1,
+          "floor": 0.6901923505526647,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "availability_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.38571428571428573,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24038333940052997,
+          "floor": 0.5771343770361312,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    }
+  },
+  "degenerate_envelope": {
+    "score": 0.0,
+    "lanes": {
+      "dilution_reserve": {
+        "metric": 0.32392939382716973,
+        "floor": 0.6965377538865981,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "collection_profile": {
+        "metric": 0.8254389279642856,
+        "floor": 0.8772107847503572,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "dispute_flag": {
+        "metric": 0.5026737967914439,
+        "floor": 0.8106666666666668,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "recovery_tier": {
+        "metric": 0.10339943342776203,
+        "floor": 0.6901923505526647,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "availability_rank": {
+        "metric": 0.075,
+        "floor": 0.38571428571428573,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.2596791562481519,
+        "floor": 0.5771343770361312,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "envelope_parameters": {
+    "dilution_reserve": {
+      "domain": [
+        0.0,
+        664817.56
+      ],
+      "intervals": 1120,
+      "value": 40327.82,
+      "attained_metric": 0.32392939382716973,
+      "proof": "affine/positive-convex quasiconcavity on every error breakpoint interval; beyond domain score=0"
+    },
+    "loss_reserve": {
+      "domain": [
+        0.0,
+        110850.96
+      ],
+      "intervals": 1120,
+      "value": 1805.53,
+      "attained_metric": 0.2596791562481519,
+      "proof": "affine/positive-convex quasiconcavity on every error breakpoint interval; beyond domain score=0"
+    },
+    "collection_profile": {
+      "vector_including_uncollected": [
+        0.31681339000000047,
+        0.17461765,
+        0.11100457,
+        0.07489778,
+        0.08997391,
+        0.04511714,
+        0.05277293,
+        0.04489925,
+        0.08990337999999998
+      ],
+      "segments": 5031,
+      "proof": "exact empirical marginal-slope allocation over the complete 9-category simplex"
+    },
+    "dispute_flag": {
+      "constant": 1,
+      "proof": "positive-class F1 best constant is all-positive"
+    },
+    "recovery_tier": {
+      "constant": 0,
+      "labels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "proof": "exhaust all admissible constant labels"
+    },
+    "availability_rank": {
+      "constant": 11,
+      "proof": "exhaust every constant rank 1..280 under the tolerance-band metric"
+    }
+  },
+  "decisions": {
+    "dilution_reserve": {
+      "measured_max": 0.6965377538865981,
+      "source": "oneshot_closed_dilution_reserve",
+      "ranked_top5": [
+        [
+          "oneshot_closed_dilution_reserve",
+          0.6965377538865981
+        ],
+        [
+          "oneshot_dilution_reserve_normalised",
+          0.6046934433246781
+        ],
+        [
+          "oneshot_dilution_reserve",
+          0.5296531950895945
+        ],
+        [
+          "degenerate_envelope",
+          0.32392939382716973
+        ],
+        [
+          "advance_rate_table",
+          0.2941267700040974
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.3034622461134019,
+      "dead_lane_risk": false
+    },
+    "collection_profile": {
+      "measured_max": 0.8772107847503572,
+      "source": "oneshot_collection_profile",
+      "ranked_top5": [
+        [
+          "oneshot_collection_profile",
+          0.8772107847503572
+        ],
+        [
+          "degenerate_envelope",
+          0.8254389279642856
+        ],
+        [
+          "constant_sector_mean",
+          0.8213464744948761
+        ],
+        [
+          "prior_period_carry",
+          0.8210673973035715
+        ],
+        [
+          "balance_haircut",
+          0.8192737022767856
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.12278921524964281,
+      "dead_lane_risk": false
+    },
+    "dispute_flag": {
+      "measured_max": 0.8106666666666668,
+      "source": "oneshot_closed_dispute_prevalence",
+      "ranked_top5": [
+        [
+          "oneshot_closed_dispute_prevalence",
+          0.8106666666666668
+        ],
+        [
+          "oneshot_dispute_flag",
+          0.7515527950310559
+        ],
+        [
+          "oneshot_closed_dispute_flag",
+          0.7320261437908496
+        ],
+        [
+          "constant_one",
+          0.5026737967914439
+        ],
+        [
+          "all_flag",
+          0.5026737967914439
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.18933333333333324,
+      "dead_lane_risk": false
+    },
+    "recovery_tier": {
+      "measured_max": 0.6901923505526647,
+      "source": "oneshot_recovery_tier",
+      "ranked_top5": [
+        [
+          "oneshot_recovery_tier",
+          0.6901923505526647
+        ],
+        [
+          "oneshot_closed_recovery_quartile",
+          0.6723896082961812
+        ],
+        [
+          "oneshot_closed_recovery_tier",
+          0.25293740391779607
+        ],
+        [
+          "sector_median",
+          0.2131119769887673
+        ],
+        [
+          "terms_schedule",
+          0.2131119769887673
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.3098076494473353,
+      "dead_lane_risk": false
+    },
+    "availability_rank": {
+      "measured_max": 0.38571428571428573,
+      "source": "oneshot_closed_availability_rank",
+      "ranked_top5": [
+        [
+          "oneshot_closed_availability_rank",
+          0.38571428571428573
+        ],
+        [
+          "oneshot_availability_rank",
+          0.15714285714285714
+        ],
+        [
+          "advance_rate_table",
+          0.1392857142857143
+        ],
+        [
+          "identity_ranking",
+          0.09821428571428571
+        ],
+        [
+          "prior_period_carry",
+          0.07678571428571429
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.6142857142857143,
+      "dead_lane_risk": false
+    },
+    "loss_reserve": {
+      "measured_max": 0.5771343770361312,
+      "source": "oneshot_loss_reserve_normalised",
+      "ranked_top5": [
+        [
+          "oneshot_loss_reserve_normalised",
+          0.5771343770361312
+        ],
+        [
+          "oneshot_loss_reserve",
+          0.41135543693474813
+        ],
+        [
+          "degenerate_envelope",
+          0.2596791562481519
+        ],
+        [
+          "prior_period_carry",
+          0.24468680772464851
+        ],
+        [
+          "advance_rate_table",
+          0.24038333940052997
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.42286562296386876,
+      "dead_lane_risk": false
+    }
+  },
+  "exact_zero_asserted": [
+    "balance_haircut",
+    "sector_median",
+    "prior_period_carry",
+    "advance_rate_table",
+    "terms_schedule",
+    "oneshot_dilution_reserve",
+    "oneshot_dilution_reserve_normalised",
+    "oneshot_collection_profile",
+    "oneshot_dispute_flag",
+    "oneshot_recovery_tier",
+    "oneshot_availability_rank",
+    "oneshot_loss_reserve",
+    "oneshot_loss_reserve_normalised",
+    "oneshot_closed_dilution_reserve",
+    "oneshot_closed_collection_profile",
+    "oneshot_closed_dispute_prevalence",
+    "oneshot_closed_dispute_flag",
+    "oneshot_closed_recovery_quartile",
+    "oneshot_closed_recovery_tier",
+    "oneshot_closed_availability_rank",
+    "oneshot_closed_loss_direct",
+    "oneshot_closed_loss_reserve",
+    "empty",
+    "constant_zero",
+    "constant_one",
+    "constant_sector_mean",
+    "constant_median",
+    "all_flag",
+    "no_flag",
+    "uniform_distribution",
+    "identity_ranking",
+    "reverse_identity_ranking",
+    "tier_0",
+    "tier_1",
+    "tier_2",
+    "tier_3",
+    "point_mass_0",
+    "point_mass_1",
+    "point_mass_2",
+    "point_mass_3",
+    "point_mass_4",
+    "point_mass_5",
+    "point_mass_6",
+    "point_mass_7",
+    "point_mass_8",
+    "degenerate_envelope"
+  ],
+  "public_reference": {
+    "score": 0.1331,
+    "lanes": {
+      "dilution_reserve": {
+        "metric": 0.7334687042595437,
+        "floor": 0.6965377538865981,
+        "fraction": 0.12169866547137044,
+        "points": 0.12169866547137044,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "collection_profile": {
+        "metric": 0.8890921843866627,
+        "floor": 0.8772107847503572,
+        "fraction": 0.0967625667461873,
+        "points": 0.0967625667461873,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "dispute_flag": {
+        "metric": 0.8509615384615384,
+        "floor": 0.8106666666666668,
+        "fraction": 0.21282502708558995,
+        "points": 0.21282502708558995,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "recovery_tier": {
+        "metric": 0.7157137660773552,
+        "floor": 0.6901923505526647,
+        "fraction": 0.08237826138320989,
+        "points": 0.08237826138320989,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "availability_rank": {
+        "metric": 0.5196428571428571,
+        "floor": 0.38571428571428573,
+        "fraction": 0.21802325581395332,
+        "points": 0.21802325581395332,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.6053807413331759,
+        "floor": 0.5771343770361312,
+        "fraction": 0.06679749490882145,
+        "points": 0.06679749490882145,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "public_reference_asof_private_diagnostic": {
+    "score": 0.101,
+    "lanes": {
+      "dilution_reserve": {
+        "metric": 0.6787392613979525,
+        "floor": 0.6965377538865981,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "collection_profile": {
+        "metric": 0.8887783689954444,
+        "floor": 0.8772107847503572,
+        "fraction": 0.09420684236452795,
+        "points": 0.09420684236452795,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "dispute_flag": {
+        "metric": 0.8306878306878308,
+        "floor": 0.8106666666666668,
+        "fraction": 0.10574558461882426,
+        "points": 0.10574558461882426,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "recovery_tier": {
+        "metric": 0.7251016829748558,
+        "floor": 0.6901923505526647,
+        "fraction": 0.11268066648601383,
+        "points": 0.11268066648601383,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "availability_rank": {
+        "metric": 0.5017857142857143,
+        "floor": 0.38571428571428573,
+        "fraction": 0.18895348837209297,
+        "points": 0.18895348837209297,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.6212560801036693,
+        "floor": 0.5771343770361312,
+        "fraction": 0.10433977290064075,
+        "points": 0.10433977290064075,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "oracle": {
+    "score": 1.0,
+    "lanes": {
+      "dilution_reserve": {
+        "metric": 1.0,
+        "floor": 0.6965377538865981,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "collection_profile": {
+        "metric": 1.0,
+        "floor": 0.8772107847503572,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "dispute_flag": {
+        "metric": 1.0,
+        "floor": 0.8106666666666668,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "recovery_tier": {
+        "metric": 1.0,
+        "floor": 0.6901923505526647,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "availability_rank": {
+        "metric": 1.0,
+        "floor": 0.38571428571428573,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 1.0,
+        "floor": 0.5771343770361312,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "nop": {
+    "score": 0.0,
+    "lanes": {
+      "dilution_reserve": {
+        "metric": 0.0,
+        "floor": 0.6965377538865981,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "collection_profile": {
+        "metric": 0.0,
+        "floor": 0.8772107847503572,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "dispute_flag": {
+        "metric": 0.0,
+        "floor": 0.8106666666666668,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "recovery_tier": {
+        "metric": 0.0,
+        "floor": 0.6901923505526647,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "availability_rank": {
+        "metric": 0.0,
+        "floor": 0.38571428571428573,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.0,
+        "floor": 0.5771343770361312,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 0.0,
+    "valid_records": 0,
+    "expected_records": 560,
+    "note": "empty submission",
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "oracle_recomputes_truth_bytes": true,
+  "invalid_floor_checks": 5,
+  "audits": {
+    "oneshot": {
+      "permitted_reads": 802,
+      "violations": 0,
+      "paths": {
+        "history/surveillance.jsonl": 1,
+        "queries.jsonl": 1,
+        "dilution/1.jsonl": 1,
+        "dilution/10.jsonl": 1,
+        "dilution/11.jsonl": 1,
+        "dilution/12.jsonl": 1,
+        "dilution/13.jsonl": 1,
+        "dilution/14.jsonl": 1,
+        "dilution/15.jsonl": 1,
+        "dilution/16.jsonl": 1,
+        "dilution/17.jsonl": 1,
+        "dilution/18.jsonl": 1,
+        "dilution/19.jsonl": 1,
+        "dilution/2.jsonl": 1,
+        "dilution/20.jsonl": 1,
+        "dilution/3.jsonl": 1,
+        "dilution/4.jsonl": 1,
+        "dilution/5.jsonl": 1,
+        "dilution/6.jsonl": 1,
+        "dilution/7.jsonl": 1,
+        "dilution/8.jsonl": 1,
+        "dilution/9.jsonl": 1,
+        "collections/1.jsonl": 1,
+        "collections/10.jsonl": 1,
+        "collections/11.jsonl": 1,
+        "collections/12.jsonl": 1,
+        "collections/13.jsonl": 1,
+        "collections/14.jsonl": 1,
+        "collections/15.jsonl": 1,
+        "collections/16.jsonl": 1,
+        "collections/17.jsonl": 1,
+        "collections/18.jsonl": 1,
+        "collections/19.jsonl": 1,
+        "collections/2.jsonl": 1,
+        "collections/20.jsonl": 1,
+        "collections/3.jsonl": 1,
+        "collections/4.jsonl": 1,
+        "collections/5.jsonl": 1,
+        "collections/6.jsonl": 1,
+        "collections/7.jsonl": 1,
+        "collections/8.jsonl": 1,
+        "collections/9.jsonl": 1,
+        "disputes/OB0000.jsonl": 1,
+        "disputes/OB0001.jsonl": 1,
+        "disputes/OB0002.jsonl": 1,
+        "disputes/OB0003.jsonl": 1,
+        "disputes/OB0004.jsonl": 1,
+        "disputes/OB0005.jsonl": 1,
+        "disputes/OB0006.jsonl": 1,
+        "disputes/OB0007.jsonl": 1,
+        "disputes/OB0008.jsonl": 1,
+        "disputes/OB0009.jsonl": 1,
+        "disputes/OB0010.jsonl": 1,
+        "disputes/OB0011.jsonl": 1,
+        "disputes/OB0012.jsonl": 1,
+        "disputes/OB0013.jsonl": 1,
+        "disputes/OB0014.jsonl": 1,
+        "disputes/OB0015.jsonl": 1,
+        "disputes/OB0016.jsonl": 1,
+        "disputes/OB0017.jsonl": 1,
+        "disputes/OB0018.jsonl": 1,
+        "disputes/OB0019.jsonl": 1,
+        "disputes/OB0020.jsonl": 1,
+        "disputes/OB0021.jsonl": 1,
+        "disputes/OB0022.jsonl": 1,
+        "disputes/OB0023.jsonl": 1,
+        "disputes/OB0024.jsonl": 1,
+        "disputes/OB0025.jsonl": 1,
+        "disputes/OB0026.jsonl": 1,
+        "disputes/OB0027.jsonl": 1,
+        "disputes/OB0028.jsonl": 1,
+        "disputes/OB0029.jsonl": 1,
+        "disputes/OB0030.jsonl": 1,
+        "disputes/OB0031.jsonl": 1,
+        "disputes/OB0032.jsonl": 1,
+        "disputes/OB0033.jsonl": 1,
+        "disputes/OB0034.jsonl": 1,
+        "disputes/OB0035.jsonl": 1,
+        "disputes/OB0036.jsonl": 1,
+        "disputes/OB0037.jsonl": 1,
+        "disputes/OB0038.jsonl": 1,
+        "disputes/OB0039.jsonl": 1,
+        "disputes/OB0040.jsonl": 1,
+        "disputes/OB0041.jsonl": 1,
+        "disputes/OB0042.jsonl": 1,
+        "disputes/OB0043.jsonl": 1,
+        "disputes/OB0044.jsonl": 1,
+        "disputes/OB0045.jsonl": 1,
+        "disputes/OB0046.jsonl": 1,
+        "disputes/OB0047.jsonl": 1,
+        "disputes/OB0048.jsonl": 1,
+        "disputes/OB0049.jsonl": 1,
+        "disputes/OB0050.jsonl": 1,
+        "disputes/OB0051.jsonl": 1,
+        "disputes/OB0052.jsonl": 1,
+        "disputes/OB0053.jsonl": 1,
+        "disputes/OB0054.jsonl": 1,
+        "disputes/OB0055.jsonl": 1,
+        "disputes/OB0056.jsonl": 1,
+        "disputes/OB0057.jsonl": 1,
+        "disputes/OB0058.jsonl": 1,
+        "disputes/OB0059.jsonl": 1,
+        "disputes/OB0060.jsonl": 1,
+        "disputes/OB0061.jsonl": 1,
+        "disputes/OB0062.jsonl": 1,
+        "disputes/OB0063.jsonl": 1,
+        "disputes/OB0064.jsonl": 1,
+        "disputes/OB0065.jsonl": 1,
+        "disputes/OB0066.jsonl": 1,
+        "disputes/OB0067.jsonl": 1,
+        "disputes/OB0068.jsonl": 1,
+        "disputes/OB0069.jsonl": 1,
+        "disputes/OB0070.jsonl": 1,
+        "disputes/OB0071.jsonl": 1,
+        "disputes/OB0072.jsonl": 1,
+        "disputes/OB0073.jsonl": 1,
+        "disputes/OB0074.jsonl": 1,
+        "disputes/OB0075.jsonl": 1,
+        "disputes/OB0076.jsonl": 1,
+        "disputes/OB0077.jsonl": 1,
+        "disputes/OB0078.jsonl": 1,
+        "disputes/OB0079.jsonl": 1,
+        "disputes/OB0080.jsonl": 1,
+        "disputes/OB0081.jsonl": 1,
+        "disputes/OB0082.jsonl": 1,
+        "disputes/OB0083.jsonl": 1,
+        "disputes/OB0084.jsonl": 1,
+        "disputes/OB0085.jsonl": 1,
+        "disputes/OB0086.jsonl": 1,
+        "disputes/OB0087.jsonl": 1,
+        "disputes/OB0088.jsonl": 1,
+        "disputes/OB0089.jsonl": 1,
+        "disputes/OB0090.jsonl": 1,
+        "disputes/OB0091.jsonl": 1,
+        "disputes/OB0092.jsonl": 1,
+        "disputes/OB0093.jsonl": 1,
+        "disputes/OB0094.jsonl": 1,
+        "disputes/OB0095.jsonl": 1,
+        "disputes/OB0096.jsonl": 1,
+        "disputes/OB0097.jsonl": 1,
+        "disputes/OB0098.jsonl": 1,
+        "disputes/OB0099.jsonl": 1,
+        "disputes/OB0100.jsonl": 1,
+        "disputes/OB0101.jsonl": 1,
+        "disputes/OB0102.jsonl": 1,
+        "disputes/OB0103.jsonl": 1,
+        "disputes/OB0104.jsonl": 1,
+        "disputes/OB0105.jsonl": 1,
+        "disputes/OB0106.jsonl": 1,
+        "disputes/OB0107.jsonl": 1,
+        "disputes/OB0108.jsonl": 1,
+        "disputes/OB0109.jsonl": 1,
+        "disputes/OB0110.jsonl": 1,
+        "disputes/OB0111.jsonl": 1,
+        "disputes/OB0112.jsonl": 1,
+        "disputes/OB0113.jsonl": 1,
+        "disputes/OB0114.jsonl": 1,
+        "disputes/OB0115.jsonl": 1,
+        "disputes/OB0116.jsonl": 1,
+        "disputes/OB0117.jsonl": 1,
+        "disputes/OB0118.jsonl": 1,
+        "disputes/OB0119.jsonl": 1,
+        "disputes/OB0120.jsonl": 1,
+        "disputes/OB0121.jsonl": 1,
+        "disputes/OB0122.jsonl": 1,
+        "disputes/OB0123.jsonl": 1,
+        "disputes/OB0124.jsonl": 1,
+        "disputes/OB0125.jsonl": 1,
+        "disputes/OB0126.jsonl": 1,
+        "disputes/OB0127.jsonl": 1,
+        "disputes/OB0128.jsonl": 1,
+        "disputes/OB0129.jsonl": 1,
+        "disputes/OB0130.jsonl": 1,
+        "disputes/OB0131.jsonl": 1,
+        "disputes/OB0132.jsonl": 1,
+        "disputes/OB0133.jsonl": 1,
+        "disputes/OB0134.jsonl": 1,
+        "disputes/OB0135.jsonl": 1,
+        "disputes/OB0136.jsonl": 1,
+        "disputes/OB0137.jsonl": 1,
+        "disputes/OB0138.jsonl": 1,
+        "disputes/OB0139.jsonl": 1,
+        "disputes/OB0140.jsonl": 1,
+        "disputes/OB0141.jsonl": 1,
+        "disputes/OB0142.jsonl": 1,
+        "disputes/OB0143.jsonl": 1,
+        "disputes/OB0144.jsonl": 1,
+        "disputes/OB0145.jsonl": 1,
+        "disputes/OB0146.jsonl": 1,
+        "disputes/OB0147.jsonl": 1,
+        "disputes/OB0148.jsonl": 1,
+        "disputes/OB0149.jsonl": 1,
+        "disputes/OB0150.jsonl": 1,
+        "disputes/OB0151.jsonl": 1,
+        "disputes/OB0152.jsonl": 1,
+        "disputes/OB0153.jsonl": 1,
+        "disputes/OB0154.jsonl": 1,
+        "disputes/OB0155.jsonl": 1,
+        "disputes/OB0156.jsonl": 1,
+        "disputes/OB0157.jsonl": 1,
+        "disputes/OB0158.jsonl": 1,
+        "disputes/OB0159.jsonl": 1,
+        "disputes/OB0160.jsonl": 1,
+        "disputes/OB0161.jsonl": 1,
+        "disputes/OB0162.jsonl": 1,
+        "disputes/OB0163.jsonl": 1,
+        "disputes/OB0164.jsonl": 1,
+        "disputes/OB0165.jsonl": 1,
+        "disputes/OB0166.jsonl": 1,
+        "disputes/OB0167.jsonl": 1,
+        "disputes/OB0168.jsonl": 1,
+        "disputes/OB0169.jsonl": 1,
+        "disputes/OB0170.jsonl": 1,
+        "disputes/OB0171.jsonl": 1,
+        "disputes/OB0172.jsonl": 1,
+        "disputes/OB0173.jsonl": 1,
+        "disputes/OB0174.jsonl": 1,
+        "disputes/OB0175.jsonl": 1,
+        "disputes/OB0176.jsonl": 1,
+        "disputes/OB0177.jsonl": 1,
+        "disputes/OB0178.jsonl": 1,
+        "disputes/OB0179.jsonl": 1,
+        "disputes/OB0180.jsonl": 1,
+        "disputes/OB0181.jsonl": 1,
+        "disputes/OB0182.jsonl": 1,
+        "disputes/OB0183.jsonl": 1,
+        "disputes/OB0184.jsonl": 1,
+        "disputes/OB0185.jsonl": 1,
+        "disputes/OB0186.jsonl": 1,
+        "disputes/OB0187.jsonl": 1,
+        "disputes/OB0188.jsonl": 1,
+        "disputes/OB0189.jsonl": 1,
+        "disputes/OB0190.jsonl": 1,
+        "disputes/OB0191.jsonl": 1,
+        "disputes/OB0192.jsonl": 1,
+        "disputes/OB0193.jsonl": 1,
+        "disputes/OB0194.jsonl": 1,
+        "disputes/OB0195.jsonl": 1,
+        "disputes/OB0196.jsonl": 1,
+        "disputes/OB0197.jsonl": 1,
+        "disputes/OB0198.jsonl": 1,
+        "disputes/OB0199.jsonl": 1,
+        "disputes/OB0200.jsonl": 1,
+        "disputes/OB0201.jsonl": 1,
+        "disputes/OB0202.jsonl": 1,
+        "disputes/OB0203.jsonl": 1,
+        "disputes/OB0204.jsonl": 1,
+        "disputes/OB0205.jsonl": 1,
+        "disputes/OB0206.jsonl": 1,
+        "disputes/OB0207.jsonl": 1,
+        "disputes/OB0208.jsonl": 1,
+        "disputes/OB0209.jsonl": 1,
+        "disputes/OB0210.jsonl": 1,
+        "disputes/OB0211.jsonl": 1,
+        "disputes/OB0212.jsonl": 1,
+        "disputes/OB0213.jsonl": 1,
+        "disputes/OB0214.jsonl": 1,
+        "disputes/OB0215.jsonl": 1,
+        "disputes/OB0216.jsonl": 1,
+        "disputes/OB0217.jsonl": 1,
+        "disputes/OB0218.jsonl": 1,
+        "disputes/OB0219.jsonl": 1,
+        "disputes/OB0220.jsonl": 1,
+        "disputes/OB0221.jsonl": 1,
+        "disputes/OB0222.jsonl": 1,
+        "disputes/OB0223.jsonl": 1,
+        "disputes/OB0224.jsonl": 1,
+        "disputes/OB0225.jsonl": 1,
+        "disputes/OB0226.jsonl": 1,
+        "disputes/OB0227.jsonl": 1,
+        "disputes/OB0228.jsonl": 1,
+        "disputes/OB0229.jsonl": 1,
+        "disputes/OB0230.jsonl": 1,
+        "disputes/OB0231.jsonl": 1,
+        "disputes/OB0232.jsonl": 1,
+        "disputes/OB0233.jsonl": 1,
+        "disputes/OB0234.jsonl": 1,
+        "disputes/OB0235.jsonl": 1,
+        "disputes/OB0236.jsonl": 1,
+        "disputes/OB0237.jsonl": 1,
+        "disputes/OB0238.jsonl": 1,
+        "disputes/OB0239.jsonl": 1,
+        "disputes/OB0240.jsonl": 1,
+        "disputes/OB0241.jsonl": 1,
+        "disputes/OB0242.jsonl": 1,
+        "disputes/OB0243.jsonl": 1,
+        "disputes/OB0244.jsonl": 1,
+        "disputes/OB0245.jsonl": 1,
+        "disputes/OB0246.jsonl": 1,
+        "disputes/OB0247.jsonl": 1,
+        "disputes/OB0248.jsonl": 1,
+        "disputes/OB0249.jsonl": 1,
+        "disputes/OB0250.jsonl": 1,
+        "disputes/OB0251.jsonl": 1,
+        "disputes/OB0252.jsonl": 1,
+        "disputes/OB0253.jsonl": 1,
+        "disputes/OB0254.jsonl": 1,
+        "disputes/OB0255.jsonl": 1,
+        "disputes/OB0256.jsonl": 1,
+        "disputes/OB0257.jsonl": 1,
+        "disputes/OB0258.jsonl": 1,
+        "disputes/OB0259.jsonl": 1,
+        "disputes/OB0260.jsonl": 1,
+        "disputes/OB0261.jsonl": 1,
+        "disputes/OB0262.jsonl": 1,
+        "disputes/OB0263.jsonl": 1,
+        "disputes/OB0264.jsonl": 1,
+        "disputes/OB0265.jsonl": 1,
+        "disputes/OB0266.jsonl": 1,
+        "disputes/OB0267.jsonl": 1,
+        "disputes/OB0268.jsonl": 1,
+        "disputes/OB0269.jsonl": 1,
+        "disputes/OB0270.jsonl": 1,
+        "disputes/OB0271.jsonl": 1,
+        "disputes/OB0272.jsonl": 1,
+        "disputes/OB0273.jsonl": 1,
+        "disputes/OB0274.jsonl": 1,
+        "disputes/OB0275.jsonl": 1,
+        "disputes/OB0276.jsonl": 1,
+        "disputes/OB0277.jsonl": 1,
+        "disputes/OB0278.jsonl": 1,
+        "disputes/OB0279.jsonl": 1,
+        "disputes/OB0280.jsonl": 1,
+        "disputes/OB0281.jsonl": 1,
+        "disputes/OB0282.jsonl": 1,
+        "disputes/OB0283.jsonl": 1,
+        "disputes/OB0284.jsonl": 1,
+        "disputes/OB0285.jsonl": 1,
+        "disputes/OB0286.jsonl": 1,
+        "disputes/OB0287.jsonl": 1,
+        "disputes/OB0288.jsonl": 1,
+        "disputes/OB0289.jsonl": 1,
+        "disputes/OB0290.jsonl": 1,
+        "disputes/OB0291.jsonl": 1,
+        "disputes/OB0292.jsonl": 1,
+        "disputes/OB0293.jsonl": 1,
+        "disputes/OB0294.jsonl": 1,
+        "disputes/OB0295.jsonl": 1,
+        "disputes/OB0296.jsonl": 1,
+        "disputes/OB0297.jsonl": 1,
+        "disputes/OB0298.jsonl": 1,
+        "disputes/OB0299.jsonl": 1,
+        "disputes/OB0300.jsonl": 1,
+        "disputes/OB0301.jsonl": 1,
+        "disputes/OB0302.jsonl": 1,
+        "disputes/OB0303.jsonl": 1,
+        "disputes/OB0304.jsonl": 1,
+        "disputes/OB0305.jsonl": 1,
+        "disputes/OB0306.jsonl": 1,
+        "disputes/OB0307.jsonl": 1,
+        "disputes/OB0308.jsonl": 1,
+        "disputes/OB0309.jsonl": 1,
+        "disputes/OB0310.jsonl": 1,
+        "disputes/OB0311.jsonl": 1,
+        "disputes/OB0312.jsonl": 1,
+        "disputes/OB0313.jsonl": 1,
+        "disputes/OB0314.jsonl": 1,
+        "disputes/OB0315.jsonl": 1,
+        "disputes/OB0316.jsonl": 1,
+        "disputes/OB0317.jsonl": 1,
+        "disputes/OB0318.jsonl": 1,
+        "disputes/OB0319.jsonl": 1,
+        "disputes/OB0320.jsonl": 1,
+        "disputes/OB0321.jsonl": 1,
+        "disputes/OB0322.jsonl": 1,
+        "disputes/OB0323.jsonl": 1,
+        "disputes/OB0324.jsonl": 1,
+        "disputes/OB0325.jsonl": 1,
+        "disputes/OB0326.jsonl": 1,
+        "disputes/OB0327.jsonl": 1,
+        "disputes/OB0328.jsonl": 1,
+        "disputes/OB0329.jsonl": 1,
+        "disputes/OB0330.jsonl": 1,
+        "disputes/OB0331.jsonl": 1,
+        "disputes/OB0332.jsonl": 1,
+        "disputes/OB0333.jsonl": 1,
+        "disputes/OB0334.jsonl": 1,
+        "disputes/OB0335.jsonl": 1,
+        "disputes/OB0336.jsonl": 1,
+        "disputes/OB0337.jsonl": 1,
+        "disputes/OB0338.jsonl": 1,
+        "disputes/OB0339.jsonl": 1,
+        "disputes/OB0340.jsonl": 1,
+        "disputes/OB0341.jsonl": 1,
+        "disputes/OB0342.jsonl": 1,
+        "disputes/OB0343.jsonl": 1,
+        "disputes/OB0344.jsonl": 1,
+        "disputes/OB0345.jsonl": 1,
+        "disputes/OB0346.jsonl": 1,
+        "disputes/OB0347.jsonl": 1,
+        "disputes/OB0348.jsonl": 1,
+        "disputes/OB0349.jsonl": 1,
+        "disputes/OB0350.jsonl": 1,
+        "disputes/OB0351.jsonl": 1,
+        "disputes/OB0352.jsonl": 1,
+        "disputes/OB0353.jsonl": 1,
+        "disputes/OB0354.jsonl": 1,
+        "disputes/OB0355.jsonl": 1,
+        "disputes/OB0356.jsonl": 1,
+        "disputes/OB0357.jsonl": 1,
+        "disputes/OB0358.jsonl": 1,
+        "disputes/OB0359.jsonl": 1,
+        "delinquencies/1.jsonl": 1,
+        "delinquencies/10.jsonl": 1,
+        "delinquencies/11.jsonl": 1,
+        "delinquencies/12.jsonl": 1,
+        "delinquencies/13.jsonl": 1,
+        "delinquencies/14.jsonl": 1,
+        "delinquencies/15.jsonl": 1,
+        "delinquencies/16.jsonl": 1,
+        "delinquencies/17.jsonl": 1,
+        "delinquencies/18.jsonl": 1,
+        "delinquencies/19.jsonl": 1,
+        "delinquencies/2.jsonl": 1,
+        "delinquencies/20.jsonl": 1,
+        "delinquencies/3.jsonl": 1,
+        "delinquencies/4.jsonl": 1,
+        "delinquencies/5.jsonl": 1,
+        "delinquencies/6.jsonl": 1,
+        "delinquencies/7.jsonl": 1,
+        "delinquencies/8.jsonl": 1,
+        "delinquencies/9.jsonl": 1,
+        "borrowing_base/1.jsonl": 1,
+        "borrowing_base/10.jsonl": 1,
+        "borrowing_base/11.jsonl": 1,
+        "borrowing_base/12.jsonl": 1,
+        "borrowing_base/13.jsonl": 1,
+        "borrowing_base/14.jsonl": 1,
+        "borrowing_base/15.jsonl": 1,
+        "borrowing_base/16.jsonl": 1,
+        "borrowing_base/17.jsonl": 1,
+        "borrowing_base/18.jsonl": 1,
+        "borrowing_base/19.jsonl": 1,
+        "borrowing_base/2.jsonl": 1,
+        "borrowing_base/20.jsonl": 1,
+        "borrowing_base/3.jsonl": 1,
+        "borrowing_base/4.jsonl": 1,
+        "borrowing_base/5.jsonl": 1,
+        "borrowing_base/6.jsonl": 1,
+        "borrowing_base/7.jsonl": 1,
+        "borrowing_base/8.jsonl": 1,
+        "borrowing_base/9.jsonl": 1,
+        "writeoffs/OB0000.jsonl": 1,
+        "writeoffs/OB0001.jsonl": 1,
+        "writeoffs/OB0002.jsonl": 1,
+        "writeoffs/OB0003.jsonl": 1,
+        "writeoffs/OB0004.jsonl": 1,
+        "writeoffs/OB0005.jsonl": 1,
+        "writeoffs/OB0006.jsonl": 1,
+        "writeoffs/OB0007.jsonl": 1,
+        "writeoffs/OB0008.jsonl": 1,
+        "writeoffs/OB0009.jsonl": 1,
+        "writeoffs/OB0010.jsonl": 1,
+        "writeoffs/OB0011.jsonl": 1,
+        "writeoffs/OB0012.jsonl": 1,
+        "writeoffs/OB0013.jsonl": 1,
+        "writeoffs/OB0014.jsonl": 1,
+        "writeoffs/OB0015.jsonl": 1,
+        "writeoffs/OB0016.jsonl": 1,
+        "writeoffs/OB0017.jsonl": 1,
+        "writeoffs/OB0018.jsonl": 1,
+        "writeoffs/OB0019.jsonl": 1,
+        "writeoffs/OB0020.jsonl": 1,
+        "writeoffs/OB0021.jsonl": 1,
+        "writeoffs/OB0022.jsonl": 1,
+        "writeoffs/OB0023.jsonl": 1,
+        "writeoffs/OB0024.jsonl": 1,
+        "writeoffs/OB0025.jsonl": 1,
+        "writeoffs/OB0026.jsonl": 1,
+        "writeoffs/OB0027.jsonl": 1,
+        "writeoffs/OB0028.jsonl": 1,
+        "writeoffs/OB0029.jsonl": 1,
+        "writeoffs/OB0030.jsonl": 1,
+        "writeoffs/OB0031.jsonl": 1,
+        "writeoffs/OB0032.jsonl": 1,
+        "writeoffs/OB0033.jsonl": 1,
+        "writeoffs/OB0034.jsonl": 1,
+        "writeoffs/OB0035.jsonl": 1,
+        "writeoffs/OB0036.jsonl": 1,
+        "writeoffs/OB0037.jsonl": 1,
+        "writeoffs/OB0038.jsonl": 1,
+        "writeoffs/OB0039.jsonl": 1,
+        "writeoffs/OB0040.jsonl": 1,
+        "writeoffs/OB0041.jsonl": 1,
+        "writeoffs/OB0042.jsonl": 1,
+        "writeoffs/OB0043.jsonl": 1,
+        "writeoffs/OB0044.jsonl": 1,
+        "writeoffs/OB0045.jsonl": 1,
+        "writeoffs/OB0046.jsonl": 1,
+        "writeoffs/OB0047.jsonl": 1,
+        "writeoffs/OB0048.jsonl": 1,
+        "writeoffs/OB0049.jsonl": 1,
+        "writeoffs/OB0050.jsonl": 1,
+        "writeoffs/OB0051.jsonl": 1,
+        "writeoffs/OB0052.jsonl": 1,
+        "writeoffs/OB0053.jsonl": 1,
+        "writeoffs/OB0054.jsonl": 1,
+        "writeoffs/OB0055.jsonl": 1,
+        "writeoffs/OB0056.jsonl": 1,
+        "writeoffs/OB0057.jsonl": 1,
+        "writeoffs/OB0058.jsonl": 1,
+        "writeoffs/OB0059.jsonl": 1,
+        "writeoffs/OB0060.jsonl": 1,
+        "writeoffs/OB0061.jsonl": 1,
+        "writeoffs/OB0062.jsonl": 1,
+        "writeoffs/OB0063.jsonl": 1,
+        "writeoffs/OB0064.jsonl": 1,
+        "writeoffs/OB0065.jsonl": 1,
+        "writeoffs/OB0066.jsonl": 1,
+        "writeoffs/OB0067.jsonl": 1,
+        "writeoffs/OB0068.jsonl": 1,
+        "writeoffs/OB0069.jsonl": 1,
+        "writeoffs/OB0070.jsonl": 1,
+        "writeoffs/OB0071.jsonl": 1,
+        "writeoffs/OB0072.jsonl": 1,
+        "writeoffs/OB0073.jsonl": 1,
+        "writeoffs/OB0074.jsonl": 1,
+        "writeoffs/OB0075.jsonl": 1,
+        "writeoffs/OB0076.jsonl": 1,
+        "writeoffs/OB0077.jsonl": 1,
+        "writeoffs/OB0078.jsonl": 1,
+        "writeoffs/OB0079.jsonl": 1,
+        "writeoffs/OB0080.jsonl": 1,
+        "writeoffs/OB0081.jsonl": 1,
+        "writeoffs/OB0082.jsonl": 1,
+        "writeoffs/OB0083.jsonl": 1,
+        "writeoffs/OB0084.jsonl": 1,
+        "writeoffs/OB0085.jsonl": 1,
+        "writeoffs/OB0086.jsonl": 1,
+        "writeoffs/OB0087.jsonl": 1,
+        "writeoffs/OB0088.jsonl": 1,
+        "writeoffs/OB0089.jsonl": 1,
+        "writeoffs/OB0090.jsonl": 1,
+        "writeoffs/OB0091.jsonl": 1,
+        "writeoffs/OB0092.jsonl": 1,
+        "writeoffs/OB0093.jsonl": 1,
+        "writeoffs/OB0094.jsonl": 1,
+        "writeoffs/OB0095.jsonl": 1,
+        "writeoffs/OB0096.jsonl": 1,
+        "writeoffs/OB0097.jsonl": 1,
+        "writeoffs/OB0098.jsonl": 1,
+        "writeoffs/OB0099.jsonl": 1,
+        "writeoffs/OB0100.jsonl": 1,
+        "writeoffs/OB0101.jsonl": 1,
+        "writeoffs/OB0102.jsonl": 1,
+        "writeoffs/OB0103.jsonl": 1,
+        "writeoffs/OB0104.jsonl": 1,
+        "writeoffs/OB0105.jsonl": 1,
+        "writeoffs/OB0106.jsonl": 1,
+        "writeoffs/OB0107.jsonl": 1,
+        "writeoffs/OB0108.jsonl": 1,
+        "writeoffs/OB0109.jsonl": 1,
+        "writeoffs/OB0110.jsonl": 1,
+        "writeoffs/OB0111.jsonl": 1,
+        "writeoffs/OB0112.jsonl": 1,
+        "writeoffs/OB0113.jsonl": 1,
+        "writeoffs/OB0114.jsonl": 1,
+        "writeoffs/OB0115.jsonl": 1,
+        "writeoffs/OB0116.jsonl": 1,
+        "writeoffs/OB0117.jsonl": 1,
+        "writeoffs/OB0118.jsonl": 1,
+        "writeoffs/OB0119.jsonl": 1,
+        "writeoffs/OB0120.jsonl": 1,
+        "writeoffs/OB0121.jsonl": 1,
+        "writeoffs/OB0122.jsonl": 1,
+        "writeoffs/OB0123.jsonl": 1,
+        "writeoffs/OB0124.jsonl": 1,
+        "writeoffs/OB0125.jsonl": 1,
+        "writeoffs/OB0126.jsonl": 1,
+        "writeoffs/OB0127.jsonl": 1,
+        "writeoffs/OB0128.jsonl": 1,
+        "writeoffs/OB0129.jsonl": 1,
+        "writeoffs/OB0130.jsonl": 1,
+        "writeoffs/OB0131.jsonl": 1,
+        "writeoffs/OB0132.jsonl": 1,
+        "writeoffs/OB0133.jsonl": 1,
+        "writeoffs/OB0134.jsonl": 1,
+        "writeoffs/OB0135.jsonl": 1,
+        "writeoffs/OB0136.jsonl": 1,
+        "writeoffs/OB0137.jsonl": 1,
+        "writeoffs/OB0138.jsonl": 1,
+        "writeoffs/OB0139.jsonl": 1,
+        "writeoffs/OB0140.jsonl": 1,
+        "writeoffs/OB0141.jsonl": 1,
+        "writeoffs/OB0142.jsonl": 1,
+        "writeoffs/OB0143.jsonl": 1,
+        "writeoffs/OB0144.jsonl": 1,
+        "writeoffs/OB0145.jsonl": 1,
+        "writeoffs/OB0146.jsonl": 1,
+        "writeoffs/OB0147.jsonl": 1,
+        "writeoffs/OB0148.jsonl": 1,
+        "writeoffs/OB0149.jsonl": 1,
+        "writeoffs/OB0150.jsonl": 1,
+        "writeoffs/OB0151.jsonl": 1,
+        "writeoffs/OB0152.jsonl": 1,
+        "writeoffs/OB0153.jsonl": 1,
+        "writeoffs/OB0154.jsonl": 1,
+        "writeoffs/OB0155.jsonl": 1,
+        "writeoffs/OB0156.jsonl": 1,
+        "writeoffs/OB0157.jsonl": 1,
+        "writeoffs/OB0158.jsonl": 1,
+        "writeoffs/OB0159.jsonl": 1,
+        "writeoffs/OB0160.jsonl": 1,
+        "writeoffs/OB0161.jsonl": 1,
+        "writeoffs/OB0162.jsonl": 1,
+        "writeoffs/OB0163.jsonl": 1,
+        "writeoffs/OB0164.jsonl": 1,
+        "writeoffs/OB0165.jsonl": 1,
+        "writeoffs/OB0166.jsonl": 1,
+        "writeoffs/OB0167.jsonl": 1,
+        "writeoffs/OB0168.jsonl": 1,
+        "writeoffs/OB0169.jsonl": 1,
+        "writeoffs/OB0170.jsonl": 1,
+        "writeoffs/OB0171.jsonl": 1,
+        "writeoffs/OB0172.jsonl": 1,
+        "writeoffs/OB0173.jsonl": 1,
+        "writeoffs/OB0174.jsonl": 1,
+        "writeoffs/OB0175.jsonl": 1,
+        "writeoffs/OB0176.jsonl": 1,
+        "writeoffs/OB0177.jsonl": 1,
+        "writeoffs/OB0178.jsonl": 1,
+        "writeoffs/OB0179.jsonl": 1,
+        "writeoffs/OB0180.jsonl": 1,
+        "writeoffs/OB0181.jsonl": 1,
+        "writeoffs/OB0182.jsonl": 1,
+        "writeoffs/OB0183.jsonl": 1,
+        "writeoffs/OB0184.jsonl": 1,
+        "writeoffs/OB0185.jsonl": 1,
+        "writeoffs/OB0186.jsonl": 1,
+        "writeoffs/OB0187.jsonl": 1,
+        "writeoffs/OB0188.jsonl": 1,
+        "writeoffs/OB0189.jsonl": 1,
+        "writeoffs/OB0190.jsonl": 1,
+        "writeoffs/OB0191.jsonl": 1,
+        "writeoffs/OB0192.jsonl": 1,
+        "writeoffs/OB0193.jsonl": 1,
+        "writeoffs/OB0194.jsonl": 1,
+        "writeoffs/OB0195.jsonl": 1,
+        "writeoffs/OB0196.jsonl": 1,
+        "writeoffs/OB0197.jsonl": 1,
+        "writeoffs/OB0198.jsonl": 1,
+        "writeoffs/OB0199.jsonl": 1,
+        "writeoffs/OB0200.jsonl": 1,
+        "writeoffs/OB0201.jsonl": 1,
+        "writeoffs/OB0202.jsonl": 1,
+        "writeoffs/OB0203.jsonl": 1,
+        "writeoffs/OB0204.jsonl": 1,
+        "writeoffs/OB0205.jsonl": 1,
+        "writeoffs/OB0206.jsonl": 1,
+        "writeoffs/OB0207.jsonl": 1,
+        "writeoffs/OB0208.jsonl": 1,
+        "writeoffs/OB0209.jsonl": 1,
+        "writeoffs/OB0210.jsonl": 1,
+        "writeoffs/OB0211.jsonl": 1,
+        "writeoffs/OB0212.jsonl": 1,
+        "writeoffs/OB0213.jsonl": 1,
+        "writeoffs/OB0214.jsonl": 1,
+        "writeoffs/OB0215.jsonl": 1,
+        "writeoffs/OB0216.jsonl": 1,
+        "writeoffs/OB0217.jsonl": 1,
+        "writeoffs/OB0218.jsonl": 1,
+        "writeoffs/OB0219.jsonl": 1,
+        "writeoffs/OB0220.jsonl": 1,
+        "writeoffs/OB0221.jsonl": 1,
+        "writeoffs/OB0222.jsonl": 1,
+        "writeoffs/OB0223.jsonl": 1,
+        "writeoffs/OB0224.jsonl": 1,
+        "writeoffs/OB0225.jsonl": 1,
+        "writeoffs/OB0226.jsonl": 1,
+        "writeoffs/OB0227.jsonl": 1,
+        "writeoffs/OB0228.jsonl": 1,
+        "writeoffs/OB0229.jsonl": 1,
+        "writeoffs/OB0230.jsonl": 1,
+        "writeoffs/OB0231.jsonl": 1,
+        "writeoffs/OB0232.jsonl": 1,
+        "writeoffs/OB0233.jsonl": 1,
+        "writeoffs/OB0234.jsonl": 1,
+        "writeoffs/OB0235.jsonl": 1,
+        "writeoffs/OB0236.jsonl": 1,
+        "writeoffs/OB0237.jsonl": 1,
+        "writeoffs/OB0238.jsonl": 1,
+        "writeoffs/OB0239.jsonl": 1,
+        "writeoffs/OB0240.jsonl": 1,
+        "writeoffs/OB0241.jsonl": 1,
+        "writeoffs/OB0242.jsonl": 1,
+        "writeoffs/OB0243.jsonl": 1,
+        "writeoffs/OB0244.jsonl": 1,
+        "writeoffs/OB0245.jsonl": 1,
+        "writeoffs/OB0246.jsonl": 1,
+        "writeoffs/OB0247.jsonl": 1,
+        "writeoffs/OB0248.jsonl": 1,
+        "writeoffs/OB0249.jsonl": 1,
+        "writeoffs/OB0250.jsonl": 1,
+        "writeoffs/OB0251.jsonl": 1,
+        "writeoffs/OB0252.jsonl": 1,
+        "writeoffs/OB0253.jsonl": 1,
+        "writeoffs/OB0254.jsonl": 1,
+        "writeoffs/OB0255.jsonl": 1,
+        "writeoffs/OB0256.jsonl": 1,
+        "writeoffs/OB0257.jsonl": 1,
+        "writeoffs/OB0258.jsonl": 1,
+        "writeoffs/OB0259.jsonl": 1,
+        "writeoffs/OB0260.jsonl": 1,
+        "writeoffs/OB0261.jsonl": 1,
+        "writeoffs/OB0262.jsonl": 1,
+        "writeoffs/OB0263.jsonl": 1,
+        "writeoffs/OB0264.jsonl": 1,
+        "writeoffs/OB0265.jsonl": 1,
+        "writeoffs/OB0266.jsonl": 1,
+        "writeoffs/OB0267.jsonl": 1,
+        "writeoffs/OB0268.jsonl": 1,
+        "writeoffs/OB0269.jsonl": 1,
+        "writeoffs/OB0270.jsonl": 1,
+        "writeoffs/OB0271.jsonl": 1,
+        "writeoffs/OB0272.jsonl": 1,
+        "writeoffs/OB0273.jsonl": 1,
+        "writeoffs/OB0274.jsonl": 1,
+        "writeoffs/OB0275.jsonl": 1,
+        "writeoffs/OB0276.jsonl": 1,
+        "writeoffs/OB0277.jsonl": 1,
+        "writeoffs/OB0278.jsonl": 1,
+        "writeoffs/OB0279.jsonl": 1,
+        "writeoffs/OB0280.jsonl": 1,
+        "writeoffs/OB0281.jsonl": 1,
+        "writeoffs/OB0282.jsonl": 1,
+        "writeoffs/OB0283.jsonl": 1,
+        "writeoffs/OB0284.jsonl": 1,
+        "writeoffs/OB0285.jsonl": 1,
+        "writeoffs/OB0286.jsonl": 1,
+        "writeoffs/OB0287.jsonl": 1,
+        "writeoffs/OB0288.jsonl": 1,
+        "writeoffs/OB0289.jsonl": 1,
+        "writeoffs/OB0290.jsonl": 1,
+        "writeoffs/OB0291.jsonl": 1,
+        "writeoffs/OB0292.jsonl": 1,
+        "writeoffs/OB0293.jsonl": 1,
+        "writeoffs/OB0294.jsonl": 1,
+        "writeoffs/OB0295.jsonl": 1,
+        "writeoffs/OB0296.jsonl": 1,
+        "writeoffs/OB0297.jsonl": 1,
+        "writeoffs/OB0298.jsonl": 1,
+        "writeoffs/OB0299.jsonl": 1,
+        "writeoffs/OB0300.jsonl": 1,
+        "writeoffs/OB0301.jsonl": 1,
+        "writeoffs/OB0302.jsonl": 1,
+        "writeoffs/OB0303.jsonl": 1,
+        "writeoffs/OB0304.jsonl": 1,
+        "writeoffs/OB0305.jsonl": 1,
+        "writeoffs/OB0306.jsonl": 1,
+        "writeoffs/OB0307.jsonl": 1,
+        "writeoffs/OB0308.jsonl": 1,
+        "writeoffs/OB0309.jsonl": 1,
+        "writeoffs/OB0310.jsonl": 1,
+        "writeoffs/OB0311.jsonl": 1,
+        "writeoffs/OB0312.jsonl": 1,
+        "writeoffs/OB0313.jsonl": 1,
+        "writeoffs/OB0314.jsonl": 1,
+        "writeoffs/OB0315.jsonl": 1,
+        "writeoffs/OB0316.jsonl": 1,
+        "writeoffs/OB0317.jsonl": 1,
+        "writeoffs/OB0318.jsonl": 1,
+        "writeoffs/OB0319.jsonl": 1,
+        "writeoffs/OB0320.jsonl": 1,
+        "writeoffs/OB0321.jsonl": 1,
+        "writeoffs/OB0322.jsonl": 1,
+        "writeoffs/OB0323.jsonl": 1,
+        "writeoffs/OB0324.jsonl": 1,
+        "writeoffs/OB0325.jsonl": 1,
+        "writeoffs/OB0326.jsonl": 1,
+        "writeoffs/OB0327.jsonl": 1,
+        "writeoffs/OB0328.jsonl": 1,
+        "writeoffs/OB0329.jsonl": 1,
+        "writeoffs/OB0330.jsonl": 1,
+        "writeoffs/OB0331.jsonl": 1,
+        "writeoffs/OB0332.jsonl": 1,
+        "writeoffs/OB0333.jsonl": 1,
+        "writeoffs/OB0334.jsonl": 1,
+        "writeoffs/OB0335.jsonl": 1,
+        "writeoffs/OB0336.jsonl": 1,
+        "writeoffs/OB0337.jsonl": 1,
+        "writeoffs/OB0338.jsonl": 1,
+        "writeoffs/OB0339.jsonl": 1,
+        "writeoffs/OB0340.jsonl": 1,
+        "writeoffs/OB0341.jsonl": 1,
+        "writeoffs/OB0342.jsonl": 1,
+        "writeoffs/OB0343.jsonl": 1,
+        "writeoffs/OB0344.jsonl": 1,
+        "writeoffs/OB0345.jsonl": 1,
+        "writeoffs/OB0346.jsonl": 1,
+        "writeoffs/OB0347.jsonl": 1,
+        "writeoffs/OB0348.jsonl": 1,
+        "writeoffs/OB0349.jsonl": 1,
+        "writeoffs/OB0350.jsonl": 1,
+        "writeoffs/OB0351.jsonl": 1,
+        "writeoffs/OB0352.jsonl": 1,
+        "writeoffs/OB0353.jsonl": 1,
+        "writeoffs/OB0354.jsonl": 1,
+        "writeoffs/OB0355.jsonl": 1,
+        "writeoffs/OB0356.jsonl": 1,
+        "writeoffs/OB0357.jsonl": 1,
+        "writeoffs/OB0358.jsonl": 1,
+        "writeoffs/OB0359.jsonl": 1
+      }
+    },
+    "cheap": {
+      "permitted_reads": 782,
+      "violations": 0,
+      "paths": {
+        "history/surveillance.jsonl": 1,
+        "queries.jsonl": 1,
+        "register/OB0204.json": 1,
+        "register/OB0341.json": 1,
+        "register/OB0068.json": 1,
+        "register/OB0087.json": 1,
+        "register/OB0253.json": 1,
+        "register/OB0316.json": 1,
+        "register/OB0195.json": 1,
+        "register/OB0245.json": 1,
+        "register/OB0300.json": 1,
+        "register/OB0029.json": 1,
+        "register/OB0183.json": 1,
+        "register/OB0212.json": 1,
+        "register/OB0357.json": 1,
+        "register/OB0091.json": 1,
+        "register/OB0286.json": 1,
+        "register/OB0269.json": 1,
+        "register/OB0140.json": 1,
+        "register/OB0005.json": 1,
+        "register/OB0117.json": 1,
+        "register/OB0052.json": 1,
+        "register/OB0228.json": 1,
+        "register/OB0101.json": 1,
+        "register/OB0044.json": 1,
+        "register/OB0290.json": 1,
+        "register/OB0156.json": 1,
+        "register/OB0013.json": 1,
+        "register/OB0064.json": 1,
+        "register/OB0121.json": 1,
+        "register/OB0208.json": 1,
+        "register/OB0033.json": 1,
+        "register/OB0199.json": 1,
+        "register/OB0176.json": 1,
+        "register/OB0025.json": 1,
+        "register/OB0160.json": 1,
+        "register/OB0249.json": 1,
+        "register/OB0072.json": 1,
+        "register/OB0137.json": 1,
+        "register/OB0009.json": 1,
+        "register/OB0320.json": 1,
+        "register/OB0265.json": 1,
+        "register/OB0232.json": 1,
+        "register/OB0048.json": 1,
+        "register/OB0224.json": 1,
+        "register/OB0336.json": 1,
+        "register/OB0273.json": 1,
+        "register/OB0337.json": 1,
+        "register/OB0272.json": 1,
+        "register/OB0225.json": 1,
+        "register/OB0049.json": 1,
+        "register/OB0233.json": 1,
+        "register/OB0321.json": 1,
+        "register/OB0264.json": 1,
+        "register/OB0008.json": 1,
+        "register/OB0073.json": 1,
+        "register/OB0136.json": 1,
+        "register/OB0248.json": 1,
+        "register/OB0024.json": 1,
+        "register/OB0161.json": 1,
+        "register/OB0032.json": 1,
+        "register/OB0198.json": 1,
+        "register/OB0177.json": 1,
+        "register/OB0209.json": 1,
+        "register/OB0065.json": 1,
+        "register/OB0120.json": 1,
+        "register/OB0157.json": 1,
+        "register/OB0012.json": 1,
+        "register/OB0291.json": 1,
+        "register/OB0100.json": 1,
+        "register/OB0045.json": 1,
+        "register/OB0229.json": 1,
+        "register/OB0116.json": 1,
+        "register/OB0053.json": 1,
+        "register/OB0141.json": 1,
+        "register/OB0004.json": 1,
+        "register/OB0287.json": 1,
+        "register/OB0268.json": 1,
+        "register/OB0090.json": 1,
+        "register/OB0213.json": 1,
+        "register/OB0356.json": 1,
+        "register/OB0028.json": 1,
+        "register/OB0182.json": 1,
+        "register/OB0244.json": 1,
+        "register/OB0301.json": 1,
+        "register/OB0194.json": 1,
+        "register/OB0252.json": 1,
+        "register/OB0317.json": 1,
+        "register/OB0069.json": 1,
+        "register/OB0086.json": 1,
+        "register/OB0205.json": 1,
+        "register/OB0340.json": 1,
+        "register/OB0062.json": 1,
+        "register/OB0127.json": 1,
+        "register/OB0035.json": 1,
+        "register/OB0170.json": 1,
+        "register/OB0259.json": 1,
+        "register/OB0189.json": 1,
+        "register/OB0023.json": 1,
+        "register/OB0166.json": 1,
+        "register/OB0074.json": 1,
+        "register/OB0131.json": 1,
+        "register/OB0218.json": 1,
+        "register/OB0326.json": 1,
+        "register/OB0263.json": 1,
+        "register/OB0058.json": 1,
+        "register/OB0234.json": 1,
+        "register/OB0222.json": 1,
+        "register/OB0019.json": 1,
+        "register/OB0330.json": 1,
+        "register/OB0275.json": 1,
+        "register/OB0202.json": 1,
+        "register/OB0347.json": 1,
+        "register/OB0081.json": 1,
+        "register/OB0255.json": 1,
+        "register/OB0310.json": 1,
+        "register/OB0193.json": 1,
+        "register/OB0039.json": 1,
+        "register/OB0243.json": 1,
+        "register/OB0306.json": 1,
+        "register/OB0185.json": 1,
+        "register/OB0214.json": 1,
+        "register/OB0351.json": 1,
+        "register/OB0078.json": 1,
+        "register/OB0097.json": 1,
+        "register/OB0280.json": 1,
+        "register/OB0146.json": 1,
+        "register/OB0003.json": 1,
+        "register/OB0238.json": 1,
+        "register/OB0111.json": 1,
+        "register/OB0054.json": 1,
+        "register/OB0107.json": 1,
+        "register/OB0042.json": 1,
+        "register/OB0296.json": 1,
+        "register/OB0279.json": 1,
+        "register/OB0150.json": 1,
+        "register/OB0015.json": 1,
+        "register/OB0151.json": 1,
+        "register/OB0014.json": 1,
+        "register/OB0297.json": 1,
+        "register/OB0278.json": 1,
+        "register/OB0106.json": 1,
+        "register/OB0043.json": 1,
+        "register/OB0110.json": 1,
+        "register/OB0055.json": 1,
+        "register/OB0239.json": 1,
+        "register/OB0147.json": 1,
+        "register/OB0002.json": 1,
+        "register/OB0281.json": 1,
+        "register/OB0079.json": 1,
+        "register/OB0096.json": 1,
+        "register/OB0215.json": 1,
+        "register/OB0350.json": 1,
+        "register/OB0184.json": 1,
+        "register/OB0242.json": 1,
+        "register/OB0307.json": 1,
+        "register/OB0192.json": 1,
+        "register/OB0038.json": 1,
+        "register/OB0254.json": 1,
+        "register/OB0311.json": 1,
+        "register/OB0080.json": 1,
+        "register/OB0203.json": 1,
+        "register/OB0346.json": 1,
+        "register/OB0331.json": 1,
+        "register/OB0274.json": 1,
+        "register/OB0018.json": 1,
+        "register/OB0223.json": 1,
+        "register/OB0235.json": 1,
+        "register/OB0059.json": 1,
+        "register/OB0327.json": 1,
+        "register/OB0262.json": 1,
+        "register/OB0219.json": 1,
+        "register/OB0075.json": 1,
+        "register/OB0130.json": 1,
+        "register/OB0188.json": 1,
+        "register/OB0022.json": 1,
+        "register/OB0167.json": 1,
+        "register/OB0258.json": 1,
+        "register/OB0034.json": 1,
+        "register/OB0171.json": 1,
+        "register/OB0063.json": 1,
+        "register/OB0126.json": 1,
+        "register/OB0277.json": 1,
+        "register/OB0332.json": 1,
+        "register/OB0298.json": 1,
+        "register/OB0220.json": 1,
+        "register/OB0109.json": 1,
+        "register/OB0236.json": 1,
+        "register/OB0261.json": 1,
+        "register/OB0324.json": 1,
+        "register/OB0148.json": 1,
+        "register/OB0133.json": 1,
+        "register/OB0099.json": 1,
+        "register/OB0076.json": 1,
+        "register/OB0308.json": 1,
+        "register/OB0164.json": 1,
+        "register/OB0021.json": 1,
+        "register/OB0172.json": 1,
+        "register/OB0037.json": 1,
+        "register/OB0349.json": 1,
+        "register/OB0125.json": 1,
+        "register/OB0060.json": 1,
+        "register/OB0017.json": 1,
+        "register/OB0152.json": 1,
+        "register/OB0294.json": 1,
+        "register/OB0040.json": 1,
+        "register/OB0105.json": 1,
+        "register/OB0056.json": 1,
+        "register/OB0113.json": 1,
+        "register/OB0001.json": 1,
+        "register/OB0144.json": 1,
+        "register/OB0328.json": 1,
+        "register/OB0282.json": 1,
+        "register/OB0095.json": 1,
+        "register/OB0353.json": 1,
+        "register/OB0216.json": 1,
+        "register/OB0168.json": 1,
+        "register/OB0187.json": 1,
+        "register/OB0304.json": 1,
+        "register/OB0241.json": 1,
+        "register/OB0191.json": 1,
+        "register/OB0312.json": 1,
+        "register/OB0257.json": 1,
+        "register/OB0129.json": 1,
+        "register/OB0083.json": 1,
+        "register/OB0345.json": 1,
+        "register/OB0200.json": 1,
+        "register/OB0344.json": 1,
+        "register/OB0201.json": 1,
+        "register/OB0128.json": 1,
+        "register/OB0082.json": 1,
+        "register/OB0313.json": 1,
+        "register/OB0256.json": 1,
+        "register/OB0190.json": 1,
+        "register/OB0305.json": 1,
+        "register/OB0240.json": 1,
+        "register/OB0169.json": 1,
+        "register/OB0186.json": 1,
+        "register/OB0352.json": 1,
+        "register/OB0217.json": 1,
+        "register/OB0094.json": 1,
+        "register/OB0329.json": 1,
+        "register/OB0283.json": 1,
+        "register/OB0000.json": 1,
+        "register/OB0145.json": 1,
+        "register/OB0057.json": 1,
+        "register/OB0112.json": 1,
+        "register/OB0041.json": 1,
+        "register/OB0104.json": 1,
+        "register/OB0295.json": 1,
+        "register/OB0016.json": 1,
+        "register/OB0153.json": 1,
+        "register/OB0124.json": 1,
+        "register/OB0061.json": 1,
+        "register/OB0348.json": 1,
+        "register/OB0173.json": 1,
+        "register/OB0036.json": 1,
+        "register/OB0165.json": 1,
+        "register/OB0020.json": 1,
+        "register/OB0309.json": 1,
+        "register/OB0132.json": 1,
+        "register/OB0098.json": 1,
+        "register/OB0077.json": 1,
+        "register/OB0149.json": 1,
+        "register/OB0260.json": 1,
+        "register/OB0325.json": 1,
+        "register/OB0237.json": 1,
+        "register/OB0108.json": 1,
+        "register/OB0221.json": 1,
+        "register/OB0276.json": 1,
+        "register/OB0333.json": 1,
+        "register/OB0299.json": 1,
+        "register/OB0011.json": 1,
+        "register/OB0154.json": 1,
+        "register/OB0292.json": 1,
+        "register/OB0338.json": 1,
+        "register/OB0046.json": 1,
+        "register/OB0103.json": 1,
+        "register/OB0050.json": 1,
+        "register/OB0115.json": 1,
+        "register/OB0007.json": 1,
+        "register/OB0142.json": 1,
+        "register/OB0284.json": 1,
+        "register/OB0093.json": 1,
+        "register/OB0139.json": 1,
+        "register/OB0355.json": 1,
+        "register/OB0210.json": 1,
+        "register/OB0181.json": 1,
+        "register/OB0302.json": 1,
+        "register/OB0247.json": 1,
+        "register/OB0178.json": 1,
+        "register/OB0197.json": 1,
+        "register/OB0314.json": 1,
+        "register/OB0251.json": 1,
+        "register/OB0085.json": 1,
+        "register/OB0343.json": 1,
+        "register/OB0206.json": 1,
+        "register/OB0271.json": 1,
+        "register/OB0334.json": 1,
+        "register/OB0158.json": 1,
+        "register/OB0226.json": 1,
+        "register/OB0230.json": 1,
+        "register/OB0119.json": 1,
+        "register/OB0267.json": 1,
+        "register/OB0288.json": 1,
+        "register/OB0322.json": 1,
+        "register/OB0359.json": 1,
+        "register/OB0135.json": 1,
+        "register/OB0070.json": 1,
+        "register/OB0162.json": 1,
+        "register/OB0027.json": 1,
+        "register/OB0318.json": 1,
+        "register/OB0174.json": 1,
+        "register/OB0031.json": 1,
+        "register/OB0089.json": 1,
+        "register/OB0123.json": 1,
+        "register/OB0066.json": 1,
+        "register/OB0088.json": 1,
+        "register/OB0122.json": 1,
+        "register/OB0067.json": 1,
+        "register/OB0175.json": 1,
+        "register/OB0030.json": 1,
+        "register/OB0319.json": 1,
+        "register/OB0163.json": 1,
+        "register/OB0026.json": 1,
+        "register/OB0134.json": 1,
+        "register/OB0071.json": 1,
+        "register/OB0358.json": 1,
+        "register/OB0266.json": 1,
+        "register/OB0289.json": 1,
+        "register/OB0323.json": 1,
+        "register/OB0118.json": 1,
+        "register/OB0231.json": 1,
+        "register/OB0227.json": 1,
+        "register/OB0159.json": 1,
+        "register/OB0270.json": 1,
+        "register/OB0335.json": 1,
+        "register/OB0342.json": 1,
+        "register/OB0207.json": 1,
+        "register/OB0084.json": 1,
+        "register/OB0315.json": 1,
+        "register/OB0250.json": 1,
+        "register/OB0179.json": 1,
+        "register/OB0196.json": 1,
+        "register/OB0303.json": 1,
+        "register/OB0246.json": 1,
+        "register/OB0180.json": 1,
+        "register/OB0354.json": 1,
+        "register/OB0211.json": 1,
+        "register/OB0092.json": 1,
+        "register/OB0138.json": 1,
+        "register/OB0285.json": 1,
+        "register/OB0006.json": 1,
+        "register/OB0143.json": 1,
+        "register/OB0051.json": 1,
+        "register/OB0114.json": 1,
+        "register/OB0047.json": 1,
+        "register/OB0102.json": 1,
+        "register/OB0293.json": 1,
+        "register/OB0339.json": 1,
+        "register/OB0010.json": 1,
+        "register/OB0155.json": 1,
+        "dilution/4.jsonl": 1,
+        "dilution/6.jsonl": 1,
+        "dilution/18.jsonl": 1,
+        "dilution/2.jsonl": 1,
+        "dilution/19.jsonl": 1,
+        "dilution/7.jsonl": 1,
+        "dilution/5.jsonl": 1,
+        "dilution/1.jsonl": 1,
+        "dilution/20.jsonl": 1,
+        "dilution/3.jsonl": 1,
+        "dilution/11.jsonl": 1,
+        "dilution/13.jsonl": 1,
+        "dilution/17.jsonl": 1,
+        "dilution/9.jsonl": 1,
+        "dilution/15.jsonl": 1,
+        "dilution/12.jsonl": 1,
+        "dilution/10.jsonl": 1,
+        "dilution/14.jsonl": 1,
+        "dilution/8.jsonl": 1,
+        "dilution/16.jsonl": 1,
+        "borrowing_base/4.jsonl": 1,
+        "borrowing_base/6.jsonl": 1,
+        "borrowing_base/18.jsonl": 1,
+        "borrowing_base/2.jsonl": 1,
+        "borrowing_base/19.jsonl": 1,
+        "borrowing_base/7.jsonl": 1,
+        "borrowing_base/5.jsonl": 1,
+        "borrowing_base/1.jsonl": 1,
+        "borrowing_base/20.jsonl": 1,
+        "borrowing_base/3.jsonl": 1,
+        "borrowing_base/11.jsonl": 1,
+        "borrowing_base/13.jsonl": 1,
+        "borrowing_base/17.jsonl": 1,
+        "borrowing_base/9.jsonl": 1,
+        "borrowing_base/15.jsonl": 1,
+        "borrowing_base/12.jsonl": 1,
+        "borrowing_base/10.jsonl": 1,
+        "borrowing_base/14.jsonl": 1,
+        "borrowing_base/8.jsonl": 1,
+        "borrowing_base/16.jsonl": 1,
+        "writeoffs/OB0358.jsonl": 1,
+        "writeoffs/OB0059.jsonl": 1,
+        "writeoffs/OB0101.jsonl": 1,
+        "writeoffs/OB0144.jsonl": 1,
+        "writeoffs/OB0200.jsonl": 1,
+        "writeoffs/OB0245.jsonl": 1,
+        "writeoffs/OB0184.jsonl": 1,
+        "writeoffs/OB0278.jsonl": 1,
+        "writeoffs/OB0285.jsonl": 1,
+        "writeoffs/OB0179.jsonl": 1,
+        "writeoffs/OB0064.jsonl": 1,
+        "writeoffs/OB0021.jsonl": 1,
+        "writeoffs/OB0099.jsonl": 1,
+        "writeoffs/OB0320.jsonl": 1,
+        "writeoffs/OB0118.jsonl": 1,
+        "writeoffs/OB0219.jsonl": 1,
+        "writeoffs/OB0341.jsonl": 1,
+        "writeoffs/OB0304.jsonl": 1,
+        "writeoffs/OB0040.jsonl": 1,
+        "writeoffs/OB0005.jsonl": 1,
+        "writeoffs/OB0038.jsonl": 1,
+        "writeoffs/OB0339.jsonl": 1,
+        "writeoffs/OB0080.jsonl": 1,
+        "writeoffs/OB0224.jsonl": 1,
+        "writeoffs/OB0261.jsonl": 1,
+        "writeoffs/OB0125.jsonl": 1,
+        "writeoffs/OB0160.jsonl": 1,
+        "writeoffs/OB0082.jsonl": 1,
+        "writeoffs/OB0127.jsonl": 1,
+        "writeoffs/OB0162.jsonl": 1,
+        "writeoffs/OB0226.jsonl": 1,
+        "writeoffs/OB0263.jsonl": 1,
+        "writeoffs/OB0042.jsonl": 1,
+        "writeoffs/OB0007.jsonl": 1,
+        "writeoffs/OB0343.jsonl": 1,
+        "writeoffs/OB0306.jsonl": 1,
+        "writeoffs/OB0287.jsonl": 1,
+        "writeoffs/OB0186.jsonl": 1,
+        "writeoffs/OB0322.jsonl": 1,
+        "writeoffs/OB0066.jsonl": 1,
+        "writeoffs/OB0023.jsonl": 1,
+        "writeoffs/OB0202.jsonl": 1,
+        "writeoffs/OB0247.jsonl": 1,
+        "writeoffs/OB0103.jsonl": 1,
+        "writeoffs/OB0146.jsonl": 1,
+        "writeoffs/OB0062.jsonl": 1,
+        "writeoffs/OB0027.jsonl": 1,
+        "writeoffs/OB0326.jsonl": 1,
+        "writeoffs/OB0182.jsonl": 1,
+        "writeoffs/OB0283.jsonl": 1,
+        "writeoffs/OB0107.jsonl": 1,
+        "writeoffs/OB0142.jsonl": 1,
+        "writeoffs/OB0206.jsonl": 1,
+        "writeoffs/OB0243.jsonl": 1,
+        "writeoffs/OB0222.jsonl": 1,
+        "writeoffs/OB0267.jsonl": 1,
+        "writeoffs/OB0123.jsonl": 1,
+        "writeoffs/OB0166.jsonl": 1,
+        "writeoffs/OB0086.jsonl": 1,
+        "writeoffs/OB0347.jsonl": 1,
+        "writeoffs/OB0302.jsonl": 1,
+        "writeoffs/OB0046.jsonl": 1,
+        "writeoffs/OB0003.jsonl": 1,
+        "writeoffs/OB0044.jsonl": 1,
+        "writeoffs/OB0001.jsonl": 1,
+        "writeoffs/OB0345.jsonl": 1,
+        "writeoffs/OB0300.jsonl": 1,
+        "writeoffs/OB0258.jsonl": 1,
+        "writeoffs/OB0159.jsonl": 1,
+        "writeoffs/OB0121.jsonl": 1,
+        "writeoffs/OB0164.jsonl": 1,
+        "writeoffs/OB0298.jsonl": 1,
+        "writeoffs/OB0220.jsonl": 1,
+        "writeoffs/OB0265.jsonl": 1,
+        "writeoffs/OB0199.jsonl": 1,
+        "writeoffs/OB0084.jsonl": 1,
+        "writeoffs/OB0079.jsonl": 1,
+        "writeoffs/OB0204.jsonl": 1,
+        "writeoffs/OB0241.jsonl": 1,
+        "writeoffs/OB0105.jsonl": 1,
+        "writeoffs/OB0140.jsonl": 1,
+        "writeoffs/OB0018.jsonl": 1,
+        "writeoffs/OB0319.jsonl": 1,
+        "writeoffs/OB0324.jsonl": 1,
+        "writeoffs/OB0060.jsonl": 1,
+        "writeoffs/OB0025.jsonl": 1,
+        "writeoffs/OB0281.jsonl": 1,
+        "writeoffs/OB0138.jsonl": 1,
+        "writeoffs/OB0180.jsonl": 1,
+        "writeoffs/OB0239.jsonl": 1,
+        "writeoffs/OB0006.jsonl": 1,
+        "writeoffs/OB0043.jsonl": 1,
+        "writeoffs/OB0307.jsonl": 1,
+        "writeoffs/OB0342.jsonl": 1,
+        "writeoffs/OB0163.jsonl": 1,
+        "writeoffs/OB0126.jsonl": 1,
+        "writeoffs/OB0262.jsonl": 1,
+        "writeoffs/OB0227.jsonl": 1,
+        "writeoffs/OB0083.jsonl": 1,
+        "writeoffs/OB0246.jsonl": 1,
+        "writeoffs/OB0203.jsonl": 1,
+        "writeoffs/OB0147.jsonl": 1,
+        "writeoffs/OB0102.jsonl": 1,
+        "writeoffs/OB0323.jsonl": 1,
+        "writeoffs/OB0022.jsonl": 1,
+        "writeoffs/OB0067.jsonl": 1,
+        "writeoffs/OB0286.jsonl": 1,
+        "writeoffs/OB0187.jsonl": 1,
+        "writeoffs/OB0020.jsonl": 1,
+        "writeoffs/OB0065.jsonl": 1,
+        "writeoffs/OB0098.jsonl": 1,
+        "writeoffs/OB0321.jsonl": 1,
+        "writeoffs/OB0185.jsonl": 1,
+        "writeoffs/OB0279.jsonl": 1,
+        "writeoffs/OB0284.jsonl": 1,
+        "writeoffs/OB0178.jsonl": 1,
+        "writeoffs/OB0145.jsonl": 1,
+        "writeoffs/OB0100.jsonl": 1,
+        "writeoffs/OB0244.jsonl": 1,
+        "writeoffs/OB0201.jsonl": 1,
+        "writeoffs/OB0359.jsonl": 1,
+        "writeoffs/OB0058.jsonl": 1,
+        "writeoffs/OB0260.jsonl": 1,
+        "writeoffs/OB0225.jsonl": 1,
+        "writeoffs/OB0161.jsonl": 1,
+        "writeoffs/OB0124.jsonl": 1,
+        "writeoffs/OB0039.jsonl": 1,
+        "writeoffs/OB0338.jsonl": 1,
+        "writeoffs/OB0081.jsonl": 1,
+        "writeoffs/OB0305.jsonl": 1,
+        "writeoffs/OB0340.jsonl": 1,
+        "writeoffs/OB0004.jsonl": 1,
+        "writeoffs/OB0041.jsonl": 1,
+        "writeoffs/OB0119.jsonl": 1,
+        "writeoffs/OB0218.jsonl": 1,
+        "writeoffs/OB0085.jsonl": 1,
+        "writeoffs/OB0078.jsonl": 1,
+        "writeoffs/OB0165.jsonl": 1,
+        "writeoffs/OB0120.jsonl": 1,
+        "writeoffs/OB0299.jsonl": 1,
+        "writeoffs/OB0264.jsonl": 1,
+        "writeoffs/OB0221.jsonl": 1,
+        "writeoffs/OB0198.jsonl": 1,
+        "writeoffs/OB0259.jsonl": 1,
+        "writeoffs/OB0158.jsonl": 1,
+        "writeoffs/OB0000.jsonl": 1,
+        "writeoffs/OB0045.jsonl": 1,
+        "writeoffs/OB0301.jsonl": 1,
+        "writeoffs/OB0344.jsonl": 1,
+        "writeoffs/OB0280.jsonl": 1,
+        "writeoffs/OB0139.jsonl": 1,
+        "writeoffs/OB0181.jsonl": 1,
+        "writeoffs/OB0238.jsonl": 1,
+        "writeoffs/OB0325.jsonl": 1,
+        "writeoffs/OB0024.jsonl": 1,
+        "writeoffs/OB0061.jsonl": 1,
+        "writeoffs/OB0019.jsonl": 1,
+        "writeoffs/OB0318.jsonl": 1,
+        "writeoffs/OB0240.jsonl": 1,
+        "writeoffs/OB0205.jsonl": 1,
+        "writeoffs/OB0141.jsonl": 1,
+        "writeoffs/OB0104.jsonl": 1,
+        "writeoffs/OB0143.jsonl": 1,
+        "writeoffs/OB0106.jsonl": 1,
+        "writeoffs/OB0242.jsonl": 1,
+        "writeoffs/OB0207.jsonl": 1,
+        "writeoffs/OB0183.jsonl": 1,
+        "writeoffs/OB0282.jsonl": 1,
+        "writeoffs/OB0026.jsonl": 1,
+        "writeoffs/OB0063.jsonl": 1,
+        "writeoffs/OB0327.jsonl": 1,
+        "writeoffs/OB0303.jsonl": 1,
+        "writeoffs/OB0346.jsonl": 1,
+        "writeoffs/OB0002.jsonl": 1,
+        "writeoffs/OB0047.jsonl": 1,
+        "writeoffs/OB0087.jsonl": 1,
+        "writeoffs/OB0266.jsonl": 1,
+        "writeoffs/OB0223.jsonl": 1,
+        "writeoffs/OB0167.jsonl": 1,
+        "writeoffs/OB0122.jsonl": 1,
+        "writeoffs/OB0076.jsonl": 1,
+        "writeoffs/OB0033.jsonl": 1,
+        "writeoffs/OB0332.jsonl": 1,
+        "writeoffs/OB0196.jsonl": 1,
+        "writeoffs/OB0297.jsonl": 1,
+        "writeoffs/OB0113.jsonl": 1,
+        "writeoffs/OB0156.jsonl": 1,
+        "writeoffs/OB0212.jsonl": 1,
+        "writeoffs/OB0257.jsonl": 1,
+        "writeoffs/OB0236.jsonl": 1,
+        "writeoffs/OB0273.jsonl": 1,
+        "writeoffs/OB0137.jsonl": 1,
+        "writeoffs/OB0172.jsonl": 1,
+        "writeoffs/OB0092.jsonl": 1,
+        "writeoffs/OB0353.jsonl": 1,
+        "writeoffs/OB0316.jsonl": 1,
+        "writeoffs/OB0052.jsonl": 1,
+        "writeoffs/OB0017.jsonl": 1,
+        "writeoffs/OB0050.jsonl": 1,
+        "writeoffs/OB0015.jsonl": 1,
+        "writeoffs/OB0351.jsonl": 1,
+        "writeoffs/OB0314.jsonl": 1,
+        "writeoffs/OB0209.jsonl": 1,
+        "writeoffs/OB0108.jsonl": 1,
+        "writeoffs/OB0135.jsonl": 1,
+        "writeoffs/OB0170.jsonl": 1,
+        "writeoffs/OB0234.jsonl": 1,
+        "writeoffs/OB0271.jsonl": 1,
+        "writeoffs/OB0329.jsonl": 1,
+        "writeoffs/OB0090.jsonl": 1,
+        "writeoffs/OB0028.jsonl": 1,
+        "writeoffs/OB0210.jsonl": 1,
+        "writeoffs/OB0255.jsonl": 1,
+        "writeoffs/OB0111.jsonl": 1,
+        "writeoffs/OB0154.jsonl": 1,
+        "writeoffs/OB0049.jsonl": 1,
+        "writeoffs/OB0348.jsonl": 1,
+        "writeoffs/OB0089.jsonl": 1,
+        "writeoffs/OB0330.jsonl": 1,
+        "writeoffs/OB0074.jsonl": 1,
+        "writeoffs/OB0031.jsonl": 1,
+        "writeoffs/OB0295.jsonl": 1,
+        "writeoffs/OB0169.jsonl": 1,
+        "writeoffs/OB0194.jsonl": 1,
+        "writeoffs/OB0268.jsonl": 1,
+        "writeoffs/OB0309.jsonl": 1,
+        "writeoffs/OB0008.jsonl": 1,
+        "writeoffs/OB0115.jsonl": 1,
+        "writeoffs/OB0150.jsonl": 1,
+        "writeoffs/OB0214.jsonl": 1,
+        "writeoffs/OB0251.jsonl": 1,
+        "writeoffs/OB0190.jsonl": 1,
+        "writeoffs/OB0229.jsonl": 1,
+        "writeoffs/OB0291.jsonl": 1,
+        "writeoffs/OB0128.jsonl": 1,
+        "writeoffs/OB0070.jsonl": 1,
+        "writeoffs/OB0035.jsonl": 1,
+        "writeoffs/OB0334.jsonl": 1,
+        "writeoffs/OB0149.jsonl": 1,
+        "writeoffs/OB0248.jsonl": 1,
+        "writeoffs/OB0355.jsonl": 1,
+        "writeoffs/OB0310.jsonl": 1,
+        "writeoffs/OB0054.jsonl": 1,
+        "writeoffs/OB0011.jsonl": 1,
+        "writeoffs/OB0069.jsonl": 1,
+        "writeoffs/OB0094.jsonl": 1,
+        "writeoffs/OB0230.jsonl": 1,
+        "writeoffs/OB0275.jsonl": 1,
+        "writeoffs/OB0189.jsonl": 1,
+        "writeoffs/OB0131.jsonl": 1,
+        "writeoffs/OB0174.jsonl": 1,
+        "writeoffs/OB0288.jsonl": 1,
+        "writeoffs/OB0096.jsonl": 1,
+        "writeoffs/OB0133.jsonl": 1,
+        "writeoffs/OB0176.jsonl": 1,
+        "writeoffs/OB0232.jsonl": 1,
+        "writeoffs/OB0277.jsonl": 1,
+        "writeoffs/OB0056.jsonl": 1,
+        "writeoffs/OB0013.jsonl": 1,
+        "writeoffs/OB0357.jsonl": 1,
+        "writeoffs/OB0312.jsonl": 1,
+        "writeoffs/OB0293.jsonl": 1,
+        "writeoffs/OB0192.jsonl": 1,
+        "writeoffs/OB0336.jsonl": 1,
+        "writeoffs/OB0072.jsonl": 1,
+        "writeoffs/OB0037.jsonl": 1,
+        "writeoffs/OB0216.jsonl": 1,
+        "writeoffs/OB0253.jsonl": 1,
+        "writeoffs/OB0117.jsonl": 1,
+        "writeoffs/OB0152.jsonl": 1,
+        "writeoffs/OB0328.jsonl": 1,
+        "writeoffs/OB0091.jsonl": 1,
+        "writeoffs/OB0029.jsonl": 1,
+        "writeoffs/OB0171.jsonl": 1,
+        "writeoffs/OB0134.jsonl": 1,
+        "writeoffs/OB0270.jsonl": 1,
+        "writeoffs/OB0235.jsonl": 1,
+        "writeoffs/OB0208.jsonl": 1,
+        "writeoffs/OB0109.jsonl": 1,
+        "writeoffs/OB0014.jsonl": 1,
+        "writeoffs/OB0051.jsonl": 1,
+        "writeoffs/OB0315.jsonl": 1,
+        "writeoffs/OB0350.jsonl": 1,
+        "writeoffs/OB0294.jsonl": 1,
+        "writeoffs/OB0168.jsonl": 1,
+        "writeoffs/OB0195.jsonl": 1,
+        "writeoffs/OB0269.jsonl": 1,
+        "writeoffs/OB0088.jsonl": 1,
+        "writeoffs/OB0331.jsonl": 1,
+        "writeoffs/OB0030.jsonl": 1,
+        "writeoffs/OB0075.jsonl": 1,
+        "writeoffs/OB0048.jsonl": 1,
+        "writeoffs/OB0349.jsonl": 1,
+        "writeoffs/OB0254.jsonl": 1,
+        "writeoffs/OB0211.jsonl": 1,
+        "writeoffs/OB0155.jsonl": 1,
+        "writeoffs/OB0110.jsonl": 1,
+        "writeoffs/OB0157.jsonl": 1,
+        "writeoffs/OB0112.jsonl": 1,
+        "writeoffs/OB0256.jsonl": 1,
+        "writeoffs/OB0213.jsonl": 1,
+        "writeoffs/OB0197.jsonl": 1,
+        "writeoffs/OB0296.jsonl": 1,
+        "writeoffs/OB0032.jsonl": 1,
+        "writeoffs/OB0077.jsonl": 1,
+        "writeoffs/OB0333.jsonl": 1,
+        "writeoffs/OB0317.jsonl": 1,
+        "writeoffs/OB0352.jsonl": 1,
+        "writeoffs/OB0016.jsonl": 1,
+        "writeoffs/OB0053.jsonl": 1,
+        "writeoffs/OB0093.jsonl": 1,
+        "writeoffs/OB0272.jsonl": 1,
+        "writeoffs/OB0237.jsonl": 1,
+        "writeoffs/OB0173.jsonl": 1,
+        "writeoffs/OB0136.jsonl": 1,
+        "writeoffs/OB0012.jsonl": 1,
+        "writeoffs/OB0057.jsonl": 1,
+        "writeoffs/OB0313.jsonl": 1,
+        "writeoffs/OB0356.jsonl": 1,
+        "writeoffs/OB0177.jsonl": 1,
+        "writeoffs/OB0132.jsonl": 1,
+        "writeoffs/OB0276.jsonl": 1,
+        "writeoffs/OB0233.jsonl": 1,
+        "writeoffs/OB0097.jsonl": 1,
+        "writeoffs/OB0252.jsonl": 1,
+        "writeoffs/OB0217.jsonl": 1,
+        "writeoffs/OB0153.jsonl": 1,
+        "writeoffs/OB0116.jsonl": 1,
+        "writeoffs/OB0337.jsonl": 1,
+        "writeoffs/OB0036.jsonl": 1,
+        "writeoffs/OB0073.jsonl": 1,
+        "writeoffs/OB0292.jsonl": 1,
+        "writeoffs/OB0193.jsonl": 1,
+        "writeoffs/OB0034.jsonl": 1,
+        "writeoffs/OB0071.jsonl": 1,
+        "writeoffs/OB0335.jsonl": 1,
+        "writeoffs/OB0191.jsonl": 1,
+        "writeoffs/OB0228.jsonl": 1,
+        "writeoffs/OB0290.jsonl": 1,
+        "writeoffs/OB0129.jsonl": 1,
+        "writeoffs/OB0151.jsonl": 1,
+        "writeoffs/OB0114.jsonl": 1,
+        "writeoffs/OB0250.jsonl": 1,
+        "writeoffs/OB0215.jsonl": 1,
+        "writeoffs/OB0308.jsonl": 1,
+        "writeoffs/OB0009.jsonl": 1,
+        "writeoffs/OB0274.jsonl": 1,
+        "writeoffs/OB0231.jsonl": 1,
+        "writeoffs/OB0188.jsonl": 1,
+        "writeoffs/OB0175.jsonl": 1,
+        "writeoffs/OB0130.jsonl": 1,
+        "writeoffs/OB0289.jsonl": 1,
+        "writeoffs/OB0068.jsonl": 1,
+        "writeoffs/OB0095.jsonl": 1,
+        "writeoffs/OB0311.jsonl": 1,
+        "writeoffs/OB0354.jsonl": 1,
+        "writeoffs/OB0010.jsonl": 1,
+        "writeoffs/OB0055.jsonl": 1,
+        "writeoffs/OB0148.jsonl": 1,
+        "writeoffs/OB0249.jsonl": 1,
+        "collections/4.jsonl": 1,
+        "collections/6.jsonl": 1,
+        "collections/18.jsonl": 1,
+        "collections/2.jsonl": 1,
+        "collections/19.jsonl": 1,
+        "collections/7.jsonl": 1,
+        "collections/5.jsonl": 1,
+        "collections/1.jsonl": 1,
+        "collections/20.jsonl": 1,
+        "collections/3.jsonl": 1,
+        "collections/11.jsonl": 1,
+        "collections/13.jsonl": 1,
+        "collections/17.jsonl": 1,
+        "collections/9.jsonl": 1,
+        "collections/15.jsonl": 1,
+        "collections/12.jsonl": 1,
+        "collections/10.jsonl": 1,
+        "collections/14.jsonl": 1,
+        "collections/8.jsonl": 1,
+        "collections/16.jsonl": 1
+      }
+    }
+  },
+  "public_is_floor_setter": false,
+  "sha256": {
+    "tests/hidden/truth.jsonl": "a8180d06849d3c4d756c351a09ec8cf57f5c1c7dc4b2888f5054a8dda1fd35c4",
+    "tests/scoring/scorer_manifest.json": "744462876e21b7fb8be564bffaca3a7d36c56eb9035441588ada572ce1aad679",
+    "solution/measure_floors.py": "a0f1b925d40e21d940c9bee975ee6a65611b9094234b9838dc19e2b12c404b67",
+    "solution/portfolio.py": "4d0f2c8222eb120580209312408b649b5cfdd7b91b5a47522f89233640df509f",
+    "solution/cheap_portfolio.py": "1ec3a251982b2f599bf625e26d8c32189069c459f799678ad8812f778f68353b",
+    "solution/public_reference.py": "d5c37ea0f832df3db45a62b97106bd482094813a7c9cc20614f860f430064907",
+    "solution/estimators.py": "f01e8e9c9bb19e74bcc3da4319a927ab78b9d0a1bb782b6caa03aeaee67fc8ee",
+    "tests/scoring/score.py": "7c5b9bc6b43f8e25de803fee70527d15516600810564afc4134dbcf07770ec78"
+  }
+}

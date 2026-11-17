@@ -1,0 +1,62 @@
+{
+  "task_id": "floorplan_finance_surveillance",
+  "submission_id": "9d526f8083fe",
+  "total_tests": 6,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.0415,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 2.5733091831207275,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [
+    {
+      "name": "aging_reserve",
+      "status": "failed",
+      "message": null,
+      "score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "name": "headroom_rank",
+      "status": "failed",
+      "message": null,
+      "score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "name": "loss_reserve",
+      "status": "failed",
+      "message": null,
+      "score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "name": "sot_flag",
+      "status": "passed",
+      "message": null,
+      "score": 0.009620009620009478,
+      "weight": 1.0
+    },
+    {
+      "name": "turn_profile",
+      "status": "failed",
+      "message": null,
+      "score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "name": "variance_tier",
+      "status": "passed",
+      "message": null,
+      "score": 0.23937821284874597,
+      "weight": 1.0
+    }
+  ],
+  "metrics": {},
+  "submitted_at": 1794660034.5831752
+}

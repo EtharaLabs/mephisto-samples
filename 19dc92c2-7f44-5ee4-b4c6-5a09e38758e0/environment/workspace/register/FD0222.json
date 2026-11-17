@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "US",
+  "fund_id": "FD0222",
+  "production_cycle": "monthly",
+  "share_classes": [
+    {
+      "class_id": "FD0222-A",
+      "currency": "EUR"
+    },
+    {
+      "class_id": "FD0222-I",
+      "currency": "GBP"
+    }
+  ],
+  "strategy": "equity"
+}

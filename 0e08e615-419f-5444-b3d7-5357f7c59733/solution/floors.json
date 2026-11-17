@@ -1,0 +1,983 @@
+{
+  "floors": {
+    "adjustment_magnitude": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7640531708433363,
+      "floor_source": "closed_rf"
+    },
+    "allocation_key_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.9415350286964286,
+      "floor_source": "history_rf"
+    },
+    "challenge_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8983957219251337,
+      "floor_source": "history_rf"
+    },
+    "method_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.550334963775262,
+      "floor_source": "closed_rf"
+    },
+    "review_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.5982142857142858,
+      "floor_source": "closed_rf"
+    },
+    "uncertain_tax_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7361798373658085,
+      "floor_source": "history_rf"
+    }
+  },
+  "floor_methods": [
+    "naive_constant",
+    "target_encoding_alone",
+    "history_rf",
+    "closed_rf",
+    "constant_flag0_tier0",
+    "constant_flag0_tier1",
+    "constant_flag0_tier2",
+    "constant_flag0_tier3",
+    "constant_flag1_tier0",
+    "constant_flag1_tier1",
+    "constant_flag1_tier2",
+    "constant_flag1_tier3"
+  ],
+  "raw_metrics": {
+    "naive_constant": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.0,
+      "method_tier": 0.1781609195402299,
+      "review_rank": 0.039285714285714285,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "target_encoding_alone": {
+      "adjustment_magnitude": 0.6196513396722585,
+      "allocation_key_profile": 0.8992940557142857,
+      "challenge_flag": 0.5914972273567468,
+      "method_tier": 0.3101917959369118,
+      "review_rank": 0.09285714285714286,
+      "uncertain_tax_reserve": 0.4576837005319833
+    },
+    "history_rf": {
+      "adjustment_magnitude": 0.7113377678566117,
+      "allocation_key_profile": 0.9415350286964286,
+      "challenge_flag": 0.8983957219251337,
+      "method_tier": 0.43245429910125355,
+      "review_rank": 0.15714285714285714,
+      "uncertain_tax_reserve": 0.7361798373658085
+    },
+    "closed_rf": {
+      "adjustment_magnitude": 0.7640531708433363,
+      "allocation_key_profile": 0.9310704064821428,
+      "challenge_flag": 0.8471001757469244,
+      "method_tier": 0.550334963775262,
+      "review_rank": 0.5982142857142858,
+      "uncertain_tax_reserve": 0.5803635663240723
+    },
+    "closed_ridge": {
+      "adjustment_magnitude": 0.7683537609938174,
+      "allocation_key_profile": 0.9423491208035714,
+      "challenge_flag": 0.9557522123893806,
+      "method_tier": 0.53614336110237,
+      "review_rank": 0.29642857142857143,
+      "uncertain_tax_reserve": 0.6796810824343933
+    },
+    "closed_extra": {
+      "adjustment_magnitude": 0.7698318200740277,
+      "allocation_key_profile": 0.9472389598571429,
+      "challenge_flag": 0.8672566371681416,
+      "method_tier": 0.5099485803711156,
+      "review_rank": 0.6642857142857143,
+      "uncertain_tax_reserve": 0.6885129532705623
+    },
+    "hgb_plain": {
+      "adjustment_magnitude": 0.7747092984796488,
+      "allocation_key_profile": 0.9279039299107142,
+      "challenge_flag": 0.8283185840707965,
+      "method_tier": 0.5542518783898094,
+      "review_rank": 0.6946428571428571,
+      "uncertain_tax_reserve": 0.596169530740604
+    },
+    "hgb_asof": {
+      "adjustment_magnitude": 0.8040871643098634,
+      "allocation_key_profile": 0.9278432090535714,
+      "challenge_flag": 0.8439716312056738,
+      "method_tier": 0.5341044142614602,
+      "review_rank": 0.6803571428571429,
+      "uncertain_tax_reserve": 0.5682175583704536
+    },
+    "engineered_ridge": {
+      "adjustment_magnitude": 0.835087900785609,
+      "allocation_key_profile": 0.94281091075,
+      "challenge_flag": 0.9751773049645389,
+      "method_tier": 0.5370401497981123,
+      "review_rank": 0.9160714285714285,
+      "uncertain_tax_reserve": 0.8037010478068437
+    },
+    "local_kernel": {
+      "adjustment_magnitude": 0.8448535664716599,
+      "allocation_key_profile": 0.9750311188214286,
+      "challenge_flag": 0.8581560283687943,
+      "method_tier": 0.6494217537695799,
+      "review_rank": 0.35357142857142854,
+      "uncertain_tax_reserve": 0.6597433133365133
+    },
+    "residual_kernel": {
+      "adjustment_magnitude": 0.9020259589440126,
+      "allocation_key_profile": 0.954953352625,
+      "challenge_flag": 0.9751773049645389,
+      "method_tier": 0.6412528836069368,
+      "review_rank": 0.9928571428571429,
+      "uncertain_tax_reserve": 0.8361152188048268
+    },
+    "local_kernel_80": {
+      "adjustment_magnitude": 0.8292253974552162,
+      "allocation_key_profile": 0.9713922070714286,
+      "challenge_flag": 0.8723404255319149,
+      "method_tier": 0.6439570791509165,
+      "review_rank": 0.32857142857142857,
+      "uncertain_tax_reserve": 0.660114862454346
+    },
+    "constant_flag0_tier0": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.0,
+      "method_tier": 0.0017793594306049821,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag0_tier1": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.0,
+      "method_tier": 0.1781609195402299,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag0_tier2": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.0,
+      "method_tier": 0.15303593556381662,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag0_tier3": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.0,
+      "method_tier": 0.00089126559714795,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag1_tier0": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.6586826347305389,
+      "method_tier": 0.0017793594306049821,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag1_tier1": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.6586826347305389,
+      "method_tier": 0.1781609195402299,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag1_tier2": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.6586826347305389,
+      "method_tier": 0.15303593556381662,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    },
+    "constant_flag1_tier3": {
+      "adjustment_magnitude": 0.2661501025459525,
+      "allocation_key_profile": 0.8867337447142857,
+      "challenge_flag": 0.6586826347305389,
+      "method_tier": 0.00089126559714795,
+      "review_rank": 0.075,
+      "uncertain_tax_reserve": 0.2696513182494724
+    }
+  },
+  "methods": {
+    "naive_constant": {
+      "score": 0.0,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.2661501025459525,
+          "floor": 0.7640531708433363,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.8867337447142857,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.0,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.1781609195402299,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.039285714285714285,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.2696513182494724,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "target_encoding_alone": {
+      "score": 0.0,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.6196513396722585,
+          "floor": 0.7640531708433363,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.8992940557142857,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.5914972273567468,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.3101917959369118,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.09285714285714286,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.4576837005319833,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "history_rf": {
+      "score": 0.0,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.7113377678566117,
+          "floor": 0.7640531708433363,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9415350286964286,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8983957219251337,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.43245429910125355,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.15714285714285714,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.7361798373658085,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "closed_rf": {
+      "score": 0.0,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.7640531708433363,
+          "floor": 0.7640531708433363,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9310704064821428,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8471001757469244,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.550334963775262,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.5982142857142858,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.5803635663240723,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "closed_ridge": {
+      "score": 0.0994,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.7683537609938174,
+          "floor": 0.7640531708433363,
+          "fraction": 0.018226946154997953,
+          "points": 0.018226946154997953,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9423491208035714,
+          "floor": 0.9415350286964286,
+          "fraction": 0.013924442088848731,
+          "points": 0.013924442088848731,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.9557522123893806,
+          "floor": 0.8983957219251337,
+          "fraction": 0.5645086166744296,
+          "points": 0.5645086166744296,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.53614336110237,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.29642857142857143,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.6796810824343933,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "closed_extra": {
+      "score": 0.0477,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.7698318200740277,
+          "floor": 0.7640531708433363,
+          "fraction": 0.02449131972379455,
+          "points": 0.02449131972379455,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9472389598571429,
+          "floor": 0.9415350286964286,
+          "fraction": 0.09756151475893896,
+          "points": 0.09756151475893896,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8672566371681416,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.5099485803711156,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.6642857142857143,
+          "floor": 0.5982142857142858,
+          "fraction": 0.16444444444444417,
+          "points": 0.16444444444444417,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.6885129532705623,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "hgb_plain": {
+      "score": 0.049,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.7747092984796488,
+          "floor": 0.7640531708433363,
+          "fraction": 0.04516325849514581,
+          "points": 0.04516325849514581,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9279039299107142,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8283185840707965,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.5542518783898094,
+          "floor": 0.550334963775262,
+          "fraction": 0.008710738658786264,
+          "points": 0.008710738658786264,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.6946428571428571,
+          "floor": 0.5982142857142858,
+          "fraction": 0.23999999999999977,
+          "points": 0.23999999999999977,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.596169530740604,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "hgb_asof": {
+      "score": 0.0624,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.8040871643098634,
+          "floor": 0.7640531708433363,
+          "fraction": 0.16967379307286776,
+          "points": 0.16967379307286776,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9278432090535714,
+          "floor": 0.9415350286964286,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8439716312056738,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.5341044142614602,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.6803571428571429,
+          "floor": 0.5982142857142858,
+          "fraction": 0.20444444444444432,
+          "points": 0.20444444444444432,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.5682175583704536,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "engineered_ridge": {
+      "score": 0.3543,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.835087900785609,
+          "floor": 0.7640531708433363,
+          "fraction": 0.3010624478242389,
+          "points": 0.3010624478242389,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.94281091075,
+          "floor": 0.9415350286964286,
+          "fraction": 0.021823016844506545,
+          "points": 0.021823016844506545,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.9751773049645389,
+          "floor": 0.8983957219251337,
+          "fraction": 0.755692422545725,
+          "points": 0.755692422545725,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.5370401497981123,
+          "floor": 0.550334963775262,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.9160714285714285,
+          "floor": 0.5982142857142858,
+          "fraction": 0.791111111111111,
+          "points": 0.791111111111111,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.8037010478068437,
+          "floor": 0.7361798373658085,
+          "fraction": 0.255936505257405,
+          "points": 0.255936505257405,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "local_kernel": {
+      "score": 0.1893,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.8448535664716599,
+          "floor": 0.7640531708433363,
+          "fraction": 0.34245171218077186,
+          "points": 0.34245171218077186,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9750311188214286,
+          "floor": 0.9415350286964286,
+          "fraction": 0.5729257943371954,
+          "points": 0.5729257943371954,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8581560283687943,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.6494217537695799,
+          "floor": 0.550334963775262,
+          "fraction": 0.22035689237976533,
+          "points": 0.22035689237976533,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.35357142857142854,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.6597433133365133,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "residual_kernel": {
+      "score": 0.5222,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.9020259589440126,
+          "floor": 0.7640531708433363,
+          "fraction": 0.5847622050858978,
+          "points": 0.5847622050858978,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.954953352625,
+          "floor": 0.9415350286964286,
+          "fraction": 0.2295104851569776,
+          "points": 0.2295104851569776,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.9751773049645389,
+          "floor": 0.8983957219251337,
+          "fraction": 0.755692422545725,
+          "points": 0.755692422545725,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.6412528836069368,
+          "floor": 0.550334963775262,
+          "fraction": 0.20219032503615625,
+          "points": 0.20219032503615625,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.9928571428571429,
+          "floor": 0.5982142857142858,
+          "fraction": 0.9822222222222223,
+          "points": 0.9822222222222223,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.8361152188048268,
+          "floor": 0.7361798373658085,
+          "fraction": 0.3788011516678008,
+          "points": 0.3788011516678008,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "local_kernel_80": {
+      "score": 0.1659,
+      "coverage": 1.0,
+      "expected_records": 560,
+      "valid_records": 560,
+      "note": null,
+      "lanes": {
+        "adjustment_magnitude": {
+          "metric": 0.8292253974552162,
+          "floor": 0.7640531708433363,
+          "fraction": 0.2762157340483133,
+          "points": 0.2762157340483133,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "allocation_key_profile": {
+          "metric": 0.9713922070714286,
+          "floor": 0.9415350286964286,
+          "fraction": 0.5106849060092867,
+          "points": 0.5106849060092867,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "challenge_flag": {
+          "metric": 0.8723404255319149,
+          "floor": 0.8983957219251337,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "method_tier": {
+          "metric": 0.6439570791509165,
+          "floor": 0.550334963775262,
+          "fraction": 0.20820412492303067,
+          "points": 0.20820412492303067,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "review_rank": {
+          "metric": 0.32857142857142857,
+          "floor": 0.5982142857142858,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "uncertain_tax_reserve": {
+          "metric": 0.660114862454346,
+          "floor": 0.7361798373658085,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    }
+  },
+  "sha256": {
+    "tests/hidden/truth.jsonl": "a303b9faa605d8aa98a53f490fd817510dc63bea7e33f20c79db6763c91a50d2",
+    "tests/scoring/scorer_manifest.json": "faa3d4f310efd2156eb686be4fd3007a006efb93063cfff2ee42f281f6d0187d",
+    "solution/estimators.py": "e8bf4a639bc803827206eab87966020d7bf331c200033ac4c8f7cbc5cae44bb7",
+    "solution/generate.py": "6481550070c67aa0db51ca0a071e3c7db2a6e4a0f45b61a692aa50452272974a",
+    "solution/portfolio.py": "9bd840543e533db14080f981e8dd28db95af1e3d6ee2b9ffdca57364a1d7f7c4",
+    "solution/measure_floors.py": "745cdcae4415838fad171fb6ff6d6a63770c1597337fb526dd560390e610129c",
+    "tests/scoring/score.py": "8c1f910cf9894b587d011a69a260c6793de3d37b592068542eb7a3625285b4d6"
+  }
+}

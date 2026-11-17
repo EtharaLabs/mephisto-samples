@@ -1,0 +1,14 @@
+{
+  "beneficiary_id": "BE0227",
+  "charge_schedule": 3,
+  "cohort": "query",
+  "credit_form": 3,
+  "credit_limit_usd": 9267664.36,
+  "currency": "USD",
+  "document_route": 2,
+  "issuing_bank": "BANK23",
+  "sector": 0,
+  "service_band": 0,
+  "tenor_basis": 0,
+  "trade_corridor": 2
+}

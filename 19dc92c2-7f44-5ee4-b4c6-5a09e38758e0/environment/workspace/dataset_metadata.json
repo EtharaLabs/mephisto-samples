@@ -1,0 +1,103 @@
+{
+  "currency": "USD",
+  "fee_components": [
+    "management fee",
+    "performance fee",
+    "admin fee",
+    "custody fee",
+    "audit fee",
+    "transfer agency",
+    "regulatory",
+    "other"
+  ],
+  "group": "view-specific operating segment code, 0 through 3; codes are not shared across views",
+  "history_periods": [
+    8,
+    10,
+    12
+  ],
+  "period_unit": "monthly oversight cut",
+  "periods": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "pricing_tiers": [
+    "unreliable",
+    "limited",
+    "supported",
+    "independently corroborated"
+  ],
+  "query_periods": [
+    16,
+    20
+  ],
+  "unallocated_component": "unallocated accrual pending invoice allocation",
+  "views": {
+    "accruals": [
+      "management_rate_bps",
+      "performance_rate",
+      "positive_return",
+      "nav_log",
+      "invoice_age_days",
+      "share_class_count"
+    ],
+    "corporate_actions": [
+      "unprocessed_count",
+      "late_notice_share",
+      "tax_mismatch_share",
+      "days_since_review",
+      "control_completion",
+      "complexity"
+    ],
+    "expenses": [
+      "invoice_error_share",
+      "vendor_stress",
+      "relationship_years",
+      "budget_utilisation",
+      "nav_log",
+      "waiver_share"
+    ],
+    "flows": [
+      "subscription_share",
+      "redemption_share",
+      "unmatched_cash_share",
+      "settlement_delay_days",
+      "cycle_phase",
+      "leverage"
+    ],
+    "positions": [
+      "unreconciled_share",
+      "fx_gap_bps",
+      "stale_position_share",
+      "turnover",
+      "cash_gap_bps",
+      "class_count"
+    ],
+    "prices": [
+      "stale_days",
+      "source_dispersion_bps",
+      "exchange_coverage",
+      "independent_sources",
+      "illiquid_share",
+      "quote_age_hours"
+    ]
+  }
+}

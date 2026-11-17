@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "IE",
+  "fund_id": "FD0223",
+  "production_cycle": "monthly",
+  "share_classes": [
+    {
+      "class_id": "FD0223-A",
+      "currency": "USD"
+    },
+    {
+      "class_id": "FD0223-I",
+      "currency": "USD"
+    }
+  ],
+  "strategy": "alternatives"
+}

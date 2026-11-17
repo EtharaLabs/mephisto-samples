@@ -1,1 +1,2 @@
 **/trajectory/**/agent_output.txt filter=lfs diff=lfs merge=lfs -text
+**/rollouts/**/agent_output.txt filter=lfs diff=lfs merge=lfs -text

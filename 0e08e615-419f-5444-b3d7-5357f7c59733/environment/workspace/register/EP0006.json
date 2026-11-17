@@ -1,0 +1,12 @@
+{
+  "apa_reference": "APA006",
+  "cohort": "group",
+  "currency": "USD",
+  "functional_role": "manufacturing",
+  "jurisdiction_band": 2,
+  "pair_id": "EP0006",
+  "provider_entity": "LE0006",
+  "provider_jurisdiction": "SG",
+  "recipient_entity": "LE0043",
+  "recipient_jurisdiction": "JP"
+}

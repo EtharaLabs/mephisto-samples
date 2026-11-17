@@ -1,0 +1,62 @@
+{
+  "task_id": "trade_finance_documentary_credit_examination",
+  "submission_id": "cf710d088e84",
+  "total_tests": 6,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.4837,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 0.21878600120544434,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [
+    {
+      "name": "discrepancy_count",
+      "status": "passed",
+      "message": null,
+      "score": 0.2160307801845888,
+      "weight": 1.0
+    },
+    {
+      "name": "discrepancy_class_profile",
+      "status": "passed",
+      "message": null,
+      "score": 0.6046649491397679,
+      "weight": 1.0
+    },
+    {
+      "name": "refusal_flag",
+      "status": "passed",
+      "message": null,
+      "score": 0.8471914008321776,
+      "weight": 1.0
+    },
+    {
+      "name": "tenor_tier",
+      "status": "passed",
+      "message": null,
+      "score": 0.37017961890622686,
+      "weight": 1.0
+    },
+    {
+      "name": "examiner_priority_rank",
+      "status": "passed",
+      "message": null,
+      "score": 0.3375,
+      "weight": 1.0
+    },
+    {
+      "name": "charge_reserve",
+      "status": "passed",
+      "message": null,
+      "score": 0.5263633424944059,
+      "weight": 1.0
+    }
+  ],
+  "metrics": {},
+  "submitted_at": 1794720480.7900999
+}

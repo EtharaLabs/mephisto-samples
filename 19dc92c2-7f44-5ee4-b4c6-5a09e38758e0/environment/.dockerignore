@@ -1,0 +1,27 @@
+# macOS metadata must never enter the work image build context.
+#
+# Files authored on macOS carry extended attributes (com.apple.provenance is
+# system-protected and cannot be removed with xattr -c). When the tree is
+# packaged or copied through a filesystem or archiver without native xattr
+# support, each xattr-bearing file gains a binary AppleDouble "._<name>"
+# sidecar alongside it.
+#
+# Those sidecars match the estimators' *.json / *.jsonl globs. The estimators
+# enumerate with pathlib.Path.glob, which - unlike glob.glob - does not apply
+# the POSIX dotfile rule, so the sidecars are read as UTF-8 and raise
+# UnicodeDecodeError on the AppleDouble header, aborting the agent.
+#
+# Patterns are matched against the full path relative to the build context,
+# not the basename, so the "**/" variants are required to catch sidecars in
+# subdirectories. Do not remove them.
+._*
+**/._*
+.DS_Store
+**/.DS_Store
+__MACOSX/
+**/__MACOSX/
+.dockerignore
+__pycache__/
+**/__pycache__/
+*.pyc
+**/*.pyc

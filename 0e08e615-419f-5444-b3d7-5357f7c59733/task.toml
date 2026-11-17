@@ -1,0 +1,67 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [
+  { source = "/workspace/predictions.jsonl" },
+  { source = "/workspace/transfer_pricing_settlement.py" },
+  { source = "/workspace/requirements.txt" },
+]
+
+[task]
+task_id = "transfer_pricing_intercompany_settlement"
+name = "ethara/0e08e615-419f-5444-b3d7-5357f7c59733"
+version = "0.1.0"
+description = "Reproduce a multinational transfer pricing desk's entity-pair-period review across six independently fitted, competence-floored settlement lanes."
+authors = [{ name = "Snehil Maurya", email = "snehil.maurya@ethara.ai" }]
+keywords = ["professional-knowledge-work", "finance", "transfer-pricing", "intercompany-settlement", "method-imitation", "synthetic"]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 1.0
+platforms = ["linux/amd64", "linux/arm64"]
+data_license = "CC0-1.0"
+
+[agent]
+timeout_sec = 43200.0
+network_mode = "no-network"
+user = "1000:1000"
+
+[environment]
+network_mode = "no-network"
+workdir = "/workspace"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "no-network"
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+workdir = "/workspace"
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-11-09"
+source_kind = "synthetic"
+
+[upstream_provenance.source]
+generator = "Deterministic synthetic intercompany ledgers in solution/generate.py; independent fitted desk methods in solution/estimators.py"
+generation_inputs = ["solution/generate.py", "solution/estimators.py"]
+design_lineage = "Data, ground truth, floors and reported scores are original to this bundle and generated from a fixed key. The scoring architecture (additive competence-floored lanes, point-in-time ledger problem, independent fitted methods, private oracle, public-only candidate ladder) is adapted lane-for-lane from ethara/receivables-finance-surveillance (04fb6ba7-d838-59da-b07d-6b683edd47a1). No numerical truth, floor value or score from that bundle is reused. origin = \"original\" above refers to the task and its data, not to the scoring design."
+
+[extensions.sforge]
+task_id = "transfer_pricing_intercompany_settlement"
+base_image = "python"
+platform = "linux/amd64"
+parser = "structured_json"
+selection = "score_first"
+score_direction = "maximize"
+cwd = "/workspace"
+submit_paths = ["predictions.jsonl", "transfer_pricing_settlement.py", "requirements.txt"]
+submit_exclude = ["__pycache__", "*.pyc"]
+work_image_tag = "local"
+judge_image_tag = "local"

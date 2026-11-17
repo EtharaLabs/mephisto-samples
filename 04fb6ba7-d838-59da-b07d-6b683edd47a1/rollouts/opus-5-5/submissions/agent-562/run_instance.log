@@ -1,0 +1,9 @@
+2026-11-15 03:07:01,049 - INFO - Judge container started: 3d1c7ff481d9021b62ac09ed35abd740ad296c65676f227f4bc2cd2e88053a79
+2026-11-15 03:07:01,050 - INFO - Archive saved (41678 bytes)
+2026-11-15 03:07:01,386 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-11-15 03:07:01,443 - INFO - Running eval script...
+2026-11-15 03:07:01,911 - INFO - Test runtime: 0.47s, timed_out: False
+2026-11-15 03:07:01,911 - INFO - Result: 0/6 passed (pass_rate=0.00%)
+2026-11-15 03:07:01,911 - INFO - Stopping container edgebench.judge.receivables_finance_surveillance.590ada6b6a53...
+2026-11-15 03:07:02,007 - INFO - Removing container edgebench.judge.receivables_finance_surveillance.590ada6b6a53...
+2026-11-15 03:07:02,080 - INFO - Container edgebench.judge.receivables_finance_surveillance.590ada6b6a53 removed.

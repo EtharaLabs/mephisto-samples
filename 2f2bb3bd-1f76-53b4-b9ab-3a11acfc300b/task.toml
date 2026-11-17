@@ -1,0 +1,66 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [
+  { source = "/workspace/predictions.jsonl" },
+  { source = "/workspace/documentary_credit_examination.py" },
+  { source = "/workspace/requirements.txt" },
+]
+
+[task]
+task_id = "trade_finance_documentary_credit_examination"
+name = "ethara/2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b"
+version = "0.1.0"
+description = "Reproduce a documentary credit desk's examination records for 560 presentation-periods across six independent, competent-method-floored lanes. Deterministic continuous reward with no overall gate."
+authors = [{ name = "Snehil Maurya", email = "snehil.maurya@ethara.ai" }]
+keywords = ["professional-knowledge-work", "finance", "trade-finance", "documentary-credit", "letter-of-credit", "document-examination", "method-imitation", "synthetic"]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 1.0
+platforms = ["linux/amd64", "linux/arm64"]
+data_license = "CC0-1.0"
+
+[agent]
+timeout_sec = 43200.0
+network_mode = "no-network"
+user = "1000:1000"
+
+[environment]
+network_mode = "no-network"
+workdir = "/workspace"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "no-network"
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+workdir = "/workspace"
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-11-09"
+source_kind = "synthetic"
+
+[upstream_provenance.source]
+generator = "Deterministic keyed documentary-credit ledger generator solution/generate.py, version 1, with six independently fitted estimators in solution/estimators.py; packaging and metric families adapted from the supplied receivables-finance reference."
+generation_inputs = ["solution/generate.py", "solution/estimators.py"]
+
+[extensions.sforge]
+task_id = "trade_finance_documentary_credit_examination"
+base_image = "python"
+platform = "linux/amd64"
+parser = "structured_json"
+selection = "score_first"
+score_direction = "maximize"
+cwd = "/workspace"
+submit_paths = ["predictions.jsonl", "documentary_credit_examination.py", "requirements.txt"]
+submit_exclude = ["__pycache__", "*.pyc"]
+work_image_tag = "local"
+judge_image_tag = "local"

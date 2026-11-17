@@ -1,0 +1,19 @@
+{
+  "agent": "claude-code",
+  "task": "floorplan_finance_surveillance",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-757",
+  "total_rounds": 785,
+  "agent_submissions": 762,
+  "auto_submissions": 23,
+  "timed_out": true,
+  "runtime_seconds": 43200.02055597305,
+  "archive_size_bytes": 38243,
+  "resume_count": 0,
+  "round_protocol": false,
+  "productive_rounds": 0,
+  "unproductive_rounds": 0,
+  "stalled": false,
+  "best_score": 0.4753
+}

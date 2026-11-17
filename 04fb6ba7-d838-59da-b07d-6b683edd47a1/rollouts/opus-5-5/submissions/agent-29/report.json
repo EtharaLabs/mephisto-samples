@@ -1,0 +1,62 @@
+{
+  "task_id": "receivables_finance_surveillance",
+  "submission_id": "9d38978d886e",
+  "total_tests": 6,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.1696,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 0.3332631587982178,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [
+    {
+      "name": "availability_rank",
+      "status": "passed",
+      "message": null,
+      "score": 0.06976744186046513,
+      "weight": 1.0
+    },
+    {
+      "name": "collection_profile",
+      "status": "passed",
+      "message": null,
+      "score": 0.04370103566288908,
+      "weight": 1.0
+    },
+    {
+      "name": "dilution_reserve",
+      "status": "failed",
+      "message": null,
+      "score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "name": "dispute_flag",
+      "status": "passed",
+      "message": null,
+      "score": 0.591471480818613,
+      "weight": 1.0
+    },
+    {
+      "name": "loss_reserve",
+      "status": "passed",
+      "message": null,
+      "score": 0.0259605799689998,
+      "weight": 1.0
+    },
+    {
+      "name": "recovery_tier",
+      "status": "passed",
+      "message": null,
+      "score": 0.2865613611617011,
+      "weight": 1.0
+    }
+  ],
+  "metrics": {},
+  "submitted_at": 1794658694.008404
+}

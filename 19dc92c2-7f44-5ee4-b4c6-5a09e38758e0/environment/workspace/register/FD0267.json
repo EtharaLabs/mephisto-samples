@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "LU",
+  "fund_id": "FD0267",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0267-A",
+      "currency": "GBP"
+    },
+    {
+      "class_id": "FD0267-I",
+      "currency": "GBP"
+    }
+  ],
+  "strategy": "multi-asset"
+}

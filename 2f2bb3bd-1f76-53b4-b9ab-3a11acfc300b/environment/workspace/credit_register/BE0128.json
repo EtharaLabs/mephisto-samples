@@ -1,0 +1,14 @@
+{
+  "beneficiary_id": "BE0128",
+  "charge_schedule": 1,
+  "cohort": "query",
+  "credit_form": 0,
+  "credit_limit_usd": 468735.04,
+  "currency": "USD",
+  "document_route": 0,
+  "issuing_bank": "BANK20",
+  "sector": 3,
+  "service_band": 3,
+  "tenor_basis": 0,
+  "trade_corridor": 0
+}

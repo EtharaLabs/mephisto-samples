@@ -1,0 +1,12 @@
+{
+  "apa_reference": "APA000",
+  "cohort": "group",
+  "currency": "USD",
+  "functional_role": "licensing",
+  "jurisdiction_band": 3,
+  "pair_id": "EP0023",
+  "provider_entity": "LE0023",
+  "provider_jurisdiction": "GB",
+  "recipient_entity": "LE0060",
+  "recipient_jurisdiction": "JP"
+}

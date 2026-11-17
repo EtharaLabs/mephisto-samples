@@ -1,0 +1,40 @@
+{
+  "lanes": {
+    "adjustment_magnitude": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7640531708433363,
+      "floor_source": "closed_rf"
+    },
+    "allocation_key_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.9415350286964286,
+      "floor_source": "history_rf"
+    },
+    "challenge_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8983957219251337,
+      "floor_source": "history_rf"
+    },
+    "method_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.550334963775262,
+      "floor_source": "closed_rf"
+    },
+    "review_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.5982142857142858,
+      "floor_source": "closed_rf"
+    },
+    "uncertain_tax_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7361798373658085,
+      "floor_source": "history_rf"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "KY",
+  "fund_id": "FD0314",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0314-A",
+      "currency": "USD"
+    },
+    {
+      "class_id": "FD0314-I",
+      "currency": "EUR"
+    }
+  ],
+  "strategy": "multi-asset"
+}

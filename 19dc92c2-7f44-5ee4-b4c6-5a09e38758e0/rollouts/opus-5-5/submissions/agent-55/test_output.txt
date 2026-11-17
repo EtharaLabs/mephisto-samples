@@ -1,0 +1,23 @@
++ echo '>>>>> Start Test Output'
++ cd /workspace
++ mkdir -p /logs/verifier
+>>>>> Start Test Output
++ echo IyEvYmluL3NoCiMgRmFpbCBjbG9zZWQsIGFuZCBuZXZlciByZXB1Ymxpc2ggYW4gZWFybGllciBwb3NpdGl2ZSByZXBvcnQuCnNldCAtdQpleHBvcnQgUFlUSE9ORE9OVFdSSVRFQllURUNPREU9MQpMT0dTPSIke1ZFUklGSUVSX0xPR19ESVI6LS9sb2dzL3ZlcmlmaWVyfSIKVEVTVFM9L3Rlc3RzICAjIHNmb3JnZSBydW5zIHRoaXMgc2NyaXB0IGZyb20gL3RtcDsgdGhlIHNjb3JlciBsaXZlcyBhdCAvdGVzdHMgKGp1ZGdlIERvY2tlcmZpbGUgQ09QWSAuIC90ZXN0cy8pCm1rZGlyIC1wICIkTE9HUyIgfHwgZXhpdCAxCnByaW50ZiAnMFxuJyA+ICIkTE9HUy9yZXdhcmQudHh0IgpwcmludGYgJ3sicmV3YXJkIjowfVxuJyA+ICIkTE9HUy9yZXdhcmQuanNvbiIKcm0gLWYgIiRMT0dTL3JlcG9ydC5qc29uIiAiJExPR1MvY3RyZi5qc29uIgppZiBweXRob24zIC1JIC1CICIkVEVTVFMvc2NvcmluZy9ldmFsLnB5IiAtLXN1Ym1pc3Npb24tZGlyICIkezE6LS93b3Jrc3BhY2V9IiAtLWxvZy1kaXIgIiRMT0dTIjsgdGhlbgogIDoKZWxzZQogIHByaW50ZiAnMFxuJyA+ICIkTE9HUy9yZXdhcmQudHh0IgogIHByaW50ZiAneyJyZXdhcmQiOjB9XG4nID4gIiRMT0dTL3Jld2FyZC5qc29uIgpmaQpleGl0IDAK
++ base64 -d
++ chmod +x /tmp/harbor_test.sh
++ bash /tmp/harbor_test.sh
+>>>>> Start Structured Result
+{"details": [{"name": "expense_reserve", "score": 0.48306436993364665, "status": "passed", "weight": 1.0}, {"name": "fee_accrual_profile", "score": 0.2944860115100452, "status": "passed", "weight": 1.0}, {"name": "nav_break_magnitude", "score": 0, "status": "failed", "weight": 1.0}, {"name": "oversight_rank", "score": 0.5875706214689266, "status": "passed", "weight": 1.0}, {"name": "pricing_source_tier", "score": 0.13627679510524865, "status": "passed", "weight": 1.0}, {"name": "restatement_flag", "score": 0, "status": "failed", "weight": 1.0}], "score": 0.2502}
+>>>>> End Structured Result
+TOTAL_SCORE 0.2502
+++ cat /logs/verifier/reward.txt
+++ tr -dc 0-9.-
++ SCORE=0.2502
++ echo '{"score": 0.2502}'
++ EXIT_CODE=0
++ echo '>>>>> End Test Output'
++ echo 'Exit code: 0'
++ exit 0
+{"score": 0.2502}
+>>>>> End Test Output
+Exit code: 0

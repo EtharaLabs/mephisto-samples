@@ -1,0 +1,5075 @@
+{
+  "floors": {
+    "aging_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7443574821347374,
+      "floor_source": "oneshot_aging_reserve_normalised"
+    },
+    "turn_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.88724141731375,
+      "floor_source": "oneshot_turn_profile"
+    },
+    "sot_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.6206896551724138,
+      "floor_source": "oneshot_closed_sot_prevalence"
+    },
+    "variance_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6607804052014472,
+      "floor_source": "oneshot_closed_variance_classifier"
+    },
+    "headroom_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.5428571428571429,
+      "floor_source": "oneshot_closed_headroom_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.3382401884784094,
+      "floor_source": "aged_haircut_table"
+    }
+  },
+  "old_floors": {
+    "aging_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7443574821347374,
+      "floor_source": "oneshot_aging_reserve_normalised"
+    },
+    "turn_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.8971146712432143,
+      "floor_source": "oneshot_turn_profile"
+    },
+    "sot_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.6206896551724138,
+      "floor_source": "oneshot_closed_sot_prevalence"
+    },
+    "variance_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6339373793610151,
+      "floor_source": "oneshot_closed_variance_classifier"
+    },
+    "headroom_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.5428571428571429,
+      "floor_source": "oneshot_closed_headroom_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.3382401884784094,
+      "floor_source": "aged_haircut_table"
+    }
+  },
+  "dead_lane_threshold": 0.1,
+  "methods": {
+    "aged_haircut_table": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.5424556183388167,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.3382401884784094,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "franchise_median": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.2577270789706141,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7570602435803571,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.06964285714285715,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2455044628177689,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "prior_period_carry": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.26234590160895277,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7567567215535714,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.075,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2471449738714149,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "line_utilisation_table": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.26785714285714285,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "velocity_schedule": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.2577270789706141,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.5968717641071428,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.06964285714285715,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2455044628177689,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_aging_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.39467696933332497,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_aging_reserve_normalised": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.7443574821347374,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_turn_profile": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.88724141731375,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_sot_flag": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.4900662251655629,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_variance_tier": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.6284350186495085,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_headroom_rank": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.23214285714285715,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_loss_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.3261494911040078,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_loss_reserve_normalised": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.33115571340254063,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_aging_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.6854946318273828,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_turn_profile": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.8238760613202937,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_sot_prevalence": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.6206896551724138,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_sot_flag": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.5890410958904109,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_variance_classifier": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.6607804052014472,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_variance_tier": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.6320350530750782,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_headroom_rank": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.5428571428571429,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_loss_direct": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.20675483218732524,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "oneshot_closed_loss_reserve": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.26800235866245825,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    }
+  },
+  "controls": {
+    "empty": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.0,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 0.0,
+      "valid_records": 0,
+      "expected_records": 560,
+      "note": "empty submission",
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_zero": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.0003445141721070629,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.014496103446428573,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.054848966613672494,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.03571428571428571,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_one": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.00041496950566205097,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.0,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.26893353941267384,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.039285714285714285,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.0002856652600559231,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_franchise_mean": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.2505810647255737,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7814037299653475,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.06607142857142857,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.2173140384957526,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "constant_median": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "all_flag": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.26893353941267384,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.09302325581395349,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "no_flag": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.054848966613672494,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "uniform_distribution": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.5826646425535714,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "identity_ranking": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0732142857142857,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "reverse_identity_ranking": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.0,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_0": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.054848966613672494,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_1": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_2": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.09183673469387756,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "tier_3": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.7602367673125,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.09302325581395349,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_0": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.3805750484285714,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_1": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.21582626007142858,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_2": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.15134590348214286,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_3": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.09791599596428571,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_4": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.07236715957142857,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_5": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.034032227624999994,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_6": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.021532277571428574,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_7": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.011909023839285715,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    },
+    "point_mass_8": {
+      "score": 0.0,
+      "lanes": {
+        "aging_reserve": {
+          "metric": 0.27167940303151555,
+          "floor": 0.7443574821347374,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        },
+        "turn_profile": {
+          "metric": 0.014496103446428573,
+          "floor": 0.88724141731375,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "distribution_overlap"
+        },
+        "sot_flag": {
+          "metric": 0.0,
+          "floor": 0.6206896551724138,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "f1_detection"
+        },
+        "variance_tier": {
+          "metric": 0.14868255959849436,
+          "floor": 0.6607804052014472,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "macro_f1"
+        },
+        "headroom_rank": {
+          "metric": 0.07142857142857142,
+          "floor": 0.5428571428571429,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "rank_agreement"
+        },
+        "loss_reserve": {
+          "metric": 0.24668669555582645,
+          "floor": 0.3382401884784094,
+          "fraction": 0.0,
+          "points": 0.0,
+          "max": 1.0,
+          "metric_kind": "relative_agreement"
+        }
+      },
+      "coverage": 1.0,
+      "valid_records": 560,
+      "expected_records": 560,
+      "cheat_checks": {
+        "duplicate_answer_rows": false,
+        "submission_symlink": false,
+        "oversized_answer_file": false,
+        "non_finite_values": false
+      }
+    }
+  },
+  "degenerate_envelope": {
+    "score": 0.0,
+    "lanes": {
+      "aging_reserve": {
+        "metric": 0.2751957569347166,
+        "floor": 0.7443574821347374,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "turn_profile": {
+        "metric": 0.7946945630892857,
+        "floor": 0.88724141731375,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "sot_flag": {
+        "metric": 0.26893353941267384,
+        "floor": 0.6206896551724138,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "variance_tier": {
+        "metric": 0.14868255959849436,
+        "floor": 0.6607804052014472,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "headroom_rank": {
+        "metric": 0.075,
+        "floor": 0.5428571428571429,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.25214138285819265,
+        "floor": 0.3382401884784094,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "envelope_parameters": {
+    "aging_reserve": {
+      "domain": [
+        0.0,
+        172561.16
+      ],
+      "intervals": 1120,
+      "value": 9589.74,
+      "attained_metric": 0.2751957569347166,
+      "proof": "affine/positive-convex quasiconcavity on every error breakpoint interval; beyond domain score=0"
+    },
+    "loss_reserve": {
+      "domain": [
+        0.0,
+        70834.3
+      ],
+      "intervals": 1120,
+      "value": 2175.1,
+      "attained_metric": 0.25214138285819265,
+      "proof": "affine/positive-convex quasiconcavity on every error breakpoint interval; beyond domain score=0"
+    },
+    "turn_profile": {
+      "vector_including_unsold": [
+        0.37479208999999997,
+        0.23318901,
+        0.16186782,
+        0.11421684,
+        0.07917999,
+        0.02600996,
+        0.00752967,
+        0.00256978,
+        0.0006448399999999799
+      ],
+      "segments": 4868,
+      "proof": "exact empirical marginal-slope allocation over the complete 9-category simplex"
+    },
+    "sot_flag": {
+      "constant": 1,
+      "proof": "positive-class F1 best constant is all-positive"
+    },
+    "variance_tier": {
+      "constant": 1,
+      "labels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "proof": "exhaust all admissible constant labels"
+    },
+    "headroom_rank": {
+      "constant": 11,
+      "proof": "exhaust every constant rank 1..280 under the tolerance-band metric"
+    }
+  },
+  "decisions": {
+    "aging_reserve": {
+      "measured_max": 0.7443574821347374,
+      "source": "oneshot_aging_reserve_normalised",
+      "ranked_top5": [
+        [
+          "oneshot_aging_reserve_normalised",
+          0.7443574821347374
+        ],
+        [
+          "oneshot_closed_aging_reserve",
+          0.6854946318273828
+        ],
+        [
+          "aged_haircut_table",
+          0.5424556183388167
+        ],
+        [
+          "oneshot_aging_reserve",
+          0.39467696933332497
+        ],
+        [
+          "degenerate_envelope",
+          0.2751957569347166
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.2556425178652626,
+      "dead_lane_risk": false
+    },
+    "turn_profile": {
+      "measured_max": 0.88724141731375,
+      "source": "oneshot_turn_profile",
+      "ranked_top5": [
+        [
+          "oneshot_turn_profile",
+          0.88724141731375
+        ],
+        [
+          "oneshot_closed_turn_profile",
+          0.8238760613202937
+        ],
+        [
+          "degenerate_envelope",
+          0.7946945630892857
+        ],
+        [
+          "constant_franchise_mean",
+          0.7814037299653475
+        ],
+        [
+          "aged_haircut_table",
+          0.7602367673125
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.11275858268625005,
+      "dead_lane_risk": false
+    },
+    "sot_flag": {
+      "measured_max": 0.6206896551724138,
+      "source": "oneshot_closed_sot_prevalence",
+      "ranked_top5": [
+        [
+          "oneshot_closed_sot_prevalence",
+          0.6206896551724138
+        ],
+        [
+          "oneshot_closed_sot_flag",
+          0.5890410958904109
+        ],
+        [
+          "oneshot_sot_flag",
+          0.4900662251655629
+        ],
+        [
+          "constant_one",
+          0.26893353941267384
+        ],
+        [
+          "all_flag",
+          0.26893353941267384
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.3793103448275862,
+      "dead_lane_risk": false
+    },
+    "variance_tier": {
+      "measured_max": 0.6607804052014472,
+      "source": "oneshot_closed_variance_classifier",
+      "ranked_top5": [
+        [
+          "oneshot_closed_variance_classifier",
+          0.6607804052014472
+        ],
+        [
+          "oneshot_closed_variance_tier",
+          0.6320350530750782
+        ],
+        [
+          "oneshot_variance_tier",
+          0.6284350186495085
+        ],
+        [
+          "aged_haircut_table",
+          0.14868255959849436
+        ],
+        [
+          "franchise_median",
+          0.14868255959849436
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.3392195947985528,
+      "dead_lane_risk": false
+    },
+    "headroom_rank": {
+      "measured_max": 0.5428571428571429,
+      "source": "oneshot_closed_headroom_rank",
+      "ranked_top5": [
+        [
+          "oneshot_closed_headroom_rank",
+          0.5428571428571429
+        ],
+        [
+          "line_utilisation_table",
+          0.26785714285714285
+        ],
+        [
+          "oneshot_headroom_rank",
+          0.23214285714285715
+        ],
+        [
+          "prior_period_carry",
+          0.075
+        ],
+        [
+          "degenerate_envelope",
+          0.075
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.4571428571428571,
+      "dead_lane_risk": false
+    },
+    "loss_reserve": {
+      "measured_max": 0.3382401884784094,
+      "source": "aged_haircut_table",
+      "ranked_top5": [
+        [
+          "aged_haircut_table",
+          0.3382401884784094
+        ],
+        [
+          "oneshot_loss_reserve_normalised",
+          0.33115571340254063
+        ],
+        [
+          "oneshot_loss_reserve",
+          0.3261494911040078
+        ],
+        [
+          "oneshot_closed_loss_reserve",
+          0.26800235866245825
+        ],
+        [
+          "degenerate_envelope",
+          0.25214138285819265
+        ]
+      ],
+      "excluded_from_floor": [],
+      "payable": 0.6617598115215906,
+      "dead_lane_risk": false
+    }
+  },
+  "exact_zero_asserted": [
+    "aged_haircut_table",
+    "franchise_median",
+    "prior_period_carry",
+    "line_utilisation_table",
+    "velocity_schedule",
+    "oneshot_aging_reserve",
+    "oneshot_aging_reserve_normalised",
+    "oneshot_turn_profile",
+    "oneshot_sot_flag",
+    "oneshot_variance_tier",
+    "oneshot_headroom_rank",
+    "oneshot_loss_reserve",
+    "oneshot_loss_reserve_normalised",
+    "oneshot_closed_aging_reserve",
+    "oneshot_closed_turn_profile",
+    "oneshot_closed_sot_prevalence",
+    "oneshot_closed_sot_flag",
+    "oneshot_closed_variance_classifier",
+    "oneshot_closed_variance_tier",
+    "oneshot_closed_headroom_rank",
+    "oneshot_closed_loss_direct",
+    "oneshot_closed_loss_reserve",
+    "empty",
+    "constant_zero",
+    "constant_one",
+    "constant_franchise_mean",
+    "constant_median",
+    "all_flag",
+    "no_flag",
+    "uniform_distribution",
+    "identity_ranking",
+    "reverse_identity_ranking",
+    "tier_0",
+    "tier_1",
+    "tier_2",
+    "tier_3",
+    "point_mass_0",
+    "point_mass_1",
+    "point_mass_2",
+    "point_mass_3",
+    "point_mass_4",
+    "point_mass_5",
+    "point_mass_6",
+    "point_mass_7",
+    "point_mass_8",
+    "degenerate_envelope"
+  ],
+  "public_reference": {
+    "score": 0.1045,
+    "lanes": {
+      "aging_reserve": {
+        "metric": 0.7598956009583586,
+        "floor": 0.7443574821347374,
+        "fraction": 0.060780651643443144,
+        "points": 0.060780651643443144,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "turn_profile": {
+        "metric": 0.9045666236160651,
+        "floor": 0.88724141731375,
+        "fraction": 0.1536486703679348,
+        "points": 0.1536486703679348,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "sot_flag": {
+        "metric": 0.6306306306306306,
+        "floor": 0.6206896551724138,
+        "fraction": 0.026208026208026154,
+        "points": 0.026208026208026154,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "variance_tier": {
+        "metric": 0.7729795503823095,
+        "floor": 0.6607804052014472,
+        "fraction": 0.3307566747359989,
+        "points": 0.3307566747359989,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "headroom_rank": {
+        "metric": 0.5571428571428572,
+        "floor": 0.5428571428571429,
+        "fraction": 0.031249999999999892,
+        "points": 0.031249999999999892,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.35428016626583797,
+        "floor": 0.3382401884784094,
+        "fraction": 0.02423836792165979,
+        "points": 0.02423836792165979,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "public_reference_asof_private_diagnostic": {
+    "score": 0.0776,
+    "lanes": {
+      "aging_reserve": {
+        "metric": 0.7547578857626869,
+        "floor": 0.7443574821347374,
+        "fraction": 0.040683387547571594,
+        "points": 0.040683387547571594,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "turn_profile": {
+        "metric": 0.8844955025190431,
+        "floor": 0.88724141731375,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "sot_flag": {
+        "metric": 0.6359447004608295,
+        "floor": 0.6206896551724138,
+        "fraction": 0.04021784666945958,
+        "points": 0.04021784666945958,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "variance_tier": {
+        "metric": 0.7785437774137505,
+        "floor": 0.6607804052014472,
+        "fraction": 0.3471596983724882,
+        "points": 0.3471596983724882,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "headroom_rank": {
+        "metric": 0.4928571428571429,
+        "floor": 0.5428571428571429,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.36307494669633367,
+        "floor": 0.3382401884784094,
+        "fraction": 0.03752835664169671,
+        "points": 0.03752835664169671,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "oracle": {
+    "score": 1.0,
+    "lanes": {
+      "aging_reserve": {
+        "metric": 1.0,
+        "floor": 0.7443574821347374,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "turn_profile": {
+        "metric": 1.0,
+        "floor": 0.88724141731375,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "sot_flag": {
+        "metric": 1.0,
+        "floor": 0.6206896551724138,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "variance_tier": {
+        "metric": 1.0,
+        "floor": 0.6607804052014472,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "headroom_rank": {
+        "metric": 1.0,
+        "floor": 0.5428571428571429,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 1.0,
+        "floor": 0.3382401884784094,
+        "fraction": 1.0,
+        "points": 1.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 1.0,
+    "valid_records": 560,
+    "expected_records": 560,
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "nop": {
+    "score": 0.0,
+    "lanes": {
+      "aging_reserve": {
+        "metric": 0.0,
+        "floor": 0.7443574821347374,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      },
+      "turn_profile": {
+        "metric": 0.0,
+        "floor": 0.88724141731375,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "distribution_overlap"
+      },
+      "sot_flag": {
+        "metric": 0.0,
+        "floor": 0.6206896551724138,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "f1_detection"
+      },
+      "variance_tier": {
+        "metric": 0.0,
+        "floor": 0.6607804052014472,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "macro_f1"
+      },
+      "headroom_rank": {
+        "metric": 0.0,
+        "floor": 0.5428571428571429,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "rank_agreement"
+      },
+      "loss_reserve": {
+        "metric": 0.0,
+        "floor": 0.3382401884784094,
+        "fraction": 0.0,
+        "points": 0.0,
+        "max": 1.0,
+        "metric_kind": "relative_agreement"
+      }
+    },
+    "coverage": 0.0,
+    "valid_records": 0,
+    "expected_records": 560,
+    "note": "empty submission",
+    "cheat_checks": {
+      "duplicate_answer_rows": false,
+      "submission_symlink": false,
+      "oversized_answer_file": false,
+      "non_finite_values": false
+    }
+  },
+  "oracle_recomputes_truth_bytes": true,
+  "invalid_floor_checks": 5,
+  "audits": {
+    "oneshot": {
+      "permitted_reads": 802,
+      "violations": 0,
+      "paths": {
+        "history/surveillance.jsonl": 1,
+        "queries.jsonl": 1,
+        "aging/1.jsonl": 1,
+        "aging/10.jsonl": 1,
+        "aging/11.jsonl": 1,
+        "aging/12.jsonl": 1,
+        "aging/13.jsonl": 1,
+        "aging/14.jsonl": 1,
+        "aging/15.jsonl": 1,
+        "aging/16.jsonl": 1,
+        "aging/17.jsonl": 1,
+        "aging/18.jsonl": 1,
+        "aging/19.jsonl": 1,
+        "aging/2.jsonl": 1,
+        "aging/20.jsonl": 1,
+        "aging/3.jsonl": 1,
+        "aging/4.jsonl": 1,
+        "aging/5.jsonl": 1,
+        "aging/6.jsonl": 1,
+        "aging/7.jsonl": 1,
+        "aging/8.jsonl": 1,
+        "aging/9.jsonl": 1,
+        "turns/1.jsonl": 1,
+        "turns/10.jsonl": 1,
+        "turns/11.jsonl": 1,
+        "turns/12.jsonl": 1,
+        "turns/13.jsonl": 1,
+        "turns/14.jsonl": 1,
+        "turns/15.jsonl": 1,
+        "turns/16.jsonl": 1,
+        "turns/17.jsonl": 1,
+        "turns/18.jsonl": 1,
+        "turns/19.jsonl": 1,
+        "turns/2.jsonl": 1,
+        "turns/20.jsonl": 1,
+        "turns/3.jsonl": 1,
+        "turns/4.jsonl": 1,
+        "turns/5.jsonl": 1,
+        "turns/6.jsonl": 1,
+        "turns/7.jsonl": 1,
+        "turns/8.jsonl": 1,
+        "turns/9.jsonl": 1,
+        "audits/DL0000.jsonl": 1,
+        "audits/DL0001.jsonl": 1,
+        "audits/DL0002.jsonl": 1,
+        "audits/DL0003.jsonl": 1,
+        "audits/DL0004.jsonl": 1,
+        "audits/DL0005.jsonl": 1,
+        "audits/DL0006.jsonl": 1,
+        "audits/DL0007.jsonl": 1,
+        "audits/DL0008.jsonl": 1,
+        "audits/DL0009.jsonl": 1,
+        "audits/DL0010.jsonl": 1,
+        "audits/DL0011.jsonl": 1,
+        "audits/DL0012.jsonl": 1,
+        "audits/DL0013.jsonl": 1,
+        "audits/DL0014.jsonl": 1,
+        "audits/DL0015.jsonl": 1,
+        "audits/DL0016.jsonl": 1,
+        "audits/DL0017.jsonl": 1,
+        "audits/DL0018.jsonl": 1,
+        "audits/DL0019.jsonl": 1,
+        "audits/DL0020.jsonl": 1,
+        "audits/DL0021.jsonl": 1,
+        "audits/DL0022.jsonl": 1,
+        "audits/DL0023.jsonl": 1,
+        "audits/DL0024.jsonl": 1,
+        "audits/DL0025.jsonl": 1,
+        "audits/DL0026.jsonl": 1,
+        "audits/DL0027.jsonl": 1,
+        "audits/DL0028.jsonl": 1,
+        "audits/DL0029.jsonl": 1,
+        "audits/DL0030.jsonl": 1,
+        "audits/DL0031.jsonl": 1,
+        "audits/DL0032.jsonl": 1,
+        "audits/DL0033.jsonl": 1,
+        "audits/DL0034.jsonl": 1,
+        "audits/DL0035.jsonl": 1,
+        "audits/DL0036.jsonl": 1,
+        "audits/DL0037.jsonl": 1,
+        "audits/DL0038.jsonl": 1,
+        "audits/DL0039.jsonl": 1,
+        "audits/DL0040.jsonl": 1,
+        "audits/DL0041.jsonl": 1,
+        "audits/DL0042.jsonl": 1,
+        "audits/DL0043.jsonl": 1,
+        "audits/DL0044.jsonl": 1,
+        "audits/DL0045.jsonl": 1,
+        "audits/DL0046.jsonl": 1,
+        "audits/DL0047.jsonl": 1,
+        "audits/DL0048.jsonl": 1,
+        "audits/DL0049.jsonl": 1,
+        "audits/DL0050.jsonl": 1,
+        "audits/DL0051.jsonl": 1,
+        "audits/DL0052.jsonl": 1,
+        "audits/DL0053.jsonl": 1,
+        "audits/DL0054.jsonl": 1,
+        "audits/DL0055.jsonl": 1,
+        "audits/DL0056.jsonl": 1,
+        "audits/DL0057.jsonl": 1,
+        "audits/DL0058.jsonl": 1,
+        "audits/DL0059.jsonl": 1,
+        "audits/DL0060.jsonl": 1,
+        "audits/DL0061.jsonl": 1,
+        "audits/DL0062.jsonl": 1,
+        "audits/DL0063.jsonl": 1,
+        "audits/DL0064.jsonl": 1,
+        "audits/DL0065.jsonl": 1,
+        "audits/DL0066.jsonl": 1,
+        "audits/DL0067.jsonl": 1,
+        "audits/DL0068.jsonl": 1,
+        "audits/DL0069.jsonl": 1,
+        "audits/DL0070.jsonl": 1,
+        "audits/DL0071.jsonl": 1,
+        "audits/DL0072.jsonl": 1,
+        "audits/DL0073.jsonl": 1,
+        "audits/DL0074.jsonl": 1,
+        "audits/DL0075.jsonl": 1,
+        "audits/DL0076.jsonl": 1,
+        "audits/DL0077.jsonl": 1,
+        "audits/DL0078.jsonl": 1,
+        "audits/DL0079.jsonl": 1,
+        "audits/DL0080.jsonl": 1,
+        "audits/DL0081.jsonl": 1,
+        "audits/DL0082.jsonl": 1,
+        "audits/DL0083.jsonl": 1,
+        "audits/DL0084.jsonl": 1,
+        "audits/DL0085.jsonl": 1,
+        "audits/DL0086.jsonl": 1,
+        "audits/DL0087.jsonl": 1,
+        "audits/DL0088.jsonl": 1,
+        "audits/DL0089.jsonl": 1,
+        "audits/DL0090.jsonl": 1,
+        "audits/DL0091.jsonl": 1,
+        "audits/DL0092.jsonl": 1,
+        "audits/DL0093.jsonl": 1,
+        "audits/DL0094.jsonl": 1,
+        "audits/DL0095.jsonl": 1,
+        "audits/DL0096.jsonl": 1,
+        "audits/DL0097.jsonl": 1,
+        "audits/DL0098.jsonl": 1,
+        "audits/DL0099.jsonl": 1,
+        "audits/DL0100.jsonl": 1,
+        "audits/DL0101.jsonl": 1,
+        "audits/DL0102.jsonl": 1,
+        "audits/DL0103.jsonl": 1,
+        "audits/DL0104.jsonl": 1,
+        "audits/DL0105.jsonl": 1,
+        "audits/DL0106.jsonl": 1,
+        "audits/DL0107.jsonl": 1,
+        "audits/DL0108.jsonl": 1,
+        "audits/DL0109.jsonl": 1,
+        "audits/DL0110.jsonl": 1,
+        "audits/DL0111.jsonl": 1,
+        "audits/DL0112.jsonl": 1,
+        "audits/DL0113.jsonl": 1,
+        "audits/DL0114.jsonl": 1,
+        "audits/DL0115.jsonl": 1,
+        "audits/DL0116.jsonl": 1,
+        "audits/DL0117.jsonl": 1,
+        "audits/DL0118.jsonl": 1,
+        "audits/DL0119.jsonl": 1,
+        "audits/DL0120.jsonl": 1,
+        "audits/DL0121.jsonl": 1,
+        "audits/DL0122.jsonl": 1,
+        "audits/DL0123.jsonl": 1,
+        "audits/DL0124.jsonl": 1,
+        "audits/DL0125.jsonl": 1,
+        "audits/DL0126.jsonl": 1,
+        "audits/DL0127.jsonl": 1,
+        "audits/DL0128.jsonl": 1,
+        "audits/DL0129.jsonl": 1,
+        "audits/DL0130.jsonl": 1,
+        "audits/DL0131.jsonl": 1,
+        "audits/DL0132.jsonl": 1,
+        "audits/DL0133.jsonl": 1,
+        "audits/DL0134.jsonl": 1,
+        "audits/DL0135.jsonl": 1,
+        "audits/DL0136.jsonl": 1,
+        "audits/DL0137.jsonl": 1,
+        "audits/DL0138.jsonl": 1,
+        "audits/DL0139.jsonl": 1,
+        "audits/DL0140.jsonl": 1,
+        "audits/DL0141.jsonl": 1,
+        "audits/DL0142.jsonl": 1,
+        "audits/DL0143.jsonl": 1,
+        "audits/DL0144.jsonl": 1,
+        "audits/DL0145.jsonl": 1,
+        "audits/DL0146.jsonl": 1,
+        "audits/DL0147.jsonl": 1,
+        "audits/DL0148.jsonl": 1,
+        "audits/DL0149.jsonl": 1,
+        "audits/DL0150.jsonl": 1,
+        "audits/DL0151.jsonl": 1,
+        "audits/DL0152.jsonl": 1,
+        "audits/DL0153.jsonl": 1,
+        "audits/DL0154.jsonl": 1,
+        "audits/DL0155.jsonl": 1,
+        "audits/DL0156.jsonl": 1,
+        "audits/DL0157.jsonl": 1,
+        "audits/DL0158.jsonl": 1,
+        "audits/DL0159.jsonl": 1,
+        "audits/DL0160.jsonl": 1,
+        "audits/DL0161.jsonl": 1,
+        "audits/DL0162.jsonl": 1,
+        "audits/DL0163.jsonl": 1,
+        "audits/DL0164.jsonl": 1,
+        "audits/DL0165.jsonl": 1,
+        "audits/DL0166.jsonl": 1,
+        "audits/DL0167.jsonl": 1,
+        "audits/DL0168.jsonl": 1,
+        "audits/DL0169.jsonl": 1,
+        "audits/DL0170.jsonl": 1,
+        "audits/DL0171.jsonl": 1,
+        "audits/DL0172.jsonl": 1,
+        "audits/DL0173.jsonl": 1,
+        "audits/DL0174.jsonl": 1,
+        "audits/DL0175.jsonl": 1,
+        "audits/DL0176.jsonl": 1,
+        "audits/DL0177.jsonl": 1,
+        "audits/DL0178.jsonl": 1,
+        "audits/DL0179.jsonl": 1,
+        "audits/DL0180.jsonl": 1,
+        "audits/DL0181.jsonl": 1,
+        "audits/DL0182.jsonl": 1,
+        "audits/DL0183.jsonl": 1,
+        "audits/DL0184.jsonl": 1,
+        "audits/DL0185.jsonl": 1,
+        "audits/DL0186.jsonl": 1,
+        "audits/DL0187.jsonl": 1,
+        "audits/DL0188.jsonl": 1,
+        "audits/DL0189.jsonl": 1,
+        "audits/DL0190.jsonl": 1,
+        "audits/DL0191.jsonl": 1,
+        "audits/DL0192.jsonl": 1,
+        "audits/DL0193.jsonl": 1,
+        "audits/DL0194.jsonl": 1,
+        "audits/DL0195.jsonl": 1,
+        "audits/DL0196.jsonl": 1,
+        "audits/DL0197.jsonl": 1,
+        "audits/DL0198.jsonl": 1,
+        "audits/DL0199.jsonl": 1,
+        "audits/DL0200.jsonl": 1,
+        "audits/DL0201.jsonl": 1,
+        "audits/DL0202.jsonl": 1,
+        "audits/DL0203.jsonl": 1,
+        "audits/DL0204.jsonl": 1,
+        "audits/DL0205.jsonl": 1,
+        "audits/DL0206.jsonl": 1,
+        "audits/DL0207.jsonl": 1,
+        "audits/DL0208.jsonl": 1,
+        "audits/DL0209.jsonl": 1,
+        "audits/DL0210.jsonl": 1,
+        "audits/DL0211.jsonl": 1,
+        "audits/DL0212.jsonl": 1,
+        "audits/DL0213.jsonl": 1,
+        "audits/DL0214.jsonl": 1,
+        "audits/DL0215.jsonl": 1,
+        "audits/DL0216.jsonl": 1,
+        "audits/DL0217.jsonl": 1,
+        "audits/DL0218.jsonl": 1,
+        "audits/DL0219.jsonl": 1,
+        "audits/DL0220.jsonl": 1,
+        "audits/DL0221.jsonl": 1,
+        "audits/DL0222.jsonl": 1,
+        "audits/DL0223.jsonl": 1,
+        "audits/DL0224.jsonl": 1,
+        "audits/DL0225.jsonl": 1,
+        "audits/DL0226.jsonl": 1,
+        "audits/DL0227.jsonl": 1,
+        "audits/DL0228.jsonl": 1,
+        "audits/DL0229.jsonl": 1,
+        "audits/DL0230.jsonl": 1,
+        "audits/DL0231.jsonl": 1,
+        "audits/DL0232.jsonl": 1,
+        "audits/DL0233.jsonl": 1,
+        "audits/DL0234.jsonl": 1,
+        "audits/DL0235.jsonl": 1,
+        "audits/DL0236.jsonl": 1,
+        "audits/DL0237.jsonl": 1,
+        "audits/DL0238.jsonl": 1,
+        "audits/DL0239.jsonl": 1,
+        "audits/DL0240.jsonl": 1,
+        "audits/DL0241.jsonl": 1,
+        "audits/DL0242.jsonl": 1,
+        "audits/DL0243.jsonl": 1,
+        "audits/DL0244.jsonl": 1,
+        "audits/DL0245.jsonl": 1,
+        "audits/DL0246.jsonl": 1,
+        "audits/DL0247.jsonl": 1,
+        "audits/DL0248.jsonl": 1,
+        "audits/DL0249.jsonl": 1,
+        "audits/DL0250.jsonl": 1,
+        "audits/DL0251.jsonl": 1,
+        "audits/DL0252.jsonl": 1,
+        "audits/DL0253.jsonl": 1,
+        "audits/DL0254.jsonl": 1,
+        "audits/DL0255.jsonl": 1,
+        "audits/DL0256.jsonl": 1,
+        "audits/DL0257.jsonl": 1,
+        "audits/DL0258.jsonl": 1,
+        "audits/DL0259.jsonl": 1,
+        "audits/DL0260.jsonl": 1,
+        "audits/DL0261.jsonl": 1,
+        "audits/DL0262.jsonl": 1,
+        "audits/DL0263.jsonl": 1,
+        "audits/DL0264.jsonl": 1,
+        "audits/DL0265.jsonl": 1,
+        "audits/DL0266.jsonl": 1,
+        "audits/DL0267.jsonl": 1,
+        "audits/DL0268.jsonl": 1,
+        "audits/DL0269.jsonl": 1,
+        "audits/DL0270.jsonl": 1,
+        "audits/DL0271.jsonl": 1,
+        "audits/DL0272.jsonl": 1,
+        "audits/DL0273.jsonl": 1,
+        "audits/DL0274.jsonl": 1,
+        "audits/DL0275.jsonl": 1,
+        "audits/DL0276.jsonl": 1,
+        "audits/DL0277.jsonl": 1,
+        "audits/DL0278.jsonl": 1,
+        "audits/DL0279.jsonl": 1,
+        "audits/DL0280.jsonl": 1,
+        "audits/DL0281.jsonl": 1,
+        "audits/DL0282.jsonl": 1,
+        "audits/DL0283.jsonl": 1,
+        "audits/DL0284.jsonl": 1,
+        "audits/DL0285.jsonl": 1,
+        "audits/DL0286.jsonl": 1,
+        "audits/DL0287.jsonl": 1,
+        "audits/DL0288.jsonl": 1,
+        "audits/DL0289.jsonl": 1,
+        "audits/DL0290.jsonl": 1,
+        "audits/DL0291.jsonl": 1,
+        "audits/DL0292.jsonl": 1,
+        "audits/DL0293.jsonl": 1,
+        "audits/DL0294.jsonl": 1,
+        "audits/DL0295.jsonl": 1,
+        "audits/DL0296.jsonl": 1,
+        "audits/DL0297.jsonl": 1,
+        "audits/DL0298.jsonl": 1,
+        "audits/DL0299.jsonl": 1,
+        "audits/DL0300.jsonl": 1,
+        "audits/DL0301.jsonl": 1,
+        "audits/DL0302.jsonl": 1,
+        "audits/DL0303.jsonl": 1,
+        "audits/DL0304.jsonl": 1,
+        "audits/DL0305.jsonl": 1,
+        "audits/DL0306.jsonl": 1,
+        "audits/DL0307.jsonl": 1,
+        "audits/DL0308.jsonl": 1,
+        "audits/DL0309.jsonl": 1,
+        "audits/DL0310.jsonl": 1,
+        "audits/DL0311.jsonl": 1,
+        "audits/DL0312.jsonl": 1,
+        "audits/DL0313.jsonl": 1,
+        "audits/DL0314.jsonl": 1,
+        "audits/DL0315.jsonl": 1,
+        "audits/DL0316.jsonl": 1,
+        "audits/DL0317.jsonl": 1,
+        "audits/DL0318.jsonl": 1,
+        "audits/DL0319.jsonl": 1,
+        "audits/DL0320.jsonl": 1,
+        "audits/DL0321.jsonl": 1,
+        "audits/DL0322.jsonl": 1,
+        "audits/DL0323.jsonl": 1,
+        "audits/DL0324.jsonl": 1,
+        "audits/DL0325.jsonl": 1,
+        "audits/DL0326.jsonl": 1,
+        "audits/DL0327.jsonl": 1,
+        "audits/DL0328.jsonl": 1,
+        "audits/DL0329.jsonl": 1,
+        "audits/DL0330.jsonl": 1,
+        "audits/DL0331.jsonl": 1,
+        "audits/DL0332.jsonl": 1,
+        "audits/DL0333.jsonl": 1,
+        "audits/DL0334.jsonl": 1,
+        "audits/DL0335.jsonl": 1,
+        "audits/DL0336.jsonl": 1,
+        "audits/DL0337.jsonl": 1,
+        "audits/DL0338.jsonl": 1,
+        "audits/DL0339.jsonl": 1,
+        "audits/DL0340.jsonl": 1,
+        "audits/DL0341.jsonl": 1,
+        "audits/DL0342.jsonl": 1,
+        "audits/DL0343.jsonl": 1,
+        "audits/DL0344.jsonl": 1,
+        "audits/DL0345.jsonl": 1,
+        "audits/DL0346.jsonl": 1,
+        "audits/DL0347.jsonl": 1,
+        "audits/DL0348.jsonl": 1,
+        "audits/DL0349.jsonl": 1,
+        "audits/DL0350.jsonl": 1,
+        "audits/DL0351.jsonl": 1,
+        "audits/DL0352.jsonl": 1,
+        "audits/DL0353.jsonl": 1,
+        "audits/DL0354.jsonl": 1,
+        "audits/DL0355.jsonl": 1,
+        "audits/DL0356.jsonl": 1,
+        "audits/DL0357.jsonl": 1,
+        "audits/DL0358.jsonl": 1,
+        "audits/DL0359.jsonl": 1,
+        "reconciliations/1.jsonl": 1,
+        "reconciliations/10.jsonl": 1,
+        "reconciliations/11.jsonl": 1,
+        "reconciliations/12.jsonl": 1,
+        "reconciliations/13.jsonl": 1,
+        "reconciliations/14.jsonl": 1,
+        "reconciliations/15.jsonl": 1,
+        "reconciliations/16.jsonl": 1,
+        "reconciliations/17.jsonl": 1,
+        "reconciliations/18.jsonl": 1,
+        "reconciliations/19.jsonl": 1,
+        "reconciliations/2.jsonl": 1,
+        "reconciliations/20.jsonl": 1,
+        "reconciliations/3.jsonl": 1,
+        "reconciliations/4.jsonl": 1,
+        "reconciliations/5.jsonl": 1,
+        "reconciliations/6.jsonl": 1,
+        "reconciliations/7.jsonl": 1,
+        "reconciliations/8.jsonl": 1,
+        "reconciliations/9.jsonl": 1,
+        "lines/1.jsonl": 1,
+        "lines/10.jsonl": 1,
+        "lines/11.jsonl": 1,
+        "lines/12.jsonl": 1,
+        "lines/13.jsonl": 1,
+        "lines/14.jsonl": 1,
+        "lines/15.jsonl": 1,
+        "lines/16.jsonl": 1,
+        "lines/17.jsonl": 1,
+        "lines/18.jsonl": 1,
+        "lines/19.jsonl": 1,
+        "lines/2.jsonl": 1,
+        "lines/20.jsonl": 1,
+        "lines/3.jsonl": 1,
+        "lines/4.jsonl": 1,
+        "lines/5.jsonl": 1,
+        "lines/6.jsonl": 1,
+        "lines/7.jsonl": 1,
+        "lines/8.jsonl": 1,
+        "lines/9.jsonl": 1,
+        "repossessions/DL0000.jsonl": 1,
+        "repossessions/DL0001.jsonl": 1,
+        "repossessions/DL0002.jsonl": 1,
+        "repossessions/DL0003.jsonl": 1,
+        "repossessions/DL0004.jsonl": 1,
+        "repossessions/DL0005.jsonl": 1,
+        "repossessions/DL0006.jsonl": 1,
+        "repossessions/DL0007.jsonl": 1,
+        "repossessions/DL0008.jsonl": 1,
+        "repossessions/DL0009.jsonl": 1,
+        "repossessions/DL0010.jsonl": 1,
+        "repossessions/DL0011.jsonl": 1,
+        "repossessions/DL0012.jsonl": 1,
+        "repossessions/DL0013.jsonl": 1,
+        "repossessions/DL0014.jsonl": 1,
+        "repossessions/DL0015.jsonl": 1,
+        "repossessions/DL0016.jsonl": 1,
+        "repossessions/DL0017.jsonl": 1,
+        "repossessions/DL0018.jsonl": 1,
+        "repossessions/DL0019.jsonl": 1,
+        "repossessions/DL0020.jsonl": 1,
+        "repossessions/DL0021.jsonl": 1,
+        "repossessions/DL0022.jsonl": 1,
+        "repossessions/DL0023.jsonl": 1,
+        "repossessions/DL0024.jsonl": 1,
+        "repossessions/DL0025.jsonl": 1,
+        "repossessions/DL0026.jsonl": 1,
+        "repossessions/DL0027.jsonl": 1,
+        "repossessions/DL0028.jsonl": 1,
+        "repossessions/DL0029.jsonl": 1,
+        "repossessions/DL0030.jsonl": 1,
+        "repossessions/DL0031.jsonl": 1,
+        "repossessions/DL0032.jsonl": 1,
+        "repossessions/DL0033.jsonl": 1,
+        "repossessions/DL0034.jsonl": 1,
+        "repossessions/DL0035.jsonl": 1,
+        "repossessions/DL0036.jsonl": 1,
+        "repossessions/DL0037.jsonl": 1,
+        "repossessions/DL0038.jsonl": 1,
+        "repossessions/DL0039.jsonl": 1,
+        "repossessions/DL0040.jsonl": 1,
+        "repossessions/DL0041.jsonl": 1,
+        "repossessions/DL0042.jsonl": 1,
+        "repossessions/DL0043.jsonl": 1,
+        "repossessions/DL0044.jsonl": 1,
+        "repossessions/DL0045.jsonl": 1,
+        "repossessions/DL0046.jsonl": 1,
+        "repossessions/DL0047.jsonl": 1,
+        "repossessions/DL0048.jsonl": 1,
+        "repossessions/DL0049.jsonl": 1,
+        "repossessions/DL0050.jsonl": 1,
+        "repossessions/DL0051.jsonl": 1,
+        "repossessions/DL0052.jsonl": 1,
+        "repossessions/DL0053.jsonl": 1,
+        "repossessions/DL0054.jsonl": 1,
+        "repossessions/DL0055.jsonl": 1,
+        "repossessions/DL0056.jsonl": 1,
+        "repossessions/DL0057.jsonl": 1,
+        "repossessions/DL0058.jsonl": 1,
+        "repossessions/DL0059.jsonl": 1,
+        "repossessions/DL0060.jsonl": 1,
+        "repossessions/DL0061.jsonl": 1,
+        "repossessions/DL0062.jsonl": 1,
+        "repossessions/DL0063.jsonl": 1,
+        "repossessions/DL0064.jsonl": 1,
+        "repossessions/DL0065.jsonl": 1,
+        "repossessions/DL0066.jsonl": 1,
+        "repossessions/DL0067.jsonl": 1,
+        "repossessions/DL0068.jsonl": 1,
+        "repossessions/DL0069.jsonl": 1,
+        "repossessions/DL0070.jsonl": 1,
+        "repossessions/DL0071.jsonl": 1,
+        "repossessions/DL0072.jsonl": 1,
+        "repossessions/DL0073.jsonl": 1,
+        "repossessions/DL0074.jsonl": 1,
+        "repossessions/DL0075.jsonl": 1,
+        "repossessions/DL0076.jsonl": 1,
+        "repossessions/DL0077.jsonl": 1,
+        "repossessions/DL0078.jsonl": 1,
+        "repossessions/DL0079.jsonl": 1,
+        "repossessions/DL0080.jsonl": 1,
+        "repossessions/DL0081.jsonl": 1,
+        "repossessions/DL0082.jsonl": 1,
+        "repossessions/DL0083.jsonl": 1,
+        "repossessions/DL0084.jsonl": 1,
+        "repossessions/DL0085.jsonl": 1,
+        "repossessions/DL0086.jsonl": 1,
+        "repossessions/DL0087.jsonl": 1,
+        "repossessions/DL0088.jsonl": 1,
+        "repossessions/DL0089.jsonl": 1,
+        "repossessions/DL0090.jsonl": 1,
+        "repossessions/DL0091.jsonl": 1,
+        "repossessions/DL0092.jsonl": 1,
+        "repossessions/DL0093.jsonl": 1,
+        "repossessions/DL0094.jsonl": 1,
+        "repossessions/DL0095.jsonl": 1,
+        "repossessions/DL0096.jsonl": 1,
+        "repossessions/DL0097.jsonl": 1,
+        "repossessions/DL0098.jsonl": 1,
+        "repossessions/DL0099.jsonl": 1,
+        "repossessions/DL0100.jsonl": 1,
+        "repossessions/DL0101.jsonl": 1,
+        "repossessions/DL0102.jsonl": 1,
+        "repossessions/DL0103.jsonl": 1,
+        "repossessions/DL0104.jsonl": 1,
+        "repossessions/DL0105.jsonl": 1,
+        "repossessions/DL0106.jsonl": 1,
+        "repossessions/DL0107.jsonl": 1,
+        "repossessions/DL0108.jsonl": 1,
+        "repossessions/DL0109.jsonl": 1,
+        "repossessions/DL0110.jsonl": 1,
+        "repossessions/DL0111.jsonl": 1,
+        "repossessions/DL0112.jsonl": 1,
+        "repossessions/DL0113.jsonl": 1,
+        "repossessions/DL0114.jsonl": 1,
+        "repossessions/DL0115.jsonl": 1,
+        "repossessions/DL0116.jsonl": 1,
+        "repossessions/DL0117.jsonl": 1,
+        "repossessions/DL0118.jsonl": 1,
+        "repossessions/DL0119.jsonl": 1,
+        "repossessions/DL0120.jsonl": 1,
+        "repossessions/DL0121.jsonl": 1,
+        "repossessions/DL0122.jsonl": 1,
+        "repossessions/DL0123.jsonl": 1,
+        "repossessions/DL0124.jsonl": 1,
+        "repossessions/DL0125.jsonl": 1,
+        "repossessions/DL0126.jsonl": 1,
+        "repossessions/DL0127.jsonl": 1,
+        "repossessions/DL0128.jsonl": 1,
+        "repossessions/DL0129.jsonl": 1,
+        "repossessions/DL0130.jsonl": 1,
+        "repossessions/DL0131.jsonl": 1,
+        "repossessions/DL0132.jsonl": 1,
+        "repossessions/DL0133.jsonl": 1,
+        "repossessions/DL0134.jsonl": 1,
+        "repossessions/DL0135.jsonl": 1,
+        "repossessions/DL0136.jsonl": 1,
+        "repossessions/DL0137.jsonl": 1,
+        "repossessions/DL0138.jsonl": 1,
+        "repossessions/DL0139.jsonl": 1,
+        "repossessions/DL0140.jsonl": 1,
+        "repossessions/DL0141.jsonl": 1,
+        "repossessions/DL0142.jsonl": 1,
+        "repossessions/DL0143.jsonl": 1,
+        "repossessions/DL0144.jsonl": 1,
+        "repossessions/DL0145.jsonl": 1,
+        "repossessions/DL0146.jsonl": 1,
+        "repossessions/DL0147.jsonl": 1,
+        "repossessions/DL0148.jsonl": 1,
+        "repossessions/DL0149.jsonl": 1,
+        "repossessions/DL0150.jsonl": 1,
+        "repossessions/DL0151.jsonl": 1,
+        "repossessions/DL0152.jsonl": 1,
+        "repossessions/DL0153.jsonl": 1,
+        "repossessions/DL0154.jsonl": 1,
+        "repossessions/DL0155.jsonl": 1,
+        "repossessions/DL0156.jsonl": 1,
+        "repossessions/DL0157.jsonl": 1,
+        "repossessions/DL0158.jsonl": 1,
+        "repossessions/DL0159.jsonl": 1,
+        "repossessions/DL0160.jsonl": 1,
+        "repossessions/DL0161.jsonl": 1,
+        "repossessions/DL0162.jsonl": 1,
+        "repossessions/DL0163.jsonl": 1,
+        "repossessions/DL0164.jsonl": 1,
+        "repossessions/DL0165.jsonl": 1,
+        "repossessions/DL0166.jsonl": 1,
+        "repossessions/DL0167.jsonl": 1,
+        "repossessions/DL0168.jsonl": 1,
+        "repossessions/DL0169.jsonl": 1,
+        "repossessions/DL0170.jsonl": 1,
+        "repossessions/DL0171.jsonl": 1,
+        "repossessions/DL0172.jsonl": 1,
+        "repossessions/DL0173.jsonl": 1,
+        "repossessions/DL0174.jsonl": 1,
+        "repossessions/DL0175.jsonl": 1,
+        "repossessions/DL0176.jsonl": 1,
+        "repossessions/DL0177.jsonl": 1,
+        "repossessions/DL0178.jsonl": 1,
+        "repossessions/DL0179.jsonl": 1,
+        "repossessions/DL0180.jsonl": 1,
+        "repossessions/DL0181.jsonl": 1,
+        "repossessions/DL0182.jsonl": 1,
+        "repossessions/DL0183.jsonl": 1,
+        "repossessions/DL0184.jsonl": 1,
+        "repossessions/DL0185.jsonl": 1,
+        "repossessions/DL0186.jsonl": 1,
+        "repossessions/DL0187.jsonl": 1,
+        "repossessions/DL0188.jsonl": 1,
+        "repossessions/DL0189.jsonl": 1,
+        "repossessions/DL0190.jsonl": 1,
+        "repossessions/DL0191.jsonl": 1,
+        "repossessions/DL0192.jsonl": 1,
+        "repossessions/DL0193.jsonl": 1,
+        "repossessions/DL0194.jsonl": 1,
+        "repossessions/DL0195.jsonl": 1,
+        "repossessions/DL0196.jsonl": 1,
+        "repossessions/DL0197.jsonl": 1,
+        "repossessions/DL0198.jsonl": 1,
+        "repossessions/DL0199.jsonl": 1,
+        "repossessions/DL0200.jsonl": 1,
+        "repossessions/DL0201.jsonl": 1,
+        "repossessions/DL0202.jsonl": 1,
+        "repossessions/DL0203.jsonl": 1,
+        "repossessions/DL0204.jsonl": 1,
+        "repossessions/DL0205.jsonl": 1,
+        "repossessions/DL0206.jsonl": 1,
+        "repossessions/DL0207.jsonl": 1,
+        "repossessions/DL0208.jsonl": 1,
+        "repossessions/DL0209.jsonl": 1,
+        "repossessions/DL0210.jsonl": 1,
+        "repossessions/DL0211.jsonl": 1,
+        "repossessions/DL0212.jsonl": 1,
+        "repossessions/DL0213.jsonl": 1,
+        "repossessions/DL0214.jsonl": 1,
+        "repossessions/DL0215.jsonl": 1,
+        "repossessions/DL0216.jsonl": 1,
+        "repossessions/DL0217.jsonl": 1,
+        "repossessions/DL0218.jsonl": 1,
+        "repossessions/DL0219.jsonl": 1,
+        "repossessions/DL0220.jsonl": 1,
+        "repossessions/DL0221.jsonl": 1,
+        "repossessions/DL0222.jsonl": 1,
+        "repossessions/DL0223.jsonl": 1,
+        "repossessions/DL0224.jsonl": 1,
+        "repossessions/DL0225.jsonl": 1,
+        "repossessions/DL0226.jsonl": 1,
+        "repossessions/DL0227.jsonl": 1,
+        "repossessions/DL0228.jsonl": 1,
+        "repossessions/DL0229.jsonl": 1,
+        "repossessions/DL0230.jsonl": 1,
+        "repossessions/DL0231.jsonl": 1,
+        "repossessions/DL0232.jsonl": 1,
+        "repossessions/DL0233.jsonl": 1,
+        "repossessions/DL0234.jsonl": 1,
+        "repossessions/DL0235.jsonl": 1,
+        "repossessions/DL0236.jsonl": 1,
+        "repossessions/DL0237.jsonl": 1,
+        "repossessions/DL0238.jsonl": 1,
+        "repossessions/DL0239.jsonl": 1,
+        "repossessions/DL0240.jsonl": 1,
+        "repossessions/DL0241.jsonl": 1,
+        "repossessions/DL0242.jsonl": 1,
+        "repossessions/DL0243.jsonl": 1,
+        "repossessions/DL0244.jsonl": 1,
+        "repossessions/DL0245.jsonl": 1,
+        "repossessions/DL0246.jsonl": 1,
+        "repossessions/DL0247.jsonl": 1,
+        "repossessions/DL0248.jsonl": 1,
+        "repossessions/DL0249.jsonl": 1,
+        "repossessions/DL0250.jsonl": 1,
+        "repossessions/DL0251.jsonl": 1,
+        "repossessions/DL0252.jsonl": 1,
+        "repossessions/DL0253.jsonl": 1,
+        "repossessions/DL0254.jsonl": 1,
+        "repossessions/DL0255.jsonl": 1,
+        "repossessions/DL0256.jsonl": 1,
+        "repossessions/DL0257.jsonl": 1,
+        "repossessions/DL0258.jsonl": 1,
+        "repossessions/DL0259.jsonl": 1,
+        "repossessions/DL0260.jsonl": 1,
+        "repossessions/DL0261.jsonl": 1,
+        "repossessions/DL0262.jsonl": 1,
+        "repossessions/DL0263.jsonl": 1,
+        "repossessions/DL0264.jsonl": 1,
+        "repossessions/DL0265.jsonl": 1,
+        "repossessions/DL0266.jsonl": 1,
+        "repossessions/DL0267.jsonl": 1,
+        "repossessions/DL0268.jsonl": 1,
+        "repossessions/DL0269.jsonl": 1,
+        "repossessions/DL0270.jsonl": 1,
+        "repossessions/DL0271.jsonl": 1,
+        "repossessions/DL0272.jsonl": 1,
+        "repossessions/DL0273.jsonl": 1,
+        "repossessions/DL0274.jsonl": 1,
+        "repossessions/DL0275.jsonl": 1,
+        "repossessions/DL0276.jsonl": 1,
+        "repossessions/DL0277.jsonl": 1,
+        "repossessions/DL0278.jsonl": 1,
+        "repossessions/DL0279.jsonl": 1,
+        "repossessions/DL0280.jsonl": 1,
+        "repossessions/DL0281.jsonl": 1,
+        "repossessions/DL0282.jsonl": 1,
+        "repossessions/DL0283.jsonl": 1,
+        "repossessions/DL0284.jsonl": 1,
+        "repossessions/DL0285.jsonl": 1,
+        "repossessions/DL0286.jsonl": 1,
+        "repossessions/DL0287.jsonl": 1,
+        "repossessions/DL0288.jsonl": 1,
+        "repossessions/DL0289.jsonl": 1,
+        "repossessions/DL0290.jsonl": 1,
+        "repossessions/DL0291.jsonl": 1,
+        "repossessions/DL0292.jsonl": 1,
+        "repossessions/DL0293.jsonl": 1,
+        "repossessions/DL0294.jsonl": 1,
+        "repossessions/DL0295.jsonl": 1,
+        "repossessions/DL0296.jsonl": 1,
+        "repossessions/DL0297.jsonl": 1,
+        "repossessions/DL0298.jsonl": 1,
+        "repossessions/DL0299.jsonl": 1,
+        "repossessions/DL0300.jsonl": 1,
+        "repossessions/DL0301.jsonl": 1,
+        "repossessions/DL0302.jsonl": 1,
+        "repossessions/DL0303.jsonl": 1,
+        "repossessions/DL0304.jsonl": 1,
+        "repossessions/DL0305.jsonl": 1,
+        "repossessions/DL0306.jsonl": 1,
+        "repossessions/DL0307.jsonl": 1,
+        "repossessions/DL0308.jsonl": 1,
+        "repossessions/DL0309.jsonl": 1,
+        "repossessions/DL0310.jsonl": 1,
+        "repossessions/DL0311.jsonl": 1,
+        "repossessions/DL0312.jsonl": 1,
+        "repossessions/DL0313.jsonl": 1,
+        "repossessions/DL0314.jsonl": 1,
+        "repossessions/DL0315.jsonl": 1,
+        "repossessions/DL0316.jsonl": 1,
+        "repossessions/DL0317.jsonl": 1,
+        "repossessions/DL0318.jsonl": 1,
+        "repossessions/DL0319.jsonl": 1,
+        "repossessions/DL0320.jsonl": 1,
+        "repossessions/DL0321.jsonl": 1,
+        "repossessions/DL0322.jsonl": 1,
+        "repossessions/DL0323.jsonl": 1,
+        "repossessions/DL0324.jsonl": 1,
+        "repossessions/DL0325.jsonl": 1,
+        "repossessions/DL0326.jsonl": 1,
+        "repossessions/DL0327.jsonl": 1,
+        "repossessions/DL0328.jsonl": 1,
+        "repossessions/DL0329.jsonl": 1,
+        "repossessions/DL0330.jsonl": 1,
+        "repossessions/DL0331.jsonl": 1,
+        "repossessions/DL0332.jsonl": 1,
+        "repossessions/DL0333.jsonl": 1,
+        "repossessions/DL0334.jsonl": 1,
+        "repossessions/DL0335.jsonl": 1,
+        "repossessions/DL0336.jsonl": 1,
+        "repossessions/DL0337.jsonl": 1,
+        "repossessions/DL0338.jsonl": 1,
+        "repossessions/DL0339.jsonl": 1,
+        "repossessions/DL0340.jsonl": 1,
+        "repossessions/DL0341.jsonl": 1,
+        "repossessions/DL0342.jsonl": 1,
+        "repossessions/DL0343.jsonl": 1,
+        "repossessions/DL0344.jsonl": 1,
+        "repossessions/DL0345.jsonl": 1,
+        "repossessions/DL0346.jsonl": 1,
+        "repossessions/DL0347.jsonl": 1,
+        "repossessions/DL0348.jsonl": 1,
+        "repossessions/DL0349.jsonl": 1,
+        "repossessions/DL0350.jsonl": 1,
+        "repossessions/DL0351.jsonl": 1,
+        "repossessions/DL0352.jsonl": 1,
+        "repossessions/DL0353.jsonl": 1,
+        "repossessions/DL0354.jsonl": 1,
+        "repossessions/DL0355.jsonl": 1,
+        "repossessions/DL0356.jsonl": 1,
+        "repossessions/DL0357.jsonl": 1,
+        "repossessions/DL0358.jsonl": 1,
+        "repossessions/DL0359.jsonl": 1
+      }
+    },
+    "cheap": {
+      "permitted_reads": 782,
+      "violations": 0,
+      "paths": {
+        "history/surveillance.jsonl": 1,
+        "queries.jsonl": 1,
+        "register/DL0010.json": 1,
+        "register/DL0155.json": 1,
+        "register/DL0339.json": 1,
+        "register/DL0293.json": 1,
+        "register/DL0047.json": 1,
+        "register/DL0102.json": 1,
+        "register/DL0051.json": 1,
+        "register/DL0114.json": 1,
+        "register/DL0006.json": 1,
+        "register/DL0143.json": 1,
+        "register/DL0285.json": 1,
+        "register/DL0138.json": 1,
+        "register/DL0092.json": 1,
+        "register/DL0354.json": 1,
+        "register/DL0211.json": 1,
+        "register/DL0180.json": 1,
+        "register/DL0303.json": 1,
+        "register/DL0246.json": 1,
+        "register/DL0179.json": 1,
+        "register/DL0196.json": 1,
+        "register/DL0315.json": 1,
+        "register/DL0250.json": 1,
+        "register/DL0084.json": 1,
+        "register/DL0342.json": 1,
+        "register/DL0207.json": 1,
+        "register/DL0270.json": 1,
+        "register/DL0335.json": 1,
+        "register/DL0159.json": 1,
+        "register/DL0227.json": 1,
+        "register/DL0231.json": 1,
+        "register/DL0118.json": 1,
+        "register/DL0266.json": 1,
+        "register/DL0323.json": 1,
+        "register/DL0289.json": 1,
+        "register/DL0358.json": 1,
+        "register/DL0134.json": 1,
+        "register/DL0071.json": 1,
+        "register/DL0163.json": 1,
+        "register/DL0026.json": 1,
+        "register/DL0319.json": 1,
+        "register/DL0175.json": 1,
+        "register/DL0030.json": 1,
+        "register/DL0122.json": 1,
+        "register/DL0088.json": 1,
+        "register/DL0067.json": 1,
+        "register/DL0123.json": 1,
+        "register/DL0089.json": 1,
+        "register/DL0066.json": 1,
+        "register/DL0174.json": 1,
+        "register/DL0031.json": 1,
+        "register/DL0318.json": 1,
+        "register/DL0162.json": 1,
+        "register/DL0027.json": 1,
+        "register/DL0135.json": 1,
+        "register/DL0070.json": 1,
+        "register/DL0359.json": 1,
+        "register/DL0267.json": 1,
+        "register/DL0322.json": 1,
+        "register/DL0288.json": 1,
+        "register/DL0119.json": 1,
+        "register/DL0230.json": 1,
+        "register/DL0226.json": 1,
+        "register/DL0158.json": 1,
+        "register/DL0271.json": 1,
+        "register/DL0334.json": 1,
+        "register/DL0343.json": 1,
+        "register/DL0206.json": 1,
+        "register/DL0085.json": 1,
+        "register/DL0314.json": 1,
+        "register/DL0251.json": 1,
+        "register/DL0178.json": 1,
+        "register/DL0197.json": 1,
+        "register/DL0302.json": 1,
+        "register/DL0247.json": 1,
+        "register/DL0181.json": 1,
+        "register/DL0355.json": 1,
+        "register/DL0210.json": 1,
+        "register/DL0139.json": 1,
+        "register/DL0093.json": 1,
+        "register/DL0284.json": 1,
+        "register/DL0007.json": 1,
+        "register/DL0142.json": 1,
+        "register/DL0050.json": 1,
+        "register/DL0115.json": 1,
+        "register/DL0046.json": 1,
+        "register/DL0103.json": 1,
+        "register/DL0338.json": 1,
+        "register/DL0292.json": 1,
+        "register/DL0011.json": 1,
+        "register/DL0154.json": 1,
+        "register/DL0276.json": 1,
+        "register/DL0299.json": 1,
+        "register/DL0333.json": 1,
+        "register/DL0221.json": 1,
+        "register/DL0108.json": 1,
+        "register/DL0237.json": 1,
+        "register/DL0260.json": 1,
+        "register/DL0325.json": 1,
+        "register/DL0149.json": 1,
+        "register/DL0098.json": 1,
+        "register/DL0132.json": 1,
+        "register/DL0077.json": 1,
+        "register/DL0309.json": 1,
+        "register/DL0165.json": 1,
+        "register/DL0020.json": 1,
+        "register/DL0173.json": 1,
+        "register/DL0036.json": 1,
+        "register/DL0348.json": 1,
+        "register/DL0124.json": 1,
+        "register/DL0061.json": 1,
+        "register/DL0016.json": 1,
+        "register/DL0153.json": 1,
+        "register/DL0295.json": 1,
+        "register/DL0041.json": 1,
+        "register/DL0104.json": 1,
+        "register/DL0057.json": 1,
+        "register/DL0112.json": 1,
+        "register/DL0000.json": 1,
+        "register/DL0145.json": 1,
+        "register/DL0283.json": 1,
+        "register/DL0329.json": 1,
+        "register/DL0094.json": 1,
+        "register/DL0352.json": 1,
+        "register/DL0217.json": 1,
+        "register/DL0169.json": 1,
+        "register/DL0186.json": 1,
+        "register/DL0305.json": 1,
+        "register/DL0240.json": 1,
+        "register/DL0190.json": 1,
+        "register/DL0313.json": 1,
+        "register/DL0256.json": 1,
+        "register/DL0082.json": 1,
+        "register/DL0128.json": 1,
+        "register/DL0344.json": 1,
+        "register/DL0201.json": 1,
+        "register/DL0345.json": 1,
+        "register/DL0200.json": 1,
+        "register/DL0083.json": 1,
+        "register/DL0129.json": 1,
+        "register/DL0312.json": 1,
+        "register/DL0257.json": 1,
+        "register/DL0191.json": 1,
+        "register/DL0304.json": 1,
+        "register/DL0241.json": 1,
+        "register/DL0168.json": 1,
+        "register/DL0187.json": 1,
+        "register/DL0353.json": 1,
+        "register/DL0216.json": 1,
+        "register/DL0095.json": 1,
+        "register/DL0282.json": 1,
+        "register/DL0328.json": 1,
+        "register/DL0001.json": 1,
+        "register/DL0144.json": 1,
+        "register/DL0056.json": 1,
+        "register/DL0113.json": 1,
+        "register/DL0040.json": 1,
+        "register/DL0105.json": 1,
+        "register/DL0294.json": 1,
+        "register/DL0017.json": 1,
+        "register/DL0152.json": 1,
+        "register/DL0125.json": 1,
+        "register/DL0060.json": 1,
+        "register/DL0349.json": 1,
+        "register/DL0172.json": 1,
+        "register/DL0037.json": 1,
+        "register/DL0164.json": 1,
+        "register/DL0021.json": 1,
+        "register/DL0308.json": 1,
+        "register/DL0099.json": 1,
+        "register/DL0133.json": 1,
+        "register/DL0076.json": 1,
+        "register/DL0148.json": 1,
+        "register/DL0261.json": 1,
+        "register/DL0324.json": 1,
+        "register/DL0236.json": 1,
+        "register/DL0109.json": 1,
+        "register/DL0220.json": 1,
+        "register/DL0277.json": 1,
+        "register/DL0298.json": 1,
+        "register/DL0332.json": 1,
+        "register/DL0063.json": 1,
+        "register/DL0126.json": 1,
+        "register/DL0034.json": 1,
+        "register/DL0171.json": 1,
+        "register/DL0258.json": 1,
+        "register/DL0022.json": 1,
+        "register/DL0188.json": 1,
+        "register/DL0167.json": 1,
+        "register/DL0075.json": 1,
+        "register/DL0130.json": 1,
+        "register/DL0219.json": 1,
+        "register/DL0327.json": 1,
+        "register/DL0262.json": 1,
+        "register/DL0059.json": 1,
+        "register/DL0235.json": 1,
+        "register/DL0223.json": 1,
+        "register/DL0018.json": 1,
+        "register/DL0331.json": 1,
+        "register/DL0274.json": 1,
+        "register/DL0203.json": 1,
+        "register/DL0346.json": 1,
+        "register/DL0080.json": 1,
+        "register/DL0254.json": 1,
+        "register/DL0311.json": 1,
+        "register/DL0038.json": 1,
+        "register/DL0192.json": 1,
+        "register/DL0242.json": 1,
+        "register/DL0307.json": 1,
+        "register/DL0184.json": 1,
+        "register/DL0215.json": 1,
+        "register/DL0350.json": 1,
+        "register/DL0079.json": 1,
+        "register/DL0096.json": 1,
+        "register/DL0281.json": 1,
+        "register/DL0147.json": 1,
+        "register/DL0002.json": 1,
+        "register/DL0239.json": 1,
+        "register/DL0110.json": 1,
+        "register/DL0055.json": 1,
+        "register/DL0106.json": 1,
+        "register/DL0043.json": 1,
+        "register/DL0297.json": 1,
+        "register/DL0278.json": 1,
+        "register/DL0151.json": 1,
+        "register/DL0014.json": 1,
+        "register/DL0150.json": 1,
+        "register/DL0015.json": 1,
+        "register/DL0296.json": 1,
+        "register/DL0279.json": 1,
+        "register/DL0107.json": 1,
+        "register/DL0042.json": 1,
+        "register/DL0111.json": 1,
+        "register/DL0054.json": 1,
+        "register/DL0238.json": 1,
+        "register/DL0146.json": 1,
+        "register/DL0003.json": 1,
+        "register/DL0280.json": 1,
+        "register/DL0078.json": 1,
+        "register/DL0097.json": 1,
+        "register/DL0214.json": 1,
+        "register/DL0351.json": 1,
+        "register/DL0185.json": 1,
+        "register/DL0243.json": 1,
+        "register/DL0306.json": 1,
+        "register/DL0039.json": 1,
+        "register/DL0193.json": 1,
+        "register/DL0255.json": 1,
+        "register/DL0310.json": 1,
+        "register/DL0081.json": 1,
+        "register/DL0202.json": 1,
+        "register/DL0347.json": 1,
+        "register/DL0330.json": 1,
+        "register/DL0275.json": 1,
+        "register/DL0019.json": 1,
+        "register/DL0222.json": 1,
+        "register/DL0234.json": 1,
+        "register/DL0058.json": 1,
+        "register/DL0326.json": 1,
+        "register/DL0263.json": 1,
+        "register/DL0218.json": 1,
+        "register/DL0074.json": 1,
+        "register/DL0131.json": 1,
+        "register/DL0023.json": 1,
+        "register/DL0189.json": 1,
+        "register/DL0166.json": 1,
+        "register/DL0259.json": 1,
+        "register/DL0035.json": 1,
+        "register/DL0170.json": 1,
+        "register/DL0062.json": 1,
+        "register/DL0127.json": 1,
+        "register/DL0205.json": 1,
+        "register/DL0340.json": 1,
+        "register/DL0069.json": 1,
+        "register/DL0086.json": 1,
+        "register/DL0252.json": 1,
+        "register/DL0317.json": 1,
+        "register/DL0194.json": 1,
+        "register/DL0244.json": 1,
+        "register/DL0301.json": 1,
+        "register/DL0182.json": 1,
+        "register/DL0028.json": 1,
+        "register/DL0213.json": 1,
+        "register/DL0356.json": 1,
+        "register/DL0090.json": 1,
+        "register/DL0287.json": 1,
+        "register/DL0268.json": 1,
+        "register/DL0141.json": 1,
+        "register/DL0004.json": 1,
+        "register/DL0116.json": 1,
+        "register/DL0053.json": 1,
+        "register/DL0229.json": 1,
+        "register/DL0100.json": 1,
+        "register/DL0045.json": 1,
+        "register/DL0291.json": 1,
+        "register/DL0157.json": 1,
+        "register/DL0012.json": 1,
+        "register/DL0065.json": 1,
+        "register/DL0120.json": 1,
+        "register/DL0209.json": 1,
+        "register/DL0198.json": 1,
+        "register/DL0032.json": 1,
+        "register/DL0177.json": 1,
+        "register/DL0024.json": 1,
+        "register/DL0161.json": 1,
+        "register/DL0248.json": 1,
+        "register/DL0073.json": 1,
+        "register/DL0136.json": 1,
+        "register/DL0008.json": 1,
+        "register/DL0321.json": 1,
+        "register/DL0264.json": 1,
+        "register/DL0233.json": 1,
+        "register/DL0049.json": 1,
+        "register/DL0225.json": 1,
+        "register/DL0337.json": 1,
+        "register/DL0272.json": 1,
+        "register/DL0336.json": 1,
+        "register/DL0273.json": 1,
+        "register/DL0224.json": 1,
+        "register/DL0048.json": 1,
+        "register/DL0232.json": 1,
+        "register/DL0320.json": 1,
+        "register/DL0265.json": 1,
+        "register/DL0009.json": 1,
+        "register/DL0072.json": 1,
+        "register/DL0137.json": 1,
+        "register/DL0249.json": 1,
+        "register/DL0025.json": 1,
+        "register/DL0160.json": 1,
+        "register/DL0199.json": 1,
+        "register/DL0033.json": 1,
+        "register/DL0176.json": 1,
+        "register/DL0208.json": 1,
+        "register/DL0064.json": 1,
+        "register/DL0121.json": 1,
+        "register/DL0156.json": 1,
+        "register/DL0013.json": 1,
+        "register/DL0290.json": 1,
+        "register/DL0101.json": 1,
+        "register/DL0044.json": 1,
+        "register/DL0228.json": 1,
+        "register/DL0117.json": 1,
+        "register/DL0052.json": 1,
+        "register/DL0140.json": 1,
+        "register/DL0005.json": 1,
+        "register/DL0286.json": 1,
+        "register/DL0269.json": 1,
+        "register/DL0091.json": 1,
+        "register/DL0212.json": 1,
+        "register/DL0357.json": 1,
+        "register/DL0183.json": 1,
+        "register/DL0029.json": 1,
+        "register/DL0245.json": 1,
+        "register/DL0300.json": 1,
+        "register/DL0195.json": 1,
+        "register/DL0253.json": 1,
+        "register/DL0316.json": 1,
+        "register/DL0068.json": 1,
+        "register/DL0087.json": 1,
+        "register/DL0204.json": 1,
+        "register/DL0341.json": 1,
+        "aging/4.jsonl": 1,
+        "aging/6.jsonl": 1,
+        "aging/18.jsonl": 1,
+        "aging/2.jsonl": 1,
+        "aging/19.jsonl": 1,
+        "aging/7.jsonl": 1,
+        "aging/5.jsonl": 1,
+        "aging/1.jsonl": 1,
+        "aging/20.jsonl": 1,
+        "aging/3.jsonl": 1,
+        "aging/11.jsonl": 1,
+        "aging/13.jsonl": 1,
+        "aging/17.jsonl": 1,
+        "aging/9.jsonl": 1,
+        "aging/15.jsonl": 1,
+        "aging/12.jsonl": 1,
+        "aging/10.jsonl": 1,
+        "aging/14.jsonl": 1,
+        "aging/8.jsonl": 1,
+        "aging/16.jsonl": 1,
+        "lines/4.jsonl": 1,
+        "lines/6.jsonl": 1,
+        "lines/18.jsonl": 1,
+        "lines/2.jsonl": 1,
+        "lines/19.jsonl": 1,
+        "lines/7.jsonl": 1,
+        "lines/5.jsonl": 1,
+        "lines/1.jsonl": 1,
+        "lines/20.jsonl": 1,
+        "lines/3.jsonl": 1,
+        "lines/11.jsonl": 1,
+        "lines/13.jsonl": 1,
+        "lines/17.jsonl": 1,
+        "lines/9.jsonl": 1,
+        "lines/15.jsonl": 1,
+        "lines/12.jsonl": 1,
+        "lines/10.jsonl": 1,
+        "lines/14.jsonl": 1,
+        "lines/8.jsonl": 1,
+        "lines/16.jsonl": 1,
+        "repossessions/DL0263.jsonl": 1,
+        "repossessions/DL0226.jsonl": 1,
+        "repossessions/DL0162.jsonl": 1,
+        "repossessions/DL0127.jsonl": 1,
+        "repossessions/DL0082.jsonl": 1,
+        "repossessions/DL0306.jsonl": 1,
+        "repossessions/DL0343.jsonl": 1,
+        "repossessions/DL0007.jsonl": 1,
+        "repossessions/DL0042.jsonl": 1,
+        "repossessions/DL0023.jsonl": 1,
+        "repossessions/DL0066.jsonl": 1,
+        "repossessions/DL0322.jsonl": 1,
+        "repossessions/DL0186.jsonl": 1,
+        "repossessions/DL0287.jsonl": 1,
+        "repossessions/DL0146.jsonl": 1,
+        "repossessions/DL0103.jsonl": 1,
+        "repossessions/DL0247.jsonl": 1,
+        "repossessions/DL0202.jsonl": 1,
+        "repossessions/DL0245.jsonl": 1,
+        "repossessions/DL0200.jsonl": 1,
+        "repossessions/DL0144.jsonl": 1,
+        "repossessions/DL0101.jsonl": 1,
+        "repossessions/DL0059.jsonl": 1,
+        "repossessions/DL0358.jsonl": 1,
+        "repossessions/DL0099.jsonl": 1,
+        "repossessions/DL0320.jsonl": 1,
+        "repossessions/DL0021.jsonl": 1,
+        "repossessions/DL0064.jsonl": 1,
+        "repossessions/DL0285.jsonl": 1,
+        "repossessions/DL0179.jsonl": 1,
+        "repossessions/DL0184.jsonl": 1,
+        "repossessions/DL0278.jsonl": 1,
+        "repossessions/DL0005.jsonl": 1,
+        "repossessions/DL0040.jsonl": 1,
+        "repossessions/DL0304.jsonl": 1,
+        "repossessions/DL0341.jsonl": 1,
+        "repossessions/DL0219.jsonl": 1,
+        "repossessions/DL0118.jsonl": 1,
+        "repossessions/DL0160.jsonl": 1,
+        "repossessions/DL0125.jsonl": 1,
+        "repossessions/DL0261.jsonl": 1,
+        "repossessions/DL0224.jsonl": 1,
+        "repossessions/DL0339.jsonl": 1,
+        "repossessions/DL0080.jsonl": 1,
+        "repossessions/DL0038.jsonl": 1,
+        "repossessions/DL0159.jsonl": 1,
+        "repossessions/DL0258.jsonl": 1,
+        "repossessions/DL0300.jsonl": 1,
+        "repossessions/DL0345.jsonl": 1,
+        "repossessions/DL0001.jsonl": 1,
+        "repossessions/DL0044.jsonl": 1,
+        "repossessions/DL0079.jsonl": 1,
+        "repossessions/DL0084.jsonl": 1,
+        "repossessions/DL0265.jsonl": 1,
+        "repossessions/DL0220.jsonl": 1,
+        "repossessions/DL0199.jsonl": 1,
+        "repossessions/DL0164.jsonl": 1,
+        "repossessions/DL0121.jsonl": 1,
+        "repossessions/DL0298.jsonl": 1,
+        "repossessions/DL0319.jsonl": 1,
+        "repossessions/DL0018.jsonl": 1,
+        "repossessions/DL0140.jsonl": 1,
+        "repossessions/DL0105.jsonl": 1,
+        "repossessions/DL0241.jsonl": 1,
+        "repossessions/DL0204.jsonl": 1,
+        "repossessions/DL0180.jsonl": 1,
+        "repossessions/DL0239.jsonl": 1,
+        "repossessions/DL0281.jsonl": 1,
+        "repossessions/DL0138.jsonl": 1,
+        "repossessions/DL0025.jsonl": 1,
+        "repossessions/DL0060.jsonl": 1,
+        "repossessions/DL0324.jsonl": 1,
+        "repossessions/DL0283.jsonl": 1,
+        "repossessions/DL0182.jsonl": 1,
+        "repossessions/DL0326.jsonl": 1,
+        "repossessions/DL0027.jsonl": 1,
+        "repossessions/DL0062.jsonl": 1,
+        "repossessions/DL0243.jsonl": 1,
+        "repossessions/DL0206.jsonl": 1,
+        "repossessions/DL0142.jsonl": 1,
+        "repossessions/DL0107.jsonl": 1,
+        "repossessions/DL0086.jsonl": 1,
+        "repossessions/DL0166.jsonl": 1,
+        "repossessions/DL0123.jsonl": 1,
+        "repossessions/DL0267.jsonl": 1,
+        "repossessions/DL0222.jsonl": 1,
+        "repossessions/DL0003.jsonl": 1,
+        "repossessions/DL0046.jsonl": 1,
+        "repossessions/DL0302.jsonl": 1,
+        "repossessions/DL0347.jsonl": 1,
+        "repossessions/DL0284.jsonl": 1,
+        "repossessions/DL0178.jsonl": 1,
+        "repossessions/DL0185.jsonl": 1,
+        "repossessions/DL0279.jsonl": 1,
+        "repossessions/DL0098.jsonl": 1,
+        "repossessions/DL0321.jsonl": 1,
+        "repossessions/DL0065.jsonl": 1,
+        "repossessions/DL0020.jsonl": 1,
+        "repossessions/DL0058.jsonl": 1,
+        "repossessions/DL0359.jsonl": 1,
+        "repossessions/DL0201.jsonl": 1,
+        "repossessions/DL0244.jsonl": 1,
+        "repossessions/DL0100.jsonl": 1,
+        "repossessions/DL0145.jsonl": 1,
+        "repossessions/DL0338.jsonl": 1,
+        "repossessions/DL0081.jsonl": 1,
+        "repossessions/DL0039.jsonl": 1,
+        "repossessions/DL0124.jsonl": 1,
+        "repossessions/DL0161.jsonl": 1,
+        "repossessions/DL0225.jsonl": 1,
+        "repossessions/DL0260.jsonl": 1,
+        "repossessions/DL0218.jsonl": 1,
+        "repossessions/DL0119.jsonl": 1,
+        "repossessions/DL0041.jsonl": 1,
+        "repossessions/DL0004.jsonl": 1,
+        "repossessions/DL0340.jsonl": 1,
+        "repossessions/DL0305.jsonl": 1,
+        "repossessions/DL0342.jsonl": 1,
+        "repossessions/DL0307.jsonl": 1,
+        "repossessions/DL0043.jsonl": 1,
+        "repossessions/DL0006.jsonl": 1,
+        "repossessions/DL0083.jsonl": 1,
+        "repossessions/DL0227.jsonl": 1,
+        "repossessions/DL0262.jsonl": 1,
+        "repossessions/DL0126.jsonl": 1,
+        "repossessions/DL0163.jsonl": 1,
+        "repossessions/DL0102.jsonl": 1,
+        "repossessions/DL0147.jsonl": 1,
+        "repossessions/DL0203.jsonl": 1,
+        "repossessions/DL0246.jsonl": 1,
+        "repossessions/DL0187.jsonl": 1,
+        "repossessions/DL0286.jsonl": 1,
+        "repossessions/DL0067.jsonl": 1,
+        "repossessions/DL0022.jsonl": 1,
+        "repossessions/DL0323.jsonl": 1,
+        "repossessions/DL0207.jsonl": 1,
+        "repossessions/DL0242.jsonl": 1,
+        "repossessions/DL0106.jsonl": 1,
+        "repossessions/DL0143.jsonl": 1,
+        "repossessions/DL0327.jsonl": 1,
+        "repossessions/DL0063.jsonl": 1,
+        "repossessions/DL0026.jsonl": 1,
+        "repossessions/DL0282.jsonl": 1,
+        "repossessions/DL0183.jsonl": 1,
+        "repossessions/DL0047.jsonl": 1,
+        "repossessions/DL0002.jsonl": 1,
+        "repossessions/DL0346.jsonl": 1,
+        "repossessions/DL0303.jsonl": 1,
+        "repossessions/DL0122.jsonl": 1,
+        "repossessions/DL0167.jsonl": 1,
+        "repossessions/DL0223.jsonl": 1,
+        "repossessions/DL0266.jsonl": 1,
+        "repossessions/DL0087.jsonl": 1,
+        "repossessions/DL0221.jsonl": 1,
+        "repossessions/DL0264.jsonl": 1,
+        "repossessions/DL0198.jsonl": 1,
+        "repossessions/DL0120.jsonl": 1,
+        "repossessions/DL0165.jsonl": 1,
+        "repossessions/DL0299.jsonl": 1,
+        "repossessions/DL0078.jsonl": 1,
+        "repossessions/DL0085.jsonl": 1,
+        "repossessions/DL0344.jsonl": 1,
+        "repossessions/DL0301.jsonl": 1,
+        "repossessions/DL0045.jsonl": 1,
+        "repossessions/DL0000.jsonl": 1,
+        "repossessions/DL0158.jsonl": 1,
+        "repossessions/DL0259.jsonl": 1,
+        "repossessions/DL0061.jsonl": 1,
+        "repossessions/DL0024.jsonl": 1,
+        "repossessions/DL0325.jsonl": 1,
+        "repossessions/DL0181.jsonl": 1,
+        "repossessions/DL0238.jsonl": 1,
+        "repossessions/DL0280.jsonl": 1,
+        "repossessions/DL0139.jsonl": 1,
+        "repossessions/DL0104.jsonl": 1,
+        "repossessions/DL0141.jsonl": 1,
+        "repossessions/DL0205.jsonl": 1,
+        "repossessions/DL0240.jsonl": 1,
+        "repossessions/DL0318.jsonl": 1,
+        "repossessions/DL0019.jsonl": 1,
+        "repossessions/DL0108.jsonl": 1,
+        "repossessions/DL0209.jsonl": 1,
+        "repossessions/DL0314.jsonl": 1,
+        "repossessions/DL0351.jsonl": 1,
+        "repossessions/DL0015.jsonl": 1,
+        "repossessions/DL0050.jsonl": 1,
+        "repossessions/DL0028.jsonl": 1,
+        "repossessions/DL0329.jsonl": 1,
+        "repossessions/DL0090.jsonl": 1,
+        "repossessions/DL0271.jsonl": 1,
+        "repossessions/DL0234.jsonl": 1,
+        "repossessions/DL0170.jsonl": 1,
+        "repossessions/DL0135.jsonl": 1,
+        "repossessions/DL0348.jsonl": 1,
+        "repossessions/DL0049.jsonl": 1,
+        "repossessions/DL0154.jsonl": 1,
+        "repossessions/DL0111.jsonl": 1,
+        "repossessions/DL0255.jsonl": 1,
+        "repossessions/DL0210.jsonl": 1,
+        "repossessions/DL0194.jsonl": 1,
+        "repossessions/DL0268.jsonl": 1,
+        "repossessions/DL0295.jsonl": 1,
+        "repossessions/DL0169.jsonl": 1,
+        "repossessions/DL0031.jsonl": 1,
+        "repossessions/DL0074.jsonl": 1,
+        "repossessions/DL0089.jsonl": 1,
+        "repossessions/DL0330.jsonl": 1,
+        "repossessions/DL0297.jsonl": 1,
+        "repossessions/DL0196.jsonl": 1,
+        "repossessions/DL0332.jsonl": 1,
+        "repossessions/DL0033.jsonl": 1,
+        "repossessions/DL0076.jsonl": 1,
+        "repossessions/DL0257.jsonl": 1,
+        "repossessions/DL0212.jsonl": 1,
+        "repossessions/DL0156.jsonl": 1,
+        "repossessions/DL0113.jsonl": 1,
+        "repossessions/DL0092.jsonl": 1,
+        "repossessions/DL0172.jsonl": 1,
+        "repossessions/DL0137.jsonl": 1,
+        "repossessions/DL0273.jsonl": 1,
+        "repossessions/DL0236.jsonl": 1,
+        "repossessions/DL0017.jsonl": 1,
+        "repossessions/DL0052.jsonl": 1,
+        "repossessions/DL0316.jsonl": 1,
+        "repossessions/DL0353.jsonl": 1,
+        "repossessions/DL0277.jsonl": 1,
+        "repossessions/DL0232.jsonl": 1,
+        "repossessions/DL0176.jsonl": 1,
+        "repossessions/DL0133.jsonl": 1,
+        "repossessions/DL0096.jsonl": 1,
+        "repossessions/DL0312.jsonl": 1,
+        "repossessions/DL0357.jsonl": 1,
+        "repossessions/DL0013.jsonl": 1,
+        "repossessions/DL0056.jsonl": 1,
+        "repossessions/DL0037.jsonl": 1,
+        "repossessions/DL0072.jsonl": 1,
+        "repossessions/DL0336.jsonl": 1,
+        "repossessions/DL0192.jsonl": 1,
+        "repossessions/DL0293.jsonl": 1,
+        "repossessions/DL0152.jsonl": 1,
+        "repossessions/DL0117.jsonl": 1,
+        "repossessions/DL0253.jsonl": 1,
+        "repossessions/DL0216.jsonl": 1,
+        "repossessions/DL0251.jsonl": 1,
+        "repossessions/DL0214.jsonl": 1,
+        "repossessions/DL0150.jsonl": 1,
+        "repossessions/DL0115.jsonl": 1,
+        "repossessions/DL0008.jsonl": 1,
+        "repossessions/DL0309.jsonl": 1,
+        "repossessions/DL0334.jsonl": 1,
+        "repossessions/DL0035.jsonl": 1,
+        "repossessions/DL0070.jsonl": 1,
+        "repossessions/DL0291.jsonl": 1,
+        "repossessions/DL0128.jsonl": 1,
+        "repossessions/DL0190.jsonl": 1,
+        "repossessions/DL0229.jsonl": 1,
+        "repossessions/DL0011.jsonl": 1,
+        "repossessions/DL0054.jsonl": 1,
+        "repossessions/DL0310.jsonl": 1,
+        "repossessions/DL0355.jsonl": 1,
+        "repossessions/DL0248.jsonl": 1,
+        "repossessions/DL0149.jsonl": 1,
+        "repossessions/DL0174.jsonl": 1,
+        "repossessions/DL0131.jsonl": 1,
+        "repossessions/DL0288.jsonl": 1,
+        "repossessions/DL0275.jsonl": 1,
+        "repossessions/DL0230.jsonl": 1,
+        "repossessions/DL0189.jsonl": 1,
+        "repossessions/DL0094.jsonl": 1,
+        "repossessions/DL0069.jsonl": 1,
+        "repossessions/DL0213.jsonl": 1,
+        "repossessions/DL0256.jsonl": 1,
+        "repossessions/DL0112.jsonl": 1,
+        "repossessions/DL0157.jsonl": 1,
+        "repossessions/DL0333.jsonl": 1,
+        "repossessions/DL0077.jsonl": 1,
+        "repossessions/DL0032.jsonl": 1,
+        "repossessions/DL0296.jsonl": 1,
+        "repossessions/DL0197.jsonl": 1,
+        "repossessions/DL0053.jsonl": 1,
+        "repossessions/DL0016.jsonl": 1,
+        "repossessions/DL0352.jsonl": 1,
+        "repossessions/DL0317.jsonl": 1,
+        "repossessions/DL0136.jsonl": 1,
+        "repossessions/DL0173.jsonl": 1,
+        "repossessions/DL0237.jsonl": 1,
+        "repossessions/DL0272.jsonl": 1,
+        "repossessions/DL0093.jsonl": 1,
+        "repossessions/DL0235.jsonl": 1,
+        "repossessions/DL0270.jsonl": 1,
+        "repossessions/DL0134.jsonl": 1,
+        "repossessions/DL0171.jsonl": 1,
+        "repossessions/DL0029.jsonl": 1,
+        "repossessions/DL0328.jsonl": 1,
+        "repossessions/DL0091.jsonl": 1,
+        "repossessions/DL0350.jsonl": 1,
+        "repossessions/DL0315.jsonl": 1,
+        "repossessions/DL0051.jsonl": 1,
+        "repossessions/DL0014.jsonl": 1,
+        "repossessions/DL0109.jsonl": 1,
+        "repossessions/DL0208.jsonl": 1,
+        "repossessions/DL0075.jsonl": 1,
+        "repossessions/DL0030.jsonl": 1,
+        "repossessions/DL0088.jsonl": 1,
+        "repossessions/DL0331.jsonl": 1,
+        "repossessions/DL0195.jsonl": 1,
+        "repossessions/DL0269.jsonl": 1,
+        "repossessions/DL0294.jsonl": 1,
+        "repossessions/DL0168.jsonl": 1,
+        "repossessions/DL0110.jsonl": 1,
+        "repossessions/DL0155.jsonl": 1,
+        "repossessions/DL0211.jsonl": 1,
+        "repossessions/DL0254.jsonl": 1,
+        "repossessions/DL0349.jsonl": 1,
+        "repossessions/DL0048.jsonl": 1,
+        "repossessions/DL0290.jsonl": 1,
+        "repossessions/DL0129.jsonl": 1,
+        "repossessions/DL0191.jsonl": 1,
+        "repossessions/DL0228.jsonl": 1,
+        "repossessions/DL0335.jsonl": 1,
+        "repossessions/DL0071.jsonl": 1,
+        "repossessions/DL0034.jsonl": 1,
+        "repossessions/DL0009.jsonl": 1,
+        "repossessions/DL0308.jsonl": 1,
+        "repossessions/DL0215.jsonl": 1,
+        "repossessions/DL0250.jsonl": 1,
+        "repossessions/DL0114.jsonl": 1,
+        "repossessions/DL0151.jsonl": 1,
+        "repossessions/DL0095.jsonl": 1,
+        "repossessions/DL0068.jsonl": 1,
+        "repossessions/DL0130.jsonl": 1,
+        "repossessions/DL0175.jsonl": 1,
+        "repossessions/DL0289.jsonl": 1,
+        "repossessions/DL0231.jsonl": 1,
+        "repossessions/DL0274.jsonl": 1,
+        "repossessions/DL0188.jsonl": 1,
+        "repossessions/DL0249.jsonl": 1,
+        "repossessions/DL0148.jsonl": 1,
+        "repossessions/DL0055.jsonl": 1,
+        "repossessions/DL0010.jsonl": 1,
+        "repossessions/DL0354.jsonl": 1,
+        "repossessions/DL0311.jsonl": 1,
+        "repossessions/DL0356.jsonl": 1,
+        "repossessions/DL0313.jsonl": 1,
+        "repossessions/DL0057.jsonl": 1,
+        "repossessions/DL0012.jsonl": 1,
+        "repossessions/DL0097.jsonl": 1,
+        "repossessions/DL0233.jsonl": 1,
+        "repossessions/DL0276.jsonl": 1,
+        "repossessions/DL0132.jsonl": 1,
+        "repossessions/DL0177.jsonl": 1,
+        "repossessions/DL0116.jsonl": 1,
+        "repossessions/DL0153.jsonl": 1,
+        "repossessions/DL0217.jsonl": 1,
+        "repossessions/DL0252.jsonl": 1,
+        "repossessions/DL0193.jsonl": 1,
+        "repossessions/DL0292.jsonl": 1,
+        "repossessions/DL0073.jsonl": 1,
+        "repossessions/DL0036.jsonl": 1,
+        "repossessions/DL0337.jsonl": 1,
+        "turns/4.jsonl": 1,
+        "turns/6.jsonl": 1,
+        "turns/18.jsonl": 1,
+        "turns/2.jsonl": 1,
+        "turns/19.jsonl": 1,
+        "turns/7.jsonl": 1,
+        "turns/5.jsonl": 1,
+        "turns/1.jsonl": 1,
+        "turns/20.jsonl": 1,
+        "turns/3.jsonl": 1,
+        "turns/11.jsonl": 1,
+        "turns/13.jsonl": 1,
+        "turns/17.jsonl": 1,
+        "turns/9.jsonl": 1,
+        "turns/15.jsonl": 1,
+        "turns/12.jsonl": 1,
+        "turns/10.jsonl": 1,
+        "turns/14.jsonl": 1,
+        "turns/8.jsonl": 1,
+        "turns/16.jsonl": 1
+      }
+    }
+  },
+  "public_is_floor_setter": false,
+  "sha256": {
+    "tests/hidden/truth.jsonl": "f9da983402dc664509598bb009b90bba538f64f845f2e7f0606bd6f8fed84c0a",
+    "tests/scoring/scorer_manifest.json": "34babba7888f98e615c20350733597006e5adc8de14ec53b633d05b914a48c3a",
+    "solution/measure_floors.py": "f64259a9e5e9be51d54cdfd6af3b231dee34c9ceba237712205d43098a86e4a7",
+    "solution/portfolio.py": "64fcb2e238832be7e0325a4b5608b29f2c0cf7b0fc307df5e3baaf8db9bba55f",
+    "solution/cheap_portfolio.py": "4a7b1199a616cac80b4bd565e86fdcceedd5c10ad72177e02bf3cf12464391ce",
+    "solution/public_reference.py": "189d8b8afa8884b0a0cf925705f45fa248eaa5955142092219ddc61a00f75d7a",
+    "solution/estimators.py": "f12ac9ae220015a66ae39a67442f9fb9ec3a26e57569c32c00b33897842c53ae",
+    "tests/scoring/score.py": "2a530de0f6fee91943c9b10f3526f683a676228ae5457bc920cd36ec24ab474b"
+  }
+}

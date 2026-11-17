@@ -1,0 +1,24 @@
++ echo '>>>>> Start Test Output'
+>>>>> Start Test Output
++ cd /workspace
++ mkdir -p /logs/verifier
++ echo IyEvYmluL3NoCiMgSGFyYm9yIHNlcGFyYXRlLXZlcmlmaWVyIGVudHJ5IHBvaW50OiBzY29yZSwgdGhlbiBsZXQgUmV3YXJkIEtpdCB3cml0ZSB0aGUgZmxhdCByZXdhcmQgY2Fycmllci4KIwojIERlbGl2ZXJ5IHJ1bGUgMTU6IGJvdGggcmV3YXJkIGNhcnJpZXJzIGFyZSBzZWVkZWQgdG8gMCBiZWZvcmUgYW55dGhpbmcgaXMgc2NvcmVkLCBzbyBhIHNjb3JlcgojIGZhaWx1cmUgc2NvcmVzIHplcm8gaW5zdGVhZCBvZiBsZWF2aW5nIHRoZSB0cmlhbCB3aXRoIG5vIHJld2FyZCBhdCBhbGwuIFdpdGhvdXQgdGhlIHNlZWQgYW4KIyB1bmNhdWdodCBmYWlsdXJlIGluIGV2YWwucHkgbGVhdmVzIC9sb2dzL3ZlcmlmaWVyL3Jld2FyZC50eHQgYWJzZW50IGFuZCBIYXJib3IgcmFpc2VzCiMgUmV3YXJkRmlsZU5vdEZvdW5kRXJyb3IsIHdoaWNoIGVycm9ycyB0aGUgdHJpYWwgcmF0aGVyIHRoYW4gc2NvcmluZyBpdC4KIwojIFJld2FyZCBLaXQgaXMgaW52b2tlZCB3aXRob3V0IGV4ZWMgYW5kIHdpdGggYSBmYWlsdXJlIGd1YXJkLCBzbyBhIFJld2FyZCBLaXQgZmF1bHQgY2Fubm90CiMgZGlzY2FyZCB0aGUgc2NvcmUgYWxyZWFkeSBwdWJsaXNoZWQgZnJvbSByZXBvcnQuanNvbiwgYW5kIGNhbm5vdCB0dXJuIGEgc2NvcmVkIHRyaWFsIGludG8gYQojIG5vbi16ZXJvIHZlcmlmaWVyIGV4aXQuCmV4cG9ydCBQWVRIT05ET05UV1JJVEVCWVRFQ09ERT0xCmxvZ3M9L2xvZ3MvdmVyaWZpZXIKbWtkaXIgLXAgIiRsb2dzIiB8fCBleGl0IDEKcHJpbnRmICcwXG4nID4gIiRsb2dzL3Jld2FyZC50eHQiCnByaW50ZiAneyJyZXdhcmQiOjB9XG4nID4gIiRsb2dzL3Jld2FyZC5qc29uIgpybSAtZiAiJGxvZ3MvcmVwb3J0Lmpzb24iICIkbG9ncy9jdHJmLmpzb24iCgpweXRob24zIC1JIC1CIC90ZXN0cy9zY29yaW5nL2V2YWwucHkgLS1zdWJtaXNzaW9uLWRpciAiJHsxOi0vd29ya3NwYWNlfSIgLS1sb2ctZGlyICIkbG9ncyIgfHwgZXhpdCAwCgpweXRob24zIC1JIC1CIC1jICdpbXBvcnQganNvbixwYXRobGliOyByPWpzb24ubG9hZHMocGF0aGxpYi5QYXRoKCIvbG9ncy92ZXJpZmllci9yZXBvcnQuanNvbiIpLnJlYWRfdGV4dCgpKTsgcGF0aGxpYi5QYXRoKCIvbG9ncy92ZXJpZmllci9yZXdhcmQuanNvbiIpLndyaXRlX3RleHQoanNvbi5kdW1wcyh7InJld2FyZCI6IGZsb2F0KHJbInNjb3JlIl0pfSkrIlxuIiknIHx8IGV4aXQgMAoKaWYgY29tbWFuZCAtdiByZXdhcmRraXQgPi9kZXYvbnVsbCAyPiYxOyB0aGVuCiAgcmV3YXJka2l0IC90ZXN0cyAtLXdvcmtzcGFjZSAiJHsxOi0vd29ya3NwYWNlfSIgLS1vdXRwdXQgIiRsb2dzL3Jld2FyZC5qc29uIiB8fCBleGl0IDAKZmkKZXhpdCAwCg==
++ base64 -d
++ chmod +x /tmp/harbor_test.sh
++ bash /tmp/harbor_test.sh
+>>>>> Start Structured Result
+{"details": [{"name": "aging_reserve", "score": 0.466196302960164, "status": "passed", "weight": 1.0}, {"name": "headroom_rank", "score": 0.7578124999999999, "status": "passed", "weight": 1.0}, {"name": "loss_reserve", "score": 0.24518726742836394, "status": "passed", "weight": 1.0}, {"name": "sot_flag", "score": 0.09331409331409346, "status": "passed", "weight": 1.0}, {"name": "turn_profile", "score": 0.560962915201592, "status": "passed", "weight": 1.0}, {"name": "variance_tier", "score": 0.6908721276663639, "status": "passed", "weight": 1.0}], "score": 0.4691}
+>>>>> End Structured Result
+TOTAL_SCORE 0.4691
+reward: 0.4691
+++ cat /logs/verifier/reward.txt
+++ tr -dc 0-9.-
++ SCORE=0.4691
++ echo '{"score": 0.4691}'
+{"score": 0.4691}
+>>>>> End Test Output
+Exit code: 0
++ EXIT_CODE=0
++ echo '>>>>> End Test Output'
++ echo 'Exit code: 0'
++ exit 0

@@ -1,0 +1,9 @@
+2026-11-15 14:31:50,437 - INFO - Judge container started: b962858b570f3112fca1a826fa897d24d5dddb79b686ca1b3782fa800f7a9d0f
+2026-11-15 14:31:50,438 - INFO - Archive saved (42716 bytes)
+2026-11-15 14:31:50,641 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-11-15 14:31:50,686 - INFO - Running eval script...
+2026-11-15 14:31:50,910 - INFO - Test runtime: 0.22s, timed_out: False
+2026-11-15 14:31:50,911 - INFO - Result: 0/6 passed (pass_rate=0.00%)
+2026-11-15 14:31:50,911 - INFO - Stopping container edgebench.judge.trade_finance_documentary_credit_examination.ad890495c94e...
+2026-11-15 14:31:50,990 - INFO - Removing container edgebench.judge.trade_finance_documentary_credit_examination.ad890495c94e...
+2026-11-15 14:31:51,049 - INFO - Container edgebench.judge.trade_finance_documentary_credit_examination.ad890495c94e removed.

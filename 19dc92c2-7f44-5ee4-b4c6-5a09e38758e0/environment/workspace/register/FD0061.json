@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "reference",
+  "domicile": "KY",
+  "fund_id": "FD0061",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0061-A",
+      "currency": "GBP"
+    },
+    {
+      "class_id": "FD0061-I",
+      "currency": "EUR"
+    }
+  ],
+  "strategy": "credit"
+}

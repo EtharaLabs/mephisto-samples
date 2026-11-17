@@ -1,0 +1,23 @@
+>>>>> Start Test Output
++ echo '>>>>> Start Test Output'
++ cd /workspace
++ mkdir -p /logs/verifier
++ echo IyEvYmluL3NoCiMgRmFpbCBjbG9zZWQ6IHNlZWQgYm90aCBjYXJyaWVycyBiZWZvcmUgaW52b2tpbmcgdGhlIGlzb2xhdGVkLCB0cnVzdGVkIHNjb3Jlci4Kc2V0IC11CmV4cG9ydCBQWVRIT05ET05UV1JJVEVCWVRFQ09ERT0xCmhlcmU9IiR7VEVTVF9ESVI6LS90ZXN0c30iICAjIHNmb3JnZSBydW5zIHRoaXMgc2NyaXB0IGZyb20gL3RtcDsgdGhlIHNjb3JlciBsaXZlcyBhdCAvdGVzdHMgKGp1ZGdlIERvY2tlcmZpbGUgQ09QWSAuIC90ZXN0cy8pCmxvZ3M9IiR7VkVSSUZJRVJfTE9HX0RJUjotL2xvZ3MvdmVyaWZpZXJ9Igpta2RpciAtcCAiJGxvZ3MiIHx8IGV4aXQgMQpwcmludGYgJzBcbicgPiAiJGxvZ3MvcmV3YXJkLnR4dCIgfHwgZXhpdCAxCnByaW50ZiAneyJyZXdhcmQiOjB9XG4nID4gIiRsb2dzL3Jld2FyZC5qc29uIiB8fCBleGl0IDEKcm0gLWYgIiRsb2dzL3JlcG9ydC5qc29uIiAiJGxvZ3MvY3RyZi5qc29uIgppZiAhIHB5dGhvbjMgLUkgLUIgIiRoZXJlL3Njb3JpbmcvZXZhbC5weSIgLS1zdWJtaXNzaW9uLWRpciAiJHsxOi0vd29ya3NwYWNlfSIgLS1sb2ctZGlyICIkbG9ncyI7IHRoZW4KICAgIHByaW50ZiAnMFxuJyA+ICIkbG9ncy9yZXdhcmQudHh0IgogICAgcHJpbnRmICd7InJld2FyZCI6MH1cbicgPiAiJGxvZ3MvcmV3YXJkLmpzb24iCiAgICBwcmludGYgJyVzXG4nICdTY29yaW5nIGZhaWxlZDsgcmV0YWluaW5nIHplcm8gcmV3YXJkLicgPiYyCmZpCmV4aXQgMAo=
++ base64 -d
++ chmod +x /tmp/harbor_test.sh
++ bash /tmp/harbor_test.sh
+>>>>> Start Structured Result
+{"score": 0.5494, "details": [{"name": "discrepancy_count", "score": 0.3491626295957226, "weight": 1.0, "status": "passed"}, {"name": "discrepancy_class_profile", "score": 0.6313159543837846, "weight": 1.0, "status": "passed"}, {"name": "refusal_flag", "score": 0.8471914008321776, "weight": 1.0, "status": "passed"}, {"name": "tenor_tier", "score": 0.3825062873903779, "weight": 1.0, "status": "passed"}, {"name": "examiner_priority_rank", "score": 0.515, "weight": 1.0, "status": "passed"}, {"name": "charge_reserve", "score": 0.5713022690711242, "weight": 1.0, "status": "passed"}]}
+>>>>> End Structured Result
+TOTAL_SCORE 0.5494
+++ cat /logs/verifier/reward.txt
+++ tr -dc 0-9.-
++ SCORE=0.5494
++ echo '{"score": 0.5494}'
++ EXIT_CODE=0
++ echo '>>>>> End Test Output'
++ echo 'Exit code: 0'
++ exit 0
+{"score": 0.5494}
+>>>>> End Test Output
+Exit code: 0

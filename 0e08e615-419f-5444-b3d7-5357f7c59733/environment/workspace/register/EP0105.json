@@ -1,0 +1,12 @@
+{
+  "apa_reference": "APA013",
+  "cohort": "group",
+  "currency": "USD",
+  "functional_role": "distribution",
+  "jurisdiction_band": 1,
+  "pair_id": "EP0105",
+  "provider_entity": "LE0105",
+  "provider_jurisdiction": "US",
+  "recipient_entity": "LE0142",
+  "recipient_jurisdiction": "IN"
+}

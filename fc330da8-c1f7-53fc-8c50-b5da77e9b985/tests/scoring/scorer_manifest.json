@@ -1,0 +1,45 @@
+{
+  "lanes": {
+    "aging_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.7443574821347374,
+      "floor_source": "oneshot_aging_reserve_normalised"
+    },
+    "turn_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.88724141731375,
+      "floor_source": "oneshot_turn_profile"
+    },
+    "sot_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.6206896551724138,
+      "floor_source": "oneshot_closed_sot_prevalence"
+    },
+    "variance_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6607804052014472,
+      "floor_source": "oneshot_closed_variance_classifier"
+    },
+    "headroom_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.5428571428571429,
+      "floor_source": "oneshot_closed_headroom_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.3382401884784094,
+      "floor_source": "aged_haircut_table"
+    }
+  },
+  "relative_agreement_bounds": {
+    "aging_reserve": 500.0,
+    "loss_reserve": 50.0
+  },
+  "coverage": "classification and rank multiply valid lane coverage; numeric/distribution missing=worst case"
+}

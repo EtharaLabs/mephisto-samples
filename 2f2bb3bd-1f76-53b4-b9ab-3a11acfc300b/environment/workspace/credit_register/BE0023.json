@@ -1,0 +1,14 @@
+{
+  "beneficiary_id": "BE0023",
+  "charge_schedule": 0,
+  "cohort": "reference",
+  "credit_form": 3,
+  "credit_limit_usd": 2349420.76,
+  "currency": "USD",
+  "document_route": 3,
+  "issuing_bank": "BANK23",
+  "sector": 3,
+  "service_band": 0,
+  "tenor_basis": 2,
+  "trade_corridor": 3
+}

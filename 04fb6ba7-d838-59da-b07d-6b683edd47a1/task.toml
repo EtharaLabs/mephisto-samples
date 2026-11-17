@@ -1,0 +1,66 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [
+  { source = "/workspace/predictions.jsonl" },
+  { source = "/workspace/receivables_surveillance.py" },
+  { source = "/workspace/requirements.txt" },
+]
+
+[task]
+task_id = "receivables_finance_surveillance"
+name = "ethara/04fb6ba7-d838-59da-b07d-6b683edd47a1"
+version = "0.1.0"
+description = "Reproduce a supply-chain finance desk's monthly surveillance record for 560 obligor-periods across six independently fitted lanes: dilution reserve, collection profile, dispute flag, recovery tier, availability rank and loss reserve. Each lane is floored by a competent one-shot method, so only exceeding competence pays; continuous reward 0 to 1."
+authors = [{ name = "rishav.kumar49", email = "rishav.kumar49@ethara.ai" }]
+keywords = ["professional-knowledge-work", "finance", "receivables-finance", "supply-chain-finance", "portfolio-surveillance", "method-imitation", "synthetic"]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 1.0
+platforms = ["linux/amd64", "linux/arm64"]
+data_license = "CC0-1.0"
+
+[agent]
+timeout_sec = 43200.0
+network_mode = "no-network"
+user = "1000:1000"
+
+[environment]
+network_mode = "no-network"
+workdir = "/workspace"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "no-network"
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+workdir = "/workspace"
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-11-03"
+source_kind = "synthetic"
+
+[upstream_provenance.source]
+generator = "deterministic synthetic receivables finance ledger generator in solution/generate.py, version 1, with six independently fitted lane estimators in solution/estimators.py"
+generation_inputs = ["solution/generate.py", "solution/estimators.py"]
+
+[extensions.sforge]
+task_id = "receivables_finance_surveillance"
+base_image = "python"
+platform = "linux/amd64"
+parser = "structured_json"
+selection = "score_first"
+score_direction = "maximize"
+cwd = "/workspace"
+submit_paths = ["predictions.jsonl", "receivables_surveillance.py", "requirements.txt"]
+submit_exclude = ["__pycache__", "*.pyc"]
+work_image_tag = "local"
+judge_image_tag = "local"

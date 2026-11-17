@@ -1,0 +1,14 @@
+{
+  "beneficiary_id": "BE0281",
+  "charge_schedule": 2,
+  "cohort": "query",
+  "credit_form": 0,
+  "credit_limit_usd": 692596.46,
+  "currency": "USD",
+  "document_route": 3,
+  "issuing_bank": "BANK21",
+  "sector": 0,
+  "service_band": 3,
+  "tenor_basis": 3,
+  "trade_corridor": 0
+}

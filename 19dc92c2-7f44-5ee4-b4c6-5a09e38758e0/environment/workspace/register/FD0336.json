@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "IE",
+  "fund_id": "FD0336",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0336-A",
+      "currency": "USD"
+    },
+    {
+      "class_id": "FD0336-I",
+      "currency": "GBP"
+    }
+  ],
+  "strategy": "alternatives"
+}

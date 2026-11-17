@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "US",
+  "fund_id": "FD0347",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0347-A",
+      "currency": "GBP"
+    },
+    {
+      "class_id": "FD0347-I",
+      "currency": "USD"
+    }
+  ],
+  "strategy": "equity"
+}

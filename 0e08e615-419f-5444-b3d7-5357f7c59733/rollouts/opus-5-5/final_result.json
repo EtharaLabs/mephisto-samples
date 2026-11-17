@@ -1,0 +1,15 @@
+{
+  "agent": "claude-code",
+  "task": "transfer_pricing_intercompany_settlement",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-273",
+  "total_rounds": 420,
+  "agent_submissions": 277,
+  "auto_submissions": 143,
+  "timed_out": true,
+  "runtime_seconds": 43199.48748278618,
+  "archive_size_bytes": 40507,
+  "resume_count": 49,
+  "best_score": 0.6588
+}

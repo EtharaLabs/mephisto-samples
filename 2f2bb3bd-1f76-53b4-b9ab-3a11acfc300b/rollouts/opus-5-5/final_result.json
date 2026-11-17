@@ -1,0 +1,15 @@
+{
+  "agent": "claude-code",
+  "task": "trade_finance_documentary_credit_examination",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-753",
+  "total_rounds": 935,
+  "agent_submissions": 792,
+  "auto_submissions": 143,
+  "timed_out": true,
+  "runtime_seconds": 43199.66127705574,
+  "archive_size_bytes": 44513,
+  "resume_count": 1,
+  "best_score": 0.5608
+}

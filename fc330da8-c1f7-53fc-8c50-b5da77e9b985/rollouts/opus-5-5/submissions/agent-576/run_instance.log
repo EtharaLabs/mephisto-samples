@@ -1,0 +1,9 @@
+2026-11-14 21:00:35,625 - INFO - Judge container started: 0210d202e05ae2d2ef8ae4157f7a6281970536db2c97368ef215563249d4c60d
+2026-11-14 21:00:35,625 - INFO - Archive saved (38246 bytes)
+2026-11-14 21:00:35,702 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-11-14 21:00:35,720 - INFO - Running eval script...
+2026-11-14 21:00:38,292 - INFO - Test runtime: 2.57s, timed_out: False
+2026-11-14 21:00:38,292 - INFO - Result: 0/6 passed (pass_rate=0.00%)
+2026-11-14 21:00:38,292 - INFO - Stopping container smoldata-mephisto.judge.floorplan_finance_surveillance.736ae6a1080c...
+2026-11-14 21:00:38,553 - INFO - Removing container smoldata-mephisto.judge.floorplan_finance_surveillance.736ae6a1080c...
+2026-11-14 21:00:38,557 - INFO - Container smoldata-mephisto.judge.floorplan_finance_surveillance.736ae6a1080c removed.

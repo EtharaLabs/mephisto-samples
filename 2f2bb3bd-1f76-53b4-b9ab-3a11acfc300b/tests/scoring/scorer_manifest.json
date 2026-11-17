@@ -1,0 +1,44 @@
+{
+  "lanes": {
+    "discrepancy_count": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.768943878946471,
+      "floor_source": "oneshot_forest"
+    },
+    "discrepancy_class_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.8988152834752976,
+      "floor_source": "constant"
+    },
+    "refusal_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8820058997050148,
+      "floor_source": "history_forest"
+    },
+    "tenor_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6115651479805342,
+      "floor_source": "oneshot_forest"
+    },
+    "examiner_priority_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.2857142857142857,
+      "floor_source": "oneshot_forest"
+    },
+    "charge_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.5521247555742163,
+      "floor_source": "history_forest"
+    }
+  },
+  "relative_agreement_bounds": {
+    "discrepancy_count": 0.5,
+    "charge_reserve": 50.0
+  }
+}

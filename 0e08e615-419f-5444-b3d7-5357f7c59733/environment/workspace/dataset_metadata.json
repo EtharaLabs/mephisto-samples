@@ -1,0 +1,103 @@
+{
+  "allocation_keys": [
+    "headcount",
+    "revenue",
+    "assets",
+    "transactions",
+    "floor_space",
+    "compute",
+    "licences",
+    "other"
+  ],
+  "cohort": "all records published or requested in the same period",
+  "currency": "USD",
+  "features": {
+    "allocation_drivers": [
+      "headcount_share",
+      "revenue_share",
+      "asset_share",
+      "transaction_share",
+      "compute_share",
+      "benefit_evidence"
+    ],
+    "comparables": [
+      "product_similarity",
+      "cost_traceability",
+      "resale_observability",
+      "unique_intangibles",
+      "integration",
+      "comparability"
+    ],
+    "invoices": [
+      "margin_gap",
+      "functional_complexity",
+      "royalty_intensity",
+      "documentation_gap",
+      "fx_volatility",
+      "service_mix"
+    ],
+    "settlements": [
+      "unsettled_share",
+      "due_age",
+      "fx_volatility",
+      "dispute_intensity",
+      "materiality",
+      "seasonality"
+    ],
+    "tax_audits": [
+      "prior_challenges",
+      "documentation_gap",
+      "jurisdiction_risk",
+      "apa_coverage",
+      "margin_outlier",
+      "audit_age"
+    ],
+    "tax_positions": [
+      "tax_rate",
+      "treaty_relief",
+      "documentation_gap",
+      "jurisdiction_risk",
+      "interest_age",
+      "provision_coverage"
+    ]
+  },
+  "history_periods": [
+    8,
+    10,
+    12
+  ],
+  "method_tiers": [
+    "CUP",
+    "cost plus",
+    "resale minus",
+    "profit split"
+  ],
+  "period_unit": "month",
+  "periods": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "query_periods": [
+    16,
+    20
+  ],
+  "residual": "cost base retained by the provider: shareholder or unsupported benefit costs"
+}

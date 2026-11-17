@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "LU",
+  "fund_id": "FD0114",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0114-A",
+      "currency": "EUR"
+    },
+    {
+      "class_id": "FD0114-I",
+      "currency": "USD"
+    }
+  ],
+  "strategy": "alternatives"
+}

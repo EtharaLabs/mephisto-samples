@@ -1,0 +1,45 @@
+{
+  "lanes": {
+    "dilution_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.6965377538865981,
+      "floor_source": "oneshot_closed_dilution_reserve"
+    },
+    "collection_profile": {
+      "weight": 1.0,
+      "metric_kind": "distribution_overlap",
+      "floor": 0.8772107847503572,
+      "floor_source": "oneshot_collection_profile"
+    },
+    "dispute_flag": {
+      "weight": 1.0,
+      "metric_kind": "f1_detection",
+      "floor": 0.8106666666666668,
+      "floor_source": "oneshot_closed_dispute_prevalence"
+    },
+    "recovery_tier": {
+      "weight": 1.0,
+      "metric_kind": "macro_f1",
+      "floor": 0.6901923505526647,
+      "floor_source": "oneshot_recovery_tier"
+    },
+    "availability_rank": {
+      "weight": 1.0,
+      "metric_kind": "rank_agreement",
+      "floor": 0.38571428571428573,
+      "floor_source": "oneshot_closed_availability_rank"
+    },
+    "loss_reserve": {
+      "weight": 1.0,
+      "metric_kind": "relative_agreement",
+      "floor": 0.5771343770361312,
+      "floor_source": "oneshot_loss_reserve_normalised"
+    }
+  },
+  "relative_agreement_bounds": {
+    "dilution_reserve": 500.0,
+    "loss_reserve": 50.0
+  },
+  "coverage": "classification and rank multiply valid lane coverage; numeric/distribution missing=worst case"
+}

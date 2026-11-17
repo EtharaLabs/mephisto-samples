@@ -1,0 +1,9 @@
+2026-11-14 21:19:32,098 - INFO - Judge container started: fbb1acfac9bfeb3e9d9bd3d0d3558ac11c40ce14eaa60377fafe247f6a79f56b
+2026-11-14 21:19:32,099 - INFO - Archive saved (37910 bytes)
+2026-11-14 21:19:32,518 - INFO - Archive extracted: 3 file(s) allowed, 0 rejected
+2026-11-14 21:19:32,587 - INFO - Running eval script...
+2026-11-14 21:19:32,866 - INFO - Test runtime: 0.28s, timed_out: False
+2026-11-14 21:19:32,867 - INFO - Result: 0/6 passed (pass_rate=0.00%)
+2026-11-14 21:19:32,867 - INFO - Stopping container edgebench.judge.transfer_pricing_intercompany_settlement.c6611cd7217a...
+2026-11-14 21:19:32,990 - INFO - Removing container edgebench.judge.transfer_pricing_intercompany_settlement.c6611cd7217a...
+2026-11-14 21:19:33,087 - INFO - Container edgebench.judge.transfer_pricing_intercompany_settlement.c6611cd7217a removed.

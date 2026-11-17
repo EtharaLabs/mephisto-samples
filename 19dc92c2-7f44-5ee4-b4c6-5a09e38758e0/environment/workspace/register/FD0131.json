@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "KY",
+  "fund_id": "FD0131",
+  "production_cycle": "monthly",
+  "share_classes": [
+    {
+      "class_id": "FD0131-A",
+      "currency": "USD"
+    },
+    {
+      "class_id": "FD0131-I",
+      "currency": "USD"
+    }
+  ],
+  "strategy": "credit"
+}

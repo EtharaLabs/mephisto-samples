@@ -1,0 +1,15 @@
+{
+  "agent": "claude-code",
+  "task": "fund_administration_nav_oversight",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-835",
+  "total_rounds": 980,
+  "agent_submissions": 837,
+  "auto_submissions": 143,
+  "timed_out": true,
+  "runtime_seconds": 43199.123195171356,
+  "archive_size_bytes": 42205,
+  "resume_count": 1,
+  "best_score": 0.5022
+}

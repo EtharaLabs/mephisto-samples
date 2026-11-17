@@ -1,0 +1,15 @@
+{
+  "agent": "claude-code",
+  "task": "receivables_finance_surveillance",
+  "model": "claude-opus-5-5",
+  "best_pass_rate": 0.0,
+  "best_round": "agent-634",
+  "total_rounds": 782,
+  "agent_submissions": 639,
+  "auto_submissions": 143,
+  "timed_out": true,
+  "runtime_seconds": 43199.42351794243,
+  "archive_size_bytes": 42266,
+  "resume_count": 13,
+  "best_score": 0.4578
+}

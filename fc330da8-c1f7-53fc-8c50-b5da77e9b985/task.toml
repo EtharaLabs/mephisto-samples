@@ -1,0 +1,66 @@
+schema_version = "1.4"
+reward_type = "bounded_continuous"
+artifacts = [
+  { source = "/workspace/predictions.jsonl" },
+  { source = "/workspace/floorplan_surveillance.py" },
+  { source = "/workspace/requirements.txt" },
+]
+
+[task]
+task_id = "floorplan_finance_surveillance"
+name = "ethara/fc330da8-c1f7-53fc-8c50-b5da77e9b985"
+version = "0.1.0"
+description = "Reproduce a dealer floorplan finance desk's monthly surveillance record for 560 dealer-periods across six independently fitted lanes: aging reserve, turn profile, sold-out-of-trust flag, variance tier, headroom rank and loss reserve. Each lane is floored by a competent one-shot method, so only exceeding competence pays; continuous reward 0 to 1."
+authors = [{ name = "rishav.kumar49", email = "rishav.kumar49@ethara.ai" }]
+keywords = ["professional-knowledge-work", "finance", "floorplan-finance", "inventory-finance", "dealer-lending", "portfolio-surveillance", "method-imitation", "synthetic"]
+
+[metadata]
+null_floor = 0.0
+discrimination_weight = 1.0
+platforms = ["linux/amd64", "linux/arm64"]
+data_license = "CC0-1.0"
+
+[agent]
+timeout_sec = 43200.0
+network_mode = "no-network"
+user = "1000:1000"
+
+[environment]
+network_mode = "no-network"
+workdir = "/workspace"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+gpus = 0
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "no-network"
+environment_mode = "separate"
+
+[verifier.environment]
+network_mode = "no-network"
+workdir = "/workspace"
+
+[upstream_provenance]
+origin = "original"
+provenance_date = "2026-11-06"
+source_kind = "synthetic"
+
+[upstream_provenance.source]
+generator = "Deterministic synthetic dealer floorplan finance ledger generator in solution/generate.py, version 1, with six independently fitted lane estimators in solution/estimators.py"
+generation_inputs = ["solution/generate.py", "solution/estimators.py"]
+
+[extensions.sforge]
+task_id = "floorplan_finance_surveillance"
+base_image = "python"
+platform = "linux/amd64"
+parser = "structured_json"
+selection = "score_first"
+score_direction = "maximize"
+cwd = "/workspace"
+submit_paths = ["predictions.jsonl", "floorplan_surveillance.py", "requirements.txt"]
+submit_exclude = ["__pycache__", "*.pyc"]
+work_image_tag = "local"
+judge_image_tag = "local"

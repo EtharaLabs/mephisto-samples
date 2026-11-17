@@ -1,0 +1,62 @@
+{
+  "task_id": "transfer_pricing_intercompany_settlement",
+  "submission_id": "6589be029e3c",
+  "total_tests": 6,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "pass_rate": 0.0,
+  "score": 0.5106,
+  "score_0_100": null,
+  "timed_out": false,
+  "runtime_seconds": 0.5840089321136475,
+  "test_details": [],
+  "valid": true,
+  "summary": null,
+  "details": [
+    {
+      "name": "adjustment_magnitude",
+      "status": "passed",
+      "message": null,
+      "score": 0.427554664248089,
+      "weight": 1.0
+    },
+    {
+      "name": "allocation_key_profile",
+      "status": "passed",
+      "message": null,
+      "score": 0.40886141801575365,
+      "weight": 1.0
+    },
+    {
+      "name": "challenge_flag",
+      "status": "passed",
+      "message": null,
+      "score": 0.8020783219474642,
+      "weight": 1.0
+    },
+    {
+      "name": "method_tier",
+      "status": "passed",
+      "message": null,
+      "score": 0.20816067764799592,
+      "weight": 1.0
+    },
+    {
+      "name": "review_rank",
+      "status": "passed",
+      "message": null,
+      "score": 0.8222222222222223,
+      "weight": 1.0
+    },
+    {
+      "name": "uncertain_tax_reserve",
+      "status": "passed",
+      "message": null,
+      "score": 0.39447770481470906,
+      "weight": 1.0
+    }
+  ],
+  "metrics": {},
+  "submitted_at": 1794686102.596281
+}

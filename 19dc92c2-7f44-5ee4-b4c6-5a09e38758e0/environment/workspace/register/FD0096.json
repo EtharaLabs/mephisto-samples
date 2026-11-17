@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "IE",
+  "fund_id": "FD0096",
+  "production_cycle": "monthly",
+  "share_classes": [
+    {
+      "class_id": "FD0096-A",
+      "currency": "USD"
+    },
+    {
+      "class_id": "FD0096-I",
+      "currency": "EUR"
+    }
+  ],
+  "strategy": "multi-asset"
+}

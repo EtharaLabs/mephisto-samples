@@ -1,0 +1,28 @@
+# macOS metadata must never enter the judge image build context.
+#
+# Files authored on macOS carry extended attributes (com.apple.provenance is
+# system-protected and cannot be removed with xattr -c). When the tree is
+# packaged or copied through a filesystem or archiver without native xattr
+# support, each xattr-bearing file gains a binary AppleDouble "._<name>"
+# sidecar alongside it.
+#
+# This Dockerfile uses "COPY . /tests/", so any sidecar here ships inside the
+# judge image. A "._reward.toml" is fatal: RewardKit's _discover_layout ->
+# _load_directory_tomls -> _load_toml -> read_text chain decodes every *.toml
+# it finds as UTF-8 and raises UnicodeDecodeError on the AppleDouble header,
+# crashing the verifier before any scoring occurs.
+#
+# Patterns are matched against the full path relative to the build context,
+# not the basename, so the "**/" variants are required to catch sidecars in
+# subdirectories. Do not remove them.
+._*
+**/._*
+.DS_Store
+**/.DS_Store
+__MACOSX/
+**/__MACOSX/
+.dockerignore
+__pycache__/
+**/__pycache__/
+*.pyc
+**/*.pyc

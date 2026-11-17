@@ -1,0 +1,7 @@
+# Six independent criteria, each with the same weight. No gate.
+[[reward]]
+name = "reward"
+aggregation = "weighted-mean"
+
+[scoring.test_output]
+aggregation = "weighted-mean"

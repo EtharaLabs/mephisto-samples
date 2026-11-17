@@ -1,0 +1,14 @@
+{
+  "beneficiary_id": "BE0057",
+  "charge_schedule": 0,
+  "cohort": "reference",
+  "credit_form": 3,
+  "credit_limit_usd": 14652846.88,
+  "currency": "USD",
+  "document_route": 0,
+  "issuing_bank": "BANK11",
+  "sector": 4,
+  "service_band": 3,
+  "tenor_basis": 3,
+  "trade_corridor": 2
+}

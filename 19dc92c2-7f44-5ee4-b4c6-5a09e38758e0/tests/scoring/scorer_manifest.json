@@ -1,0 +1,40 @@
+{
+  "lanes": {
+    "nav_break_magnitude": {
+      "weight": 1.0,
+      "floor": 0.7658886126114046,
+      "floor_source": "ridge_closed",
+      "metric_kind": "relative_agreement"
+    },
+    "fee_accrual_profile": {
+      "weight": 1.0,
+      "floor": 0.9513717315535715,
+      "floor_source": "ridge_closed",
+      "metric_kind": "distribution_overlap"
+    },
+    "restatement_flag": {
+      "weight": 1.0,
+      "floor": 0.9314586994727593,
+      "floor_source": "ridge_closed",
+      "metric_kind": "f1_detection"
+    },
+    "pricing_source_tier": {
+      "weight": 1.0,
+      "floor": 0.8462716774887861,
+      "floor_source": "ridge_closed",
+      "metric_kind": "macro_f1"
+    },
+    "oversight_rank": {
+      "weight": 1.0,
+      "floor": 0.3678571428571429,
+      "floor_source": "rf_closed",
+      "metric_kind": "rank_agreement"
+    },
+    "expense_reserve": {
+      "weight": 1.0,
+      "floor": 0.5520540974178461,
+      "floor_source": "ridge_closed",
+      "metric_kind": "relative_agreement"
+    }
+  }
+}

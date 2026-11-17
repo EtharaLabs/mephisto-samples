@@ -1,0 +1,18 @@
+{
+  "base_currency": "USD",
+  "cohort": "query",
+  "domicile": "KY",
+  "fund_id": "FD0180",
+  "production_cycle": "daily",
+  "share_classes": [
+    {
+      "class_id": "FD0180-A",
+      "currency": "GBP"
+    },
+    {
+      "class_id": "FD0180-I",
+      "currency": "USD"
+    }
+  ],
+  "strategy": "alternatives"
+}
