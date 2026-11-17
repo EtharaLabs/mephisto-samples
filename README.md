@@ -2,29 +2,69 @@
 
 # Mephisto: samples
 
-<p align="center"><b>The samples lane: 5 Harbor task bundles.</b></p>
+<p align="center"><b>Five sample task bundles from Mephisto, a Harbor benchmark that measures whether an autonomous agent can reproduce a professional review desk's method from the desk's own ledgers.</b></p>
 
-<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-5-845EF7" alt="bundles: 5"></a> <a href="#summary"><img src="https://img.shields.io/badge/schema-1.4-845EF7" alt="schema: 1.4"></a> <a href="#about"><img src="https://img.shields.io/badge/rollouts-opus--5--5-845EF7" alt="rollouts: opus-5-5"></a></p>
+<p align="center"><a href="#summary"><img src="https://img.shields.io/badge/bundles-5-845EF7" alt="bundles: 5"></a> <a href="#summary"><img src="https://img.shields.io/badge/harbor_schema-1.4-845EF7" alt="harbor schema: 1.4"></a> <a href="#rollouts"><img src="https://img.shields.io/badge/mean_reward-0.5310-845EF7" alt="mean reward: 0.5310"></a></p>
 
-<p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#about">About</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
+<p align="center"><sub><a href="#abstract">Abstract</a> | <a href="#summary">Summary</a> | <a href="#tasks">Tasks</a> | <a href="#rollouts">Rollouts</a> | <a href="#coverage">Coverage</a> | <a href="#dataset-structure">Dataset structure</a> | <a href="#verification-and-quality-assurance">Verification and quality assurance</a> | <a href="#cite">Cite</a> | <a href="#license">License</a> | <a href="#contact">Contact</a></sub></p>
 
 ## Abstract
 
-The curated lane of this corpus: five Harbor task bundles, each a complete, self-contained task with its own verifier and one recorded agent run.
+Mephisto is a benchmark of agentic tasks in [Harbor](https://github.com/laude-institute/harbor) format, built to measure method imitation rather than recall. It targets [EdgeBench](https://arxiv.org/abs/2607.05155) (arXiv:2607.05155). Each bundle hands the agent a finance operations desk's raw ledgers and asks it to reproduce the record that desk publishes for a set of queried entity-periods. Six named lanes are scored independently, and each lane carries a floor measured from a competent one-shot method, so reward accrues only where the agent beats that method rather than for merely emitting well-formed output.
 
-Each bundle is one Harbor task in a directory named by its content-derived uuid5, so the name doubles as an integrity check. This page is rendered from the resident bundles; a value a bundle does not carry reads `absent`, and the page never fills one in.
+Every bundle runs in an offline container, with `no-network` set for the agent, the environment, and the verifier alike. Each carries a private reference solution, 560 held-out truth rows the agent never sees, deterministic per-lane scoring with no LLM judge, and a bounded continuous reward from 0 to 1 aggregated as a weighted mean over the six lanes.
 
-All five are professional-knowledge-work tasks drawn from finance back-office and middle-office review desks. Each asks the agent to reproduce a desk's periodic record across six independently fitted lanes, with every lane floored by a competent one-shot method so that only exceeding that floor earns reward. Reward is bounded continuous on 0 to 1, scored per lane and aggregated as a weighted mean.
+This repository holds the five-bundle sample. All five are back-office and middle-office review desks: receivables finance, transfer pricing, fund administration NAV oversight, trade finance documentary credit examination, and dealer floorplan finance. Every ledger is produced by a deterministic synthetic generator named in the bundle's own provenance, and every register covers 360 entities with 560 queried entity-periods, so no bundle rewards retrieval of a real-world source.
 
 ## Summary
 
 | Property | Value |
 | --- | --- |
 | Bundles | 5 |
-| Harbor schema | 1.4 (5) |
-| Reward type | bounded_continuous (5) |
-| Agent timeout | 12 h (5) |
-| Recorded rollouts | opus-5-5 (5) |
+| Domain | Finance operations review (method imitation from desk ledgers) |
+| Format | Harbor task, schema 1.4 |
+| Platforms | linux/amd64, linux/arm64 |
+| Scored lanes per bundle | 6 |
+| Reward | `bounded_continuous`, 0 to 1, weighted mean over lanes |
+| Agent timeout | 12 h per bundle |
+| Data license | CC0-1.0 |
+| Agent | Claude Code with `claude-opus-5-5` |
+| Runs per bundle | 1 |
+| Mean best reward | 0.5310 |
+
+## Tasks
+
+| Task | Desk | Objective | Entity |
+| --- | --- | --- | --- |
+| [`04fb6ba7`](04fb6ba7-d838-59da-b07d-6b683edd47a1/) | Receivables finance | Reproduce a supply-chain finance desk's monthly surveillance record across six competence-floored lanes: dilution reserve, collection profile, dispute flag, recovery tier, availability rank and loss reserve. | Obligor |
+| [`0e08e615`](0e08e615-419f-5444-b3d7-5357f7c59733/) | Transfer pricing | Reproduce a multinational group's intercompany settlement review across six competence-floored lanes: adjustment magnitude, allocation key profile, challenge flag, method tier, review rank and uncertain tax reserve. | Entity pair |
+| [`19dc92c2`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/) | Fund administration | Reproduce a fund administrator's NAV oversight record across six competence-floored lanes: NAV break magnitude, fee accrual profile, restatement flag, pricing source tier, oversight rank and expense reserve. | Fund |
+| [`2f2bb3bd`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/) | Trade finance | Reproduce a documentary credit desk's examination record across six competence-floored lanes: discrepancy count, discrepancy class profile, refusal flag, tenor tier, examiner priority rank and charge reserve. | Beneficiary |
+| [`fc330da8`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/) | Floorplan finance | Reproduce a dealer floorplan desk's monthly surveillance record across six competence-floored lanes: aging reserve, turn profile, sold-out-of-trust flag, variance tier, headroom rank and loss reserve. | Dealer |
+
+## Rollouts
+
+Each bundle was run once with Claude Code on `claude-opus-5-5` and scored by the bundle's own verifier. Every run reached the 12 hour agent timeout, and no run produced a passing round, so these rollouts record difficulty evidence rather than reference solutions. Rollouts are stored in each bundle's `rollouts/opus-5-5/`.
+
+| Task | Best reward | Rounds | Best round | Agent submissions | Agent time |
+| --- | ---: | ---: | --- | ---: | ---: |
+| [`04fb6ba7-d838-59da-b07d-6b683edd47a1`](04fb6ba7-d838-59da-b07d-6b683edd47a1/rollouts/opus-5-5/) | 0.4578 | 782 | agent-634 | 639 | 12 h |
+| [`0e08e615-419f-5444-b3d7-5357f7c59733`](0e08e615-419f-5444-b3d7-5357f7c59733/rollouts/opus-5-5/) | 0.6588 | 420 | agent-273 | 277 | 12 h |
+| [`19dc92c2-7f44-5ee4-b4c6-5a09e38758e0`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/rollouts/opus-5-5/) | 0.5022 | 980 | agent-835 | 837 | 12 h |
+| [`2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/rollouts/opus-5-5/) | 0.5608 | 935 | agent-753 | 792 | 12 h |
+| [`fc330da8-c1f7-53fc-8c50-b5da77e9b985`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/rollouts/opus-5-5/) | 0.4753 | 785 | agent-757 | 762 | 12 h |
+| **mean** | **0.5310** | **780** | | **661** | **12 h** |
+
+Each rollout folder holds the run as the harness recorded it:
+
+| Path | Contents |
+| --- | --- |
+| `agent_prompt.md` | Harness preamble and the bundle's instruction as the agent received it |
+| `agent_output.txt` | Agent transcript for the whole run |
+| `run_history.json`, `evolve_state.json` | Per-round history and harness state |
+| `final_result.json` | Agent, model, round counts, runtime, and best score |
+| `final_archive.tar.gz` | Workspace archive at the end of the run |
+| `submissions/<round>/` | Per-round `report.json`, `test_output.txt`, `eval.sh`, `run_instance.log`, `allowed_files.txt`, and `submission.tar.gz` |
 
 ## Coverage
 
@@ -51,26 +91,27 @@ All five are professional-knowledge-work tasks drawn from finance back-office an
 
 ## Dataset structure
 
-| Bundle | Task | Objective | Keywords |
-| --- | --- | --- | --- |
-| [`04fb6ba7-d838-59da-b07d-6b683edd47a1`](04fb6ba7-d838-59da-b07d-6b683edd47a1/) | `receivables_finance_surveillance` | Receivables finance portfolio surveillance | finance, method-imitation, portfolio-surveillance, professional-knowledge-work, receivables-finance, supply-chain-finance, synthetic |
-| [`0e08e615-419f-5444-b3d7-5357f7c59733`](0e08e615-419f-5444-b3d7-5357f7c59733/) | `transfer_pricing_intercompany_settlement` | Transfer pricing intercompany settlement | finance, intercompany-settlement, method-imitation, professional-knowledge-work, synthetic, transfer-pricing |
-| [`19dc92c2-7f44-5ee4-b4c6-5a09e38758e0`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/) | `fund_administration_nav_oversight` | Fund administration NAV oversight | finance, fund-administration, method-imitation, nav-oversight, professional-knowledge-work, synthetic |
-| [`2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/) | `trade_finance_documentary_credit_examination` | Trade finance documentary credit examination | document-examination, documentary-credit, finance, letter-of-credit, method-imitation, professional-knowledge-work, synthetic, trade-finance |
-| [`fc330da8-c1f7-53fc-8c50-b5da77e9b985`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/) | `floorplan_finance_surveillance` | Dealer floorplan finance portfolio surveillance | dealer-lending, finance, floorplan-finance, inventory-finance, method-imitation, portfolio-surveillance, professional-knowledge-work, synthetic |
+Each bundle is one Harbor task in a directory named by its content-derived uuid5, so the name doubles as an integrity check.
 
-Every bundle carries the same layout:
+| Task | Keywords |
+| --- | --- |
+| [`04fb6ba7-d838-59da-b07d-6b683edd47a1`](04fb6ba7-d838-59da-b07d-6b683edd47a1/) | finance, method-imitation, portfolio-surveillance, professional-knowledge-work, receivables-finance, supply-chain-finance, synthetic |
+| [`0e08e615-419f-5444-b3d7-5357f7c59733`](0e08e615-419f-5444-b3d7-5357f7c59733/) | finance, intercompany-settlement, method-imitation, professional-knowledge-work, synthetic, transfer-pricing |
+| [`19dc92c2-7f44-5ee4-b4c6-5a09e38758e0`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/) | finance, fund-administration, method-imitation, nav-oversight, professional-knowledge-work, synthetic |
+| [`2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/) | document-examination, documentary-credit, finance, letter-of-credit, method-imitation, professional-knowledge-work, synthetic, trade-finance |
+| [`fc330da8-c1f7-53fc-8c50-b5da77e9b985`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/) | dealer-lending, finance, floorplan-finance, inventory-finance, method-imitation, portfolio-surveillance, professional-knowledge-work, synthetic |
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#131a33","primaryTextColor":"#e8ecff","primaryBorderColor":"#845EF7","lineColor":"#22d3ee","fontFamily":"monospace"}}}%%
-flowchart LR
-    bundle["&lt;uuid&gt;/"]
-    bundle --> n0["task.toml<br/>runner manifest"]
-    bundle --> n1["instruction.md<br/>objective the agent reads"]
-    bundle --> n2["environment/<br/>agent sandbox image"]
-    bundle --> n3["tests/<br/>verifier, hidden from the agent"]
-    bundle --> n4["solution/<br/>private oracle"]
-    bundle --> n5["rollouts/<br/>recorded agent runs"]
+```
+<uuid>/
+├── task.toml         runner manifest
+├── instruction.md    objective the agent reads
+├── environment/      offline sandbox image, with the desk's ledgers in workspace/
+├── tests/            verifier and held-out truth, hidden from the agent
+├── solution/         private reference solution and measured lane floors
+└── rollouts/
+    └── opus-5-5/     agent model
+        ├── final_result.json, agent_output.txt, run_history.json
+        └── submissions/<round>/
 ```
 
 ## Verification and quality assurance
@@ -79,50 +120,28 @@ The verifier travels with the bundle and never reaches the agent. `tests/hidden/
 
 Scoring is per lane rather than all-or-nothing, and every bundle uses the same six-lane shape: one profile, one flag, one tier, one cross-sectional rank, and two value lanes such as a reserve, magnitude or count.
 
-| Bundle | Scored lanes |
-| --- | --- |
-| [`04fb6ba7`](04fb6ba7-d838-59da-b07d-6b683edd47a1/) | dilution_reserve, collection_profile, dispute_flag, recovery_tier, availability_rank, loss_reserve |
-| [`0e08e615`](0e08e615-419f-5444-b3d7-5357f7c59733/) | adjustment_magnitude, allocation_key_profile, challenge_flag, method_tier, review_rank, uncertain_tax_reserve |
-| [`19dc92c2`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/) | nav_break_magnitude, fee_accrual_profile, restatement_flag, pricing_source_tier, oversight_rank, expense_reserve |
-| [`2f2bb3bd`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/) | discrepancy_count, discrepancy_class_profile, refusal_flag, tenor_tier, examiner_priority_rank, charge_reserve |
-| [`fc330da8`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/) | aging_reserve, turn_profile, sot_flag, variance_tier, headroom_rank, loss_reserve |
-
-Each lane carries a measured competence floor. `solution/measure_floors.py` fits a competent one-shot method per lane and records the result in `solution/floors.json`, and every manifest sets `null_floor = 0.0`, so a submission earns credit only where it beats that method rather than for merely emitting well-formed output.
+Each lane carries a measured competence floor. `solution/measure_floors.py` fits a competent one-shot method per lane and records the result in `solution/floors.json`, and every manifest sets `null_floor = 0.0`, so a submission earns credit only where it beats that method.
 
 The scorer is exercised against more than one implementation shape. `solution/checks/test_scorer.py` carries the scorer self-tests, and `solution/alternates/` holds rewrites of the same method: a class facade in all five bundles, split modules in four, and a renamed single module in three. A scorer that silently depended on the reference file layout would not survive them.
 
 Data provenance is declared in `task.toml`: all five set `origin = "original"` and `source_kind = "synthetic"`, and name the deterministic generator and its inputs under `[upstream_provenance]`.
 
-## About
-
-Each bundle directory is a complete Harbor task: `task.toml` is the runner manifest, `instruction.md` the objective, `environment/` the sandbox image, and `tests/` the verifier.
-
-Every bundle also carries `rollouts/<model>/`, holding the prompt, transcript, per-round submissions and final result of one recorded run against that bundle. All five resident rollouts are `opus-5-5` runs that reached the 12 hour agent timeout without a passing round, scoring 0.4578 to 0.6588 on the bounded continuous reward, so they record difficulty evidence rather than reference solutions.
-
-| Bundle | Rounds | Best round | Best score |
-| --- | --- | --- | --- |
-| [`04fb6ba7`](04fb6ba7-d838-59da-b07d-6b683edd47a1/rollouts/opus-5-5/) | 782 | agent-634 | 0.4578 |
-| [`0e08e615`](0e08e615-419f-5444-b3d7-5357f7c59733/rollouts/opus-5-5/) | 420 | agent-273 | 0.6588 |
-| [`19dc92c2`](19dc92c2-7f44-5ee4-b4c6-5a09e38758e0/rollouts/opus-5-5/) | 980 | agent-835 | 0.5022 |
-| [`2f2bb3bd`](2f2bb3bd-1f76-53b4-b9ab-3a11acfc300b/rollouts/opus-5-5/) | 935 | agent-753 | 0.5608 |
-| [`fc330da8`](fc330da8-c1f7-53fc-8c50-b5da77e9b985/rollouts/opus-5-5/) | 785 | agent-757 | 0.4753 |
-
 ## Cite
 
 ```bibtex
-@misc{mephistosamples,
-  title = {Mephisto: samples}
+@misc{mephisto2026,
+  title        = {Mephisto: A Method-Imitation Benchmark for Professional Knowledge Work},
+  author       = {{Ethara.AI}},
+  year         = {2026}
 }
 ```
 
 ## License
 
-Released under the [MIT License](LICENSE). © 2026 Ethara.AI.
-
-Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
+Released under the MIT License. © 2026 Ethara.AI.
 
 ## Contact
 
-[Ethara AI on GitHub](https://github.com/Ethara-Ai), [SECURITY.md](SECURITY.md) for a private report, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution route.
+Mephisto is built by [Ethara.AI](https://github.com/Ethara-Ai).
 
 Copyright (c) 2026 Green Rider Technology LLP (Ethara AI). All rights reserved.
